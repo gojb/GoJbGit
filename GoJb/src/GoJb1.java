@@ -449,10 +449,12 @@ public class GoJb1 implements ActionListener{
 	JButton button113 = new JButton("Gruvvagn med hopper", i113);
 	JButton button114 = new JButton("Koppel", i114);
 	
-	ImageIcon tra = new ImageIcon(getClass().getResource("images/200.png"));
 	ImageIcon kullersten = new ImageIcon(getClass().getResource("images/1.png"));
 	ImageIcon rödsten = new ImageIcon(getClass().getResource("images/2.png"));
+	ImageIcon trä = new ImageIcon(getClass().getResource("images/3.png"));
 	ImageIcon pilbåge = new ImageIcon(getClass().getResource("images/68.gif"));
+	ImageIcon tra = new ImageIcon(getClass().getResource("images/200.png"));
+	
 	
 	JPanel frame = new JPanel();
 	JFrame frameHuvud = new JFrame();
@@ -5815,7 +5817,6 @@ public class GoJb1 implements ActionListener{
 
 			}
 			if (e.getSource() == buttons107[9]){
-
 			}
 
 			if (e.getSource() == buttons108[1]){
@@ -5843,7 +5844,6 @@ public class GoJb1 implements ActionListener{
 
 			}
 			if (e.getSource() == buttons108[9]){
-
 			}
 
 			if (e.getSource() == buttons109[1]){
@@ -5871,7 +5871,6 @@ public class GoJb1 implements ActionListener{
 
 			}
 			if (e.getSource() == buttons109[9]){
-
 			}
 
 			if (e.getSource() == buttons110[1]){
@@ -5899,7 +5898,6 @@ public class GoJb1 implements ActionListener{
 
 			}
 			if (e.getSource() == buttons110[9]){
-
 			}
 
 			if (e.getSource() == buttons111[1]){
@@ -5927,7 +5925,6 @@ public class GoJb1 implements ActionListener{
 
 			}
 			if (e.getSource() == buttons111[9]){
-
 			}
 
 			if (e.getSource() == buttons112[1]){
@@ -5955,7 +5952,6 @@ public class GoJb1 implements ActionListener{
 
 			}
 			if (e.getSource() == buttons112[9]){
-
 			}
 
 			if (e.getSource() == buttons113[1]){
@@ -5983,7 +5979,6 @@ public class GoJb1 implements ActionListener{
 
 			}
 			if (e.getSource() == buttons113[9]){
-
 			}
 		
 			if (e.getSource() == buttons114[1]){
