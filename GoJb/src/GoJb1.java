@@ -694,8 +694,6 @@ public class GoJb1 implements ActionListener{
 		frame112.setSize(500,500);
 		frame113.setSize(500,500);
 		frame114.setSize(500,500);
-
-		button103.setSize(300, 300);
 		
 		frame3.setLocationRelativeTo(null);
 		frame7.setLocationRelativeTo(null);
