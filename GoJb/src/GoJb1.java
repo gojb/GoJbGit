@@ -11,7 +11,7 @@ import javax.swing.*;;
  */
 public class GoJb1 implements ActionListener{
 	
-//	/oliusalfbl//hdksdj blflsjdhgbsdv jblkdbbl
+//	/oliusalfbl//hdksdj
 	
 	JButton[] buttons3 = new JButton[10];
 	JButton[] buttons7 = new JButton[10];
