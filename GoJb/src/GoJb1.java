@@ -6410,8 +6410,15 @@ public class GoJb1 implements ActionListener{
 			if (e.getSource() == buttons114[9]){
 
 			}
-
-
+			
+			Icon abc = ((AbstractButton) e.getSource()).getIcon();
+			if (abc==kullersten) {
+				
+			}
+			System.out.println(kullersten);
+			
+			
+		
 	
 	}
 	
