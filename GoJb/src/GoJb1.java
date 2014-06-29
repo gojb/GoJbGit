@@ -454,9 +454,32 @@ public class GoJb1 implements ActionListener{
 	ImageIcon plankor = new ImageIcon(getClass().getResource("images/3.png"));
 	ImageIcon pilbåge = new ImageIcon(getClass().getResource("images/68.gif"));
 	ImageIcon tra = new ImageIcon(getClass().getResource("images/200.png"));
+	ImageIcon sand = new ImageIcon(getClass().getResource("images/4.png"));
+	ImageIcon ull = new ImageIcon(getClass().getResource("images/15.png"));
+	ImageIcon guld = new ImageIcon(getClass().getResource("images/5.png"));
+	ImageIcon pinne = new ImageIcon(getClass().getResource("images/71.png"));
+	ImageIcon tryckplatta = new ImageIcon(getClass().getResource("images/30.png"));
+	ImageIcon kolv = new ImageIcon(getClass().getResource("images/14.gif"));
+	ImageIcon slime = new ImageIcon(getClass().getResource("images/1000.png"));
+	ImageIcon tråd = new ImageIcon(getClass().getResource("images/1001.png"));
+	ImageIcon tegel = new ImageIcon(getClass().getResource("images/1006.png"));
+	ImageIcon krut = new ImageIcon(getClass().getResource("images/1005.png"));
+	ImageIcon järn = new ImageIcon(getClass().getResource("images/6.png"));
+	ImageIcon diamant = new ImageIcon(getClass().getResource("images/1013.png"));
+	ImageIcon snöboll = new ImageIcon(getClass().getResource("images/1012.png"));
+	ImageIcon obsidian = new ImageIcon(getClass().getResource("images/1018.png"));
+	ImageIcon enderöga = new ImageIcon(getClass().getResource("images/103.png"));
+	ImageIcon bok = new ImageIcon(getClass().getResource("images/84.png"));
+	ImageIcon papper = new ImageIcon(getClass().getResource("images/83.png"));
+	ImageIcon läder = new ImageIcon(getClass().getResource("images/1032.png"));
+	ImageIcon gruvvagn = new ImageIcon(getClass().getResource("images/81.png"));
+	ImageIcon hopper = new ImageIcon(getClass().getResource("images/58.png"));
+	ImageIcon kista = new ImageIcon(getClass().getResource("images/22.gif"));
+	ImageIcon ugn = new ImageIcon(getClass().getResource("images/24.png"));
+
 	
 	JPanel frame = new JPanel();
-	JFrame frameHuvud = new JFrame();
+	JFrame frameHuvud = new JFrame("GoJbGuide");
 	
 	JScrollPane scrollBar=new JScrollPane(frame,JScrollPane.VERTICAL_SCROLLBAR_ALWAYS,JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
 	
@@ -469,11 +492,7 @@ public class GoJb1 implements ActionListener{
 					
 		scrollBar.getVerticalScrollBar().setUnitIncrement(20);
 		
-		frameHuvud.add(scrollBar);
-		frameHuvud.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frameHuvud.setSize(1000, 800);
-		frameHuvud.setLocationRelativeTo(null);
-		frameHuvud.setTitle("GoJbGuide");
+		
 		frameHuvud.setIconImage(new ImageIcon(getClass().getResource("images/java-icon.png")).getImage());
 	
 //		Knappar synliga:
@@ -2975,11 +2994,14 @@ public class GoJb1 implements ActionListener{
 			buttons114[9].setIcon(null);
 
 
-
-		frame.setLayout(new GridLayout(37, 3));
-		frame.revalidate();
-		frame.repaint();
+		frameHuvud.add(scrollBar);
+		frameHuvud.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setLayout(new GridLayout(36, 3));
+		frameHuvud.pack();
+		frameHuvud.setSize(new Dimension(frameHuvud.getWidth(),700));
+		frameHuvud.setLocationRelativeTo(null);
 		frameHuvud.setVisible(true);
+		
          
 	
 	}
