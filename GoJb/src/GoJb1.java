@@ -2,7 +2,6 @@
 import java.awt.*;
 import java.awt.event.*;
 
-import javax.swing.JButton;
 import javax.swing.*;;
 
 /**
@@ -12,6 +11,8 @@ import javax.swing.*;;
 public class GoJb1 implements ActionListener{
 	
 //	/oliusalfbl//hdksdjasödiuhhisuövviudslds
+	
+	
 	
 	JButton[] buttons3 = new JButton[10];
 	JButton[] buttons7 = new JButton[10];
@@ -449,6 +450,8 @@ public class GoJb1 implements ActionListener{
 	JButton button113 = new JButton("Gruvvagn med hopper", i113);
 	JButton button114 = new JButton("Koppel", i114);
 	
+	
+	
 	ImageIcon kullersten = new ImageIcon(getClass().getResource("images/1.png"));
 	ImageIcon rödsten = new ImageIcon(getClass().getResource("images/2.png"));
 	ImageIcon plankor = new ImageIcon(getClass().getResource("images/3.png"));
@@ -745,115 +748,7 @@ public class GoJb1 implements ActionListener{
 		frame112.setSize(500,500);
 		frame113.setSize(500,500);
 		frame114.setSize(500,500);
-		
-		frame3.setLocationRelativeTo(null);
-		frame7.setLocationRelativeTo(null);
-		frame8.setLocationRelativeTo(null);
-		frame9.setLocationRelativeTo(null);
-		frame10.setLocationRelativeTo(null);
-		frame11.setLocationRelativeTo(null);
-		frame12.setLocationRelativeTo(null);
-		frame13.setLocationRelativeTo(null);
-		frame14.setLocationRelativeTo(null);
-		frame15.setLocationRelativeTo(null);
-		frame16.setLocationRelativeTo(null);
-		frame17.setLocationRelativeTo(null);
-		frame18.setLocationRelativeTo(null);
-		frame19.setLocationRelativeTo(null);
-		frame20.setLocationRelativeTo(null);
-		frame21.setLocationRelativeTo(null);
-		frame22.setLocationRelativeTo(null);
-		frame23.setLocationRelativeTo(null);
-		frame24.setLocationRelativeTo(null);
-		frame25.setLocationRelativeTo(null);
-		frame26.setLocationRelativeTo(null);
-		frame27.setLocationRelativeTo(null);
-		frame28.setLocationRelativeTo(null);
-		frame29.setLocationRelativeTo(null);
-		frame30.setLocationRelativeTo(null);
-		frame31.setLocationRelativeTo(null);
-		frame32.setLocationRelativeTo(null);
-		frame33.setLocationRelativeTo(null);
-		frame34.setLocationRelativeTo(null);
-		frame35.setLocationRelativeTo(null);
-		frame36.setLocationRelativeTo(null);
-		frame37.setLocationRelativeTo(null);
-		frame38.setLocationRelativeTo(null);
-		frame39.setLocationRelativeTo(null);
-		frame40.setLocationRelativeTo(null);
-		frame41.setLocationRelativeTo(null);
-		frame42.setLocationRelativeTo(null);
-		frame43.setLocationRelativeTo(null);
-		frame44.setLocationRelativeTo(null);
-		frame45.setLocationRelativeTo(null);
-		frame46.setLocationRelativeTo(null);
-		frame47.setLocationRelativeTo(null);
-		frame48.setLocationRelativeTo(null);
-		frame49.setLocationRelativeTo(null);
-		frame50.setLocationRelativeTo(null);
-		frame51.setLocationRelativeTo(null);
-		frame52.setLocationRelativeTo(null);
-		frame53.setLocationRelativeTo(null);
-		frame54.setLocationRelativeTo(null);
-		frame55.setLocationRelativeTo(null);
-		frame56.setLocationRelativeTo(null);
-		frame57.setLocationRelativeTo(null);
-		frame58.setLocationRelativeTo(null);
-		frame59.setLocationRelativeTo(null);
-		frame60.setLocationRelativeTo(null);
-		frame61.setLocationRelativeTo(null);
-		frame62.setLocationRelativeTo(null);
-		frame63.setLocationRelativeTo(null);
-		frame64.setLocationRelativeTo(null);
-		frame65.setLocationRelativeTo(null);
-		frame66.setLocationRelativeTo(null);
-		frame67.setLocationRelativeTo(null);
-		frame68.setLocationRelativeTo(null);
-		frame69.setLocationRelativeTo(null);
-		frame70.setLocationRelativeTo(null);
-		frame71.setLocationRelativeTo(null);
-		frame72.setLocationRelativeTo(null);
-		frame73.setLocationRelativeTo(null);
-		frame74.setLocationRelativeTo(null);
-		frame75.setLocationRelativeTo(null);
-		frame76.setLocationRelativeTo(null);
-		frame77.setLocationRelativeTo(null);
-		frame78.setLocationRelativeTo(null);
-		frame79.setLocationRelativeTo(null);
-		frame80.setLocationRelativeTo(null);
-		frame81.setLocationRelativeTo(null);
-		frame82.setLocationRelativeTo(null);
-		frame83.setLocationRelativeTo(null);
-		frame84.setLocationRelativeTo(null);
-		frame85.setLocationRelativeTo(null);
-		frame86.setLocationRelativeTo(null);
-		frame87.setLocationRelativeTo(null);
-		frame88.setLocationRelativeTo(null);
-		frame89.setLocationRelativeTo(null);
-		frame91.setLocationRelativeTo(null);
-		frame92.setLocationRelativeTo(null);
-		frame93.setLocationRelativeTo(null);
-		frame94.setLocationRelativeTo(null);
-		frame95.setLocationRelativeTo(null);
-		frame96.setLocationRelativeTo(null);
-		frame97.setLocationRelativeTo(null);
-		frame98.setLocationRelativeTo(null);
-		frame99.setLocationRelativeTo(null);
-		frame100.setLocationRelativeTo(null);
-		frame101.setLocationRelativeTo(null);
-		frame102.setLocationRelativeTo(null);
-		frame103.setLocationRelativeTo(null);
-		frame104.setLocationRelativeTo(null);
-		frame105.setLocationRelativeTo(null);
-		frame106.setLocationRelativeTo(null);
-		frame107.setLocationRelativeTo(null);
-		frame108.setLocationRelativeTo(null);
-		frame109.setLocationRelativeTo(null);
-		frame110.setLocationRelativeTo(null);
-		frame111.setLocationRelativeTo(null);
-		frame112.setLocationRelativeTo(null);
-		frame113.setLocationRelativeTo(null);
-		frame114.setLocationRelativeTo(null);
+			
 
 		button3.addActionListener(this);
 		button7.addActionListener(this);
@@ -1072,6 +967,10 @@ public class GoJb1 implements ActionListener{
 		frame112.setLayout(new GridLayout(3,3));
 		frame113.setLayout(new GridLayout(3,3));
 		frame114.setLayout(new GridLayout(3,3));
+		
+		
+		
+		
 		
 		for (int j = 1; j < buttons3.length; j++) {
 			buttons3[j] = new JButton();
@@ -2297,12 +2196,12 @@ public class GoJb1 implements ActionListener{
 			buttons41[1].setIcon(null);
 			buttons41[2].setIcon(null);
 			buttons41[3].setIcon(null);
-			buttons41[4].setIcon(null);
-			buttons41[5].setIcon(null);
-			buttons41[6].setIcon(null);
-			buttons41[7].setIcon(null);
-			buttons41[8].setIcon(null);
-			buttons41[9].setIcon(null);
+			buttons41[4].setIcon(färgglas);
+			buttons41[5].setIcon(färgglas);
+			buttons41[6].setIcon(färgglas);
+			buttons41[7].setIcon(färgglas);
+			buttons41[8].setIcon(färgglas);
+			buttons41[9].setIcon(färgglas);
 
 			buttons42[1].setIcon(melon);
 			buttons42[2].setIcon(melon);
@@ -2338,11 +2237,11 @@ public class GoJb1 implements ActionListener{
 			buttons45[2].setIcon(null);
 			buttons45[3].setIcon(null);
 			buttons45[4].setIcon(null);
-			buttons45[5].setIcon(null);
-			buttons45[6].setIcon(null);
-			buttons45[7].setIcon(null);
-			buttons45[8].setIcon(null);
-			buttons45[9].setIcon(null);
+			buttons45[5].setIcon(blaze);
+			buttons45[6].setIcon(kullersten);
+			buttons45[7].setIcon(kullersten);
+			buttons45[8].setIcon(kullersten);
+			buttons45[9].setIcon(kullersten);
 
 			buttons46[1].setIcon(null);
 			buttons46[2].setIcon(null);
@@ -3043,6 +2942,117 @@ public class GoJb1 implements ActionListener{
 	
 		System.out.println("Någon knapp nedtryckt!");		 
 
+		
+		frame3.setLocationRelativeTo(frameHuvud);
+		frame7.setLocationRelativeTo(frameHuvud);
+		frame8.setLocationRelativeTo(frameHuvud);
+		frame9.setLocationRelativeTo(frameHuvud);
+		frame10.setLocationRelativeTo(frameHuvud);
+		frame11.setLocationRelativeTo(frameHuvud);
+		frame12.setLocationRelativeTo(frameHuvud);
+		frame13.setLocationRelativeTo(frameHuvud);
+		frame14.setLocationRelativeTo(frameHuvud);
+		frame15.setLocationRelativeTo(frameHuvud);
+		frame16.setLocationRelativeTo(frameHuvud);
+		frame17.setLocationRelativeTo(frameHuvud);
+		frame18.setLocationRelativeTo(frameHuvud);
+		frame19.setLocationRelativeTo(frameHuvud);
+		frame20.setLocationRelativeTo(frameHuvud);
+		frame21.setLocationRelativeTo(frameHuvud);
+		frame22.setLocationRelativeTo(frameHuvud);
+		frame23.setLocationRelativeTo(frameHuvud);
+		frame24.setLocationRelativeTo(frameHuvud);
+		frame25.setLocationRelativeTo(frameHuvud);
+		frame26.setLocationRelativeTo(frameHuvud);
+		frame27.setLocationRelativeTo(frameHuvud);
+		frame28.setLocationRelativeTo(frameHuvud);
+		frame29.setLocationRelativeTo(frameHuvud);
+		frame30.setLocationRelativeTo(frameHuvud);
+		frame31.setLocationRelativeTo(frameHuvud);
+		frame32.setLocationRelativeTo(frameHuvud);
+		frame33.setLocationRelativeTo(frameHuvud);
+		frame34.setLocationRelativeTo(frameHuvud);
+		frame35.setLocationRelativeTo(frameHuvud);
+		frame36.setLocationRelativeTo(frameHuvud);
+		frame37.setLocationRelativeTo(frameHuvud);
+		frame38.setLocationRelativeTo(frameHuvud);
+		frame39.setLocationRelativeTo(frameHuvud);
+		frame40.setLocationRelativeTo(frameHuvud);
+		frame41.setLocationRelativeTo(frameHuvud);
+		frame42.setLocationRelativeTo(frameHuvud);
+		frame43.setLocationRelativeTo(frameHuvud);
+		frame44.setLocationRelativeTo(frameHuvud);
+		frame45.setLocationRelativeTo(frameHuvud);
+		frame46.setLocationRelativeTo(frameHuvud);
+		frame47.setLocationRelativeTo(frameHuvud);
+		frame48.setLocationRelativeTo(frameHuvud);
+		frame49.setLocationRelativeTo(frameHuvud);
+		frame50.setLocationRelativeTo(frameHuvud);
+		frame51.setLocationRelativeTo(frameHuvud);
+		frame52.setLocationRelativeTo(frameHuvud);
+		frame53.setLocationRelativeTo(frameHuvud);
+		frame54.setLocationRelativeTo(frameHuvud);
+		frame55.setLocationRelativeTo(frameHuvud);
+		frame56.setLocationRelativeTo(frameHuvud);
+		frame57.setLocationRelativeTo(frameHuvud);
+		frame58.setLocationRelativeTo(frameHuvud);
+		frame59.setLocationRelativeTo(frameHuvud);
+		frame60.setLocationRelativeTo(frameHuvud);
+		frame61.setLocationRelativeTo(frameHuvud);
+		frame62.setLocationRelativeTo(frameHuvud);
+		frame63.setLocationRelativeTo(frameHuvud);
+		frame64.setLocationRelativeTo(frameHuvud);
+		frame65.setLocationRelativeTo(frameHuvud);
+		frame66.setLocationRelativeTo(frameHuvud);
+		frame67.setLocationRelativeTo(frameHuvud);
+		frame68.setLocationRelativeTo(frameHuvud);
+		frame69.setLocationRelativeTo(frameHuvud);
+		frame70.setLocationRelativeTo(frameHuvud);
+		frame71.setLocationRelativeTo(frameHuvud);
+		frame72.setLocationRelativeTo(frameHuvud);
+		frame73.setLocationRelativeTo(frameHuvud);
+		frame74.setLocationRelativeTo(frameHuvud);
+		frame75.setLocationRelativeTo(frameHuvud);
+		frame76.setLocationRelativeTo(frameHuvud);
+		frame77.setLocationRelativeTo(frameHuvud);
+		frame78.setLocationRelativeTo(frameHuvud);
+		frame79.setLocationRelativeTo(frameHuvud);
+		frame80.setLocationRelativeTo(frameHuvud);
+		frame81.setLocationRelativeTo(frameHuvud);
+		frame82.setLocationRelativeTo(frameHuvud);
+		frame83.setLocationRelativeTo(frameHuvud);
+		frame84.setLocationRelativeTo(frameHuvud);
+		frame85.setLocationRelativeTo(frameHuvud);
+		frame86.setLocationRelativeTo(frameHuvud);
+		frame87.setLocationRelativeTo(frameHuvud);
+		frame88.setLocationRelativeTo(frameHuvud);
+		frame89.setLocationRelativeTo(frameHuvud);
+		frame91.setLocationRelativeTo(frameHuvud);
+		frame92.setLocationRelativeTo(frameHuvud);
+		frame93.setLocationRelativeTo(frameHuvud);
+		frame94.setLocationRelativeTo(frameHuvud);
+		frame95.setLocationRelativeTo(frameHuvud);
+		frame96.setLocationRelativeTo(frameHuvud);
+		frame97.setLocationRelativeTo(frameHuvud);
+		frame98.setLocationRelativeTo(frameHuvud);
+		frame99.setLocationRelativeTo(frameHuvud);
+		frame100.setLocationRelativeTo(frameHuvud);
+		frame101.setLocationRelativeTo(frameHuvud);
+		frame102.setLocationRelativeTo(frameHuvud);
+		frame103.setLocationRelativeTo(frameHuvud);
+		frame104.setLocationRelativeTo(frameHuvud);
+		frame105.setLocationRelativeTo(frameHuvud);
+		frame106.setLocationRelativeTo(frameHuvud);
+		frame107.setLocationRelativeTo(frameHuvud);
+		frame108.setLocationRelativeTo(frameHuvud);
+		frame109.setLocationRelativeTo(frameHuvud);
+		frame110.setLocationRelativeTo(frameHuvud);
+		frame111.setLocationRelativeTo(frameHuvud);
+		frame112.setLocationRelativeTo(frameHuvud);
+		frame113.setLocationRelativeTo(frameHuvud);
+		frame114.setLocationRelativeTo(frameHuvud);
+
+		
 
 			if (e.getSource() == button3){
 			 frame3.setVisible(true); 
