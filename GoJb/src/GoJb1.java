@@ -449,7 +449,6 @@ public class GoJb1 implements ActionListener{
 	JButton button113 = new JButton("Gruvvagn med hopper", i113);
 	JButton button114 = new JButton("Koppel", i114);
 	
-	
 	ImageIcon kullersten = new ImageIcon(getClass().getResource("images/1.png"));
 	ImageIcon rödsten = new ImageIcon(getClass().getResource("images/2.png"));
 	ImageIcon plankor = new ImageIcon(getClass().getResource("images/3.png"));
