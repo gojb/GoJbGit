@@ -2289,15 +2289,15 @@ public class GoJb1 implements ActionListener{
 			buttons49[8].setIcon(plankor);
 			buttons49[9].setIcon(null);
 
-			buttons50[1].setIcon(null);
-			buttons50[2].setIcon(null);
-			buttons50[3].setIcon(null);
-			buttons50[4].setIcon(null);
-			buttons50[5].setIcon(null);
-			buttons50[6].setIcon(null);
-			buttons50[7].setIcon(null);
-			buttons50[8].setIcon(null);
-			buttons50[9].setIcon(null);
+			buttons50[1].setIcon(glas);
+			buttons50[2].setIcon(glas);
+			buttons50[3].setIcon(glas);
+			buttons50[4].setIcon(glas);
+			buttons50[5].setIcon(nederstjärna);
+			buttons50[6].setIcon(glas);
+			buttons50[7].setIcon(obsidian);
+			buttons50[8].setIcon(obsidian);
+			buttons50[9].setIcon(obsidian);
 
 			buttons51[1].setIcon(null);
 			buttons51[2].setIcon(null);
@@ -2312,22 +2312,22 @@ public class GoJb1 implements ActionListener{
 			buttons52[1].setIcon(null);
 			buttons52[2].setIcon(null);
 			buttons52[3].setIcon(null);
-			buttons52[4].setIcon(null);
+			buttons52[4].setIcon(tegel);
 			buttons52[5].setIcon(null);
-			buttons52[6].setIcon(null);
+			buttons52[6].setIcon(tegel);
 			buttons52[7].setIcon(null);
-			buttons52[8].setIcon(null);
+			buttons52[8].setIcon(tegel);
 			buttons52[9].setIcon(null);
 
-			buttons53[1].setIcon(null);
-			buttons53[2].setIcon(null);
-			buttons53[3].setIcon(null);
+			buttons53[1].setIcon(järnblock);
+			buttons53[2].setIcon(järnblock);
+			buttons53[3].setIcon(järnblock);
 			buttons53[4].setIcon(null);
-			buttons53[5].setIcon(null);
+			buttons53[5].setIcon(järn);
 			buttons53[6].setIcon(null);
-			buttons53[7].setIcon(null);
-			buttons53[8].setIcon(null);
-			buttons53[9].setIcon(null);
+			buttons53[7].setIcon(järn);
+			buttons53[8].setIcon(järn);
+			buttons53[9].setIcon(järn);
 
 			buttons54[1].setIcon(null);
 			buttons54[2].setIcon(null);
@@ -2340,14 +2340,14 @@ public class GoJb1 implements ActionListener{
 			buttons54[9].setIcon(null);
 
 			buttons55[1].setIcon(null);
-			buttons55[2].setIcon(null);
+			buttons55[2].setIcon(rödsten);
 			buttons55[3].setIcon(null);
-			buttons55[4].setIcon(null);
-			buttons55[5].setIcon(null);
-			buttons55[6].setIcon(null);
-			buttons55[7].setIcon(null);
-			buttons55[8].setIcon(null);
-			buttons55[9].setIcon(null);
+			buttons55[4].setIcon(rödsten);
+			buttons55[5].setIcon(nederkvarts);
+			buttons55[6].setIcon(rödsten);
+			buttons55[7].setIcon(sten);
+			buttons55[8].setIcon(sten);
+			buttons55[9].setIcon(sten);
 
 			buttons56[1].setIcon(null);
 			buttons56[2].setIcon(null);
