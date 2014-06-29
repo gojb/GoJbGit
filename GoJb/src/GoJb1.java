@@ -479,7 +479,7 @@ public class GoJb1 implements ActionListener{
 	ImageIcon färger = new ImageIcon(getClass().getResource("images/90.gif"));
 	ImageIcon raketstjärna = new ImageIcon(getClass().getResource("images/111.png"));
 	ImageIcon dynamit = new ImageIcon(getClass().getResource("images/18.png"));
-	ImageIcon block = new ImageIcon(getClass().getResource("images/1008.png"));
+	ImageIcon block = new ImageIcon(getClass().getResource("images/1008.gif"));
 
 
 	
