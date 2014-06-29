@@ -2935,6 +2935,7 @@ public class GoJb1 implements ActionListener{
 			buttons114[9].setIcon(tråd);
 
 
+		
 		frameHuvud.add(scrollBar);
 		frameHuvud.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setLayout(new GridLayout(36, 3));
