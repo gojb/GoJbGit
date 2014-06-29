@@ -489,7 +489,7 @@ public class GoJb1 implements ActionListener{
 	ImageIcon guldklimp = new ImageIcon(getClass().getResource("images/98.png"));
 	ImageIcon järnträ = new ImageIcon(getClass().getResource("images/1009.gif"));
 	ImageIcon fjäder = new ImageIcon(getClass().getResource("images/1030.png"));
-	ImageIcon bläck = new ImageIcon(getClass().getResource("images/1041.gif"));
+	ImageIcon bläck = new ImageIcon(getClass().getResource("images/1041.png"));
 	ImageIcon tryck = new ImageIcon(getClass().getResource("images/1011.gif"));
 
 
