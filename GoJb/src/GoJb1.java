@@ -480,6 +480,10 @@ public class GoJb1 implements ActionListener{
 	ImageIcon raketstjärna = new ImageIcon(getClass().getResource("images/111.png"));
 	ImageIcon dynamit = new ImageIcon(getClass().getResource("images/18.png"));
 	ImageIcon block = new ImageIcon(getClass().getResource("images/1008.gif"));
+	ImageIcon socker = new ImageIcon(getClass().getResource("images/91.png"));
+	ImageIcon ägg = new ImageIcon(getClass().getResource("images/1035.png"));
+	ImageIcon pumpa = new ImageIcon(getClass().getResource("images/1015.png"));
+	ImageIcon kol = new ImageIcon(getClass().getResource("images/1007.png"));
 
 
 	
@@ -2941,11 +2945,11 @@ public class GoJb1 implements ActionListener{
 			buttons109[1].setIcon(null);
 			buttons109[2].setIcon(null);
 			buttons109[3].setIcon(null);
-			buttons109[4].setIcon(null);
-			buttons109[5].setIcon(null);
+			buttons109[4].setIcon(pumpa);
+			buttons109[5].setIcon(socker);
 			buttons109[6].setIcon(null);
 			buttons109[7].setIcon(null);
-			buttons109[8].setIcon(null);
+			buttons109[8].setIcon(ägg);
 			buttons109[9].setIcon(null);
 
 			buttons110[1].setIcon(null);
