@@ -454,7 +454,7 @@ public class GoJb1 implements ActionListener{
 	ImageIcon pilbåge = new ImageIcon(getClass().getResource("images/68.gif"));
 	ImageIcon tra = new ImageIcon(getClass().getResource("images/200.png"));
 	ImageIcon sand = new ImageIcon(getClass().getResource("images/4.png"));
-	ImageIcon ull = new ImageIcon(getClass().getResource("images/15.png"));
+	ImageIcon ull = new ImageIcon(getClass().getResource("images/1026.gif"));
 	ImageIcon guld = new ImageIcon(getClass().getResource("images/5.png"));
 	ImageIcon pinne = new ImageIcon(getClass().getResource("images/71.png"));
 	ImageIcon tryckplatta = new ImageIcon(getClass().getResource("images/30.png"));
@@ -515,6 +515,8 @@ public class GoJb1 implements ActionListener{
 	ImageIcon järnblock = new ImageIcon(getClass().getResource("images/1021.png"));
 	ImageIcon trähalvblock = new ImageIcon(getClass().getResource("images/1023.png"));
 	ImageIcon nederkvarts = new ImageIcon(getClass().getResource("images/1022.png"));
+	ImageIcon material = new ImageIcon(getClass().getResource("images/1027.gif"));
+	ImageIcon snubbeltrådskrok = new ImageIcon(getClass().getResource("images/49.gif"));
 
 	
 	
@@ -2359,28 +2361,28 @@ public class GoJb1 implements ActionListener{
 			buttons56[8].setIcon(null);
 			buttons56[9].setIcon(null);
 
-			buttons57[1].setIcon(null);
-			buttons57[2].setIcon(null);
-			buttons57[3].setIcon(null);
-			buttons57[4].setIcon(null);
-			buttons57[5].setIcon(null);
-			buttons57[6].setIcon(null);
-			buttons57[7].setIcon(null);
-			buttons57[8].setIcon(null);
-			buttons57[9].setIcon(null);
+			buttons57[1].setIcon(material);
+			buttons57[2].setIcon(material);
+			buttons57[3].setIcon(material);
+			buttons57[4].setIcon(material);
+			buttons57[5].setIcon(material);
+			buttons57[6].setIcon(material);
+			buttons57[7].setIcon(material);
+			buttons57[8].setIcon(material);
+			buttons57[9].setIcon(material);
 
-			buttons58[1].setIcon(null);
+			buttons58[1].setIcon(järn);
 			buttons58[2].setIcon(null);
-			buttons58[3].setIcon(null);
-			buttons58[4].setIcon(null);
-			buttons58[5].setIcon(null);
-			buttons58[6].setIcon(null);
+			buttons58[3].setIcon(järn);
+			buttons58[4].setIcon(järn);
+			buttons58[5].setIcon(kista);
+			buttons58[6].setIcon(järn);
 			buttons58[7].setIcon(null);
-			buttons58[8].setIcon(null);
+			buttons58[8].setIcon(järn);
 			buttons58[9].setIcon(null);
 
 			buttons59[1].setIcon(null);
-			buttons59[2].setIcon(null);
+			buttons59[2].setIcon(ull);
 			buttons59[3].setIcon(null);
 			buttons59[4].setIcon(null);
 			buttons59[5].setIcon(null);
@@ -2389,35 +2391,35 @@ public class GoJb1 implements ActionListener{
 			buttons59[8].setIcon(null);
 			buttons59[9].setIcon(null);
 
-			buttons60[1].setIcon(null);
-			buttons60[2].setIcon(null);
-			buttons60[3].setIcon(null);
-			buttons60[4].setIcon(null);
-			buttons60[5].setIcon(null);
-			buttons60[6].setIcon(null);
-			buttons60[7].setIcon(null);
-			buttons60[8].setIcon(null);
-			buttons60[9].setIcon(null);
+			buttons60[1].setIcon(järn);
+			buttons60[2].setIcon(pinne);
+			buttons60[3].setIcon(järn);
+			buttons60[4].setIcon(järn);
+			buttons60[5].setIcon(rödstensfackla);
+			buttons60[6].setIcon(järn);
+			buttons60[7].setIcon(järn);
+			buttons60[8].setIcon(pinne);
+			buttons60[9].setIcon(järn);
 
-			buttons61[1].setIcon(null);
-			buttons61[2].setIcon(null);
-			buttons61[3].setIcon(null);
-			buttons61[4].setIcon(null);
+			buttons61[1].setIcon(kullersten);
+			buttons61[2].setIcon(kullersten);
+			buttons61[3].setIcon(kullersten);
+			buttons61[4].setIcon(kullersten);
 			buttons61[5].setIcon(null);
-			buttons61[6].setIcon(null);
-			buttons61[7].setIcon(null);
-			buttons61[8].setIcon(null);
-			buttons61[9].setIcon(null);
+			buttons61[6].setIcon(kullersten);
+			buttons61[7].setIcon(kullersten);
+			buttons61[8].setIcon(rödsten);
+			buttons61[9].setIcon(kullersten);
 
-			buttons62[1].setIcon(null);
-			buttons62[2].setIcon(null);
-			buttons62[3].setIcon(null);
-			buttons62[4].setIcon(null);
-			buttons62[5].setIcon(null);
-			buttons62[6].setIcon(null);
-			buttons62[7].setIcon(null);
-			buttons62[8].setIcon(null);
-			buttons62[9].setIcon(null);
+			buttons62[1].setIcon(vete);
+			buttons62[2].setIcon(vete);
+			buttons62[3].setIcon(vete);
+			buttons62[4].setIcon(vete);
+			buttons62[5].setIcon(vete);
+			buttons62[6].setIcon(vete);
+			buttons62[7].setIcon(vete);
+			buttons62[8].setIcon(vete);
+			buttons62[9].setIcon(vete);
 
 			buttons63[1].setIcon(null);
 			buttons63[2].setIcon(järnStenTrä);
