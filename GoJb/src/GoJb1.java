@@ -2126,14 +2126,14 @@ public class GoJb1 implements ActionListener{
 			buttons25[8].setIcon(pinne);
 			buttons25[9].setIcon(null);
 
-			buttons26[1].setIcon(null);
-			buttons26[2].setIcon(null);
+			buttons26[1].setIcon(järnträ);
+			buttons26[2].setIcon(järnträ);
 			buttons26[3].setIcon(null);
-			buttons26[4].setIcon(null);
-			buttons26[5].setIcon(null);
+			buttons26[4].setIcon(järnträ);
+			buttons26[5].setIcon(järnträ);
 			buttons26[6].setIcon(null);
-			buttons26[7].setIcon(null);
-			buttons26[8].setIcon(null);
+			buttons26[7].setIcon(järnträ);
+			buttons26[8].setIcon(järnträ);
 			buttons26[9].setIcon(null);
 
 			buttons27[1].setIcon(null);
