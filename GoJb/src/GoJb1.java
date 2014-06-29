@@ -492,6 +492,14 @@ public class GoJb1 implements ActionListener{
 	ImageIcon bläck = new ImageIcon(getClass().getResource("images/1041.png"));
 	ImageIcon tryck = new ImageIcon(getClass().getResource("images/1011.gif"));
 	ImageIcon melon = new ImageIcon(getClass().getResource("images/1017.png"));
+	ImageIcon blazepulver = new ImageIcon(getClass().getResource("images/101.png"));
+	ImageIcon blaze = new ImageIcon(getClass().getResource("images/1019.png"));
+	ImageIcon enderpärla = new ImageIcon(getClass().getResource("images/1040.png"));
+	ImageIcon svamp = new ImageIcon(getClass().getResource("images/1039.png"));
+	ImageIcon spindelöga = new ImageIcon(getClass().getResource("images/1038.png"));
+	ImageIcon glödstenspulver = new ImageIcon(getClass().getResource("images/1014.png"));
+	ImageIcon fackla = new ImageIcon(getClass().getResource("images/20.png"));
+	ImageIcon glas = new ImageIcon(getClass().getResource("images/1016.png"));
 
 	
 	JPanel frame = new JPanel();
@@ -2873,7 +2881,7 @@ public class GoJb1 implements ActionListener{
 			buttons101[2].setIcon(null);
 			buttons101[3].setIcon(null);
 			buttons101[4].setIcon(null);
-			buttons101[5].setIcon(null);
+			buttons101[5].setIcon(blaze);
 			buttons101[6].setIcon(null);
 			buttons101[7].setIcon(null);
 			buttons101[8].setIcon(null);
@@ -2883,20 +2891,20 @@ public class GoJb1 implements ActionListener{
 			buttons102[2].setIcon(null);
 			buttons102[3].setIcon(null);
 			buttons102[4].setIcon(null);
-			buttons102[5].setIcon(null);
+			buttons102[5].setIcon(slime);
 			buttons102[6].setIcon(null);
 			buttons102[7].setIcon(null);
-			buttons102[8].setIcon(null);
+			buttons102[8].setIcon(blazepulver);
 			buttons102[9].setIcon(null);
 
 			buttons103[1].setIcon(null);
 			buttons103[2].setIcon(null);
 			buttons103[3].setIcon(null);
 			buttons103[4].setIcon(null);
-			buttons103[5].setIcon(null);
+			buttons103[5].setIcon(enderpärla);
 			buttons103[6].setIcon(null);
 			buttons103[7].setIcon(null);
-			buttons103[8].setIcon(null);
+			buttons103[8].setIcon(blazepulver);
 			buttons103[9].setIcon(null);
 
 			buttons104[1].setIcon(guldklimp);
