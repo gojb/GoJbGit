@@ -507,7 +507,9 @@ public class GoJb1 implements ActionListener{
 	ImageIcon mjölk = new ImageIcon(getClass().getResource("images/1036.png"));
 	ImageIcon färgglas = new ImageIcon(getClass().getResource("images/1012.gif"));
 	ImageIcon sockerrör = new ImageIcon(getClass().getResource("images/1034.png"));
+	ImageIcon glödstenslampa = new ImageIcon(getClass().getResource("images/36.png"));
 
+	
 	
 	JPanel frame = new JPanel();
 	JFrame frameHuvud = new JFrame("GoJbGuide");
@@ -2634,30 +2636,30 @@ public class GoJb1 implements ActionListener{
 			buttons85[2].setIcon(null);
 			buttons85[3].setIcon(null);
 			buttons85[4].setIcon(null);
-			buttons85[5].setIcon(null);
+			buttons85[5].setIcon(kista);
 			buttons85[6].setIcon(null);
 			buttons85[7].setIcon(null);
-			buttons85[8].setIcon(null);
+			buttons85[8].setIcon(gruvvagn);
 			buttons85[9].setIcon(null);
 
 			buttons86[1].setIcon(null);
 			buttons86[2].setIcon(null);
 			buttons86[3].setIcon(null);
 			buttons86[4].setIcon(null);
-			buttons86[5].setIcon(null);
+			buttons86[5].setIcon(ugn);
 			buttons86[6].setIcon(null);
 			buttons86[7].setIcon(null);
-			buttons86[8].setIcon(null);
+			buttons86[8].setIcon(gruvvagn);
 			buttons86[9].setIcon(null);
 
 			buttons87[1].setIcon(null);
-			buttons87[2].setIcon(null);
+			buttons87[2].setIcon(järn);
 			buttons87[3].setIcon(null);
-			buttons87[4].setIcon(null);
-			buttons87[5].setIcon(null);
-			buttons87[6].setIcon(null);
+			buttons87[4].setIcon(järn);
+			buttons87[5].setIcon(rödsten);
+			buttons87[6].setIcon(järn);
 			buttons87[7].setIcon(null);
-			buttons87[8].setIcon(null);
+			buttons87[8].setIcon(järn);
 			buttons87[9].setIcon(null);
 
 			buttons88[1].setIcon(null);
