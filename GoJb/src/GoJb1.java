@@ -491,7 +491,7 @@ public class GoJb1 implements ActionListener{
 	ImageIcon fjäder = new ImageIcon(getClass().getResource("images/1030.png"));
 	ImageIcon bläck = new ImageIcon(getClass().getResource("images/1041.png"));
 	ImageIcon tryck = new ImageIcon(getClass().getResource("images/1011.gif"));
-
+	ImageIcon melon = new ImageIcon(getClass().getResource("images/1017.png"));
 
 	
 	JPanel frame = new JPanel();
@@ -2899,24 +2899,24 @@ public class GoJb1 implements ActionListener{
 			buttons103[8].setIcon(null);
 			buttons103[9].setIcon(null);
 
-			buttons104[1].setIcon(null);
-			buttons104[2].setIcon(null);
-			buttons104[3].setIcon(null);
-			buttons104[4].setIcon(null);
-			buttons104[5].setIcon(null);
-			buttons104[6].setIcon(null);
-			buttons104[7].setIcon(null);
-			buttons104[8].setIcon(null);
-			buttons104[9].setIcon(null);
+			buttons104[1].setIcon(guldklimp);
+			buttons104[2].setIcon(guldklimp);
+			buttons104[3].setIcon(guldklimp);
+			buttons104[4].setIcon(guldklimp);
+			buttons104[5].setIcon(melon);
+			buttons104[6].setIcon(guldklimp);
+			buttons104[7].setIcon(guldklimp);
+			buttons104[8].setIcon(guldklimp);
+			buttons104[9].setIcon(guldklimp);
 
 			buttons105[1].setIcon(null);
 			buttons105[2].setIcon(null);
 			buttons105[3].setIcon(null);
-			buttons105[4].setIcon(null);
+			buttons105[4].setIcon(fjäder);
 			buttons105[5].setIcon(null);
 			buttons105[6].setIcon(null);
-			buttons105[7].setIcon(null);
-			buttons105[8].setIcon(null);
+			buttons105[7].setIcon(bläck);
+			buttons105[8].setIcon(bok);
 			buttons105[9].setIcon(null);
 
 			buttons106[1].setIcon(pinne);
