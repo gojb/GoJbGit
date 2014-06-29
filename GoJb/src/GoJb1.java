@@ -9,11 +9,7 @@ import javax.swing.*;;
  *
  */
 public class GoJb1 implements ActionListener{
-	
-//	/oliusalfbl//hdksdjasödiuhhisuövviudslds
-	
-	
-	
+
 	JButton[] buttons3 = new JButton[10];
 	JButton[] buttons7 = new JButton[10];
 	JButton[] buttons8 = new JButton[10];
@@ -510,6 +506,7 @@ public class GoJb1 implements ActionListener{
 	ImageIcon rödstensfackla = new ImageIcon(getClass().getResource("images/31.png"));
 	ImageIcon mjölk = new ImageIcon(getClass().getResource("images/1036.png"));
 	ImageIcon färgglas = new ImageIcon(getClass().getResource("images/1012.gif"));
+	ImageIcon sockerrör = new ImageIcon(getClass().getResource("images/1034.png"));
 
 	
 	JPanel frame = new JPanel();
@@ -2665,29 +2662,29 @@ public class GoJb1 implements ActionListener{
 
 			buttons88[1].setIcon(null);
 			buttons88[2].setIcon(null);
-			buttons88[3].setIcon(null);
+			buttons88[3].setIcon(pinne);
 			buttons88[4].setIcon(null);
-			buttons88[5].setIcon(null);
-			buttons88[6].setIcon(null);
-			buttons88[7].setIcon(null);
+			buttons88[5].setIcon(pinne);
+			buttons88[6].setIcon(tråd);
+			buttons88[7].setIcon(pinne);
 			buttons88[8].setIcon(null);
-			buttons88[9].setIcon(null);
+			buttons88[9].setIcon(tråd);
 
 			buttons89[1].setIcon(null);
-			buttons89[2].setIcon(null);
+			buttons89[2].setIcon(guld);
 			buttons89[3].setIcon(null);
-			buttons89[4].setIcon(null);
-			buttons89[5].setIcon(null);
-			buttons89[6].setIcon(null);
+			buttons89[4].setIcon(guld);
+			buttons89[5].setIcon(rödsten);
+			buttons89[6].setIcon(guld);
 			buttons89[7].setIcon(null);
-			buttons89[8].setIcon(null);
+			buttons89[8].setIcon(guld);
 			buttons89[9].setIcon(null);
 
 			buttons91[1].setIcon(null);
 			buttons91[2].setIcon(null);
 			buttons91[3].setIcon(null);
 			buttons91[4].setIcon(null);
-			buttons91[5].setIcon(null);
+			buttons91[5].setIcon(sockerrör);
 			buttons91[6].setIcon(null);
 			buttons91[7].setIcon(null);
 			buttons91[8].setIcon(null);
