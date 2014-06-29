@@ -2130,9 +2130,9 @@ public class GoJb1 implements ActionListener{
 			buttons25[1].setIcon(plankor);
 			buttons25[2].setIcon(plankor);
 			buttons25[3].setIcon(plankor);
-			buttons25[4].setIcon(null);
-			buttons25[5].setIcon(pinne);
-			buttons25[6].setIcon(null);
+			buttons25[4].setIcon(plankor);
+			buttons25[5].setIcon(plankor);
+			buttons25[6].setIcon(plankor);
 			buttons25[7].setIcon(null);
 			buttons25[8].setIcon(pinne);
 			buttons25[9].setIcon(null);
@@ -2148,13 +2148,13 @@ public class GoJb1 implements ActionListener{
 			buttons26[9].setIcon(null);
 
 			buttons27[1].setIcon(pinne);
-			buttons27[2].setIcon(pinne);
+			buttons27[2].setIcon(null);
 			buttons27[3].setIcon(pinne);
-			buttons27[4].setIcon(null);
+			buttons27[4].setIcon(pinne);
 			buttons27[5].setIcon(pinne);
-			buttons27[6].setIcon(null);
+			buttons27[6].setIcon(pinne);
 			buttons27[7].setIcon(pinne);
-			buttons27[8].setIcon(pinne);
+			buttons27[8].setIcon(null);
 			buttons27[9].setIcon(pinne);
 
 			buttons28[1].setIcon(pinne);
@@ -2184,14 +2184,14 @@ public class GoJb1 implements ActionListener{
 			buttons30[5].setIcon(null);
 			buttons30[6].setIcon(null);
 			buttons30[7].setIcon(null);
-			buttons30[8].setIcon(null);
-			buttons30[9].setIcon(null);
+			buttons30[8].setIcon(tryck);
+			buttons30[9].setIcon(tryck);
 
 			buttons31[1].setIcon(null);
-			buttons31[2].setIcon(null);
+			buttons31[2].setIcon(rödsten);
 			buttons31[3].setIcon(null);
 			buttons31[4].setIcon(null);
-			buttons31[5].setIcon(null);
+			buttons31[5].setIcon(pinne);
 			buttons31[6].setIcon(null);
 			buttons31[7].setIcon(null);
 			buttons31[8].setIcon(null);
@@ -2201,41 +2201,41 @@ public class GoJb1 implements ActionListener{
 			buttons32[2].setIcon(null);
 			buttons32[3].setIcon(null);
 			buttons32[4].setIcon(null);
-			buttons32[5].setIcon(null);
+			buttons32[5].setIcon(plankor);
 			buttons32[6].setIcon(null);
 			buttons32[7].setIcon(null);
 			buttons32[8].setIcon(null);
 			buttons32[9].setIcon(null);
 
-			buttons33[1].setIcon(null);
-			buttons33[2].setIcon(null);
+			buttons33[1].setIcon(snöboll);
+			buttons33[2].setIcon(snöboll);
 			buttons33[3].setIcon(null);
-			buttons33[4].setIcon(null);
-			buttons33[5].setIcon(null);
+			buttons33[4].setIcon(snöboll);
+			buttons33[5].setIcon(snöboll);
 			buttons33[6].setIcon(null);
 			buttons33[7].setIcon(null);
 			buttons33[8].setIcon(null);
 			buttons33[9].setIcon(null);
 
-			buttons34[1].setIcon(null);
-			buttons34[2].setIcon(null);
-			buttons34[3].setIcon(null);
-			buttons34[4].setIcon(null);
-			buttons34[5].setIcon(null);
-			buttons34[6].setIcon(null);
-			buttons34[7].setIcon(null);
-			buttons34[8].setIcon(null);
-			buttons34[9].setIcon(null);
+			buttons34[1].setIcon(plankor);
+			buttons34[2].setIcon(plankor);
+			buttons34[3].setIcon(plankor);
+			buttons34[4].setIcon(plankor);
+			buttons34[5].setIcon(diamant);
+			buttons34[6].setIcon(plankor);
+			buttons34[7].setIcon(plankor);
+			buttons34[8].setIcon(plankor);
+			buttons34[9].setIcon(plankor);
 
 			buttons35[1].setIcon(null);
 			buttons35[2].setIcon(null);
 			buttons35[3].setIcon(null);
-			buttons35[4].setIcon(null);
-			buttons35[5].setIcon(null);
-			buttons35[6].setIcon(null);
-			buttons35[7].setIcon(null);
-			buttons35[8].setIcon(null);
-			buttons35[9].setIcon(null);
+			buttons35[4].setIcon(pinne);
+			buttons35[5].setIcon(pinne);
+			buttons35[6].setIcon(pinne);
+			buttons35[7].setIcon(pinne);
+			buttons35[8].setIcon(pinne);
+			buttons35[9].setIcon(pinne);
 
 			buttons36[1].setIcon(null);
 			buttons36[2].setIcon(null);
@@ -2251,7 +2251,7 @@ public class GoJb1 implements ActionListener{
 			buttons37[2].setIcon(null);
 			buttons37[3].setIcon(null);
 			buttons37[4].setIcon(null);
-			buttons37[5].setIcon(null);
+			buttons37[5].setIcon(pumpa);
 			buttons37[6].setIcon(null);
 			buttons37[7].setIcon(null);
 			buttons37[8].setIcon(null);
