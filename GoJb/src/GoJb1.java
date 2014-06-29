@@ -3388,10 +3388,217 @@ public class GoJb1 implements ActionListener{
 			 }
 					
 			Icon abc = ((AbstractButton) e.getSource()).getIcon();
+			
 			if (abc==kullersten) {
-				
-			}
-			System.out.println(kullersten);
+				JOptionPane.showMessageDialog(null, "kullersten  ");
+				}
+				if (abc==kullersten) {
+				JOptionPane.showMessageDialog(null, "kullersten  ");
+				}
+				if (abc==kullersten) {
+				JOptionPane.showMessageDialog(null, "kullersten  ");
+				}
+				if (abc==kullersten) {
+				JOptionPane.showMessageDialog(null, "kullersten  ");
+				}
+				if (abc==kullersten) {
+				JOptionPane.showMessageDialog(null, "kullersten  ");
+				}
+				if (abc==kullersten) {
+				JOptionPane.showMessageDialog(null, "kullersten  ");
+				}
+				if (abc==kullersten) {
+				JOptionPane.showMessageDialog(null, "kullersten  ");
+				}
+				if (abc==kullersten) {
+				JOptionPane.showMessageDialog(null, "kullersten  ");
+				}
+				if (abc==kullersten) {
+				JOptionPane.showMessageDialog(null, "kullersten  ");
+				}
+				if (abc==kullersten) {
+				JOptionPane.showMessageDialog(null, "kullersten  ");
+				}
+				if (abc==kullersten) {
+				JOptionPane.showMessageDialog(null, "kullersten  ");
+				}
+				if (abc==kullersten) {
+				JOptionPane.showMessageDialog(null, "kullersten  ");
+				}
+				if (abc==kullersten) {
+				JOptionPane.showMessageDialog(null, "kullersten  ");
+				}
+				if (abc==kullersten) {
+				JOptionPane.showMessageDialog(null, "kullersten  ");
+				}
+				if (abc==kullersten) {
+				JOptionPane.showMessageDialog(null, "kullersten  ");
+				}
+				if (abc==kullersten) {
+				JOptionPane.showMessageDialog(null, "kullersten  ");
+				}
+				if (abc==kullersten) {
+				JOptionPane.showMessageDialog(null, "kullersten  ");
+				}
+				if (abc==kullersten) {
+				JOptionPane.showMessageDialog(null, "kullersten  ");
+				}
+				if (abc==kullersten) {
+				JOptionPane.showMessageDialog(null, "kullersten  ");
+				}
+				if (abc==kullersten) {
+				JOptionPane.showMessageDialog(null, "kullersten  ");
+				}
+				if (abc==kullersten) {
+				JOptionPane.showMessageDialog(null, "kullersten  ");
+				}
+				if (abc==kullersten) {
+				JOptionPane.showMessageDialog(null, "kullersten  ");
+				}
+				if (abc==kullersten) {
+				JOptionPane.showMessageDialog(null, "kullersten  ");
+				}
+				if (abc==kullersten) {
+				JOptionPane.showMessageDialog(null, "kullersten  ");
+				}
+				if (abc==kullersten) {
+				JOptionPane.showMessageDialog(null, "kullersten  ");
+				}
+				if (abc==kullersten) {
+				JOptionPane.showMessageDialog(null, "kullersten  ");
+				}
+				if (abc==kullersten) {
+				JOptionPane.showMessageDialog(null, "kullersten  ");
+				}
+				if (abc==kullersten) {
+				JOptionPane.showMessageDialog(null, "kullersten  ");
+				}
+				if (abc==kullersten) {
+				JOptionPane.showMessageDialog(null, "kullersten  ");
+				}
+				if (abc==kullersten) {
+				JOptionPane.showMessageDialog(null, "kullersten  ");
+				}
+				if (abc==kullersten) {
+				JOptionPane.showMessageDialog(null, "kullersten  ");
+				}
+				if (abc==kullersten) {
+				JOptionPane.showMessageDialog(null, "kullersten  ");
+				}
+				if (abc==kullersten) {
+				JOptionPane.showMessageDialog(null, "kullersten  ");
+				}
+				if (abc==kullersten) {
+				JOptionPane.showMessageDialog(null, "kullersten  ");
+				}
+				if (abc==kullersten) {
+				JOptionPane.showMessageDialog(null, "kullersten  ");
+				}
+				if (abc==kullersten) {
+				JOptionPane.showMessageDialog(null, "kullersten  ");
+				}
+				if (abc==kullersten) {
+				JOptionPane.showMessageDialog(null, "kullersten  ");
+				}
+				if (abc==kullersten) {
+				JOptionPane.showMessageDialog(null, "kullersten  ");
+				}
+				if (abc==kullersten) {
+				JOptionPane.showMessageDialog(null, "kullersten  ");
+				}
+				if (abc==kullersten) {
+				JOptionPane.showMessageDialog(null, "kullersten  ");
+				}
+				if (abc==kullersten) {
+				JOptionPane.showMessageDialog(null, "kullersten  ");
+				}
+				if (abc==kullersten) {
+				JOptionPane.showMessageDialog(null, "kullersten  ");
+				}
+				if (abc==kullersten) {
+				JOptionPane.showMessageDialog(null, "kullersten  ");
+				}
+				if (abc==kullersten) {
+				JOptionPane.showMessageDialog(null, "kullersten  ");
+				}
+				if (abc==kullersten) {
+				JOptionPane.showMessageDialog(null, "kullersten  ");
+				}
+				if (abc==kullersten) {
+				JOptionPane.showMessageDialog(null, "kullersten  ");
+				}
+				if (abc==kullersten) {
+				JOptionPane.showMessageDialog(null, "kullersten  ");
+				}
+				if (abc==kullersten) {
+				JOptionPane.showMessageDialog(null, "kullersten  ");
+				}
+				if (abc==kullersten) {
+				JOptionPane.showMessageDialog(null, "kullersten  ");
+				}
+				if (abc==kullersten) {
+				JOptionPane.showMessageDialog(null, "kullersten  ");
+				}
+				if (abc==kullersten) {
+				JOptionPane.showMessageDialog(null, "kullersten  ");
+				}
+				if (abc==kullersten) {
+				JOptionPane.showMessageDialog(null, "kullersten  ");
+				}
+				if (abc==kullersten) {
+				JOptionPane.showMessageDialog(null, "kullersten  ");
+				}
+				if (abc==kullersten) {
+				JOptionPane.showMessageDialog(null, "kullersten  ");
+				}
+				if (abc==kullersten) {
+				JOptionPane.showMessageDialog(null, "kullersten  ");
+				}
+				if (abc==kullersten) {
+				JOptionPane.showMessageDialog(null, "kullersten  ");
+				}
+				if (abc==kullersten) {
+				JOptionPane.showMessageDialog(null, "kullersten  ");
+				}
+				if (abc==kullersten) {
+				JOptionPane.showMessageDialog(null, "kullersten  ");
+				}
+				if (abc==kullersten) {
+				JOptionPane.showMessageDialog(null, "kullersten  ");
+				}
+				if (abc==kullersten) {
+				JOptionPane.showMessageDialog(null, "kullersten  ");
+				}
+				if (abc==kullersten) {
+				JOptionPane.showMessageDialog(null, "kullersten  ");
+				}
+				if (abc==kullersten) {
+				JOptionPane.showMessageDialog(null, "kullersten  ");
+				}
+				if (abc==kullersten) {
+				JOptionPane.showMessageDialog(null, "kullersten  ");
+				}
+				if (abc==kullersten) {
+				JOptionPane.showMessageDialog(null, "kullersten  ");
+				}
+				if (abc==kullersten) {
+				JOptionPane.showMessageDialog(null, "kullersten  ");
+				}
+				if (abc==kullersten) {
+				JOptionPane.showMessageDialog(null, "kullersten  ");
+				}
+				if (abc==kullersten) {
+				JOptionPane.showMessageDialog(null, "kullersten  ");
+				}
+				if (abc==kullersten) {
+				JOptionPane.showMessageDialog(null, "kullersten  ");
+				}
+				if (abc==kullersten) {
+				JOptionPane.showMessageDialog(null, "kullersten  ");
+				}
+
+			
+			
 			
 			
 		
