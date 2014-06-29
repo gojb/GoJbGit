@@ -2139,31 +2139,31 @@ public class GoJb1 implements ActionListener{
 			buttons26[8].setIcon(järnträ);
 			buttons26[9].setIcon(null);
 
-			buttons27[1].setIcon(null);
-			buttons27[2].setIcon(null);
-			buttons27[3].setIcon(null);
+			buttons27[1].setIcon(pinne);
+			buttons27[2].setIcon(pinne);
+			buttons27[3].setIcon(pinne);
 			buttons27[4].setIcon(null);
-			buttons27[5].setIcon(null);
+			buttons27[5].setIcon(pinne);
 			buttons27[6].setIcon(null);
-			buttons27[7].setIcon(null);
-			buttons27[8].setIcon(null);
-			buttons27[9].setIcon(null);
+			buttons27[7].setIcon(pinne);
+			buttons27[8].setIcon(pinne);
+			buttons27[9].setIcon(pinne);
 
-			buttons28[1].setIcon(null);
+			buttons28[1].setIcon(pinne);
 			buttons28[2].setIcon(null);
-			buttons28[3].setIcon(null);
-			buttons28[4].setIcon(null);
-			buttons28[5].setIcon(null);
-			buttons28[6].setIcon(null);
-			buttons28[7].setIcon(null);
+			buttons28[3].setIcon(pinne);
+			buttons28[4].setIcon(pinne);
+			buttons28[5].setIcon(järn);
+			buttons28[6].setIcon(pinne);
+			buttons28[7].setIcon(pinne);
 			buttons28[8].setIcon(null);
-			buttons28[9].setIcon(null);
+			buttons28[9].setIcon(pinne);
 
 			buttons29[1].setIcon(null);
-			buttons29[2].setIcon(null);
+			buttons29[2].setIcon(pinne);
 			buttons29[3].setIcon(null);
 			buttons29[4].setIcon(null);
-			buttons29[5].setIcon(null);
+			buttons29[5].setIcon(kullersten);
 			buttons29[6].setIcon(null);
 			buttons29[7].setIcon(null);
 			buttons29[8].setIcon(null);
