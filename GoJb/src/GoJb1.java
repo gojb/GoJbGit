@@ -2260,13 +2260,13 @@ public class GoJb1 implements ActionListener{
 			buttons46[9].setIcon(järn);
 
 			buttons47[1].setIcon(null);
-			buttons47[2].setIcon(null);
+			buttons47[2].setIcon(rödsten);
 			buttons47[3].setIcon(null);
-			buttons47[4].setIcon(null);
-			buttons47[5].setIcon(null);
-			buttons47[6].setIcon(null);
+			buttons47[4].setIcon(rödsten);
+			buttons47[5].setIcon(glödstenslampa);
+			buttons47[6].setIcon(rödsten);
 			buttons47[7].setIcon(null);
-			buttons47[8].setIcon(null);
+			buttons47[8].setIcon(rödsten);
 			buttons47[9].setIcon(null);
 
 			buttons48[1].setIcon(obsidian);
@@ -2302,12 +2302,12 @@ public class GoJb1 implements ActionListener{
 			buttons51[1].setIcon(null);
 			buttons51[2].setIcon(null);
 			buttons51[3].setIcon(null);
-			buttons51[4].setIcon(null);
-			buttons51[5].setIcon(null);
-			buttons51[6].setIcon(null);
-			buttons51[7].setIcon(null);
-			buttons51[8].setIcon(null);
-			buttons51[9].setIcon(null);
+			buttons51[4].setIcon(kullersten);
+			buttons51[5].setIcon(kullersten);
+			buttons51[6].setIcon(kullersten);
+			buttons51[7].setIcon(kullersten);
+			buttons51[8].setIcon(kullersten);
+			buttons51[9].setIcon(kullersten);
 
 			buttons52[1].setIcon(null);
 			buttons52[2].setIcon(null);
