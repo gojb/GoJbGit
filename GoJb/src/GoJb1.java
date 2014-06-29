@@ -2243,15 +2243,15 @@ public class GoJb1 implements ActionListener{
 			buttons45[8].setIcon(kullersten);
 			buttons45[9].setIcon(kullersten);
 
-			buttons46[1].setIcon(null);
+			buttons46[1].setIcon(järn);
 			buttons46[2].setIcon(null);
-			buttons46[3].setIcon(null);
-			buttons46[4].setIcon(null);
+			buttons46[3].setIcon(järn);
+			buttons46[4].setIcon(järn);
 			buttons46[5].setIcon(null);
-			buttons46[6].setIcon(null);
-			buttons46[7].setIcon(null);
-			buttons46[8].setIcon(null);
-			buttons46[9].setIcon(null);
+			buttons46[6].setIcon(järn);
+			buttons46[7].setIcon(järn);
+			buttons46[8].setIcon(järn);
+			buttons46[9].setIcon(järn);
 
 			buttons47[1].setIcon(null);
 			buttons47[2].setIcon(null);
@@ -2263,24 +2263,24 @@ public class GoJb1 implements ActionListener{
 			buttons47[8].setIcon(null);
 			buttons47[9].setIcon(null);
 
-			buttons48[1].setIcon(null);
-			buttons48[2].setIcon(null);
-			buttons48[3].setIcon(null);
-			buttons48[4].setIcon(null);
-			buttons48[5].setIcon(null);
-			buttons48[6].setIcon(null);
-			buttons48[7].setIcon(null);
-			buttons48[8].setIcon(null);
-			buttons48[9].setIcon(null);
+			buttons48[1].setIcon(obsidian);
+			buttons48[2].setIcon(obsidian);
+			buttons48[3].setIcon(obsidian);
+			buttons48[4].setIcon(obsidian);
+			buttons48[5].setIcon(enderöga);
+			buttons48[6].setIcon(obsidian);
+			buttons48[7].setIcon(obsidian);
+			buttons48[8].setIcon(obsidian);
+			buttons48[9].setIcon(obsidian);
 
 			buttons49[1].setIcon(null);
-			buttons49[2].setIcon(null);
+			buttons49[2].setIcon(järn);
 			buttons49[3].setIcon(null);
 			buttons49[4].setIcon(null);
-			buttons49[5].setIcon(null);
+			buttons49[5].setIcon(pinne);
 			buttons49[6].setIcon(null);
 			buttons49[7].setIcon(null);
-			buttons49[8].setIcon(null);
+			buttons49[8].setIcon(plankor);
 			buttons49[9].setIcon(null);
 
 			buttons50[1].setIcon(null);
