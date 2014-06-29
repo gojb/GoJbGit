@@ -3391,86 +3391,86 @@ public class GoJb1 implements ActionListener{
 			 }
 					
 			Icon abc = ((AbstractButton) e.getSource()).getIcon();
-			if (abc==kullersten) {
-				JOptionPane.showMessageDialog(null, "kullersten  ");
+				if (abc==tra) {
+				JOptionPane.showMessageDialog(null, "Trä  ");
 				}
 				if (abc==kullersten) {
-				JOptionPane.showMessageDialog(null, "kullersten  ");
+				JOptionPane.showMessageDialog(null, "Kullersten  ");
 				}
-				if (abc==kullersten) {
-				JOptionPane.showMessageDialog(null, "kullersten  ");
+				if (abc==rödsten) {
+				JOptionPane.showMessageDialog(null, "Rödsten  ");
 				}
-				if (abc==kullersten) {
-				JOptionPane.showMessageDialog(null, "kullersten  ");
+				if (abc==plankor) {
+				JOptionPane.showMessageDialog(null, "Plankor  ");dd
 				}
-				if (abc==kullersten) {
-				JOptionPane.showMessageDialog(null, "kullersten  ");
+				if (abc==pilbåge) {
+				JOptionPane.showMessageDialog(null, "Pilbåge ");ddd
 				}
-				if (abc==kullersten) {
-				JOptionPane.showMessageDialog(null, "kullersten  ");
+				if (abc==sand) {
+				JOptionPane.showMessageDialog(null, "Sand  ");
 				}
-				if (abc==kullersten) {
-				JOptionPane.showMessageDialog(null, "kullersten  ");
+				if (abc==ull) {
+				JOptionPane.showMessageDialog(null, "Ull  ");dddd
 				}
-				if (abc==kullersten) {
-				JOptionPane.showMessageDialog(null, "kullersten  ");
+				if (abc==guld) {
+				JOptionPane.showMessageDialog(null, "Guld  ");
 				}
-				if (abc==kullersten) {
-				JOptionPane.showMessageDialog(null, "kullersten  ");
+				if (abc==pinne) {
+				JOptionPane.showMessageDidalog(null, "Pinne  ");
 				}
-				if (abc==kullersten) {
-				JOptionPane.showMessageDialog(null, "kullersten  ");
+				if (abc==tryckplatta) {
+				JOptionPane.showMessageDiadlog(null, "Tryckplatta  ");
 				}
-				if (abc==kullersten) {
-				JOptionPane.showMessageDialog(null, "kullersten  ");
+				if (abc==kolv) {
+				JOptionPane.showMessageDialdog(null, "Kolv  ");
 				}
-				if (abc==kullersten) {
-				JOptionPane.showMessageDialog(null, "kullersten  ");
+				if (abc==slime) {
+				JOptionPane.showMessageDialog(null, "Slime  ");
 				}
-				if (abc==kullersten) {
-				JOptionPane.showMessageDialog(null, "kullersten  ");
+				if (abc==tråd) {
+				JOptionPane.showMessageDialog(null, "Tråd  ");
 				}
-				if (abc==kullersten) {
-				JOptionPane.showMessageDialog(null, "kullersten  ");
+				if (abc==tegel) {
+				JOptionPane.showMessageDialog(null, "Tegel  ");
 				}
-				if (abc==kullersten) {
-				JOptionPane.showMessageDialog(null, "kullersten  ");
+				if (abc==krut) {
+				JOptionPane.showMessageDialog(null, "Krut");
 				}
-				if (abc==kullersten) {
-				JOptionPane.showMessageDialog(null, "kullersten  ");
+				if (abc==järn) {
+				JOptionPane.showMessageDialog(null, "Järn  ");
 				}
-				if (abc==kullersten) {
-				JOptionPane.showMessageDialog(null, "kullersten  ");
+				if (abc==diamant) {
+				JOptionPane.showMessageDialog(null, "Diamant  ");
 				}
-				if (abc==kullersten) {
-				JOptionPane.showMessageDialog(null, "kullersten  ");
+				if (abc==snöboll) {
+				JOptionPane.showMessageDialog(null, "Snöboll  ");
 				}
-				if (abc==kullersten) {
-				JOptionPane.showMessageDialog(null, "kullersten  ");
+				if (abc==obsidian) {
+				JOptionPane.showMessageDialog(null, "Obsidian  ");
 				}
-				if (abc==kullersten) {
-				JOptionPane.showMessageDialog(null, "kullersten  ");
+				if (abc==enderöga) {
+				JOptionPane.showMessageDialodg(null, "Enderöga  ");
 				}
-				if (abc==kullersten) {
-				JOptionPane.showMessageDialog(null, "kullersten  ");
+				if (abc==bok) {
+				JOptionPane.showMessageDialogd(null, "Bok  ");
 				}
-				if (abc==kullersten) {
-				JOptionPane.showMessageDialog(null, "kullersten  ");
+				if (abc==papper) {
+				JOptionPane.showMessageDialdog(null, "Papper  ");
 				}
-				if (abc==kullersten) {
-				JOptionPane.showMessageDialog(null, "kullersten  ");
+				if (abc==läder) {
+				JOptionPane.showMessageDialog(null, "Läder  ");
 				}
-				if (abc==kullersten) {
-				JOptionPane.showMessageDialog(null, "kullersten  ");
+				if (abc==gruvvagn) {
+				JOptionPane.showMessageDialdog(null, "Gruvvagn  ");
 				}
-				if (abc==kullersten) {
-				JOptionPane.showMessageDialog(null, "kullersten  ");
+				if (abc==hopper) {
+				JOptionPane.showMessageDialodg(null, "Hopper  ");
 				}
-				if (abc==kullersten) {
-				JOptionPane.showMessageDialog(null, "kullersten  ");
+				if (abc==kista) {
+				JOptionPane.showMessageDialogd(null, "Kista  ");
 				}
-				if (abc==kullersten) {
-				JOptionPane.showMessageDialog(null, "kullersten  ");
+				if (abc==ugn) {
+				JOptionPane.showMessageDialodg(null, "Ugn  ");
 				}
 				if (abc==kullersten) {
 				JOptionPane.showMessageDialog(null, "kullersten  ");
