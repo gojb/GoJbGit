@@ -479,7 +479,7 @@ public class GoJb1 implements ActionListener{
 	ImageIcon färger = new ImageIcon(getClass().getResource("images/90.gif"));
 	ImageIcon raketstjärna = new ImageIcon(getClass().getResource("images/111.png"));
 	ImageIcon dynamit = new ImageIcon(getClass().getResource("images/18.png"));
-	ImageIcon block = new ImageIcon(getClass().getResource("images/1008.png"));
+	ImageIcon block = new ImageIcon(getClass().getResource("images/1008.gif"));
 
 
 	
@@ -2024,45 +2024,45 @@ public class GoJb1 implements ActionListener{
 			buttons16[4].setIcon(null);
 			buttons16[5].setIcon(null);
 			buttons16[6].setIcon(null);
-			buttons16[7].setIcon(null);
-			buttons16[8].setIcon(null);
-			buttons16[9].setIcon(null);
+			buttons16[7].setIcon(block);
+			buttons16[8].setIcon(block);
+			buttons16[9].setIcon(block);
 
 			buttons17[1].setIcon(null);
 			buttons17[2].setIcon(null);
 			buttons17[3].setIcon(null);
-			buttons17[4].setIcon(null);
-			buttons17[5].setIcon(null);
+			buttons17[4].setIcon(tegel);
+			buttons17[5].setIcon(tegel);
 			buttons17[6].setIcon(null);
-			buttons17[7].setIcon(null);
-			buttons17[8].setIcon(null);
+			buttons17[7].setIcon(tegel);
+			buttons17[8].setIcon(tegel);
 			buttons17[9].setIcon(null);
 
-			buttons18[1].setIcon(null);
-			buttons18[2].setIcon(null);
-			buttons18[3].setIcon(null);
-			buttons18[4].setIcon(null);
-			buttons18[5].setIcon(null);
-			buttons18[6].setIcon(null);
-			buttons18[7].setIcon(null);
-			buttons18[8].setIcon(null);
-			buttons18[9].setIcon(null);
+			buttons18[1].setIcon(krut);
+			buttons18[2].setIcon(sand);
+			buttons18[3].setIcon(krut);
+			buttons18[4].setIcon(sand);
+			buttons18[5].setIcon(krut);
+			buttons18[6].setIcon(sand);
+			buttons18[7].setIcon(krut);
+			buttons18[8].setIcon(sand);
+			buttons18[9].setIcon(krut);
 
-			buttons19[1].setIcon(null);
-			buttons19[2].setIcon(null);
-			buttons19[3].setIcon(null);
-			buttons19[4].setIcon(null);
-			buttons19[5].setIcon(null);
-			buttons19[6].setIcon(null);
-			buttons19[7].setIcon(null);
-			buttons19[8].setIcon(null);
-			buttons19[9].setIcon(null);
+			buttons19[1].setIcon(plankor);
+			buttons19[2].setIcon(plankor);
+			buttons19[3].setIcon(plankor);
+			buttons19[4].setIcon(bok);
+			buttons19[5].setIcon(bok);
+			buttons19[6].setIcon(bok);
+			buttons19[7].setIcon(plankor);
+			buttons19[8].setIcon(plankor);
+			buttons19[9].setIcon(plankor);
 
 			buttons20[1].setIcon(null);
 			buttons20[2].setIcon(null);
 			buttons20[3].setIcon(null);
 			buttons20[4].setIcon(null);
-			buttons20[5].setIcon(null);
+			buttons20[5].setIcon(pinne);
 			buttons20[6].setIcon(null);
 			buttons20[7].setIcon(null);
 			buttons20[8].setIcon(null);
