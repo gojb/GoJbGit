@@ -368,7 +368,7 @@ public class GoJb1 implements ActionListener{
 	JButton button33 = new JButton("Snöblock", i33);
 	JButton button34 = new JButton("Jukebox", i34);
 	JButton button35 = new JButton("Staket", i35);
-	JButton button36 = new JButton("Glödsten", i36);
+	JButton button36 = new JButton("Glödstenslampa", i36);
 	JButton button37 = new JButton("Pumpalykta", i37);
 	JButton button38 = new JButton("Färgat glas", i38);
 	JButton button39 = new JButton("Fallucka", i39);
