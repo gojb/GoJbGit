@@ -2351,15 +2351,15 @@ public class GoJb1 implements ActionListener{
 			buttons55[8].setIcon(sten);
 			buttons55[9].setIcon(sten);
 
-			buttons56[1].setIcon(null);
-			buttons56[2].setIcon(null);
-			buttons56[3].setIcon(null);
-			buttons56[4].setIcon(null);
-			buttons56[5].setIcon(null);
-			buttons56[6].setIcon(null);
-			buttons56[7].setIcon(null);
-			buttons56[8].setIcon(null);
-			buttons56[9].setIcon(null);
+			buttons56[1].setIcon(glas);
+			buttons56[2].setIcon(glas);
+			buttons56[3].setIcon(glas);
+			buttons56[4].setIcon(nederkvarts);
+			buttons56[5].setIcon(nederkvarts);
+			buttons56[6].setIcon(nederkvarts);
+			buttons56[7].setIcon(trähalvblock);
+			buttons56[8].setIcon(trähalvblock);
+			buttons56[9].setIcon(trähalvblock);
 
 			buttons57[1].setIcon(material);
 			buttons57[2].setIcon(material);
