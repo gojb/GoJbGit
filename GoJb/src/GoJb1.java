@@ -453,6 +453,7 @@ public class GoJb1 implements ActionListener{
 	ImageIcon kullersten = new ImageIcon(getClass().getResource("images/1.png"));
 	ImageIcon rödsten = new ImageIcon(getClass().getResource("images/2.png"));
 	ImageIcon pilbåge = new ImageIcon(getClass().getResource("images/68.gif"));
+	ImageIcon plankor = new ImageIcon(getClass().getResource("images/68.gif"));
 	
 	JPanel frame = new JPanel();
 	JFrame frameHuvud = new JFrame();
@@ -1026,542 +1027,867 @@ public class GoJb1 implements ActionListener{
 			buttons3[j] = new JButton();
 			frame3.add(buttons3[j]);
 			buttons3[j].addActionListener(this);
+			frame3.setIconImage(frameHuvud.getIconImage());
+			frame3.setTitle(button3.getText());
 			}
-			for (int j = 1; j < buttons3.length; j++) {
+
+			for (int j = 1; j < buttons7.length; j++) {
 			buttons7[j] = new JButton();
 			frame7.add(buttons7[j]);
 			buttons7[j].addActionListener(this);
+			frame7.setIconImage(frameHuvud.getIconImage());
+			frame7.setTitle(button7.getText());
 			}
-			for (int j = 1; j < buttons3.length; j++) {
+
+			for (int j = 1; j < buttons8.length; j++) {
 			buttons8[j] = new JButton();
 			frame8.add(buttons8[j]);
 			buttons8[j].addActionListener(this);
+			frame8.setIconImage(frameHuvud.getIconImage());
+			frame8.setTitle(button8.getText());
 			}
-			for (int j = 1; j < buttons3.length; j++) {
+
+			for (int j = 1; j < buttons9.length; j++) {
 			buttons9[j] = new JButton();
 			frame9.add(buttons9[j]);
 			buttons9[j].addActionListener(this);
+			frame9.setIconImage(frameHuvud.getIconImage());
+			frame9.setTitle(button9.getText());
 			}
-			for (int j = 1; j < buttons3.length; j++) {
+
+			for (int j = 1; j < buttons10.length; j++) {
 			buttons10[j] = new JButton();
 			frame10.add(buttons10[j]);
 			buttons10[j].addActionListener(this);
+			frame10.setIconImage(frameHuvud.getIconImage());
+			frame10.setTitle(button10.getText());
 			}
-			for (int j = 1; j < buttons3.length; j++) {
+
+			for (int j = 1; j < buttons11.length; j++) {
 			buttons11[j] = new JButton();
 			frame11.add(buttons11[j]);
 			buttons11[j].addActionListener(this);
+			frame11.setIconImage(frameHuvud.getIconImage());
+			frame11.setTitle(button11.getText());
 			}
-			for (int j = 1; j < buttons3.length; j++) {
+
+			for (int j = 1; j < buttons12.length; j++) {
 			buttons12[j] = new JButton();
 			frame12.add(buttons12[j]);
 			buttons12[j].addActionListener(this);
+			frame12.setIconImage(frameHuvud.getIconImage());
+			frame12.setTitle(button12.getText());
 			}
-			for (int j = 1; j < buttons3.length; j++) {
+
+			for (int j = 1; j < buttons13.length; j++) {
 			buttons13[j] = new JButton();
 			frame13.add(buttons13[j]);
 			buttons13[j].addActionListener(this);
+			frame13.setIconImage(frameHuvud.getIconImage());
+			frame13.setTitle(button13.getText());
 			}
-			for (int j = 1; j < buttons3.length; j++) {
+
+			for (int j = 1; j < buttons14.length; j++) {
 			buttons14[j] = new JButton();
 			frame14.add(buttons14[j]);
 			buttons14[j].addActionListener(this);
+			frame14.setIconImage(frameHuvud.getIconImage());
+			frame14.setTitle(button14.getText());
 			}
-			for (int j = 1; j < buttons3.length; j++) {
+
+			for (int j = 1; j < buttons15.length; j++) {
 			buttons15[j] = new JButton();
 			frame15.add(buttons15[j]);
 			buttons15[j].addActionListener(this);
+			frame15.setIconImage(frameHuvud.getIconImage());
+			frame15.setTitle(button15.getText());
 			}
-			for (int j = 1; j < buttons3.length; j++) {
+
+			for (int j = 1; j < buttons16.length; j++) {
 			buttons16[j] = new JButton();
 			frame16.add(buttons16[j]);
 			buttons16[j].addActionListener(this);
+			frame16.setIconImage(frameHuvud.getIconImage());
+			frame16.setTitle(button16.getText());
 			}
-			for (int j = 1; j < buttons3.length; j++) {
+
+			for (int j = 1; j < buttons17.length; j++) {
 			buttons17[j] = new JButton();
 			frame17.add(buttons17[j]);
 			buttons17[j].addActionListener(this);
+			frame17.setIconImage(frameHuvud.getIconImage());
+			frame17.setTitle(button17.getText());
 			}
-			for (int j = 1; j < buttons3.length; j++) {
+
+			for (int j = 1; j < buttons18.length; j++) {
 			buttons18[j] = new JButton();
 			frame18.add(buttons18[j]);
 			buttons18[j].addActionListener(this);
+			frame18.setIconImage(frameHuvud.getIconImage());
+			frame18.setTitle(button18.getText());
 			}
-			for (int j = 1; j < buttons3.length; j++) {
+
+			for (int j = 1; j < buttons19.length; j++) {
 			buttons19[j] = new JButton();
 			frame19.add(buttons19[j]);
 			buttons19[j].addActionListener(this);
+			frame19.setIconImage(frameHuvud.getIconImage());
+			frame19.setTitle(button19.getText());
 			}
-			for (int j = 1; j < buttons3.length; j++) {
+
+			for (int j = 1; j < buttons20.length; j++) {
 			buttons20[j] = new JButton();
 			frame20.add(buttons20[j]);
 			buttons20[j].addActionListener(this);
+			frame20.setIconImage(frameHuvud.getIconImage());
+			frame20.setTitle(button20.getText());
 			}
-			for (int j = 1; j < buttons3.length; j++) {
+
+			for (int j = 1; j < buttons21.length; j++) {
 			buttons21[j] = new JButton();
 			frame21.add(buttons21[j]);
 			buttons21[j].addActionListener(this);
+			frame21.setIconImage(frameHuvud.getIconImage());
+			frame21.setTitle(button21.getText());
 			}
-			for (int j = 1; j < buttons3.length; j++) {
+
+			for (int j = 1; j < buttons22.length; j++) {
 			buttons22[j] = new JButton();
 			frame22.add(buttons22[j]);
 			buttons22[j].addActionListener(this);
+			frame22.setIconImage(frameHuvud.getIconImage());
+			frame22.setTitle(button22.getText());
 			}
-			for (int j = 1; j < buttons3.length; j++) {
+
+			for (int j = 1; j < buttons23.length; j++) {
 			buttons23[j] = new JButton();
 			frame23.add(buttons23[j]);
 			buttons23[j].addActionListener(this);
+			frame23.setIconImage(frameHuvud.getIconImage());
+			frame23.setTitle(button23.getText());
 			}
-			for (int j = 1; j < buttons3.length; j++) {
+
+			for (int j = 1; j < buttons24.length; j++) {
 			buttons24[j] = new JButton();
 			frame24.add(buttons24[j]);
 			buttons24[j].addActionListener(this);
+			frame24.setIconImage(frameHuvud.getIconImage());
+			frame24.setTitle(button24.getText());
 			}
-			for (int j = 1; j < buttons3.length; j++) {
+
+			for (int j = 1; j < buttons25.length; j++) {
 			buttons25[j] = new JButton();
 			frame25.add(buttons25[j]);
 			buttons25[j].addActionListener(this);
+			frame25.setIconImage(frameHuvud.getIconImage());
+			frame25.setTitle(button25.getText());
 			}
-			for (int j = 1; j < buttons3.length; j++) {
+
+			for (int j = 1; j < buttons26.length; j++) {
 			buttons26[j] = new JButton();
 			frame26.add(buttons26[j]);
 			buttons26[j].addActionListener(this);
+			frame26.setIconImage(frameHuvud.getIconImage());
+			frame26.setTitle(button26.getText());
 			}
-			for (int j = 1; j < buttons3.length; j++) {
+
+			for (int j = 1; j < buttons27.length; j++) {
 			buttons27[j] = new JButton();
 			frame27.add(buttons27[j]);
 			buttons27[j].addActionListener(this);
+			frame27.setIconImage(frameHuvud.getIconImage());
+			frame27.setTitle(button27.getText());
 			}
-			for (int j = 1; j < buttons3.length; j++) {
+
+			for (int j = 1; j < buttons28.length; j++) {
 			buttons28[j] = new JButton();
 			frame28.add(buttons28[j]);
 			buttons28[j].addActionListener(this);
+			frame28.setIconImage(frameHuvud.getIconImage());
+			frame28.setTitle(button28.getText());
 			}
-			for (int j = 1; j < buttons3.length; j++) {
+
+			for (int j = 1; j < buttons29.length; j++) {
 			buttons29[j] = new JButton();
 			frame29.add(buttons29[j]);
 			buttons29[j].addActionListener(this);
+			frame29.setIconImage(frameHuvud.getIconImage());
+			frame29.setTitle(button29.getText());
 			}
-			for (int j = 1; j < buttons3.length; j++) {
+
+			for (int j = 1; j < buttons30.length; j++) {
 			buttons30[j] = new JButton();
 			frame30.add(buttons30[j]);
 			buttons30[j].addActionListener(this);
+			frame30.setIconImage(frameHuvud.getIconImage());
+			frame30.setTitle(button30.getText());
 			}
-			for (int j = 1; j < buttons3.length; j++) {
+
+			for (int j = 1; j < buttons31.length; j++) {
 			buttons31[j] = new JButton();
 			frame31.add(buttons31[j]);
 			buttons31[j].addActionListener(this);
+			frame31.setIconImage(frameHuvud.getIconImage());
+			frame31.setTitle(button31.getText());
 			}
-			for (int j = 1; j < buttons3.length; j++) {
+
+			for (int j = 1; j < buttons32.length; j++) {
 			buttons32[j] = new JButton();
 			frame32.add(buttons32[j]);
 			buttons32[j].addActionListener(this);
+			frame32.setIconImage(frameHuvud.getIconImage());
+			frame32.setTitle(button32.getText());
 			}
-			for (int j = 1; j < buttons3.length; j++) {
+
+			for (int j = 1; j < buttons33.length; j++) {
 			buttons33[j] = new JButton();
 			frame33.add(buttons33[j]);
 			buttons33[j].addActionListener(this);
+			frame33.setIconImage(frameHuvud.getIconImage());
+			frame33.setTitle(button33.getText());
 			}
-			for (int j = 1; j < buttons3.length; j++) {
+
+			for (int j = 1; j < buttons34.length; j++) {
 			buttons34[j] = new JButton();
 			frame34.add(buttons34[j]);
 			buttons34[j].addActionListener(this);
+			frame34.setIconImage(frameHuvud.getIconImage());
+			frame34.setTitle(button34.getText());
 			}
-			for (int j = 1; j < buttons3.length; j++) {
+
+			for (int j = 1; j < buttons35.length; j++) {
 			buttons35[j] = new JButton();
 			frame35.add(buttons35[j]);
 			buttons35[j].addActionListener(this);
+			frame35.setIconImage(frameHuvud.getIconImage());
+			frame35.setTitle(button35.getText());
 			}
-			for (int j = 1; j < buttons3.length; j++) {
+
+			for (int j = 1; j < buttons36.length; j++) {
 			buttons36[j] = new JButton();
 			frame36.add(buttons36[j]);
 			buttons36[j].addActionListener(this);
+			frame36.setIconImage(frameHuvud.getIconImage());
+			frame36.setTitle(button36.getText());
 			}
-			for (int j = 1; j < buttons3.length; j++) {
+
+			for (int j = 1; j < buttons37.length; j++) {
 			buttons37[j] = new JButton();
 			frame37.add(buttons37[j]);
 			buttons37[j].addActionListener(this);
+			frame37.setIconImage(frameHuvud.getIconImage());
+			frame37.setTitle(button37.getText());
 			}
-			for (int j = 1; j < buttons3.length; j++) {
+
+			for (int j = 1; j < buttons38.length; j++) {
 			buttons38[j] = new JButton();
 			frame38.add(buttons38[j]);
 			buttons38[j].addActionListener(this);
+			frame38.setIconImage(frameHuvud.getIconImage());
+			frame38.setTitle(button38.getText());
 			}
-			for (int j = 1; j < buttons3.length; j++) {
+
+			for (int j = 1; j < buttons39.length; j++) {
 			buttons39[j] = new JButton();
 			frame39.add(buttons39[j]);
 			buttons39[j].addActionListener(this);
+			frame39.setIconImage(frameHuvud.getIconImage());
+			frame39.setTitle(button39.getText());
 			}
-			for (int j = 1; j < buttons3.length; j++) {
+
+			for (int j = 1; j < buttons40.length; j++) {
 			buttons40[j] = new JButton();
 			frame40.add(buttons40[j]);
 			buttons40[j].addActionListener(this);
+			frame40.setIconImage(frameHuvud.getIconImage());
+			frame40.setTitle(button40.getText());
 			}
-			for (int j = 1; j < buttons3.length; j++) {
+
+			for (int j = 1; j < buttons41.length; j++) {
 			buttons41[j] = new JButton();
 			frame41.add(buttons41[j]);
 			buttons41[j].addActionListener(this);
+			frame41.setIconImage(frameHuvud.getIconImage());
+			frame41.setTitle(button41.getText());
 			}
-			for (int j = 1; j < buttons3.length; j++) {
+
+			for (int j = 1; j < buttons42.length; j++) {
 			buttons42[j] = new JButton();
 			frame42.add(buttons42[j]);
 			buttons42[j].addActionListener(this);
+			frame42.setIconImage(frameHuvud.getIconImage());
+			frame42.setTitle(button42.getText());
 			}
-			for (int j = 1; j < buttons3.length; j++) {
+
+			for (int j = 1; j < buttons43.length; j++) {
 			buttons43[j] = new JButton();
 			frame43.add(buttons43[j]);
 			buttons43[j].addActionListener(this);
+			frame43.setIconImage(frameHuvud.getIconImage());
+			frame43.setTitle(button43.getText());
 			}
-			for (int j = 1; j < buttons3.length; j++) {
+
+			for (int j = 1; j < buttons44.length; j++) {
 			buttons44[j] = new JButton();
 			frame44.add(buttons44[j]);
 			buttons44[j].addActionListener(this);
+			frame44.setIconImage(frameHuvud.getIconImage());
+			frame44.setTitle(button44.getText());
 			}
-			for (int j = 1; j < buttons3.length; j++) {
+
+			for (int j = 1; j < buttons45.length; j++) {
 			buttons45[j] = new JButton();
 			frame45.add(buttons45[j]);
 			buttons45[j].addActionListener(this);
+			frame45.setIconImage(frameHuvud.getIconImage());
+			frame45.setTitle(button45.getText());
 			}
-			for (int j = 1; j < buttons3.length; j++) {
+
+			for (int j = 1; j < buttons46.length; j++) {
 			buttons46[j] = new JButton();
 			frame46.add(buttons46[j]);
 			buttons46[j].addActionListener(this);
+			frame46.setIconImage(frameHuvud.getIconImage());
+			frame46.setTitle(button46.getText());
 			}
-			for (int j = 1; j < buttons3.length; j++) {
+
+			for (int j = 1; j < buttons47.length; j++) {
 			buttons47[j] = new JButton();
 			frame47.add(buttons47[j]);
 			buttons47[j].addActionListener(this);
+			frame47.setIconImage(frameHuvud.getIconImage());
+			frame47.setTitle(button47.getText());
 			}
-			for (int j = 1; j < buttons3.length; j++) {
+
+			for (int j = 1; j < buttons48.length; j++) {
 			buttons48[j] = new JButton();
 			frame48.add(buttons48[j]);
 			buttons48[j].addActionListener(this);
+			frame48.setIconImage(frameHuvud.getIconImage());
+			frame48.setTitle(button48.getText());
 			}
-			for (int j = 1; j < buttons3.length; j++) {
+
+			for (int j = 1; j < buttons49.length; j++) {
 			buttons49[j] = new JButton();
 			frame49.add(buttons49[j]);
 			buttons49[j].addActionListener(this);
+			frame49.setIconImage(frameHuvud.getIconImage());
+			frame49.setTitle(button49.getText());
 			}
-			for (int j = 1; j < buttons3.length; j++) {
+
+			for (int j = 1; j < buttons50.length; j++) {
 			buttons50[j] = new JButton();
 			frame50.add(buttons50[j]);
 			buttons50[j].addActionListener(this);
+			frame50.setIconImage(frameHuvud.getIconImage());
+			frame50.setTitle(button50.getText());
 			}
-			for (int j = 1; j < buttons3.length; j++) {
+
+			for (int j = 1; j < buttons51.length; j++) {
 			buttons51[j] = new JButton();
 			frame51.add(buttons51[j]);
 			buttons51[j].addActionListener(this);
+			frame51.setIconImage(frameHuvud.getIconImage());
+			frame51.setTitle(button51.getText());
 			}
-			for (int j = 1; j < buttons3.length; j++) {
+
+			for (int j = 1; j < buttons52.length; j++) {
 			buttons52[j] = new JButton();
 			frame52.add(buttons52[j]);
 			buttons52[j].addActionListener(this);
+			frame52.setIconImage(frameHuvud.getIconImage());
+			frame52.setTitle(button52.getText());
 			}
-			for (int j = 1; j < buttons3.length; j++) {
+
+			for (int j = 1; j < buttons53.length; j++) {
 			buttons53[j] = new JButton();
 			frame53.add(buttons53[j]);
 			buttons53[j].addActionListener(this);
+			frame53.setIconImage(frameHuvud.getIconImage());
+			frame53.setTitle(button53.getText());
 			}
-			for (int j = 1; j < buttons3.length; j++) {
+
+			for (int j = 1; j < buttons54.length; j++) {
 			buttons54[j] = new JButton();
 			frame54.add(buttons54[j]);
 			buttons54[j].addActionListener(this);
+			frame54.setIconImage(frameHuvud.getIconImage());
+			frame54.setTitle(button54.getText());
 			}
-			for (int j = 1; j < buttons3.length; j++) {
+
+			for (int j = 1; j < buttons55.length; j++) {
 			buttons55[j] = new JButton();
 			frame55.add(buttons55[j]);
 			buttons55[j].addActionListener(this);
+			frame55.setIconImage(frameHuvud.getIconImage());
+			frame55.setTitle(button55.getText());
 			}
-			for (int j = 1; j < buttons3.length; j++) {
+
+			for (int j = 1; j < buttons56.length; j++) {
 			buttons56[j] = new JButton();
 			frame56.add(buttons56[j]);
 			buttons56[j].addActionListener(this);
+			frame56.setIconImage(frameHuvud.getIconImage());
+			frame56.setTitle(button56.getText());
 			}
-			for (int j = 1; j < buttons3.length; j++) {
+
+			for (int j = 1; j < buttons57.length; j++) {
 			buttons57[j] = new JButton();
 			frame57.add(buttons57[j]);
 			buttons57[j].addActionListener(this);
+			frame57.setIconImage(frameHuvud.getIconImage());
+			frame57.setTitle(button57.getText());
 			}
-			for (int j = 1; j < buttons3.length; j++) {
+
+			for (int j = 1; j < buttons58.length; j++) {
 			buttons58[j] = new JButton();
 			frame58.add(buttons58[j]);
 			buttons58[j].addActionListener(this);
+			frame58.setIconImage(frameHuvud.getIconImage());
+			frame58.setTitle(button58.getText());
 			}
-			for (int j = 1; j < buttons3.length; j++) {
+
+			for (int j = 1; j < buttons59.length; j++) {
 			buttons59[j] = new JButton();
 			frame59.add(buttons59[j]);
 			buttons59[j].addActionListener(this);
+			frame59.setIconImage(frameHuvud.getIconImage());
+			frame59.setTitle(button59.getText());
 			}
-			for (int j = 1; j < buttons3.length; j++) {
+
+			for (int j = 1; j < buttons60.length; j++) {
 			buttons60[j] = new JButton();
 			frame60.add(buttons60[j]);
 			buttons60[j].addActionListener(this);
+			frame60.setIconImage(frameHuvud.getIconImage());
+			frame60.setTitle(button60.getText());
 			}
-			for (int j = 1; j < buttons3.length; j++) {
+
+			for (int j = 1; j < buttons61.length; j++) {
 			buttons61[j] = new JButton();
 			frame61.add(buttons61[j]);
 			buttons61[j].addActionListener(this);
+			frame61.setIconImage(frameHuvud.getIconImage());
+			frame61.setTitle(button61.getText());
 			}
-			for (int j = 1; j < buttons3.length; j++) {
+
+			for (int j = 1; j < buttons62.length; j++) {
 			buttons62[j] = new JButton();
 			frame62.add(buttons62[j]);
 			buttons62[j].addActionListener(this);
+			frame62.setIconImage(frameHuvud.getIconImage());
+			frame62.setTitle(button62.getText());
 			}
-			for (int j = 1; j < buttons3.length; j++) {
+
+			for (int j = 1; j < buttons63.length; j++) {
 			buttons63[j] = new JButton();
 			frame63.add(buttons63[j]);
 			buttons63[j].addActionListener(this);
+			frame63.setIconImage(frameHuvud.getIconImage());
+			frame63.setTitle(button63.getText());
 			}
-			for (int j = 1; j < buttons3.length; j++) {
+
+			for (int j = 1; j < buttons64.length; j++) {
 			buttons64[j] = new JButton();
 			frame64.add(buttons64[j]);
 			buttons64[j].addActionListener(this);
+			frame64.setIconImage(frameHuvud.getIconImage());
+			frame64.setTitle(button64.getText());
 			}
-			for (int j = 1; j < buttons3.length; j++) {
+
+			for (int j = 1; j < buttons65.length; j++) {
 			buttons65[j] = new JButton();
 			frame65.add(buttons65[j]);
 			buttons65[j].addActionListener(this);
+			frame65.setIconImage(frameHuvud.getIconImage());
+			frame65.setTitle(button65.getText());
 			}
-			for (int j = 1; j < buttons3.length; j++) {
+
+			for (int j = 1; j < buttons66.length; j++) {
 			buttons66[j] = new JButton();
 			frame66.add(buttons66[j]);
 			buttons66[j].addActionListener(this);
+			frame66.setIconImage(frameHuvud.getIconImage());
+			frame66.setTitle(button66.getText());
 			}
-			for (int j = 1; j < buttons3.length; j++) {
+
+			for (int j = 1; j < buttons67.length; j++) {
 			buttons67[j] = new JButton();
 			frame67.add(buttons67[j]);
 			buttons67[j].addActionListener(this);
+			frame67.setIconImage(frameHuvud.getIconImage());
+			frame67.setTitle(button67.getText());
 			}
-			for (int j = 1; j < buttons3.length; j++) {
+
+			for (int j = 1; j < buttons68.length; j++) {
 			buttons68[j] = new JButton();
 			frame68.add(buttons68[j]);
 			buttons68[j].addActionListener(this);
+			frame68.setIconImage(frameHuvud.getIconImage());
+			frame68.setTitle(button68.getText());
 			}
-			for (int j = 1; j < buttons3.length; j++) {
+
+			for (int j = 1; j < buttons69.length; j++) {
 			buttons69[j] = new JButton();
 			frame69.add(buttons69[j]);
 			buttons69[j].addActionListener(this);
+			frame69.setIconImage(frameHuvud.getIconImage());
+			frame69.setTitle(button69.getText());
 			}
-			for (int j = 1; j < buttons3.length; j++) {
+
+			for (int j = 1; j < buttons70.length; j++) {
 			buttons70[j] = new JButton();
 			frame70.add(buttons70[j]);
 			buttons70[j].addActionListener(this);
+			frame70.setIconImage(frameHuvud.getIconImage());
+			frame70.setTitle(button70.getText());
 			}
-			for (int j = 1; j < buttons3.length; j++) {
+
+			for (int j = 1; j < buttons71.length; j++) {
 			buttons71[j] = new JButton();
 			frame71.add(buttons71[j]);
 			buttons71[j].addActionListener(this);
+			frame71.setIconImage(frameHuvud.getIconImage());
+			frame71.setTitle(button71.getText());
 			}
-			for (int j = 1; j < buttons3.length; j++) {
+
+			for (int j = 1; j < buttons72.length; j++) {
 			buttons72[j] = new JButton();
 			frame72.add(buttons72[j]);
 			buttons72[j].addActionListener(this);
+			frame72.setIconImage(frameHuvud.getIconImage());
+			frame72.setTitle(button72.getText());
 			}
-			for (int j = 1; j < buttons3.length; j++) {
+
+			for (int j = 1; j < buttons73.length; j++) {
 			buttons73[j] = new JButton();
 			frame73.add(buttons73[j]);
 			buttons73[j].addActionListener(this);
+			frame73.setIconImage(frameHuvud.getIconImage());
+			frame73.setTitle(button73.getText());
 			}
-			for (int j = 1; j < buttons3.length; j++) {
+
+			for (int j = 1; j < buttons74.length; j++) {
 			buttons74[j] = new JButton();
 			frame74.add(buttons74[j]);
 			buttons74[j].addActionListener(this);
+			frame74.setIconImage(frameHuvud.getIconImage());
+			frame74.setTitle(button74.getText());
 			}
-			for (int j = 1; j < buttons3.length; j++) {
+
+			for (int j = 1; j < buttons75.length; j++) {
 			buttons75[j] = new JButton();
 			frame75.add(buttons75[j]);
 			buttons75[j].addActionListener(this);
+			frame75.setIconImage(frameHuvud.getIconImage());
+			frame75.setTitle(button75.getText());
 			}
-			for (int j = 1; j < buttons3.length; j++) {
+
+			for (int j = 1; j < buttons76.length; j++) {
 			buttons76[j] = new JButton();
 			frame76.add(buttons76[j]);
 			buttons76[j].addActionListener(this);
+			frame76.setIconImage(frameHuvud.getIconImage());
+			frame76.setTitle(button76.getText());
 			}
-			for (int j = 1; j < buttons3.length; j++) {
+
+			for (int j = 1; j < buttons77.length; j++) {
 			buttons77[j] = new JButton();
 			frame77.add(buttons77[j]);
 			buttons77[j].addActionListener(this);
+			frame77.setIconImage(frameHuvud.getIconImage());
+			frame77.setTitle(button77.getText());
 			}
-			for (int j = 1; j < buttons3.length; j++) {
+
+			for (int j = 1; j < buttons78.length; j++) {
 			buttons78[j] = new JButton();
 			frame78.add(buttons78[j]);
 			buttons78[j].addActionListener(this);
+			frame78.setIconImage(frameHuvud.getIconImage());
+			frame78.setTitle(button78.getText());
 			}
-			for (int j = 1; j < buttons3.length; j++) {
+
+			for (int j = 1; j < buttons79.length; j++) {
 			buttons79[j] = new JButton();
 			frame79.add(buttons79[j]);
 			buttons79[j].addActionListener(this);
+			frame79.setIconImage(frameHuvud.getIconImage());
+			frame79.setTitle(button79.getText());
 			}
-			for (int j = 1; j < buttons3.length; j++) {
+
+			for (int j = 1; j < buttons80.length; j++) {
 			buttons80[j] = new JButton();
 			frame80.add(buttons80[j]);
 			buttons80[j].addActionListener(this);
+			frame80.setIconImage(frameHuvud.getIconImage());
+			frame80.setTitle(button80.getText());
 			}
-			for (int j = 1; j < buttons3.length; j++) {
+
+			for (int j = 1; j < buttons81.length; j++) {
 			buttons81[j] = new JButton();
 			frame81.add(buttons81[j]);
 			buttons81[j].addActionListener(this);
+			frame81.setIconImage(frameHuvud.getIconImage());
+			frame81.setTitle(button81.getText());
 			}
-			for (int j = 1; j < buttons3.length; j++) {
+
+			for (int j = 1; j < buttons82.length; j++) {
 			buttons82[j] = new JButton();
 			frame82.add(buttons82[j]);
 			buttons82[j].addActionListener(this);
+			frame82.setIconImage(frameHuvud.getIconImage());
+			frame82.setTitle(button82.getText());
 			}
-			for (int j = 1; j < buttons3.length; j++) {
+
+			for (int j = 1; j < buttons83.length; j++) {
 			buttons83[j] = new JButton();
 			frame83.add(buttons83[j]);
 			buttons83[j].addActionListener(this);
+			frame83.setIconImage(frameHuvud.getIconImage());
+			frame83.setTitle(button83.getText());
 			}
-			for (int j = 1; j < buttons3.length; j++) {
+
+			for (int j = 1; j < buttons84.length; j++) {
 			buttons84[j] = new JButton();
 			frame84.add(buttons84[j]);
 			buttons84[j].addActionListener(this);
+			frame84.setIconImage(frameHuvud.getIconImage());
+			frame84.setTitle(button84.getText());
 			}
-			for (int j = 1; j < buttons3.length; j++) {
+
+			for (int j = 1; j < buttons85.length; j++) {
 			buttons85[j] = new JButton();
 			frame85.add(buttons85[j]);
 			buttons85[j].addActionListener(this);
+			frame85.setIconImage(frameHuvud.getIconImage());
+			frame85.setTitle(button85.getText());
 			}
-			for (int j = 1; j < buttons3.length; j++) {
+
+			for (int j = 1; j < buttons86.length; j++) {
 			buttons86[j] = new JButton();
 			frame86.add(buttons86[j]);
 			buttons86[j].addActionListener(this);
+			frame86.setIconImage(frameHuvud.getIconImage());
+			frame86.setTitle(button86.getText());
 			}
-			for (int j = 1; j < buttons3.length; j++) {
+
+			for (int j = 1; j < buttons87.length; j++) {
 			buttons87[j] = new JButton();
 			frame87.add(buttons87[j]);
 			buttons87[j].addActionListener(this);
+			frame87.setIconImage(frameHuvud.getIconImage());
+			frame87.setTitle(button87.getText());
 			}
-			for (int j = 1; j < buttons3.length; j++) {
+
+			for (int j = 1; j < buttons88.length; j++) {
 			buttons88[j] = new JButton();
 			frame88.add(buttons88[j]);
 			buttons88[j].addActionListener(this);
+			frame88.setIconImage(frameHuvud.getIconImage());
+			frame88.setTitle(button88.getText());
 			}
-			for (int j = 1; j < buttons3.length; j++) {
+
+			for (int j = 1; j < buttons89.length; j++) {
 			buttons89[j] = new JButton();
 			frame89.add(buttons89[j]);
 			buttons89[j].addActionListener(this);
+			frame89.setIconImage(frameHuvud.getIconImage());
+			frame89.setTitle(button89.getText());
 			}
-			for (int j = 1; j < buttons3.length; j++) {
+
+			for (int j = 1; j < buttons91.length; j++) {
 			buttons91[j] = new JButton();
 			frame91.add(buttons91[j]);
 			buttons91[j].addActionListener(this);
+			frame91.setIconImage(frameHuvud.getIconImage());
+			frame91.setTitle(button91.getText());
 			}
-			for (int j = 1; j < buttons3.length; j++) {
+
+			for (int j = 1; j < buttons92.length; j++) {
 			buttons92[j] = new JButton();
 			frame92.add(buttons92[j]);
 			buttons92[j].addActionListener(this);
+			frame92.setIconImage(frameHuvud.getIconImage());
+			frame92.setTitle(button92.getText());
 			}
-			for (int j = 1; j < buttons3.length; j++) {
+
+			for (int j = 1; j < buttons93.length; j++) {
 			buttons93[j] = new JButton();
 			frame93.add(buttons93[j]);
 			buttons93[j].addActionListener(this);
+			frame93.setIconImage(frameHuvud.getIconImage());
+			frame93.setTitle(button93.getText());
 			}
-			for (int j = 1; j < buttons3.length; j++) {
+
+			for (int j = 1; j < buttons94.length; j++) {
 			buttons94[j] = new JButton();
 			frame94.add(buttons94[j]);
 			buttons94[j].addActionListener(this);
+			frame94.setIconImage(frameHuvud.getIconImage());
+			frame94.setTitle(button94.getText());
 			}
-			for (int j = 1; j < buttons3.length; j++) {
+
+			for (int j = 1; j < buttons95.length; j++) {
 			buttons95[j] = new JButton();
 			frame95.add(buttons95[j]);
 			buttons95[j].addActionListener(this);
+			frame95.setIconImage(frameHuvud.getIconImage());
+			frame95.setTitle(button95.getText());
 			}
-			for (int j = 1; j < buttons3.length; j++) {
+
+			for (int j = 1; j < buttons96.length; j++) {
 			buttons96[j] = new JButton();
 			frame96.add(buttons96[j]);
 			buttons96[j].addActionListener(this);
+			frame96.setIconImage(frameHuvud.getIconImage());
+			frame96.setTitle(button96.getText());
 			}
-			for (int j = 1; j < buttons3.length; j++) {
+
+			for (int j = 1; j < buttons97.length; j++) {
 			buttons97[j] = new JButton();
 			frame97.add(buttons97[j]);
 			buttons97[j].addActionListener(this);
+			frame97.setIconImage(frameHuvud.getIconImage());
+			frame97.setTitle(button97.getText());
 			}
-			for (int j = 1; j < buttons3.length; j++) {
+
+			for (int j = 1; j < buttons98.length; j++) {
 			buttons98[j] = new JButton();
 			frame98.add(buttons98[j]);
 			buttons98[j].addActionListener(this);
+			frame98.setIconImage(frameHuvud.getIconImage());
+			frame98.setTitle(button98.getText());
 			}
-			for (int j = 1; j < buttons3.length; j++) {
+
+			for (int j = 1; j < buttons99.length; j++) {
 			buttons99[j] = new JButton();
 			frame99.add(buttons99[j]);
 			buttons99[j].addActionListener(this);
+			frame99.setIconImage(frameHuvud.getIconImage());
+			frame99.setTitle(button99.getText());
 			}
-			for (int j = 1; j < buttons3.length; j++) {
+
+			for (int j = 1; j < buttons100.length; j++) {
 			buttons100[j] = new JButton();
 			frame100.add(buttons100[j]);
 			buttons100[j].addActionListener(this);
+			frame100.setIconImage(frameHuvud.getIconImage());
+			frame100.setTitle(button100.getText());
 			}
-			for (int j = 1; j < buttons3.length; j++) {
+
+			for (int j = 1; j < buttons101.length; j++) {
 			buttons101[j] = new JButton();
 			frame101.add(buttons101[j]);
 			buttons101[j].addActionListener(this);
+			frame101.setIconImage(frameHuvud.getIconImage());
+			frame101.setTitle(button101.getText());
 			}
-			for (int j = 1; j < buttons3.length; j++) {
+
+			for (int j = 1; j < buttons102.length; j++) {
 			buttons102[j] = new JButton();
 			frame102.add(buttons102[j]);
 			buttons102[j].addActionListener(this);
+			frame102.setIconImage(frameHuvud.getIconImage());
+			frame102.setTitle(button102.getText());
 			}
-			for (int j = 1; j < buttons3.length; j++) {
+
+			for (int j = 1; j < buttons103.length; j++) {
 			buttons103[j] = new JButton();
 			frame103.add(buttons103[j]);
 			buttons103[j].addActionListener(this);
+			frame103.setIconImage(frameHuvud.getIconImage());
+			frame103.setTitle(button103.getText());
 			}
-			for (int j = 1; j < buttons3.length; j++) {
+
+			for (int j = 1; j < buttons104.length; j++) {
 			buttons104[j] = new JButton();
 			frame104.add(buttons104[j]);
 			buttons104[j].addActionListener(this);
+			frame104.setIconImage(frameHuvud.getIconImage());
+			frame104.setTitle(button104.getText());
 			}
-			for (int j = 1; j < buttons3.length; j++) {
+
+			for (int j = 1; j < buttons105.length; j++) {
 			buttons105[j] = new JButton();
 			frame105.add(buttons105[j]);
 			buttons105[j].addActionListener(this);
+			frame105.setIconImage(frameHuvud.getIconImage());
+			frame105.setTitle(button105.getText());
 			}
-			for (int j = 1; j < buttons3.length; j++) {
+
+			for (int j = 1; j < buttons106.length; j++) {
 			buttons106[j] = new JButton();
 			frame106.add(buttons106[j]);
 			buttons106[j].addActionListener(this);
+			frame106.setIconImage(frameHuvud.getIconImage());
+			frame106.setTitle(button106.getText());
 			}
-			for (int j = 1; j < buttons3.length; j++) {
+
+			for (int j = 1; j < buttons107.length; j++) {
 			buttons107[j] = new JButton();
 			frame107.add(buttons107[j]);
 			buttons107[j].addActionListener(this);
+			frame107.setIconImage(frameHuvud.getIconImage());
+			frame107.setTitle(button107.getText());
 			}
-			for (int j = 1; j < buttons3.length; j++) {
+
+			for (int j = 1; j < buttons108.length; j++) {
 			buttons108[j] = new JButton();
 			frame108.add(buttons108[j]);
 			buttons108[j].addActionListener(this);
+			frame108.setIconImage(frameHuvud.getIconImage());
+			frame108.setTitle(button108.getText());
 			}
-			for (int j = 1; j < buttons3.length; j++) {
+
+			for (int j = 1; j < buttons109.length; j++) {
 			buttons109[j] = new JButton();
 			frame109.add(buttons109[j]);
 			buttons109[j].addActionListener(this);
+			frame109.setIconImage(frameHuvud.getIconImage());
+			frame109.setTitle(button109.getText());
 			}
-			for (int j = 1; j < buttons3.length; j++) {
+
+			for (int j = 1; j < buttons110.length; j++) {
 			buttons110[j] = new JButton();
 			frame110.add(buttons110[j]);
 			buttons110[j].addActionListener(this);
+			frame110.setIconImage(frameHuvud.getIconImage());
+			frame110.setTitle(button110.getText());
 			}
-			for (int j = 1; j < buttons3.length; j++) {
+
+			for (int j = 1; j < buttons111.length; j++) {
 			buttons111[j] = new JButton();
 			frame111.add(buttons111[j]);
 			buttons111[j].addActionListener(this);
+			frame111.setIconImage(frameHuvud.getIconImage());
+			frame111.setTitle(button111.getText());
 			}
-			for (int j = 1; j < buttons3.length; j++) {
+
+			for (int j = 1; j < buttons112.length; j++) {
 			buttons112[j] = new JButton();
 			frame112.add(buttons112[j]);
 			buttons112[j].addActionListener(this);
+			frame112.setIconImage(frameHuvud.getIconImage());
+			frame112.setTitle(button112.getText());
 			}
-			for (int j = 1; j < buttons3.length; j++) {
+
+			for (int j = 1; j < buttons113.length; j++) {
 			buttons113[j] = new JButton();
 			frame113.add(buttons113[j]);
 			buttons113[j].addActionListener(this);
+			frame113.setIconImage(frameHuvud.getIconImage());
+			frame113.setTitle(button113.getText());
 			}
-			for (int j = 1; j < buttons3.length; j++) {
+
+			for (int j = 1; j < buttons114.length; j++) {
 			buttons114[j] = new JButton();
 			frame114.add(buttons114[j]);
 			buttons114[j].addActionListener(this);
+			frame114.setIconImage(frameHuvud.getIconImage());
+			frame114.setTitle(button114.getText());
 			}
+
+
 
 
 
@@ -1582,10 +1908,10 @@ public class GoJb1 implements ActionListener{
 			buttons7[2].setIcon(kullersten);
 			buttons7[3].setIcon(kullersten);
 			buttons7[4].setIcon(kullersten);
-			buttons7[5].setIcon(rödsten);
+			buttons7[5].setIcon(pilbåge);
 			buttons7[6].setIcon(kullersten);
 			buttons7[7].setIcon(kullersten);
-			buttons7[8].setIcon(pilbåge);
+			buttons7[8].setIcon(rödsten);
 			buttons7[9].setIcon(kullersten);
 
 			buttons8[1].setIcon(null);
