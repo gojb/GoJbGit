@@ -476,6 +476,11 @@ public class GoJb1 implements ActionListener{
 	ImageIcon hopper = new ImageIcon(getClass().getResource("images/58.png"));
 	ImageIcon kista = new ImageIcon(getClass().getResource("images/22.gif"));
 	ImageIcon ugn = new ImageIcon(getClass().getResource("images/24.png"));
+	ImageIcon färger = new ImageIcon(getClass().getResource("images/90.gif"));
+	ImageIcon raketstjärna = new ImageIcon(getClass().getResource("images/111.png"));
+	ImageIcon dynamit = new ImageIcon(getClass().getResource("images/18.png"));
+	ImageIcon block = new ImageIcon(getClass().getResource("images/1008.png"));
+
 
 	
 	JPanel frame = new JPanel();
@@ -2946,9 +2951,9 @@ public class GoJb1 implements ActionListener{
 			buttons110[1].setIcon(null);
 			buttons110[2].setIcon(null);
 			buttons110[3].setIcon(null);
-			buttons110[4].setIcon(null);
-			buttons110[5].setIcon(null);
-			buttons110[6].setIcon(null);
+			buttons110[4].setIcon(raketstjärna);
+			buttons110[5].setIcon(papper);
+			buttons110[6].setIcon(krut);
 			buttons110[7].setIcon(null);
 			buttons110[8].setIcon(null);
 			buttons110[9].setIcon(null);
@@ -2956,8 +2961,8 @@ public class GoJb1 implements ActionListener{
 			buttons111[1].setIcon(null);
 			buttons111[2].setIcon(null);
 			buttons111[3].setIcon(null);
-			buttons111[4].setIcon(null);
-			buttons111[5].setIcon(null);
+			buttons111[4].setIcon(krut);
+			buttons111[5].setIcon(färger);
 			buttons111[6].setIcon(null);
 			buttons111[7].setIcon(null);
 			buttons111[8].setIcon(null);
@@ -2967,31 +2972,31 @@ public class GoJb1 implements ActionListener{
 			buttons112[2].setIcon(null);
 			buttons112[3].setIcon(null);
 			buttons112[4].setIcon(null);
-			buttons112[5].setIcon(null);
+			buttons112[5].setIcon(dynamit);
 			buttons112[6].setIcon(null);
 			buttons112[7].setIcon(null);
-			buttons112[8].setIcon(null);
+			buttons112[8].setIcon(gruvvagn);
 			buttons112[9].setIcon(null);
 
 			buttons113[1].setIcon(null);
 			buttons113[2].setIcon(null);
 			buttons113[3].setIcon(null);
 			buttons113[4].setIcon(null);
-			buttons113[5].setIcon(null);
+			buttons113[5].setIcon(hopper);
 			buttons113[6].setIcon(null);
 			buttons113[7].setIcon(null);
-			buttons113[8].setIcon(null);
+			buttons113[8].setIcon(gruvvagn);
 			buttons113[9].setIcon(null);
 
-			buttons114[1].setIcon(null);
-			buttons114[2].setIcon(null);
+			buttons114[1].setIcon(tråd);
+			buttons114[2].setIcon(tråd);
 			buttons114[3].setIcon(null);
-			buttons114[4].setIcon(null);
-			buttons114[5].setIcon(null);
+			buttons114[4].setIcon(tråd);
+			buttons114[5].setIcon(slime);
 			buttons114[6].setIcon(null);
 			buttons114[7].setIcon(null);
 			buttons114[8].setIcon(null);
-			buttons114[9].setIcon(null);
+			buttons114[9].setIcon(tråd);
 
 
 		frameHuvud.add(scrollBar);
