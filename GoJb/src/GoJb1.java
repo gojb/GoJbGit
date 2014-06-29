@@ -484,6 +484,10 @@ public class GoJb1 implements ActionListener{
 	ImageIcon ägg = new ImageIcon(getClass().getResource("images/1035.png"));
 	ImageIcon pumpa = new ImageIcon(getClass().getResource("images/1015.png"));
 	ImageIcon kol = new ImageIcon(getClass().getResource("images/1007.png"));
+	ImageIcon morot = new ImageIcon(getClass().getResource("images/1042.png"));
+	ImageIcon fiskespö = new ImageIcon(getClass().getResource("images/88.png"));
+	ImageIcon guldklimp = new ImageIcon(getClass().getResource("images/98.png"));
+	ImageIcon järnträ = new ImageIcon(getClass().getResource("images/1009.gif"));
 
 
 	
@@ -2935,11 +2939,11 @@ public class GoJb1 implements ActionListener{
 			buttons108[1].setIcon(null);
 			buttons108[2].setIcon(null);
 			buttons108[3].setIcon(null);
-			buttons108[4].setIcon(null);
+			buttons108[4].setIcon(fiskespö);
 			buttons108[5].setIcon(null);
 			buttons108[6].setIcon(null);
 			buttons108[7].setIcon(null);
-			buttons108[8].setIcon(null);
+			buttons108[8].setIcon(morot);
 			buttons108[9].setIcon(null);
 
 			buttons109[1].setIcon(null);
