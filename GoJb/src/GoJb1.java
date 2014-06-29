@@ -449,11 +449,12 @@ public class GoJb1 implements ActionListener{
 	JButton button113 = new JButton("Gruvvagn med hopper", i113);
 	JButton button114 = new JButton("Koppel", i114);
 	
-	ImageIcon tra = new ImageIcon(getClass().getResource("images/200.png"));
+	
 	ImageIcon kullersten = new ImageIcon(getClass().getResource("images/1.png"));
 	ImageIcon rödsten = new ImageIcon(getClass().getResource("images/2.png"));
+	ImageIcon plankor = new ImageIcon(getClass().getResource("images/3.png"));
 	ImageIcon pilbåge = new ImageIcon(getClass().getResource("images/68.gif"));
-	ImageIcon plankor = new ImageIcon(getClass().getResource("images/68.gif"));
+	ImageIcon tra = new ImageIcon(getClass().getResource("images/200.png"));
 	
 	JPanel frame = new JPanel();
 	JFrame frameHuvud = new JFrame();
