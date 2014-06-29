@@ -10,6 +10,7 @@ import javax.swing.*;;
  */
 public class GoJb1 implements ActionListener{
 
+	
 	JButton[] buttons3 = new JButton[10];
 	JButton[] buttons7 = new JButton[10];
 	JButton[] buttons8 = new JButton[10];
@@ -758,6 +759,8 @@ public class GoJb1 implements ActionListener{
 		frame114.setSize(500,500);
 			
 
+		
+		
 		button3.addActionListener(this);
 		button7.addActionListener(this);
 		button8.addActionListener(this);
@@ -3389,6 +3392,8 @@ public class GoJb1 implements ActionListener{
 					
 			Icon abc = ((AbstractButton) e.getSource()).getIcon();
 			if (abc==kullersten) {
+				
+				
 				
 			}
 			System.out.println(kullersten);
