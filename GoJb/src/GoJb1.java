@@ -1,8 +1,10 @@
 
 import java.awt.*;
 import java.awt.event.*;
+import java.io.*;
+import java.util.Properties;
 
-import javax.swing.*;;
+import javax.swing.*;
 
 /**
  * @author GoJb
@@ -10,6 +12,15 @@ import javax.swing.*;;
  */
 public class GoJb1 implements ActionListener{
 
+
+	Properties prop = new Properties();
+	
+	String string;
+	
+	JFrame språk = new JFrame("Language");
+	
+	JButton svenska = new JButton("Svenska"),
+			engelska = new JButton("English");
 	
 	JButton[] buttons3 = new JButton[10];
 	JButton[] buttons7 = new JButton[10];
@@ -527,12 +538,85 @@ public class GoJb1 implements ActionListener{
 	JScrollPane scrollBar=new JScrollPane(frame,JScrollPane.VERTICAL_SCROLLBAR_ALWAYS,JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
 	
 	public static void main(String[] args) {
+		
 		new GoJb1();
 	}
-	
 
-	public GoJb1() {
+	
+	public GoJb1(){
+		
+		try {
+			prop.load(new FileInputStream(System.getProperty("user.home") + "\\AppData\\Roaming\\GoJb\\settings.gojb"));
+			string = prop.getProperty("9778436klbgflf");
+			Språk();
+			GörFönster();
+		
+		} catch (Exception e) {
+
+			språk.setLayout(new FlowLayout());
+			språk.add(svenska);
+			språk.add(engelska);
+			språk.pack();
+			språk.setLocationRelativeTo(null);
+			språk.setVisible(true);
+			
+			ActionListener dActionListener = new ActionListener() {
+				
+				public void actionPerformed(ActionEvent e) {
+					if (e.getSource()==svenska) {
+						string="86325yhrel";
+					}
+					else if (e.getSource()==engelska) {
+						string="lhdohf7984";
+					}
 					
+					prop.setProperty("9778436klbgflf", string);
+					try {
+						prop.store(new FileWriter(new File(System.getProperty("user.home") + "\\AppData\\Roaming\\GoJb\\settings.gojb")),"Inställningar för GoJbGuide");
+					} catch (Exception e1) {
+					
+					}
+					
+					språk.setVisible(false);
+					try {
+						Språk();
+					} catch (Exception e1) {
+						
+						e1.printStackTrace();
+					}
+					GörFönster();
+				}
+			};
+
+			svenska.addActionListener(dActionListener);
+			engelska.addActionListener(dActionListener);
+		}
+	/**
+9778436klbgflf=lhdohf7984
+#Engelska
+#lhdohf7984
+#Svenska
+#86325yhrel
+	 */
+		
+	}
+	public void Språk() throws Exception{
+
+		if (string.equals("86325yhrel")){
+			System.out.println("Hej!");
+		}
+		else if (string.equals("lhdohf7984")){
+			
+			//Eng
+			button60.setText("Tills Vidare");
+		}
+		else {
+			throw new Exception();
+		}
+	}
+	public void GörFönster() {
+
+		
 		scrollBar.getVerticalScrollBar().setUnitIncrement(20);
 		frameHuvud.setIconImage(new ImageIcon(getClass().getResource("images/java-icon.png")).getImage());
 	
@@ -978,9 +1062,8 @@ public class GoJb1 implements ActionListener{
 		frame113.setLayout(new GridLayout(3,3));
 		frame114.setLayout(new GridLayout(3,3));
 		
-		
-		
-		
+		//Inställningar
+	
 		
 		for (int j = 1; j < buttons3.length; j++) {
 			buttons3[j] = new JButton();
@@ -2947,6 +3030,9 @@ public class GoJb1 implements ActionListener{
 
 
 	
+	
+
+
 	public void actionPerformed(ActionEvent e) {
 	
 		System.out.println("Någon knapp nedtryckt!");	
