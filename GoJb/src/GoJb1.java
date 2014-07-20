@@ -1,4 +1,3 @@
-
 import java.awt.*;
 import java.awt.event.*;
 import java.io.*;
@@ -12,7 +11,7 @@ import javax.swing.*;
  */
 public class GoJb1 implements ActionListener{
 
-
+	static int engångsöppning = 1;
 	Properties prop = new Properties();
 	
 	String string;
@@ -21,6 +20,12 @@ public class GoJb1 implements ActionListener{
 	
 	JButton svenska = new JButton("Svenska"),
 			engelska = new JButton("English");
+	
+	JMenuBar bar = new JMenuBar();
+	
+	JMenu språkMeny = new JMenu();
+	
+	JMenuItem väljSpråk = new JMenuItem();
 	
 	JButton[] buttons3 = new JButton[10];
 	JButton[] buttons7 = new JButton[10];
@@ -131,114 +136,114 @@ public class GoJb1 implements ActionListener{
 	JButton[] buttons113 = new JButton[10];
 	JButton[] buttons114 = new JButton[10];
 
-	JFrame frame3 = new JFrame("");
-	JFrame frame7 = new JFrame("");
-	JFrame frame8 = new JFrame("");
-	JFrame frame9 = new JFrame("");
-	JFrame frame10 = new JFrame("");
-	JFrame frame11 = new JFrame("");
-	JFrame frame12 = new JFrame("");
-	JFrame frame13 = new JFrame("");
-	JFrame frame14 = new JFrame("");
-	JFrame frame15 = new JFrame("");
-	JFrame frame16 = new JFrame("");
-	JFrame frame17 = new JFrame("");
-	JFrame frame18 = new JFrame("");
-	JFrame frame19 = new JFrame("");
-	JFrame frame20 = new JFrame("");
-	JFrame frame21 = new JFrame("");
-	JFrame frame22 = new JFrame("");
-	JFrame frame23 = new JFrame("");
-	JFrame frame24 = new JFrame("");
-	JFrame frame25 = new JFrame("");
-	JFrame frame26 = new JFrame("");
-	JFrame frame27 = new JFrame("");
-	JFrame frame28 = new JFrame("");
-	JFrame frame29 = new JFrame("");
-	JFrame frame30 = new JFrame("");
-	JFrame frame31 = new JFrame("");
-	JFrame frame32 = new JFrame("");
-	JFrame frame33 = new JFrame("");
-	JFrame frame34 = new JFrame("");
-	JFrame frame35 = new JFrame("");
-	JFrame frame36 = new JFrame("");
-	JFrame frame37 = new JFrame("");
-	JFrame frame38 = new JFrame("");
-	JFrame frame39 = new JFrame("");
-	JFrame frame40 = new JFrame("");
-	JFrame frame41 = new JFrame("");
-	JFrame frame42 = new JFrame("");
-	JFrame frame43 = new JFrame("");
-	JFrame frame44 = new JFrame("");
-	JFrame frame45 = new JFrame("");
-	JFrame frame46 = new JFrame("");
-	JFrame frame47 = new JFrame("");
-	JFrame frame48 = new JFrame("");
-	JFrame frame49 = new JFrame("");
-	JFrame frame50 = new JFrame("");
-	JFrame frame51 = new JFrame("");
-	JFrame frame52 = new JFrame("");
-	JFrame frame53 = new JFrame("");
-	JFrame frame54 = new JFrame("");
-	JFrame frame55 = new JFrame("");
-	JFrame frame56 = new JFrame("");
-	JFrame frame57 = new JFrame("");
-	JFrame frame58 = new JFrame("");
-	JFrame frame59 = new JFrame("");
-	JFrame frame60 = new JFrame("");
-	JFrame frame61 = new JFrame("");
-	JFrame frame62 = new JFrame("");
-	JFrame frame63 = new JFrame("");
-	JFrame frame64 = new JFrame("");
-	JFrame frame65 = new JFrame("");
-	JFrame frame66 = new JFrame("");
-	JFrame frame67 = new JFrame("");
-	JFrame frame68 = new JFrame("");
-	JFrame frame69 = new JFrame("");
-	JFrame frame70 = new JFrame("");
-	JFrame frame71 = new JFrame("");
-	JFrame frame72 = new JFrame("");
-	JFrame frame73 = new JFrame("");
-	JFrame frame74 = new JFrame("");
-	JFrame frame75 = new JFrame("");
-	JFrame frame76 = new JFrame("");
-	JFrame frame77 = new JFrame("");
-	JFrame frame78 = new JFrame("");
-	JFrame frame79 = new JFrame("");
-	JFrame frame80 = new JFrame("");
-	JFrame frame81 = new JFrame("");
-	JFrame frame82 = new JFrame("");
-	JFrame frame83 = new JFrame("");
-	JFrame frame84 = new JFrame("");
-	JFrame frame85 = new JFrame("");
-	JFrame frame86 = new JFrame("");
-	JFrame frame87 = new JFrame("");
-	JFrame frame88 = new JFrame("");
-	JFrame frame89 = new JFrame("");
-	JFrame frame91 = new JFrame("");
-	JFrame frame92 = new JFrame("");
-	JFrame frame93 = new JFrame("");
-	JFrame frame94 = new JFrame("");
-	JFrame frame95 = new JFrame("");
-	JFrame frame96 = new JFrame("");
-	JFrame frame97 = new JFrame("");
-	JFrame frame98 = new JFrame("");
-	JFrame frame99 = new JFrame("");
-	JFrame frame100 = new JFrame("");
-	JFrame frame101 = new JFrame("");
-	JFrame frame102 = new JFrame("");
-	JFrame frame103 = new JFrame("");
-	JFrame frame104 = new JFrame("");
-	JFrame frame105 = new JFrame("");
-	JFrame frame106 = new JFrame("");
-	JFrame frame107 = new JFrame("");
-	JFrame frame108 = new JFrame("");
-	JFrame frame109 = new JFrame("");
-	JFrame frame110 = new JFrame("");
-	JFrame frame111 = new JFrame("");
-	JFrame frame112 = new JFrame("");
-	JFrame frame113 = new JFrame("");
-	JFrame frame114 = new JFrame("");
+	JFrame 	frame3 = new JFrame(),
+			frame7 = new JFrame(),
+			frame8 = new JFrame(),
+			frame9 = new JFrame(),
+			frame10 = new JFrame(),
+			frame11 = new JFrame(),
+			frame12 = new JFrame(),
+			frame13 = new JFrame(),
+			frame14 = new JFrame(),
+			frame15 = new JFrame(),
+			frame16 = new JFrame(),
+			frame17 = new JFrame(),
+			frame18 = new JFrame(),
+			frame19 = new JFrame(),
+			frame20 = new JFrame(),
+			frame21 = new JFrame(),
+			frame22 = new JFrame(),
+			frame23 = new JFrame(),
+			frame24 = new JFrame(),
+			frame25 = new JFrame(),
+			frame26 = new JFrame(),
+			frame27 = new JFrame(),
+			frame28 = new JFrame(),
+			frame29 = new JFrame(),
+			frame30 = new JFrame(),
+			frame31 = new JFrame(),
+			frame32 = new JFrame(),
+			frame33 = new JFrame(),
+			frame34 = new JFrame(),
+			frame35 = new JFrame(),
+			frame36 = new JFrame(),
+			frame37 = new JFrame(),
+			frame38 = new JFrame(),
+			frame39 = new JFrame(),
+			frame40 = new JFrame(),
+			frame41 = new JFrame(),
+			frame42 = new JFrame(),
+			frame43 = new JFrame(),
+			frame44 = new JFrame(),
+			frame45 = new JFrame(),
+			frame46 = new JFrame(),
+			frame47 = new JFrame(),
+			frame48 = new JFrame(),
+			frame49 = new JFrame(),
+			frame50 = new JFrame(),
+			frame51 = new JFrame(),
+			frame52 = new JFrame(),
+			frame53 = new JFrame(),
+			frame54 = new JFrame(),
+			frame55 = new JFrame(),
+			frame56 = new JFrame(),
+			frame57 = new JFrame(),
+			frame58 = new JFrame(),
+			frame59 = new JFrame(),
+			frame60 = new JFrame(),
+			frame61 = new JFrame(),
+			frame62 = new JFrame(),
+			frame63 = new JFrame(),
+			frame64 = new JFrame(),
+			frame65 = new JFrame(),
+			frame66 = new JFrame(),
+			frame67 = new JFrame(),
+			frame68 = new JFrame(),
+			frame69 = new JFrame(),
+			frame70 = new JFrame(),
+			frame71 = new JFrame(),
+			frame72 = new JFrame(),
+			frame73 = new JFrame(),
+			frame74 = new JFrame(),
+			frame75 = new JFrame(),
+			frame76 = new JFrame(),
+			frame77 = new JFrame(),
+			frame78 = new JFrame(),
+			frame79 = new JFrame(),
+			frame80 = new JFrame(),
+			frame81 = new JFrame(),
+			frame82 = new JFrame(),
+			frame83 = new JFrame(),
+			frame84 = new JFrame(),
+			frame85 = new JFrame(),
+			frame86 = new JFrame(),
+			frame87 = new JFrame(),
+			frame88 = new JFrame(),
+			frame89 = new JFrame(),
+			frame91 = new JFrame(),
+			frame92 = new JFrame(),
+			frame93 = new JFrame(),
+			frame94 = new JFrame(),
+			frame95 = new JFrame(),
+			frame96 = new JFrame(),
+			frame97 = new JFrame(),
+			frame98 = new JFrame(),
+			frame99 = new JFrame(),
+			frame100 = new JFrame(),
+			frame101 = new JFrame(),
+			frame102 = new JFrame(),
+			frame103 = new JFrame(),
+			frame104 = new JFrame(),
+			frame105 = new JFrame(),
+			frame106 = new JFrame(),
+			frame107 = new JFrame(),
+			frame108 = new JFrame(),
+			frame109 = new JFrame(),
+			frame110 = new JFrame(),
+			frame111 = new JFrame(),
+			frame112 = new JFrame(),
+			frame113 = new JFrame(),
+			frame114 = new JFrame();
 	
 	ImageIcon i3 = new ImageIcon(getClass().getResource("images/3.png"));
 	ImageIcon i7= new ImageIcon(getClass().getResource("images/7.png"));
@@ -545,51 +550,19 @@ public class GoJb1 implements ActionListener{
 	
 	public GoJb1(){
 		
+		
+		
 		try {
 			prop.load(new FileInputStream(System.getProperty("user.home") + "\\AppData\\Roaming\\GoJb\\settings.gojb"));
 			string = prop.getProperty("9778436klbgflf");
 			Språk();
-			GörFönster();
+			if (engångsöppning==1) {
+				GörFönster();
+				}
+				engångsöppning++;
 		
 		} catch (Exception e) {
-
-			språk.setLayout(new FlowLayout());
-			språk.add(svenska);
-			språk.add(engelska);
-			språk.pack();
-			språk.setLocationRelativeTo(null);
-			språk.setVisible(true);
-			
-			ActionListener dActionListener = new ActionListener() {
-				
-				public void actionPerformed(ActionEvent e) {
-					if (e.getSource()==svenska) {
-						string="86325yhrel";
-					}
-					else if (e.getSource()==engelska) {
-						string="lhdohf7984";
-					}
-					
-					prop.setProperty("9778436klbgflf", string);
-					try {
-						prop.store(new FileWriter(new File(System.getProperty("user.home") + "\\AppData\\Roaming\\GoJb\\settings.gojb")),"Inställningar för GoJbGuide");
-					} catch (Exception e1) {
-					
-					}
-					
-					språk.setVisible(false);
-					try {
-						Språk();
-					} catch (Exception e1) {
-						
-						e1.printStackTrace();
-					}
-					GörFönster();
-				}
-			};
-
-			svenska.addActionListener(dActionListener);
-			engelska.addActionListener(dActionListener);
+			Språkfråga();
 		}
 	/**
 9778436klbgflf=lhdohf7984
@@ -600,12 +573,64 @@ public class GoJb1 implements ActionListener{
 	 */
 		
 	}
+	public void Språkfråga() {
+		ActionListener dActionListener = new ActionListener() {
+			
+			public void actionPerformed(ActionEvent e) {
+				if (e.getSource()==svenska) {
+					string="86325yhrel";
+				}
+				else if (e.getSource()==engelska) {
+					string="lhdohf7984";
+				}
+				
+				prop.setProperty("9778436klbgflf", string);
+				try {
+					prop.store(new FileWriter(new File(System.getProperty("user.home") + "\\AppData\\Roaming\\GoJb\\settings.gojb")),"Inställningar för GoJbGuide");
+				} catch (Exception e1) {
+				
+				}
+				
+				språk.setVisible(false);
+				try {
+					Språk();
+				} catch (Exception e1) {
+					
+					e1.printStackTrace();
+				}
+				if (engångsöppning==1) {
+				GörFönster();
+				}
+				engångsöppning++;
+			}
+		};
+		
+		språk.setLayout(new FlowLayout());
+		språk.add(svenska);
+		språk.add(engelska);
+		språk.setAlwaysOnTop(true);
+		språk.pack();
+		språk.setLocationRelativeTo(null);
+		språk.setVisible(true);
+		
+		
+
+		svenska.addActionListener(dActionListener);
+		engelska.addActionListener(dActionListener);
+	}
 	public void Språk() throws Exception{
 
 		if (string.equals("86325yhrel")){
 			System.out.println("Hej!");
+			
+			väljSpråk.setText("Språk");
+			språkMeny.setText("Språk");
+			button60.setText("Aktiveringsräls");
 		}
 		else if (string.equals("lhdohf7984")){
+			
+			väljSpråk.setText("Language");
+			språkMeny.setText("Language");
 			
 			//Eng
 			button60.setText("Tills Vidare");
@@ -3017,6 +3042,14 @@ public class GoJb1 implements ActionListener{
 			
 			frame.setLayout(new GridLayout(36, 3));
 			
+			frameHuvud.setJMenuBar(bar);
+			
+			bar.add(språkMeny);
+			språkMeny.add(väljSpråk);
+			väljSpråk.addActionListener(this);
+			
+			
+			
 			frameHuvud.add(scrollBar);
 			frameHuvud.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 			frameHuvud.pack();
@@ -3787,6 +3820,10 @@ public class GoJb1 implements ActionListener{
 				}
 				if (abc==snubbeltrådskrok) {
 					frame49.setVisible(true);
+				}
+				if (e.getSource()==väljSpråk){
+					Språkfråga();
+					
 				}
 			
 		
