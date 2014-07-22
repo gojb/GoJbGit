@@ -23,7 +23,8 @@ public class GoJb1 implements ActionListener{
 	
 	JMenuBar bar = new JMenuBar();
 	
-	JMenu språkMeny = new JMenu();
+	JMenu språkMeny = new JMenu(),
+			hjälpMenu = new JMenu("Hjälp");
 	
 	JMenuItem 	väljSpråk = new JMenuItem(),
 				helpItem = new JMenuItem("Hjälp");
@@ -594,7 +595,15 @@ public class GoJb1 implements ActionListener{
 				try {
 					prop.store(new FileWriter(new File(System.getProperty("user.home") + "\\AppData\\Roaming\\GoJb\\settings.gojb")),"Inställningar för GoJbGuide");
 				} catch (Exception e1) {
-				
+					System.err.println("Mappen finns inte! Skapar...");
+					new File((System.getProperty("user.home") + "\\AppData\\Roaming\\GoJb\\")).mkdir();
+					
+					try {
+						prop.store(new FileWriter(new File(System.getProperty("user.home") + "\\AppData\\Roaming\\GoJb\\settings.gojb")),"Inställningar för GoJbGuide");
+					} catch (IOException e2) {
+						e2.printStackTrace();
+						 
+					}
 				}
 				
 				språk.setVisible(false);
@@ -625,21 +634,242 @@ public class GoJb1 implements ActionListener{
 		engelska.addActionListener(dActionListener);
 	}
 	public void Språk() throws Exception{
-	
+	frame.removeAll();
 		if (string.equals("86325yhrel")){
+			//Svenska
 			System.out.println("Hej!");
 			
 			väljSpråk.setText("Språk");
 			språkMeny.setText("Språk");
 			button60.setText("Aktiveringsräls");
+			
+			frame.add(button60);
+			frame.add(button23);
+			frame.add(button7);
+			frame.add(button101);
+			frame.add(button57);
+			frame.add(button105);
+			frame.add(button84);
+			frame.add(button19);
+			frame.add(button45);
+			frame.add(button73);
+			frame.add(button75);
+			frame.add(button76);
+			frame.add(button82);
+			frame.add(button56);
+			frame.add(button11);
+			frame.add(button61);
+			frame.add(button18);
+			frame.add(button26);
+			frame.add(button48);
+			frame.add(button103);
+			frame.add(button20);
+			frame.add(button39);
+			frame.add(button88);
+			frame.add(button70);
+			frame.add(button67);
+			frame.add(button50);
+			frame.add(button54);
+			frame.add(button38);
+			frame.add(button41);
+			frame.add(button106);
+			frame.add(button99);
+			frame.add(button36);
+			frame.add(button43);
+			frame.add(button112);
+			frame.add(button113);
+			frame.add(button85);
+			frame.add(button81);
+			frame.add(button86);
+			frame.add(button98);
+			frame.add(button104);
+			frame.add(button107);
+			frame.add(button79);
+			frame.add(button65);
+			frame.add(button16);
+			frame.add(button80);
+			frame.add(button74);
+			frame.add(button58);
+			frame.add(button62);
+			frame.add(button34);
+			frame.add(button40);
+			frame.add(button100);
+			frame.add(button94);
+			frame.add(button95);
+			frame.add(button22);
+			frame.add(button46);
+			frame.add(button13);
+			frame.add(button89);
+			frame.add(button32);
+			frame.add(button14);
+			frame.add(button87);
+			frame.add(button114);
+			frame.add(button52);
+			frame.add(button102);
+			frame.add(button59);
+			frame.add(button42);
+			frame.add(button97);
+			frame.add(button108);
+			frame.add(button51);
+			frame.add(button78);
+			frame.add(button9);
+			frame.add(button83);
+			frame.add(button69);
+			frame.add(button68);
+			frame.add(button71);
+			frame.add(button37);
+			frame.add(button109);
+			frame.add(button110);
+			frame.add(button111);
+			frame.add(button28);
+			frame.add(button31);
+			frame.add(button55);
+			frame.add(button47);
+			frame.add(button93);
+			frame.add(button8);
+			frame.add(button96);
+			frame.add(button12);
+			frame.add(button77);
+			frame.add(button25);
+			frame.add(button72);
+			frame.add(button49);
+			frame.add(button33);
+			frame.add(button91);
+			frame.add(button63);
+			frame.add(button29);
+			frame.add(button35);
+			frame.add(button27);
+			frame.add(button53);
+			frame.add(button66);
+			frame.add(button10);
+			frame.add(button17);
+			frame.add(button21);
+			frame.add(button44);
+			frame.add(button30);
+			frame.add(button3);
+			frame.add(button92);
+			frame.add(button24);
+			frame.add(button15);
+			frame.add(button64);
 		}
 		else if (string.equals("lhdohf7984")){
+			//Eng
 			
 			väljSpråk.setText("Language");
 			språkMeny.setText("Language");
 			
-			//Eng
+			
 			button60.setText("Tills Vidare");
+			
+			frame.add(button60);
+			frame.add(button23);
+			frame.add(button7);
+			frame.add(button101);
+			frame.add(button57);
+			frame.add(button105);
+			frame.add(button84);
+			frame.add(button19);
+			frame.add(button45);
+			frame.add(button73);
+			frame.add(button75);
+			frame.add(button76);
+			frame.add(button82);
+			frame.add(button56);
+			frame.add(button11);
+			frame.add(button61);
+			frame.add(button18);
+			frame.add(button26);
+			frame.add(button48);
+			frame.add(button103);
+			frame.add(button20);
+			frame.add(button39);
+			frame.add(button88);
+			frame.add(button70);
+			frame.add(button67);
+			frame.add(button50);
+			frame.add(button54);
+			frame.add(button38);
+			frame.add(button41);
+			frame.add(button106);
+			frame.add(button99);
+			frame.add(button36);
+			frame.add(button43);
+			frame.add(button112);
+			frame.add(button113);
+			frame.add(button85);
+			frame.add(button81);
+			frame.add(button86);
+			frame.add(button98);
+			frame.add(button104);
+			frame.add(button107);
+			frame.add(button79);
+			frame.add(button65);
+			frame.add(button16);
+			frame.add(button80);
+			frame.add(button74);
+			frame.add(button58);
+			frame.add(button62);
+			frame.add(button34);
+			frame.add(button40);
+			frame.add(button100);
+			frame.add(button94);
+			frame.add(button95);
+			frame.add(button22);
+			frame.add(button46);
+			frame.add(button13);
+			frame.add(button89);
+			frame.add(button32);
+			frame.add(button14);
+			frame.add(button87);
+			frame.add(button114);
+			frame.add(button52);
+			frame.add(button102);
+			frame.add(button59);
+			frame.add(button42);
+			frame.add(button97);
+			frame.add(button108);
+			frame.add(button51);
+			frame.add(button78);
+			frame.add(button9);
+			frame.add(button83);
+			frame.add(button69);
+			frame.add(button68);
+			frame.add(button71);
+			frame.add(button37);
+			frame.add(button109);
+			frame.add(button110);
+			frame.add(button111);
+			frame.add(button28);
+			frame.add(button31);
+			frame.add(button55);
+			frame.add(button47);
+			frame.add(button93);
+			frame.add(button8);
+			frame.add(button96);
+			frame.add(button12);
+			frame.add(button77);
+			frame.add(button25);
+			frame.add(button72);
+			frame.add(button49);
+			frame.add(button33);
+			frame.add(button91);
+			frame.add(button63);
+			frame.add(button29);
+			frame.add(button35);
+			frame.add(button27);
+			frame.add(button53);
+			frame.add(button66);
+			frame.add(button10);
+			frame.add(button17);
+			frame.add(button21);
+			frame.add(button44);
+			frame.add(button30);
+			frame.add(button3);
+			frame.add(button92);
+			frame.add(button24);
+			frame.add(button15);
+			frame.add(button64);
+			
 		}
 		else {
 			throw new Exception();
@@ -653,117 +883,6 @@ public class GoJb1 implements ActionListener{
 	
 //		Knappar synliga:
 
-		
-		frame.add(button60);
-		frame.add(button23);
-		frame.add(button7);
-		frame.add(button101);
-		frame.add(button57);
-		frame.add(button105);
-		frame.add(button84);
-		frame.add(button19);
-		frame.add(button45);
-		frame.add(button73);
-		frame.add(button75);
-		frame.add(button76);
-		frame.add(button82);
-		frame.add(button56);
-		frame.add(button11);
-		frame.add(button61);
-		frame.add(button18);
-		frame.add(button26);
-		frame.add(button48);
-		frame.add(button103);
-		frame.add(button20);
-		frame.add(button39);
-		frame.add(button88);
-		frame.add(button70);
-		frame.add(button67);
-		frame.add(button50);
-		frame.add(button54);
-		frame.add(button38);
-		frame.add(button41);
-		frame.add(button106);
-		frame.add(button99);
-		frame.add(button36);
-		frame.add(button43);
-		frame.add(button112);
-		frame.add(button113);
-		frame.add(button85);
-		frame.add(button81);
-		frame.add(button86);
-		frame.add(button98);
-		frame.add(button104);
-		frame.add(button107);
-		frame.add(button79);
-		frame.add(button65);
-		frame.add(button16);
-		frame.add(button80);
-		frame.add(button74);
-		frame.add(button58);
-		frame.add(button62);
-		frame.add(button34);
-		frame.add(button40);
-		frame.add(button100);
-		frame.add(button94);
-		frame.add(button95);
-		frame.add(button22);
-		frame.add(button46);
-		frame.add(button13);
-		frame.add(button89);
-		frame.add(button32);
-		frame.add(button14);
-		frame.add(button87);
-		frame.add(button114);
-		frame.add(button52);
-		frame.add(button102);
-		frame.add(button59);
-		frame.add(button42);
-		frame.add(button97);
-		frame.add(button108);
-		frame.add(button51);
-		frame.add(button78);
-		frame.add(button9);
-		frame.add(button83);
-		frame.add(button69);
-		frame.add(button68);
-		frame.add(button71);
-		frame.add(button37);
-		frame.add(button109);
-		frame.add(button110);
-		frame.add(button111);
-		frame.add(button28);
-		frame.add(button31);
-		frame.add(button55);
-		frame.add(button47);
-		frame.add(button93);
-		frame.add(button8);
-		frame.add(button96);
-		frame.add(button12);
-		frame.add(button77);
-		frame.add(button25);
-		frame.add(button72);
-		frame.add(button49);
-		frame.add(button33);
-		frame.add(button91);
-		frame.add(button63);
-		frame.add(button29);
-		frame.add(button35);
-		frame.add(button27);
-		frame.add(button53);
-		frame.add(button66);
-		frame.add(button10);
-		frame.add(button17);
-		frame.add(button21);
-		frame.add(button44);
-		frame.add(button30);
-		frame.add(button3);
-		frame.add(button92);
-		frame.add(button24);
-		frame.add(button15);
-		frame.add(button64);
-
-		
 		frame3.setSize(500,500);
 		frame7.setSize(500,500);
 		frame8.setSize(500,500);
@@ -3052,8 +3171,9 @@ public class GoJb1 implements ActionListener{
 			frameHuvud.setJMenuBar(bar);
 			
 			bar.add(språkMeny);
-			bar.add(helpItem);
+			bar.add(hjälpMenu);
 			språkMeny.add(väljSpråk);
+			hjälpMenu.add(helpItem);
 			väljSpråk.addActionListener(this);
 			
 			
