@@ -518,18 +518,26 @@ public class GoJb1 implements ActionListener{
 	ImageIcon nederkvarts = new ImageIcon(getClass().getResource("images/1022.png"));
 	ImageIcon material = new ImageIcon(getClass().getResource("images/1027.gif"));
 	ImageIcon snubbeltrådskrok = new ImageIcon(getClass().getResource("images/49.gif"));
-
-	
 	
 	JPanel frame = new JPanel();
 	JFrame frameHuvud = new JFrame("GoJbGuide");
 	
 	JScrollPane scrollBar=new JScrollPane(frame,JScrollPane.VERTICAL_SCROLLBAR_ALWAYS,JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
 	
+	JMenuBar menuBar = new JMenuBar();
+	
+	JMenuItem helpItem = new JMenuItem("Hjälp");
+	
 	public static void main(String[] args) {
+		try {
+		      UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsLookAndFeel");
+		    } catch (Exception e) {
+		    	((Runnable) Toolkit.getDefaultToolkit().getDesktopProperty("win.sound.hand")).run();
+		    	JOptionPane.showMessageDialog(null, "Bad LookAndFeel!","Error",JOptionPane.ERROR_MESSAGE);
+		    }
 		new GoJb1();
 	}
-	
+
 
 	public GoJb1() {
 					
@@ -537,6 +545,8 @@ public class GoJb1 implements ActionListener{
 		frameHuvud.setIconImage(new ImageIcon(getClass().getResource("images/java-icon.png")).getImage());
 	
 //		Knappar synliga:
+		menuBar.add(helpItem);
+		frameHuvud.setJMenuBar(menuBar);
 		
 		frame.add(button60);
 		frame.add(button23);
