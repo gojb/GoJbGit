@@ -618,6 +618,7 @@ public class GoJb1 implements ActionListener{
 				if (engångsöppning==1) {
 				GörFönster();
 				}
+				
 				engångsöppning++;
 			}
 		};
@@ -870,6 +871,7 @@ public class GoJb1 implements ActionListener{
 			frame.add(button24);
 			frame.add(button15);
 			frame.add(button64);
+			
 		}
 		else if (string.equals("lhdohf7984")){
 			//Eng
@@ -1106,10 +1108,16 @@ public class GoJb1 implements ActionListener{
 			frame.add(button15);
 			frame.add(button64);
 			
+			
 		}
 		else {
 			throw new Exception();
 		}
+		frameHuvud.repaint();
+		frameHuvud.revalidate();
+		frameHuvud.pack();
+		frameHuvud.setSize(new Dimension(frameHuvud.getWidth(),700));
+		frameHuvud.setLocationRelativeTo(null);
 	
 	}
 	public void GörFönster() {
