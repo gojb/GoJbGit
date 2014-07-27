@@ -15,7 +15,6 @@ public class GoJb1 implements ActionListener{
 	Properties prop = new Properties();
 	
 	String string;
-	String språkstring;
 	
 	JFrame språk = new JFrame("Language");
 	
@@ -27,8 +26,7 @@ public class GoJb1 implements ActionListener{
 	JMenu språkMeny = new JMenu(),
 			hjälpMenu = new JMenu("Hjälp");
 	
-	JMenuItem 	väljSpråkSV = new JMenuItem(new ImageIcon(getClass().getResource("/images/swedish.jpg"))),
-				väljSpråkENG = new JMenuItem(new ImageIcon(getClass().getResource("/images/brittish.jpg"))),
+	JMenuItem 	väljSpråk = new JMenuItem(),
 				helpItem = new JMenuItem("Hjälp");
 	
 	JButton[] buttons3 = new JButton[10];
@@ -640,13 +638,11 @@ public class GoJb1 implements ActionListener{
 		if (string.equals("86325yhrel")){
 			//Svenska
 			
-			språkMeny.remove(väljSpråkENG);
-			
-			språkMeny.add(väljSpråkSV);
+			språkMeny.setIcon(new ImageIcon(getClass().getResource("/images/swedish.jpg")));
 			
 			System.out.println("Hej!");
 			
-			väljSpråkSV.setText("Språk");
+			väljSpråk.setText("Språk");
 			språkMeny.setText("Språk");
 
 			hjälpMenu.setText("Hjälp");
@@ -874,12 +870,9 @@ public class GoJb1 implements ActionListener{
 		else if (string.equals("lhdohf7984")){
 			//Eng
 			
-			språkMeny.remove(väljSpråkSV);
+			språkMeny.setIcon(new ImageIcon(getClass().getResource("/images/brittish.jpg")));
 			
-			språkMeny.add(väljSpråkENG);
-			
-			
-			väljSpråkENG.setText("Language");
+			väljSpråk.setText("Language");
 			språkMeny.setText("Language");
 			
 			hjälpMenu.setText("Help");
@@ -1227,7 +1220,6 @@ public class GoJb1 implements ActionListener{
 		frame112.setSize(500,500);
 		frame113.setSize(500,500);
 		frame114.setSize(500,500);
-			
 		
 		
 		button3.addActionListener(this);
@@ -3405,11 +3397,12 @@ public class GoJb1 implements ActionListener{
 			
 			frameHuvud.setJMenuBar(bar);
 			
-			bar.add(språkMeny);
 			bar.add(hjälpMenu);
+			bar.add(språkMeny);
+			
+			språkMeny.add(väljSpråk);
 			hjälpMenu.add(helpItem);
-			väljSpråkENG.addActionListener(this);
-			väljSpråkSV.addActionListener(this);
+			väljSpråk.addActionListener(this);
 			
 			
 			
@@ -4184,7 +4177,7 @@ public class GoJb1 implements ActionListener{
 				if (abc==snubbeltrådskrok) {
 					frame49.setVisible(true);
 				}
-				if (e.getSource()==väljSpråkENG||e.getSource()==väljSpråkSV){
+				if (e.getSource()==väljSpråk){
 					Språkfråga();
 					
 				}
