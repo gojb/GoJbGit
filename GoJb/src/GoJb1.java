@@ -15,6 +15,7 @@ public class GoJb1 implements ActionListener{
 	Properties prop = new Properties();
 	
 	String string;
+	String språkstring;
 	
 	JFrame språk = new JFrame("Language");
 	
@@ -26,7 +27,8 @@ public class GoJb1 implements ActionListener{
 	JMenu språkMeny = new JMenu(),
 			hjälpMenu = new JMenu("Hjälp");
 	
-	JMenuItem 	väljSpråk = new JMenuItem(),
+	JMenuItem 	väljSpråkSV = new JMenuItem(new ImageIcon(getClass().getResource("/images/swedish.jpg"))),
+				väljSpråkENG = new JMenuItem(new ImageIcon(getClass().getResource("/images/brittish.jpg"))),
 				helpItem = new JMenuItem("Hjälp");
 	
 	JButton[] buttons3 = new JButton[10];
@@ -637,9 +639,14 @@ public class GoJb1 implements ActionListener{
 	frame.removeAll();
 		if (string.equals("86325yhrel")){
 			//Svenska
+			
+			språkMeny.remove(väljSpråkENG);
+			
+			språkMeny.add(väljSpråkSV);
+			
 			System.out.println("Hej!");
 			
-			väljSpråk.setText("Språk");
+			väljSpråkSV.setText("Språk");
 			språkMeny.setText("Språk");
 
 			hjälpMenu.setText("Hjälp");
@@ -867,7 +874,12 @@ public class GoJb1 implements ActionListener{
 		else if (string.equals("lhdohf7984")){
 			//Eng
 			
-			väljSpråk.setText("Language");
+			språkMeny.remove(väljSpråkSV);
+			
+			språkMeny.add(väljSpråkENG);
+			
+			
+			väljSpråkENG.setText("Language");
 			språkMeny.setText("Language");
 			
 			hjälpMenu.setText("Help");
@@ -1216,7 +1228,6 @@ public class GoJb1 implements ActionListener{
 		frame113.setSize(500,500);
 		frame114.setSize(500,500);
 			
-
 		
 		
 		button3.addActionListener(this);
@@ -3396,9 +3407,9 @@ public class GoJb1 implements ActionListener{
 			
 			bar.add(språkMeny);
 			bar.add(hjälpMenu);
-			språkMeny.add(väljSpråk);
 			hjälpMenu.add(helpItem);
-			väljSpråk.addActionListener(this);
+			väljSpråkENG.addActionListener(this);
+			väljSpråkSV.addActionListener(this);
 			
 			
 			
@@ -4173,7 +4184,7 @@ public class GoJb1 implements ActionListener{
 				if (abc==snubbeltrådskrok) {
 					frame49.setVisible(true);
 				}
-				if (e.getSource()==väljSpråk){
+				if (e.getSource()==väljSpråkENG||e.getSource()==väljSpråkSV){
 					Språkfråga();
 					
 				}
