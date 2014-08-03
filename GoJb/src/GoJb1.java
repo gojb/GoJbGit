@@ -617,10 +617,11 @@ public class GoJb1 implements ActionListener{
 					e1.printStackTrace();
 				}
 				if (engångsöppning==1) {
-				GörFönster();
+					GörFönster();
+					engångsöppning++;
 				}
 				
-				engångsöppning++;
+				
 			}
 		};
 		
