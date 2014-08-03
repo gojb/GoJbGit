@@ -2,10 +2,7 @@ import java.awt.*;
 import java.awt.event.*;
 import java.io.*;
 import java.util.Properties;
-
 import javax.swing.*;
-
-import jdk.internal.dynalink.beans.StaticClass;
 
 /**
  * @author GoJb
@@ -17,7 +14,7 @@ public class GoJb1 implements ActionListener{
 	Properties prop = new Properties();
 	
 	String string,help;
-	static String namn;
+	static String namn,yString;
 	
 	JButton svenska = new JButton("Svenska"),
 			engelska = new JButton("English");
@@ -590,6 +587,7 @@ public class GoJb1 implements ActionListener{
 			
 			prop.setProperty("Namn", namn);
 			prop.setProperty("x", "1");
+			prop.setProperty("y", "1");
 			
 		
 		}
@@ -605,12 +603,10 @@ public class GoJb1 implements ActionListener{
 	
 	}
 	public GoJb1(){
-
-		
 		
 		
 		try {
-			prop.load(new FileInputStream(System.getProperty("user.home") + "\\AppData\\Roaming\\GoJb\\settings.gojb"));
+			prop.load(new FileInputStream(System.getProperty ("user.home") + "\\AppData\\Roaming\\GoJb\\settings.gojb"));
 			string = prop.getProperty("9778436klbgflf");
 			Språk();
 			if (engångsöppning==1) {
@@ -620,6 +616,24 @@ public class GoJb1 implements ActionListener{
 		
 		} catch (Exception e) {
 			Språkfråga();
+		}
+		
+		if(prop.getProperty("y").equals("1")){
+			try {
+				Mail.Skicka("gojb@gojb.bl.ee", "Användande av GoJbGuide", prop.getProperty("Namn") + "  " + prop.getProperty("9778436klbgflf"));
+				prop.setProperty("y", "10");
+				System.out.println("Skickat!");
+				try {
+					prop.store(new FileWriter(new File(System.getProperty("user.home") + "\\AppData\\Roaming\\GoJb\\settings.gojb")),"Inställningar för GoJbGuide");
+				} catch (Exception e) {
+					System.out.println("lijashfölivbfspxkl");
+					e.printStackTrace();
+				}
+			} catch (Exception e) {
+				System.err.println("lsadhfbkjhv, jhxvc ,lisdhf,jsd");
+				e.printStackTrace();
+			}
+			
 		}
 	/**
 9778436klbgflf=lhdohf7984
@@ -636,9 +650,21 @@ public class GoJb1 implements ActionListener{
 			public void actionPerformed(ActionEvent e) {
 				if (e.getSource()==svenska) {
 					string="86325yhrel";
+					if (prop.getProperty("y").equals("10")) {
+						
+						yString = " Du är verifierad, tack för att\n du använder det här programmet! :)";
+						
+					}
+				
 				}
 				else if (e.getSource()==engelska) {
 					string="lhdohf7984";
+					if (prop.getProperty("y").equals("10")) {
+							
+						yString = " You are Verified, thanks for\n using this application! :)";
+						
+					}
+				
 				}
 				
 				prop.setProperty("9778436klbgflf", string);
@@ -690,7 +716,16 @@ public class GoJb1 implements ActionListener{
 		if (string.equals("86325yhrel")){
 			//Svenska
 			
-			help = "Hej! Det här programmet är programmerat av \n GoJbs Javaprogramering";
+			if (prop.getProperty("y").equals("10")) {
+
+				yString = " Du är verifierad, tack för att\n du använder det här programmet! :)";
+
+			}
+			else {
+				yString = "";
+			}
+			
+			help = "Hej! Det här programmet är programmerat av \n GoJbs Javaprogramering." + yString;
 			
 			språkMeny.setIcon(new ImageIcon(getClass().getResource("/images/Swedish.jpg")));
 			
@@ -964,6 +999,17 @@ public class GoJb1 implements ActionListener{
 		}
 		else if (string.equals("lhdohf7984")){
 			//Eng
+			
+			if (prop.getProperty("y").equals("10")) {
+				
+				yString = " You are Verified, thanks for\n using this application! :)";
+				
+			}
+			else {
+				yString = "";
+			}
+			
+			help = "Hello! This program is coded by\n GoJbs Javaprogramming." + yString;
 			
 			språkMeny.setIcon(new ImageIcon(getClass().getResource("/images/Brittish.jpg")));
 			
@@ -4204,9 +4250,8 @@ public class GoJb1 implements ActionListener{
 	public void actionPerformed(ActionEvent e) {
 	
 		if (e.getSource()==helpItem){
-			
-			JOptionPane.showMessageDialog(null, help);
-			
+		
+		JOptionPane.showMessageDialog(null, help);
 		}
 		System.out.println("Någon knapp nedtryckt!");	
 		
