@@ -5,6 +5,8 @@ import java.util.Properties;
 
 import javax.swing.*;
 
+import jdk.internal.dynalink.beans.StaticClass;
+
 /**
  * @author GoJb
  *
@@ -14,7 +16,8 @@ public class GoJb1 implements ActionListener{
 	static int engångsöppning = 1;
 	Properties prop = new Properties();
 	
-	String string;
+	String string,help;
+	static String namn;
 	
 	JButton svenska = new JButton("Svenska"),
 			engelska = new JButton("English");
@@ -557,11 +560,55 @@ public class GoJb1 implements ActionListener{
 		    	((Runnable) Toolkit.getDefaultToolkit().getDesktopProperty("win.sound.hand")).run();
 		    	JOptionPane.showMessageDialog(null, "Bad LookAndFeel!","Error",JOptionPane.ERROR_MESSAGE);
 		    }
-		new GoJb1();
+		Namn();
+		
+		
 	}
+	public static void Namn() {
+		Properties prop = new Properties();
+		try {
+			prop.load(new FileInputStream(System.getProperty("user.home") + "\\AppData\\Roaming\\GoJb\\settings.gojb"));
+		}catch (IOException e) {
+			
+			e.printStackTrace();
+		}
+		
+	if(prop.getProperty("x","0").equals("1")){
+		
+			new GoJb1();
+			return;
+		}
+	else {
+		namn = JOptionPane.showInputDialog("Enter name/Skriv ditt namn");
+		if(namn.equals("")||namn.equals(null)){
+			
+			System.exit(3);
+			
+		}
+		else {
+			System.err.println("Dankish shöen!");
+			
+			prop.setProperty("Namn", namn);
+			prop.setProperty("x", "1");
+			
+		
+		}
+		}
 	
+		try {
+				prop.store(new FileWriter(new File(System.getProperty("user.home") + "\\AppData\\Roaming\\GoJb\\settings.gojb")),"Inställningar för GoJbGuide");
+			} catch (Exception e) {
+				System.out.println("lijashfölivbfspxkl");
+				e.printStackTrace();
+			}
+		Namn();
+	
+	}
 	public GoJb1(){
 
+		
+		
+		
 		try {
 			prop.load(new FileInputStream(System.getProperty("user.home") + "\\AppData\\Roaming\\GoJb\\settings.gojb"));
 			string = prop.getProperty("9778436klbgflf");
@@ -641,6 +688,8 @@ public class GoJb1 implements ActionListener{
 	frame.removeAll();
 		if (string.equals("86325yhrel")){
 			//Svenska
+			
+			help = "Hej! Det här programmet är programmerat av \n GoJbs Javaprogramering";
 			
 			språkMeny.setIcon(new ImageIcon(getClass().getResource("/images/Swedish.jpg")));
 			
@@ -4133,6 +4182,7 @@ public class GoJb1 implements ActionListener{
 		bar.add(språkMeny);
 		bar.add(hjälpMenu);
 		
+		helpItem.addActionListener(this);
 
 		språkMeny.add(väljSpråk);
 		hjälpMenu.add(helpItem);
@@ -4142,6 +4192,9 @@ public class GoJb1 implements ActionListener{
 		frameHuvud.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frameHuvud.setLocationRelativeTo(null);
 		frameHuvud.setVisible(true);
+		
+		
+		
 
 
 
@@ -4149,7 +4202,11 @@ public class GoJb1 implements ActionListener{
 
 	public void actionPerformed(ActionEvent e) {
 	
-		
+		if (e.getSource()==helpItem){
+			
+			JOptionPane.showMessageDialog(null, help);
+			
+		}
 		System.out.println("Någon knapp nedtryckt!");	
 		
 		frame3.setVisible(false);
@@ -4907,7 +4964,7 @@ public class GoJb1 implements ActionListener{
 			Språkfråga();
 
 		}
-
+		
 	}
 
 }
