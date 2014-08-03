@@ -5,19 +5,17 @@ import java.util.*;
 import javax.mail.*;
 import javax.mail.internet.*;
 
-public class Mail {
-	public static void Skicka(String Till, String Ämne, String Meddelande) throws AddressException, MessagingException{
-		
-		
-	
+class Mail {
+	static void Skicka(String Till, String Ämne, String Meddelande) throws AddressException, MessagingException{
+
 	        Properties props = new Properties();
-	        props.put("mail.smtp.host", "mx1.hostinger.se"); // for gmail use smtp.gmail.com
+	        props.put("mail.smtp.host", "mx1.hostinger.se");
 	        props.put("mail.smtp.auth", "true");
 	        props.put("mail.smtp.port", "2525");
 
 	        Session mailSession = Session.getInstance(props, new Authenticator() {
 
-	            protected PasswordAuthentication getPasswordAuthentication() {
+	           protected PasswordAuthentication getPasswordAuthentication() {
 	                return new PasswordAuthentication("gojb@gojb.bl.ee", "uggen0684");
 	            }
 	        });
