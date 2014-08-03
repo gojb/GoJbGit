@@ -628,7 +628,7 @@ public class GoJb1 implements ActionListener{
 		språk.add(svenska);
 		språk.add(engelska);
 		språk.setAlwaysOnTop(true);
-		språk.setIconImage(new ImageIcon(getClass().getResource("/images/java-icon.png")).getImage());
+		språk.setIconImage(new ImageIcon(getClass().getResource("/images/Java-icon.png")).getImage());
 		språk.pack();
 		språk.setLocationRelativeTo(null);
 		språk.setVisible(true);
@@ -642,7 +642,7 @@ public class GoJb1 implements ActionListener{
 		if (string.equals("86325yhrel")){
 			//Svenska
 			
-			språkMeny.setIcon(new ImageIcon(getClass().getResource("/images/swedish.jpg")));
+			språkMeny.setIcon(new ImageIcon(getClass().getResource("/images/Swedish.jpg")));
 			
 			System.out.println("Hej!");
 			
@@ -915,7 +915,7 @@ public class GoJb1 implements ActionListener{
 		else if (string.equals("lhdohf7984")){
 			//Eng
 			
-			språkMeny.setIcon(new ImageIcon(getClass().getResource("/images/brittish.jpg")));
+			språkMeny.setIcon(new ImageIcon(getClass().getResource("/images/Brittish.jpg")));
 			
 			väljSpråk.setText("Language");
 			språkMeny.setText("Language");
@@ -1308,7 +1308,7 @@ public class GoJb1 implements ActionListener{
 	public void GörFönster() {
 
 		scrollBar.getVerticalScrollBar().setUnitIncrement(20);
-		frameHuvud.setIconImage(new ImageIcon(getClass().getResource("/images/java-icon.png")).getImage());
+		frameHuvud.setIconImage(new ImageIcon(getClass().getResource("/images/Java-icon.png")).getImage());
 
 		frame3.setSize(500,500);
 		frame7.setSize(500,500);
