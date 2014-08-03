@@ -535,7 +535,16 @@ public class GoJb1 implements ActionListener{
 				nederkvarts = new ImageIcon(getClass().getResource("images/1022.png")),
 				material = new ImageIcon(getClass().getResource("images/1027.gif")),
 				snubbeltrådskrok = new ImageIcon(getClass().getResource("images/49.gif"));
-
+	
+	String traString = "",kullerString = "",rödString = "",sandString = "",guldString = "",
+			slimesString = "",trådsString = "",tegelString = "",krutString = "",järnString = "",
+			diamantString = "",snöbollString = "",obsidianString = "",lädersString = "",färgerString = "",
+			pumpaString = "",äggString = "",kolString = "",morotString = "",järnelrträdString = "",
+			fjäderString = "",bläckString = "",träjärnstenString = "",melonString = "",blazeString = "",
+			spindelögaString = "",glasString = "",svampString = "",glödstenspulverString = "",
+			veteString = "",kakaoString = "",stenString = "",sockerrörString = "",mjölkString = "",
+			äppleString = "",flintaString = "",järnstenträString = "",nederstjärnaString = "",
+			nederkvartString = "",materialString = "";
 	
 	JPanel frame = new JPanel();
 
@@ -860,6 +869,47 @@ public class GoJb1 implements ActionListener{
 			frame.add(button15);
 			frame.add(button64);
 			
+			traString = "Trä";
+			kullerString = "Kullersten";
+			rödString = "Rödsten";
+			sandString = "Sandsten";
+			guldString = "Guld";
+			slimesString = "Slime";
+			trådsString = "Tråd";
+			tegelString = "Tegelsten";
+			krutString = "Krut";
+			järnString = "Järn";
+			diamantString = "Diamant";
+			snöbollString = "Snöboll";
+			obsidianString = "Obsidian";
+			lädersString = "Läder";
+			färgerString = "Färger, Skapas t.ex. med blommor";
+			pumpaString = "Pumpa";
+			äggString = "Ägg";
+			kolString = "Kol";
+			morotString = "Morot";
+			järnelrträdString = "Järn eller trä";
+			fjäderString = "Fjäder";
+			bläckString = "Bläck";
+			träjärnstenString = "Sten, järn eller trä";
+			melonString = "Melon";
+			blazeString = "Blaze";
+			spindelögaString = "Spindelöga";
+			glasString = "Glas";
+			svampString = "Svamp";
+			glödstenspulverString = "Glödstenspulver";
+			veteString = "Vete";
+			kakaoString = "Kakao";
+			stenString = "Sten";
+			sockerrörString = "Sockerrör";
+			mjölkString = "Mjölk";
+			äppleString = "Äpple";
+			flintaString = "Flinta";
+			järnstenträString = "Järn, kullersten eller trä";
+			nederstjärnaString = "Nederstjärna";
+			nederkvartString = "Nederkvarts";
+			materialString = "Material";
+			
 		}
 		else if (string.equals("lhdohf7984")){
 			//Eng
@@ -1092,6 +1142,46 @@ public class GoJb1 implements ActionListener{
 			frame.add(button49);
 			frame.add(button15);
 			
+			traString = "";
+			kullerString = "";
+			rödString = "";
+			sandString = "";
+			guldString = "";
+			slimesString = "";
+			trådsString = "";
+			tegelString = "";
+			krutString = "";
+			järnString = "";
+			diamantString = "";
+			snöbollString = "";
+			obsidianString = "";
+			lädersString = "";
+			färgerString = "";
+			pumpaString = "";
+			äggString = "";
+			kolString = "";
+			morotString = "";
+			järnelrträdString = "";
+			fjäderString = "";
+			bläckString = "";
+			träjärnstenString = "";
+			melonString = "";
+			blazeString = "";
+			spindelögaString = "";
+			glasString = "";
+			svampString = "";
+			glödstenspulverString = "";
+			veteString = "";
+			kakaoString = "";
+			stenString = "";
+			sockerrörString = "";
+			mjölkString = "";
+			äppleString = "";
+			flintaString = "";
+			järnstenträString = "";
+			nederstjärnaString = "";
+			nederkvartString = "";
+			materialString = "";
 			
 		}
 		else {
@@ -4606,340 +4696,214 @@ public class GoJb1 implements ActionListener{
 		}
 		
 		Icon abc = ((AbstractButton) e.getSource()).getIcon();
-		String traString = "",
-				kullerString = "",
-				rödString = "",
-				sandString = "",
-				guldString = "",
-				slimesString = "",
-				trådsString = "",
-				tegelString = "",
-				krutString = "",
-				järnString = "",
-				diamantString = "",
-				snöbollString = "",
-				obsidianString = "",
-				lädersString = "",
-				färgerString = "",
-				pumpaString = "",
-				äggString = "",
-				kolString = "",
-				morotString = "",
-				järnelrträdString = "",
-				fjäderString = "",
-				bläckString = "",
-				träjärnstenString = "",
-				melonString = "",
-				blazeString = "",
-				spindelögaString = "",
-				glasString = "",
-				svampString = "",
-				glödstenspulverString = "",
-				veteString = "",
-				kakaoString = "",
-				stenString = "",
-				sockerrörString = "",
-				mjölkString = "",
-				äppleString = "",
-				flintaString = "",
-				järnstenträString = "",
-				nederstjärnaString = "",
-				nederkvartString = "",
-				materialString = "";
-
 		
-		if (string.equals("86325yhrel")){
-			traString = "Trä";
-			kullerString = "Kullersten";
-			rödString = "Rödsten";
-			sandString = "Sandsten";
-			guldString = "Guld";
-			slimesString = "Slime";
-			trådsString = "Tråd";
-			tegelString = "Tegelsten";
-			krutString = "Krut";
-			järnString = "Järn";
-			diamantString = "Diamant";
-			snöbollString = "Snöboll";
-			obsidianString = "Obsidian";
-			lädersString = "Läder";
-			färgerString = "Färger, Skapas t.ex. med blommor";
-			pumpaString = "Pumpa";
-			äggString = "Ägg";
-			kolString = "Kol";
-			morotString = "Morot";
-			järnelrträdString = "Järn eller trä";
-			fjäderString = "Fjäder";
-			bläckString = "Bläck";
-			träjärnstenString = "Sten, järn eller trä";
-			melonString = "Melon";
-			blazeString = "Blaze";
-			spindelögaString = "Spindelöga";
-			glasString = "Glas";
-			svampString = "Svamp";
-			glödstenspulverString = "Glödstenspulver";
-			veteString = "Vete";
-			kakaoString = "Kakao";
-			stenString = "Sten";
-			sockerrörString = "Sockerrör";
-			mjölkString = "Mjölk";
-			äppleString = "Äpple";
-			flintaString = "Flinta";
-			järnstenträString = "Järn, kullersten eller trä";
-			nederstjärnaString = "Nederstjärna";
-			nederkvartString = "Nederkvarts";
-			materialString = "Material";
-		}
-		else if (string.equals("lhdohf7984")) {
-			traString = "";
-			kullerString = "";
-			rödString = "";
-			sandString = "";
-			guldString = "";
-			slimesString = "";
-			trådsString = "";
-			tegelString = "";
-			krutString = "";
-			järnString = "";
-			diamantString = "";
-			snöbollString = "";
-			obsidianString = "";
-			lädersString = "";
-			färgerString = "";
-			pumpaString = "";
-			äggString = "";
-			kolString = "";
-			morotString = "";
-			järnelrträdString = "";
-			fjäderString = "";
-			bläckString = "";
-			träjärnstenString = "";
-			melonString = "";
-			blazeString = "";
-			spindelögaString = "";
-			glasString = "";
-			svampString = "";
-			glödstenspulverString = "";
-			veteString = "";
-			kakaoString = "";
-			stenString = "";
-			sockerrörString = "";
-			mjölkString = "";
-			äppleString = "";
-			flintaString = "";
-			järnstenträString = "";
-			nederstjärnaString = "";
-			nederkvartString = "";
-			materialString = "";
-
-		}
 		if (abc==tra) {
 
-				JOptionPane.showMessageDialog(null, traString);
-			}
-			if (abc==kullersten) {
-				JOptionPane.showMessageDialog(null, kullerString);
-			}
-			if (abc==rödsten) {
-				JOptionPane.showMessageDialog(null, rödString);
-			}
-			if (abc==plankor) {
-				frame3.setVisible(true);
-			}
-			if (abc==pilbåge) {
-				frame68.setVisible(true);
-			}
-			if (abc==sand) {
-				JOptionPane.showMessageDialog(null, sandString);
-			}
-			if (abc==ull) {
-				frame15.setVisible(true);
-			}
-			if (abc==guld) {
-				JOptionPane.showMessageDialog(null, guldString);
-			}
-			if (abc==pinne) {
-				frame71.setVisible(true);
-			}
-			if (abc==tryckplatta) {
-				frame30.setVisible(true);
-			}
-			if (abc==kolv) {
-				frame14.setVisible(true);
-			}
-			if (abc==slime) {
-				JOptionPane.showMessageDialog(null, slimesString);
-			}
-			if (abc==tråd) {
-				JOptionPane.showMessageDialog(null, trådsString);
-			}
-			if (abc==tegel) {
-				JOptionPane.showMessageDialog(null, tegelString);
-			}
-			if (abc==krut) {
-				JOptionPane.showMessageDialog(null, krutString);
-			}
-			if (abc==järn) {
-				JOptionPane.showMessageDialog(null, järnString);
-			}
-			if (abc==diamant) {
-				JOptionPane.showMessageDialog(null, diamantString);
-			}
-			if (abc==snöboll) {
-				JOptionPane.showMessageDialog(null, snöbollString);
-			}
-			if (abc==obsidian) {
-				JOptionPane.showMessageDialog(null, obsidianString);
-			}
-			if (abc==enderöga) {
-				frame103.setVisible(true);
-			}
-			if (abc==bok) {
-				frame84.setVisible(true);
-			}
-			if (abc==papper) {
-				frame83.setVisible(true);
-			}
-			if (abc==läder) {
-				JOptionPane.showMessageDialog(null, lädersString);
-			}
-			if (abc==gruvvagn) {
-				frame81.setVisible(true);
-			}
-			if (abc==hopper) {
-				frame58.setVisible(true);
-			}
-			if (abc==kista) {
-				frame22.setVisible(true);
-			}
-			if (abc==ugn) {
-				frame24.setVisible(true);
-			}
-			if (abc==färger) {
-				JOptionPane.showMessageDialog(null, färgerString);
-			}
-			if (abc==raketstjärna) {
-				frame111.setVisible(true);
-			}
-			if (abc==dynamit) {
-				frame18.setVisible(true);
-			}
-			if (abc==block) {
-				frame57.setVisible(true);
-			}
-			if (abc==socker) {
-				frame91.setVisible(true);
-			}
-			if (abc==pumpa) {
-				JOptionPane.showMessageDialog(null, pumpaString);
-			}
-			if (abc==ägg) {
-				JOptionPane.showMessageDialog(null, äggString);
-			}
-			if (abc==kol) {
-				JOptionPane.showMessageDialog(null, kolString);
-			}
-			if (abc==morot) {
-				JOptionPane.showMessageDialog(null, morotString);
-			}
-			if (abc==fiskespö) {
-				frame88.setVisible(true);
-			}
-			if (abc==guldklimp) {
-				frame98.setVisible(true);
-			}
-			if (abc==järnträ) {
-				JOptionPane.showMessageDialog(null, järnelrträdString);
-			}
-			if (abc==fjäder) {
-				JOptionPane.showMessageDialog(null, fjäderString);
-			}
-			if (abc==bläck) {
-				JOptionPane.showMessageDialog(null, bläckString);
-			}
-			if (abc==tryck) {
-				JOptionPane.showMessageDialog(null, träjärnstenString);
-			}
-			if (abc==melon) {
-				JOptionPane.showMessageDialog(null, melonString);
-			}
-			if (abc==blazepulver) {
-				frame101.setVisible(true);
-			}
-			if (abc==blaze) {
-				JOptionPane.showMessageDialog(null, blazeString);
-			}
-			if (abc==svamp) {
-				JOptionPane.showMessageDialog(null, svampString);
-			}
-			if (abc==spindelöga) {
-				JOptionPane.showMessageDialog(null, spindelögaString);
-			}
-			if (abc==glödstenspulver) {
-				JOptionPane.showMessageDialog(null, glödstenspulverString);
-			}
-			if (abc==fackla) {
-				frame20.setVisible(true);
-			}
-			if (abc==glas) {
-				JOptionPane.showMessageDialog(null, glasString);
-			}
-			if (abc==vete) {
-				JOptionPane.showMessageDialog(null, veteString);
-			}
-			if (abc==kakao) {
-				JOptionPane.showMessageDialog(null, kakaoString);
-			}
-			if (abc==kompass) {
-				frame87.setVisible(true);
-			}
-			if (abc==sten) {
-				JOptionPane.showMessageDialog(null, stenString);
-			}
-			if (abc==rödstensfackla) {
-				frame31.setVisible(true);
-			}
-			if (abc==mjölk) {
-				JOptionPane.showMessageDialog(null, mjölkString);
-			}
-			if (abc==färgglas) {
-				frame38.setVisible(true);
-			}
-			if (abc==sockerrör) {
-				JOptionPane.showMessageDialog(null, sockerrörString);
-			}
-			if (abc==glödstenslampa) {
-				frame36.setVisible(true);
-			}
-			if (abc==äpple) {
-				JOptionPane.showMessageDialog(null, äppleString);
-			}
-			if (abc==flinta) {
-				JOptionPane.showMessageDialog(null, flintaString);
-			}
-			if (abc==järnStenTrä) {
-				JOptionPane.showMessageDialog(null, järnstenträString);
-			}
-			if (abc==nederstjärna) {
-				JOptionPane.showMessageDialog(null, nederstjärnaString);
-			}
-			if (abc==järnblock) {
-				frame57.setVisible(true);
-			}
-			if (abc==trähalvblock) {
-				frame16.setVisible(true);
-			}
-			if (abc==nederkvarts) {
-				JOptionPane.showMessageDialog(null, nederkvartString);
-			}
-			if (abc==material) {
-				JOptionPane.showMessageDialog(null, materialString);
-			}
-			if (abc==snubbeltrådskrok) {
-				frame49.setVisible(true);
-			}
-			if (e.getSource()==väljSpråk){
-				Språkfråga();
+			JOptionPane.showMessageDialog(null, traString);
+		}
+		if (abc==kullersten) {
+			JOptionPane.showMessageDialog(null, kullerString);
+		}
+		if (abc==rödsten) {
+			JOptionPane.showMessageDialog(null, rödString);
+		}
+		if (abc==plankor) {
+			frame3.setVisible(true);
+		}
+		if (abc==pilbåge) {
+			frame68.setVisible(true);
+		}
+		if (abc==sand) {
+			JOptionPane.showMessageDialog(null, sandString);
+		}
+		if (abc==ull) {
+			frame15.setVisible(true);
+		}
+		if (abc==guld) {
+			JOptionPane.showMessageDialog(null, guldString);
+		}
+		if (abc==pinne) {
+			frame71.setVisible(true);
+		}
+		if (abc==tryckplatta) {
+			frame30.setVisible(true);
+		}
+		if (abc==kolv) {
+			frame14.setVisible(true);
+		}
+		if (abc==slime) {
+			JOptionPane.showMessageDialog(null, slimesString);
+		}
+		if (abc==tråd) {
+			JOptionPane.showMessageDialog(null, trådsString);
+		}
+		if (abc==tegel) {
+			JOptionPane.showMessageDialog(null, tegelString);
+		}
+		if (abc==krut) {
+			JOptionPane.showMessageDialog(null, krutString);
+		}
+		if (abc==järn) {
+			JOptionPane.showMessageDialog(null, järnString);
+		}
+		if (abc==diamant) {
+			JOptionPane.showMessageDialog(null, diamantString);
+		}
+		if (abc==snöboll) {
+			JOptionPane.showMessageDialog(null, snöbollString);
+		}
+		if (abc==obsidian) {
+			JOptionPane.showMessageDialog(null, obsidianString);
+		}
+		if (abc==enderöga) {
+			frame103.setVisible(true);
+		}
+		if (abc==bok) {
+			frame84.setVisible(true);
+		}
+		if (abc==papper) {
+			frame83.setVisible(true);
+		}
+		if (abc==läder) {
+			JOptionPane.showMessageDialog(null, lädersString);
+		}
+		if (abc==gruvvagn) {
+			frame81.setVisible(true);
+		}
+		if (abc==hopper) {
+			frame58.setVisible(true);
+		}
+		if (abc==kista) {
+			frame22.setVisible(true);
+		}
+		if (abc==ugn) {
+			frame24.setVisible(true);
+		}
+		if (abc==färger) {
+			JOptionPane.showMessageDialog(null, färgerString);
+		}
+		if (abc==raketstjärna) {
+			frame111.setVisible(true);
+		}
+		if (abc==dynamit) {
+			frame18.setVisible(true);
+		}
+		if (abc==block) {
+			frame57.setVisible(true);
+		}
+		if (abc==socker) {
+			frame91.setVisible(true);
+		}
+		if (abc==pumpa) {
+			JOptionPane.showMessageDialog(null, pumpaString);
+		}
+		if (abc==ägg) {
+			JOptionPane.showMessageDialog(null, äggString);
+		}
+		if (abc==kol) {
+			JOptionPane.showMessageDialog(null, kolString);
+		}
+		if (abc==morot) {
+			JOptionPane.showMessageDialog(null, morotString);
+		}
+		if (abc==fiskespö) {
+			frame88.setVisible(true);
+		}
+		if (abc==guldklimp) {
+			frame98.setVisible(true);
+		}
+		if (abc==järnträ) {
+			JOptionPane.showMessageDialog(null, järnelrträdString);
+		}
+		if (abc==fjäder) {
+			JOptionPane.showMessageDialog(null, fjäderString);
+		}
+		if (abc==bläck) {
+			JOptionPane.showMessageDialog(null, bläckString);
+		}
+		if (abc==tryck) {
+			JOptionPane.showMessageDialog(null, träjärnstenString);
+		}
+		if (abc==melon) {
+			JOptionPane.showMessageDialog(null, melonString);
+		}
+		if (abc==blazepulver) {
+			frame101.setVisible(true);
+		}
+		if (abc==blaze) {
+			JOptionPane.showMessageDialog(null, blazeString);
+		}
+		if (abc==svamp) {
+			JOptionPane.showMessageDialog(null, svampString);
+		}
+		if (abc==spindelöga) {
+			JOptionPane.showMessageDialog(null, spindelögaString);
+		}
+		if (abc==glödstenspulver) {
+			JOptionPane.showMessageDialog(null, glödstenspulverString);
+		}
+		if (abc==fackla) {
+			frame20.setVisible(true);
+		}
+		if (abc==glas) {
+			JOptionPane.showMessageDialog(null, glasString);
+		}
+		if (abc==vete) {
+			JOptionPane.showMessageDialog(null, veteString);
+		}
+		if (abc==kakao) {
+			JOptionPane.showMessageDialog(null, kakaoString);
+		}
+		if (abc==kompass) {
+			frame87.setVisible(true);
+		}
+		if (abc==sten) {
+			JOptionPane.showMessageDialog(null, stenString);
+		}
+		if (abc==rödstensfackla) {
+			frame31.setVisible(true);
+		}
+		if (abc==mjölk) {
+			JOptionPane.showMessageDialog(null, mjölkString);
+		}
+		if (abc==färgglas) {
+			frame38.setVisible(true);
+		}
+		if (abc==sockerrör) {
+			JOptionPane.showMessageDialog(null, sockerrörString);
+		}
+		if (abc==glödstenslampa) {
+			frame36.setVisible(true);
+		}
+		if (abc==äpple) {
+			JOptionPane.showMessageDialog(null, äppleString);
+		}
+		if (abc==flinta) {
+			JOptionPane.showMessageDialog(null, flintaString);
+		}
+		if (abc==järnStenTrä) {
+			JOptionPane.showMessageDialog(null, järnstenträString);
+		}
+		if (abc==nederstjärna) {
+			JOptionPane.showMessageDialog(null, nederstjärnaString);
+		}
+		if (abc==järnblock) {
+			frame57.setVisible(true);
+		}
+		if (abc==trähalvblock) {
+			frame16.setVisible(true);
+		}
+		if (abc==nederkvarts) {
+			JOptionPane.showMessageDialog(null, nederkvartString);
+		}
+		if (abc==material) {
+			JOptionPane.showMessageDialog(null, materialString);
+		}
+		if (abc==snubbeltrådskrok) {
+			frame49.setVisible(true);
+		}
+		if (e.getSource()==väljSpråk){
+			Språkfråga();
 
 		}
 
