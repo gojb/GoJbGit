@@ -579,7 +579,7 @@ public class GoJb1 implements ActionListener{
 			
 			public void actionPerformed(ActionEvent e) {
 				if (e.getSource()==svenska) {
-					string="86325yhrel";
+					string="86325yhrel";d
 				}
 				else if (e.getSource()==engelska) {
 					string="lhdohf7984";
@@ -751,7 +751,6 @@ public class GoJb1 implements ActionListener{
 			button113.setText("Gruvvagn med hopper");
 			button114.setText("Koppel");
 
-			
 			frame.add(button60);
 			frame.add(button23);
 			frame.add(button7);
@@ -1211,10 +1210,10 @@ public class GoJb1 implements ActionListener{
 
 		frameHuvud.repaint();
 		frameHuvud.revalidate();
-		frameHuvud.pack();
-		frameHuvud.setSize(new Dimension(frameHuvud.getWidth(),700));
+		frameHuvud.setSize(800,700);
 		frameHuvud.setLocationRelativeTo(null);
-	
+		
+		
 	}
 	public void GörFönster() {
 
@@ -3819,6 +3818,224 @@ public class GoJb1 implements ActionListener{
 		frame113.setIconImage(frameHuvud.getIconImage());
 		frame114.setIconImage(frameHuvud.getIconImage());
 		
+		button3.setVerticalTextPosition(JButton.BOTTOM);
+		button7.setVerticalTextPosition(JButton.BOTTOM);
+		button8.setVerticalTextPosition(JButton.BOTTOM);
+		button9.setVerticalTextPosition(JButton.BOTTOM);
+		button10.setVerticalTextPosition(JButton.BOTTOM);
+		button11.setVerticalTextPosition(JButton.BOTTOM);
+		button12.setVerticalTextPosition(JButton.BOTTOM);
+		button13.setVerticalTextPosition(JButton.BOTTOM);
+		button14.setVerticalTextPosition(JButton.BOTTOM);
+		button15.setVerticalTextPosition(JButton.BOTTOM);
+		button16.setVerticalTextPosition(JButton.BOTTOM);
+		button17.setVerticalTextPosition(JButton.BOTTOM);
+		button18.setVerticalTextPosition(JButton.BOTTOM);
+		button19.setVerticalTextPosition(JButton.BOTTOM);
+		button20.setVerticalTextPosition(JButton.BOTTOM);
+		button21.setVerticalTextPosition(JButton.BOTTOM);
+		button22.setVerticalTextPosition(JButton.BOTTOM);
+		button23.setVerticalTextPosition(JButton.BOTTOM);
+		button24.setVerticalTextPosition(JButton.BOTTOM);
+		button25.setVerticalTextPosition(JButton.BOTTOM);
+		button26.setVerticalTextPosition(JButton.BOTTOM);
+		button27.setVerticalTextPosition(JButton.BOTTOM);
+		button28.setVerticalTextPosition(JButton.BOTTOM);
+		button29.setVerticalTextPosition(JButton.BOTTOM);
+		button30.setVerticalTextPosition(JButton.BOTTOM);
+		button31.setVerticalTextPosition(JButton.BOTTOM);
+		button32.setVerticalTextPosition(JButton.BOTTOM);
+		button33.setVerticalTextPosition(JButton.BOTTOM);
+		button34.setVerticalTextPosition(JButton.BOTTOM);
+		button35.setVerticalTextPosition(JButton.BOTTOM);
+		button36.setVerticalTextPosition(JButton.BOTTOM);
+		button37.setVerticalTextPosition(JButton.BOTTOM);
+		button38.setVerticalTextPosition(JButton.BOTTOM);
+		button39.setVerticalTextPosition(JButton.BOTTOM);
+		button40.setVerticalTextPosition(JButton.BOTTOM);
+		button41.setVerticalTextPosition(JButton.BOTTOM);
+		button42.setVerticalTextPosition(JButton.BOTTOM);
+		button43.setVerticalTextPosition(JButton.BOTTOM);
+		button44.setVerticalTextPosition(JButton.BOTTOM);
+		button45.setVerticalTextPosition(JButton.BOTTOM);
+		button46.setVerticalTextPosition(JButton.BOTTOM);
+		button47.setVerticalTextPosition(JButton.BOTTOM);
+		button48.setVerticalTextPosition(JButton.BOTTOM);
+		button49.setVerticalTextPosition(JButton.BOTTOM);
+		button50.setVerticalTextPosition(JButton.BOTTOM);
+		button51.setVerticalTextPosition(JButton.BOTTOM);
+		button52.setVerticalTextPosition(JButton.BOTTOM);
+		button53.setVerticalTextPosition(JButton.BOTTOM);
+		button54.setVerticalTextPosition(JButton.BOTTOM);
+		button55.setVerticalTextPosition(JButton.BOTTOM);
+		button56.setVerticalTextPosition(JButton.BOTTOM);
+		button57.setVerticalTextPosition(JButton.BOTTOM);
+		button58.setVerticalTextPosition(JButton.BOTTOM);
+		button59.setVerticalTextPosition(JButton.BOTTOM);
+		button60.setVerticalTextPosition(JButton.BOTTOM);
+		button61.setVerticalTextPosition(JButton.BOTTOM);
+		button62.setVerticalTextPosition(JButton.BOTTOM);
+		button63.setVerticalTextPosition(JButton.BOTTOM);
+		button64.setVerticalTextPosition(JButton.BOTTOM);
+		button65.setVerticalTextPosition(JButton.BOTTOM);
+		button66.setVerticalTextPosition(JButton.BOTTOM);
+		button67.setVerticalTextPosition(JButton.BOTTOM);
+		button68.setVerticalTextPosition(JButton.BOTTOM);
+		button69.setVerticalTextPosition(JButton.BOTTOM);
+		button70.setVerticalTextPosition(JButton.BOTTOM);
+		button71.setVerticalTextPosition(JButton.BOTTOM);
+		button72.setVerticalTextPosition(JButton.BOTTOM);
+		button73.setVerticalTextPosition(JButton.BOTTOM);
+		button74.setVerticalTextPosition(JButton.BOTTOM);
+		button75.setVerticalTextPosition(JButton.BOTTOM);
+		button76.setVerticalTextPosition(JButton.BOTTOM);
+		button77.setVerticalTextPosition(JButton.BOTTOM);
+		button78.setVerticalTextPosition(JButton.BOTTOM);
+		button79.setVerticalTextPosition(JButton.BOTTOM);
+		button80.setVerticalTextPosition(JButton.BOTTOM);
+		button81.setVerticalTextPosition(JButton.BOTTOM);
+		button82.setVerticalTextPosition(JButton.BOTTOM);
+		button83.setVerticalTextPosition(JButton.BOTTOM);
+		button84.setVerticalTextPosition(JButton.BOTTOM);
+		button85.setVerticalTextPosition(JButton.BOTTOM);
+		button86.setVerticalTextPosition(JButton.BOTTOM);
+		button87.setVerticalTextPosition(JButton.BOTTOM);
+		button88.setVerticalTextPosition(JButton.BOTTOM);
+		button89.setVerticalTextPosition(JButton.BOTTOM);
+		button91.setVerticalTextPosition(JButton.BOTTOM);
+		button92.setVerticalTextPosition(JButton.BOTTOM);
+		button93.setVerticalTextPosition(JButton.BOTTOM);
+		button94.setVerticalTextPosition(JButton.BOTTOM);
+		button95.setVerticalTextPosition(JButton.BOTTOM);
+		button96.setVerticalTextPosition(JButton.BOTTOM);
+		button97.setVerticalTextPosition(JButton.BOTTOM);
+		button98.setVerticalTextPosition(JButton.BOTTOM);
+		button99.setVerticalTextPosition(JButton.BOTTOM);
+		button100.setVerticalTextPosition(JButton.BOTTOM);
+		button101.setVerticalTextPosition(JButton.BOTTOM);
+		button102.setVerticalTextPosition(JButton.BOTTOM);
+		button103.setVerticalTextPosition(JButton.BOTTOM);
+		button104.setVerticalTextPosition(JButton.BOTTOM);
+		button105.setVerticalTextPosition(JButton.BOTTOM);
+		button106.setVerticalTextPosition(JButton.BOTTOM);
+		button107.setVerticalTextPosition(JButton.BOTTOM);
+		button108.setVerticalTextPosition(JButton.BOTTOM);
+		button109.setVerticalTextPosition(JButton.BOTTOM);
+		button110.setVerticalTextPosition(JButton.BOTTOM);
+		button111.setVerticalTextPosition(JButton.BOTTOM);
+		button112.setVerticalTextPosition(JButton.BOTTOM);
+		button113.setVerticalTextPosition(JButton.BOTTOM);
+		button114.setVerticalTextPosition(JButton.BOTTOM);
+	
+		button3.setHorizontalTextPosition(JButton.CENTER);
+		button7.setHorizontalTextPosition(JButton.CENTER);
+		button8.setHorizontalTextPosition(JButton.CENTER);
+		button9.setHorizontalTextPosition(JButton.CENTER);
+		button10.setHorizontalTextPosition(JButton.CENTER);
+		button11.setHorizontalTextPosition(JButton.CENTER);
+		button12.setHorizontalTextPosition(JButton.CENTER);
+		button13.setHorizontalTextPosition(JButton.CENTER);
+		button14.setHorizontalTextPosition(JButton.CENTER);
+		button15.setHorizontalTextPosition(JButton.CENTER);
+		button16.setHorizontalTextPosition(JButton.CENTER);
+		button17.setHorizontalTextPosition(JButton.CENTER);
+		button18.setHorizontalTextPosition(JButton.CENTER);
+		button19.setHorizontalTextPosition(JButton.CENTER);
+		button20.setHorizontalTextPosition(JButton.CENTER);
+		button21.setHorizontalTextPosition(JButton.CENTER);
+		button22.setHorizontalTextPosition(JButton.CENTER);
+		button23.setHorizontalTextPosition(JButton.CENTER);
+		button24.setHorizontalTextPosition(JButton.CENTER);
+		button25.setHorizontalTextPosition(JButton.CENTER);
+		button26.setHorizontalTextPosition(JButton.CENTER);
+		button27.setHorizontalTextPosition(JButton.CENTER);
+		button28.setHorizontalTextPosition(JButton.CENTER);
+		button29.setHorizontalTextPosition(JButton.CENTER);
+		button30.setHorizontalTextPosition(JButton.CENTER);
+		button31.setHorizontalTextPosition(JButton.CENTER);
+		button32.setHorizontalTextPosition(JButton.CENTER);
+		button33.setHorizontalTextPosition(JButton.CENTER);
+		button34.setHorizontalTextPosition(JButton.CENTER);
+		button35.setHorizontalTextPosition(JButton.CENTER);
+		button36.setHorizontalTextPosition(JButton.CENTER);
+		button37.setHorizontalTextPosition(JButton.CENTER);
+		button38.setHorizontalTextPosition(JButton.CENTER);
+		button39.setHorizontalTextPosition(JButton.CENTER);
+		button40.setHorizontalTextPosition(JButton.CENTER);
+		button41.setHorizontalTextPosition(JButton.CENTER);
+		button42.setHorizontalTextPosition(JButton.CENTER);
+		button43.setHorizontalTextPosition(JButton.CENTER);
+		button44.setHorizontalTextPosition(JButton.CENTER);
+		button45.setHorizontalTextPosition(JButton.CENTER);
+		button46.setHorizontalTextPosition(JButton.CENTER);
+		button47.setHorizontalTextPosition(JButton.CENTER);
+		button48.setHorizontalTextPosition(JButton.CENTER);
+		button49.setHorizontalTextPosition(JButton.CENTER);
+		button50.setHorizontalTextPosition(JButton.CENTER);
+		button51.setHorizontalTextPosition(JButton.CENTER);
+		button52.setHorizontalTextPosition(JButton.CENTER);
+		button53.setHorizontalTextPosition(JButton.CENTER);
+		button54.setHorizontalTextPosition(JButton.CENTER);
+		button55.setHorizontalTextPosition(JButton.CENTER);
+		button56.setHorizontalTextPosition(JButton.CENTER);
+		button57.setHorizontalTextPosition(JButton.CENTER);
+		button58.setHorizontalTextPosition(JButton.CENTER);
+		button59.setHorizontalTextPosition(JButton.CENTER);
+		button60.setHorizontalTextPosition(JButton.CENTER);
+		button61.setHorizontalTextPosition(JButton.CENTER);
+		button62.setHorizontalTextPosition(JButton.CENTER);
+		button63.setHorizontalTextPosition(JButton.CENTER);
+		button64.setHorizontalTextPosition(JButton.CENTER);
+		button65.setHorizontalTextPosition(JButton.CENTER);
+		button66.setHorizontalTextPosition(JButton.CENTER);
+		button67.setHorizontalTextPosition(JButton.CENTER);
+		button68.setHorizontalTextPosition(JButton.CENTER);
+		button69.setHorizontalTextPosition(JButton.CENTER);
+		button70.setHorizontalTextPosition(JButton.CENTER);
+		button71.setHorizontalTextPosition(JButton.CENTER);
+		button72.setHorizontalTextPosition(JButton.CENTER);
+		button73.setHorizontalTextPosition(JButton.CENTER);
+		button74.setHorizontalTextPosition(JButton.CENTER);
+		button75.setHorizontalTextPosition(JButton.CENTER);
+		button76.setHorizontalTextPosition(JButton.CENTER);
+		button77.setHorizontalTextPosition(JButton.CENTER);
+		button78.setHorizontalTextPosition(JButton.CENTER);
+		button79.setHorizontalTextPosition(JButton.CENTER);
+		button80.setHorizontalTextPosition(JButton.CENTER);
+		button81.setHorizontalTextPosition(JButton.CENTER);
+		button82.setHorizontalTextPosition(JButton.CENTER);
+		button83.setHorizontalTextPosition(JButton.CENTER);
+		button84.setHorizontalTextPosition(JButton.CENTER);
+		button85.setHorizontalTextPosition(JButton.CENTER);
+		button86.setHorizontalTextPosition(JButton.CENTER);
+		button87.setHorizontalTextPosition(JButton.CENTER);
+		button88.setHorizontalTextPosition(JButton.CENTER);
+		button89.setHorizontalTextPosition(JButton.CENTER);
+		button91.setHorizontalTextPosition(JButton.CENTER);
+		button92.setHorizontalTextPosition(JButton.CENTER);
+		button93.setHorizontalTextPosition(JButton.CENTER);
+		button94.setHorizontalTextPosition(JButton.CENTER);
+		button95.setHorizontalTextPosition(JButton.CENTER);
+		button96.setHorizontalTextPosition(JButton.CENTER);
+		button97.setHorizontalTextPosition(JButton.CENTER);
+		button98.setHorizontalTextPosition(JButton.CENTER);
+		button99.setHorizontalTextPosition(JButton.CENTER);
+		button100.setHorizontalTextPosition(JButton.CENTER);
+		button101.setHorizontalTextPosition(JButton.CENTER);
+		button102.setHorizontalTextPosition(JButton.CENTER);
+		button103.setHorizontalTextPosition(JButton.CENTER);
+		button104.setHorizontalTextPosition(JButton.CENTER);
+		button105.setHorizontalTextPosition(JButton.CENTER);
+		button106.setHorizontalTextPosition(JButton.CENTER);
+		button107.setHorizontalTextPosition(JButton.CENTER);
+		button108.setHorizontalTextPosition(JButton.CENTER);
+		button109.setHorizontalTextPosition(JButton.CENTER);
+		button110.setHorizontalTextPosition(JButton.CENTER);
+		button111.setHorizontalTextPosition(JButton.CENTER);
+		button112.setHorizontalTextPosition(JButton.CENTER);
+		button113.setHorizontalTextPosition(JButton.CENTER);
+		button114.setHorizontalTextPosition(JButton.CENTER);
+		
 		frame.setLayout(new GridLayout(36, 3));
 
 		frameHuvud.setJMenuBar(bar);
@@ -3833,8 +4050,6 @@ public class GoJb1 implements ActionListener{
 
 		frameHuvud.add(scrollBar);
 		frameHuvud.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frameHuvud.pack();
-		frameHuvud.setSize(new Dimension(frameHuvud.getWidth(),700));
 		frameHuvud.setLocationRelativeTo(null);
 		frameHuvud.setVisible(true);
 
@@ -3844,6 +4059,7 @@ public class GoJb1 implements ActionListener{
 
 	public void actionPerformed(ActionEvent e) {
 	
+		
 		System.out.println("Någon knapp nedtryckt!");	
 		
 		frame3.setVisible(false);
@@ -4389,215 +4605,228 @@ public class GoJb1 implements ActionListener{
 		if (e.getSource() == button114){
 			frame114.setVisible(true); 
 		}
-
+		
 		Icon abc = ((AbstractButton) e.getSource()).getIcon();
-		if (abc==tra) {
-			JOptionPane.showMessageDialog(null, "Trä  ");
-		}
-		if (abc==kullersten) {
-			JOptionPane.showMessageDialog(null, "Kullersten  ");
-		}
-		if (abc==rödsten) {
-			JOptionPane.showMessageDialog(null, "Rödsten  ");
-		}
-		if (abc==plankor) {
-			frame3.setVisible(true);
-		}
-		if (abc==pilbåge) {
-			frame68.setVisible(true);
-		}
-		if (abc==sand) {
-			JOptionPane.showMessageDialog(null, "Sand  ");
-		}
-		if (abc==ull) {
-			frame15.setVisible(true);
-		}
-		if (abc==guld) {
-			JOptionPane.showMessageDialog(null, "Guld  ");
-		}
-		if (abc==pinne) {
-			frame71.setVisible(true);
-		}
-		if (abc==tryckplatta) {
-			frame30.setVisible(true);
-		}
-		if (abc==kolv) {
-			frame14.setVisible(true);
-		}
-		if (abc==slime) {
-			JOptionPane.showMessageDialog(null, "Slime  ");
-		}
-		if (abc==tråd) {
-			JOptionPane.showMessageDialog(null, "Tråd  ");
-		}
-		if (abc==tegel) {
-			JOptionPane.showMessageDialog(null, "Tegel  ");
-		}
-		if (abc==krut) {
-			JOptionPane.showMessageDialog(null, "Krut");
-		}
-		if (abc==järn) {
-			JOptionPane.showMessageDialog(null, "Järn  ");
-		}
-		if (abc==diamant) {
-			JOptionPane.showMessageDialog(null, "Diamant  ");
-		}
-		if (abc==snöboll) {
-			JOptionPane.showMessageDialog(null, "Snöboll  ");
-		}
-		if (abc==obsidian) {
-			JOptionPane.showMessageDialog(null, "Obsidian  ");
-		}
-		if (abc==enderöga) {
-			frame103.setVisible(true);
-		}
-		if (abc==bok) {
-			frame84.setVisible(true);
-		}
-		if (abc==papper) {
-			frame83.setVisible(true);
-		}
-		if (abc==läder) {
-			JOptionPane.showMessageDialog(null, "Läder  ");
-		}
-		if (abc==gruvvagn) {
-			frame81.setVisible(true);
-		}
-		if (abc==hopper) {
-			frame58.setVisible(true);
-		}
-		if (abc==kista) {
-			frame22.setVisible(true);
-		}
-		if (abc==ugn) {
-			frame24.setVisible(true);
-		}
-		if (abc==färger) {
-			JOptionPane.showMessageDialog(null, "Färger, Skapas t.ex. med blommor");
-		}
-		if (abc==raketstjärna) {
-			frame111.setVisible(true);
-		}
-		if (abc==dynamit) {
-			frame18.setVisible(true);
-		}
-		if (abc==block) {
-			frame57.setVisible(true);
-		}
-		if (abc==socker) {
-			frame91.setVisible(true);
-		}
-		if (abc==pumpa) {
-			JOptionPane.showMessageDialog(null, "Pumpa  ");
-		}
-		if (abc==ägg) {
-			JOptionPane.showMessageDialog(null, "Ägg  ");
-		}
-		if (abc==kol) {
-			JOptionPane.showMessageDialog(null, "Kol  ");
-		}
-		if (abc==morot) {
-			JOptionPane.showMessageDialog(null, "Morot  ");
-		}
-		if (abc==fiskespö) {
-			frame88.setVisible(true);
-		}
-		if (abc==guldklimp) {
-			frame98.setVisible(true);
-		}
-		if (abc==järnträ) {
-			JOptionPane.showMessageDialog(null, "Järn eller Trä  ");
-		}
-		if (abc==fjäder) {
-			JOptionPane.showMessageDialog(null, "Fjäder  ");
-		}
-		if (abc==bläck) {
-			JOptionPane.showMessageDialog(null, "Bläck  ");
-		}
-		if (abc==tryck) {
-			JOptionPane.showMessageDialog(null, "Trä, järn eller sten  ");
-		}
-		if (abc==melon) {
-			JOptionPane.showMessageDialog(null, "Melon  ");
-		}
-		if (abc==blazepulver) {
-			frame101.setVisible(true);
-		}
-		if (abc==blaze) {
-			JOptionPane.showMessageDialog(null, "Blaze  ");
-		}
-		if (abc==svamp) {
-			JOptionPane.showMessageDialog(null, "Svamp  ");
-		}
-		if (abc==spindelöga) {
-			JOptionPane.showMessageDialog(null, "Spindelöga  ");
-		}
-		if (abc==glödstenspulver) {
-			JOptionPane.showMessageDialog(null, "Glödstenspulver  ");
-		}
-		if (abc==fackla) {
-			frame20.setVisible(true);
-		}
-		if (abc==glas) {
-			JOptionPane.showMessageDialog(null, "Glas  ");
-		}
-		if (abc==vete) {
-			JOptionPane.showMessageDialog(null, "Vete  ");
-		}
-		if (abc==kakao) {
-			JOptionPane.showMessageDialog(null, "Kakaobönor  ");
-		}
-		if (abc==kompass) {
-			frame87.setVisible(true);
-		}
-		if (abc==sten) {
-			JOptionPane.showMessageDialog(null, "Sten  ");
-		}
-		if (abc==rödstensfackla) {
-			frame31.setVisible(true);
-		}
-		if (abc==mjölk) {
-			JOptionPane.showMessageDialog(null, "Mjölk  ");
-		}
-		if (abc==färgglas) {
-			frame38.setVisible(true);
-		}
-		if (abc==sockerrör) {
-			JOptionPane.showMessageDialog(null, "Sockerrör  ");
-		}
-		if (abc==glödstenslampa) {
-			frame36.setVisible(true);
-		}
-		if (abc==äpple) {
-			JOptionPane.showMessageDialog(null, "Äpple");
-		}
-		if (abc==flinta) {
-			JOptionPane.showMessageDialog(null, "Flinta  ");
-		}
-		if (abc==järnStenTrä) {
-			JOptionPane.showMessageDialog(null, "Järn, sten eller trä");
-		}
-		if (abc==nederstjärna) {
-			JOptionPane.showMessageDialog(null, "Nederstjärna");
-		}
-		if (abc==järnblock) {
-			frame57.setVisible(true);
-		}
-		if (abc==trähalvblock) {
-			frame16.setVisible(true);
-		}
-		if (abc==nederkvarts) {
-			JOptionPane.showMessageDialog(null, "Nederkvarts  ");
-		}
-		if (abc==material) {
-			JOptionPane.showMessageDialog(null, "Material");
-		}
-		if (abc==snubbeltrådskrok) {
-			frame49.setVisible(true);
-		}
-		if (e.getSource()==väljSpråk){
-			Språkfråga();
+		if (string == "86325yhrel"){
+			
+			String traString,kullerString,rödString,sandString,guldString,slimesString,trådsString,
+			tegelString,krutString,järnString,diamantString,snöbollString,obsidianString,lädersString,
+			färgerString,pumpaString,äggString,kolString,morotString,järnelrträdString,fjäderString,
+			bläckString,träjärnstenString,melonString,blazeString,spindelögaString,glasString,
+			svampString,glödstenspulverString,veteString,kakaoString,stenString,sockerrörString,
+			mjölkString,äppleString,flintaString,järnstenträString,nederstjärnaString,nederkvartString,
+			materialString;
+			
+			
+			if (abc==tra) {
 
+				JOptionPane.showMessageDialog(null, "Trä  ");öö
+			}
+			if (abc==kullersten) {
+				JOptionPane.showMessageDialog(null, "Kullersten  ");
+			}
+			if (abc==rödsten) {
+				JOptionPane.showMessageDialog(null, "Rödsten  ");
+			}
+			if (abc==plankor) {
+				frame3.setVisible(true);
+			}
+			if (abc==pilbåge) {
+				frame68.setVisible(true);
+			}
+			if (abc==sand) {
+				JOptionPane.showMessageDialog(null, "Sand  ");
+			}
+			if (abc==ull) {
+				frame15.setVisible(true);
+			}
+			if (abc==guld) {
+				JOptionPane.showMessageDialog(null, "Guld  ");
+			}
+			if (abc==pinne) {
+				frame71.setVisible(true);
+			}
+			if (abc==tryckplatta) {
+				frame30.setVisible(true);
+			}
+			if (abc==kolv) {
+				frame14.setVisible(true);
+			}
+			if (abc==slime) {
+				JOptionPane.showMessageDialog(null, "Slime  ");
+			}
+			if (abc==tråd) {
+				JOptionPane.showMessageDialog(null, "Tråd  ");
+			}
+			if (abc==tegel) {
+				JOptionPane.showMessageDialog(null, "Tegel  ");
+			}
+			if (abc==krut) {
+				JOptionPane.showMessageDialog(null, "Krut");
+			}
+			if (abc==järn) {
+				JOptionPane.showMessageDialog(null, "Järn  ");
+			}
+			if (abc==diamant) {
+				JOptionPane.showMessageDialog(null, "Diamant  ");
+			}
+			if (abc==snöboll) {
+				JOptionPane.showMessageDialog(null, "Snöboll  ");
+			}
+			if (abc==obsidian) {
+				JOptionPane.showMessageDialog(null, "Obsidian  ");
+			}
+			if (abc==enderöga) {
+				frame103.setVisible(true);
+			}
+			if (abc==bok) {
+				frame84.setVisible(true);
+			}
+			if (abc==papper) {
+				frame83.setVisible(true);
+			}
+			if (abc==läder) {
+				JOptionPane.showMessageDialog(null, "Läder  ");
+			}
+			if (abc==gruvvagn) {
+				frame81.setVisible(true);
+			}
+			if (abc==hopper) {
+				frame58.setVisible(true);
+			}
+			if (abc==kista) {
+				frame22.setVisible(true);
+			}
+			if (abc==ugn) {
+				frame24.setVisible(true);
+			}
+			if (abc==färger) {
+				JOptionPane.showMessageDialog(null, "Färger, Skapas t.ex. med blommor");
+			}
+			if (abc==raketstjärna) {
+				frame111.setVisible(true);
+			}
+			if (abc==dynamit) {
+				frame18.setVisible(true);
+			}
+			if (abc==block) {
+				frame57.setVisible(true);
+			}
+			if (abc==socker) {
+				frame91.setVisible(true);
+			}
+			if (abc==pumpa) {
+				JOptionPane.showMessageDialog(null, "Pumpa  ");
+			}
+			if (abc==ägg) {
+				JOptionPane.showMessageDialog(null, "Ägg  ");
+			}
+			if (abc==kol) {
+				JOptionPane.showMessageDialog(null, "Kol  ");
+			}
+			if (abc==morot) {
+				JOptionPane.showMessageDialog(null, "Morot  ");
+			}
+			if (abc==fiskespö) {
+				frame88.setVisible(true);
+			}
+			if (abc==guldklimp) {
+				frame98.setVisible(true);
+			}
+			if (abc==järnträ) {
+				JOptionPane.showMessageDialog(null, "Järn eller Trä  ");
+			}
+			if (abc==fjäder) {
+				JOptionPane.showMessageDialog(null, "Fjäder  ");
+			}
+			if (abc==bläck) {
+				JOptionPane.showMessageDialog(null, "Bläck  ");
+			}
+			if (abc==tryck) {
+				JOptionPane.showMessageDialog(null, "Trä, järn eller sten  ");
+			}
+			if (abc==melon) {
+				JOptionPane.showMessageDialog(null, "Melon  ");
+			}
+			if (abc==blazepulver) {
+				frame101.setVisible(true);
+			}
+			if (abc==blaze) {
+				JOptionPane.showMessageDialog(null, "Blaze  ");
+			}
+			if (abc==svamp) {
+				JOptionPane.showMessageDialog(null, "Svamp  ");
+			}
+			if (abc==spindelöga) {
+				JOptionPane.showMessageDialog(null, "Spindelöga  ");
+			}
+			if (abc==glödstenspulver) {
+				JOptionPane.showMessageDialog(null, "Glödstenspulver  ");
+			}
+			if (abc==fackla) {
+				frame20.setVisible(true);
+			}
+			if (abc==glas) {
+				JOptionPane.showMessageDialog(null, "Glas  ");
+			}
+			if (abc==vete) {
+				JOptionPane.showMessageDialog(null, "Vete  ");
+			}
+			if (abc==kakao) {
+				JOptionPane.showMessageDialog(null, "Kakaobönor  ");
+			}
+			if (abc==kompass) {
+				frame87.setVisible(true);
+			}
+			if (abc==sten) {
+				JOptionPane.showMessageDialog(null, "Sten  ");
+			}
+			if (abc==rödstensfackla) {
+				frame31.setVisible(true);
+			}
+			if (abc==mjölk) {
+				JOptionPane.showMessageDialog(null, "Mjölk  ");
+			}
+			if (abc==färgglas) {
+				frame38.setVisible(true);
+			}
+			if (abc==sockerrör) {
+				JOptionPane.showMessageDialog(null, "Sockerrör  ");
+			}
+			if (abc==glödstenslampa) {
+				frame36.setVisible(true);
+			}
+			if (abc==äpple) {
+				JOptionPane.showMessageDialog(null, "Äpple");
+			}
+			if (abc==flinta) {
+				JOptionPane.showMessageDialog(null, "Flinta  ");
+			}
+			if (abc==järnStenTrä) {
+				JOptionPane.showMessageDialog(null, "Järn, sten eller trä");
+			}
+			if (abc==nederstjärna) {
+				JOptionPane.showMessageDialog(null, "Nederstjärna");
+			}
+			if (abc==järnblock) {
+				frame57.setVisible(true);
+			}
+			if (abc==trähalvblock) {
+				frame16.setVisible(true);
+			}
+			if (abc==nederkvarts) {
+				JOptionPane.showMessageDialog(null, "Nederkvarts  ");
+			}
+			if (abc==material) {
+				JOptionPane.showMessageDialog(null, "Material");
+			}
+			if (abc==snubbeltrådskrok) {
+				frame49.setVisible(true);
+			}
+			if (e.getSource()==väljSpråk){
+				Språkfråga();
+
+			}
 		}
 
 	}
