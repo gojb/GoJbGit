@@ -4620,13 +4620,13 @@ public class GoJb1 implements ActionListener{
 			
 			if (abc==tra) {
 
-				JOptionPane.showMessageDialog(null, "Trä  ");öö
+				JOptionPane.showMessageDialog(null, traString);öö
 			}
 			if (abc==kullersten) {
-				JOptionPane.showMessageDialog(null, "Kullersten  ");
+				JOptionPane.showMessageDialog(null, kullerString);
 			}
 			if (abc==rödsten) {
-				JOptionPane.showMessageDialog(null, "Rödsten  ");
+				JOptionPane.showMessageDialog(null, rödString);
 			}
 			if (abc==plankor) {
 				frame3.setVisible(true);
@@ -4635,13 +4635,13 @@ public class GoJb1 implements ActionListener{
 				frame68.setVisible(true);
 			}
 			if (abc==sand) {
-				JOptionPane.showMessageDialog(null, "Sand  ");
+				JOptionPane.showMessageDialog(null, sandString);
 			}
 			if (abc==ull) {
 				frame15.setVisible(true);
 			}
 			if (abc==guld) {
-				JOptionPane.showMessageDialog(null, "Guld  ");
+				JOptionPane.showMessageDialog(null, guldString);
 			}
 			if (abc==pinne) {
 				frame71.setVisible(true);
@@ -4653,28 +4653,28 @@ public class GoJb1 implements ActionListener{
 				frame14.setVisible(true);
 			}
 			if (abc==slime) {
-				JOptionPane.showMessageDialog(null, "Slime  ");
+				JOptionPane.showMessageDialog(null, slimesString);
 			}
 			if (abc==tråd) {
-				JOptionPane.showMessageDialog(null, "Tråd  ");
+				JOptionPane.showMessageDialog(null, trådsString);
 			}
 			if (abc==tegel) {
-				JOptionPane.showMessageDialog(null, "Tegel  ");
+				JOptionPane.showMessageDialog(null, tegelString);
 			}
 			if (abc==krut) {
-				JOptionPane.showMessageDialog(null, "Krut");
+				JOptionPane.showMessageDialog(null, krutString);
 			}
 			if (abc==järn) {
-				JOptionPane.showMessageDialog(null, "Järn  ");
+				JOptionPane.showMessageDialog(null, järnString);
 			}
 			if (abc==diamant) {
-				JOptionPane.showMessageDialog(null, "Diamant  ");
+				JOptionPane.showMessageDialog(null, diamantString);
 			}
 			if (abc==snöboll) {
-				JOptionPane.showMessageDialog(null, "Snöboll  ");
+				JOptionPane.showMessageDialog(null, snöbollString);
 			}
 			if (abc==obsidian) {
-				JOptionPane.showMessageDialog(null, "Obsidian  ");
+				JOptionPane.showMessageDialog(null, obsidianString);
 			}
 			if (abc==enderöga) {
 				frame103.setVisible(true);
@@ -4686,7 +4686,7 @@ public class GoJb1 implements ActionListener{
 				frame83.setVisible(true);
 			}
 			if (abc==läder) {
-				JOptionPane.showMessageDialog(null, "Läder  ");
+				JOptionPane.showMessageDialog(null, lädersString);
 			}
 			if (abc==gruvvagn) {
 				frame81.setVisible(true);
@@ -4701,7 +4701,7 @@ public class GoJb1 implements ActionListener{
 				frame24.setVisible(true);
 			}
 			if (abc==färger) {
-				JOptionPane.showMessageDialog(null, "Färger, Skapas t.ex. med blommor");
+				JOptionPane.showMessageDialog(null, färgerString);
 			}
 			if (abc==raketstjärna) {
 				frame111.setVisible(true);
@@ -4716,16 +4716,16 @@ public class GoJb1 implements ActionListener{
 				frame91.setVisible(true);
 			}
 			if (abc==pumpa) {
-				JOptionPane.showMessageDialog(null, "Pumpa  ");
+				JOptionPane.showMessageDialog(null, pumpaString);
 			}
 			if (abc==ägg) {
-				JOptionPane.showMessageDialog(null, "Ägg  ");
+				JOptionPane.showMessageDialog(null, äggString);
 			}
 			if (abc==kol) {
-				JOptionPane.showMessageDialog(null, "Kol  ");
+				JOptionPane.showMessageDialog(null, kolString);
 			}
 			if (abc==morot) {
-				JOptionPane.showMessageDialog(null, "Morot  ");
+				JOptionPane.showMessageDialog(null, morotString);
 			}
 			if (abc==fiskespö) {
 				frame88.setVisible(true);
@@ -4734,79 +4734,79 @@ public class GoJb1 implements ActionListener{
 				frame98.setVisible(true);
 			}
 			if (abc==järnträ) {
-				JOptionPane.showMessageDialog(null, "Järn eller Trä  ");
+				JOptionPane.showMessageDialog(null, järnelrträdString);
 			}
 			if (abc==fjäder) {
-				JOptionPane.showMessageDialog(null, "Fjäder  ");
+				JOptionPane.showMessageDialog(null, fjäderString);
 			}
 			if (abc==bläck) {
-				JOptionPane.showMessageDialog(null, "Bläck  ");
+				JOptionPane.showMessageDialog(null, bläckString);
 			}
 			if (abc==tryck) {
-				JOptionPane.showMessageDialog(null, "Trä, järn eller sten  ");
+				JOptionPane.showMessageDialog(null, träjärnstenString);
 			}
 			if (abc==melon) {
-				JOptionPane.showMessageDialog(null, "Melon  ");
+				JOptionPane.showMessageDialog(null, melonString);
 			}
 			if (abc==blazepulver) {
 				frame101.setVisible(true);
 			}
 			if (abc==blaze) {
-				JOptionPane.showMessageDialog(null, "Blaze  ");
+				JOptionPane.showMessageDialog(null, blazeString);
 			}
 			if (abc==svamp) {
-				JOptionPane.showMessageDialog(null, "Svamp  ");
+				JOptionPane.showMessageDialog(null, svampString);
 			}
 			if (abc==spindelöga) {
-				JOptionPane.showMessageDialog(null, "Spindelöga  ");
+				JOptionPane.showMessageDialog(null, spindelögaString);
 			}
 			if (abc==glödstenspulver) {
-				JOptionPane.showMessageDialog(null, "Glödstenspulver  ");
+				JOptionPane.showMessageDialog(null, glödstenspulverString);
 			}
 			if (abc==fackla) {
 				frame20.setVisible(true);
 			}
 			if (abc==glas) {
-				JOptionPane.showMessageDialog(null, "Glas  ");
+				JOptionPane.showMessageDialog(null, glasString);
 			}
 			if (abc==vete) {
-				JOptionPane.showMessageDialog(null, "Vete  ");
+				JOptionPane.showMessageDialog(null, veteString);
 			}
 			if (abc==kakao) {
-				JOptionPane.showMessageDialog(null, "Kakaobönor  ");
+				JOptionPane.showMessageDialog(null, kakaoString);
 			}
 			if (abc==kompass) {
 				frame87.setVisible(true);
 			}
 			if (abc==sten) {
-				JOptionPane.showMessageDialog(null, "Sten  ");
+				JOptionPane.showMessageDialog(null, stenString);
 			}
 			if (abc==rödstensfackla) {
 				frame31.setVisible(true);
 			}
 			if (abc==mjölk) {
-				JOptionPane.showMessageDialog(null, "Mjölk  ");
+				JOptionPane.showMessageDialog(null, mjölkString);
 			}
 			if (abc==färgglas) {
 				frame38.setVisible(true);
 			}
 			if (abc==sockerrör) {
-				JOptionPane.showMessageDialog(null, "Sockerrör  ");
+				JOptionPane.showMessageDialog(null, sockerrörString);
 			}
 			if (abc==glödstenslampa) {
 				frame36.setVisible(true);
 			}
 			if (abc==äpple) {
-				JOptionPane.showMessageDialog(null, "Äpple");
+				JOptionPane.showMessageDialog(null, äppleString);
 			}
 			if (abc==flinta) {
-				JOptionPane.showMessageDialog(null, "Flinta  ");
+				JOptionPane.showMessageDialog(null, flintaString);
 			}
 			if (abc==järnStenTrä) {
-				JOptionPane.showMessageDialog(null, "Järn, sten eller trä");
+				JOptionPane.showMessageDialog(null, järnstenträString);
 			}
 			if (abc==nederstjärna) {
-				JOptionPane.showMessageDialog(null, "Nederstjärna");
+				JOptionPane.showMessageDialog(null, nederstjärnaString);
 			}
 			if (abc==järnblock) {
 				frame57.setVisible(true);
@@ -4815,10 +4815,10 @@ public class GoJb1 implements ActionListener{
 				frame16.setVisible(true);
 			}
 			if (abc==nederkvarts) {
-				JOptionPane.showMessageDialog(null, "Nederkvarts  ");
+				JOptionPane.showMessageDialog(null, nederkvartString);
 			}
 			if (abc==material) {
-				JOptionPane.showMessageDialog(null, "Material");
+				JOptionPane.showMessageDialog(null, materialString);
 			}
 			if (abc==snubbeltrådskrok) {
 				frame49.setVisible(true);
