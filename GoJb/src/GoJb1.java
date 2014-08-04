@@ -714,6 +714,7 @@ public class GoJb1 implements ActionListener{
 	public void Språk() throws Exception{
 	frame.removeAll();
 		if (string.equals("86325yhrel")){
+			
 			//Svenska
 			
 			if (prop.getProperty("y").equals("10")) {
