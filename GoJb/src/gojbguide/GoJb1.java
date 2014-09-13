@@ -1,8 +1,13 @@
+package gojbguide;
 import java.awt.*;
 import java.awt.event.*;
 import java.io.*;
 import java.util.Properties;
+
 import javax.swing.*;
+
+import static gojbguide.GoJb1.*;
+
 
 /**
  * @author GoJb
@@ -11,9 +16,9 @@ import javax.swing.*;
 public class GoJb1 implements ActionListener{
 
 	static int engångsöppning = 1;
-	Properties prop = new Properties();
+	public static Properties prop = new Properties();
 	
-	String string,help;
+	static String string,help;
 	static String namn,yString;
 	
 	JButton svenska = new JButton("Svenska"),
@@ -557,69 +562,21 @@ public class GoJb1 implements ActionListener{
 		    	((Runnable) Toolkit.getDefaultToolkit().getDesktopProperty("win.sound.hand")).run();
 		    	JOptionPane.showMessageDialog(null, "Bad LookAndFeel!","Error",JOptionPane.ERROR_MESSAGE);
 		    }
-		Namn();
+		
+		new Ladda();
 		
 		
 	}
-	public static void Namn() {
-		Properties prop = new Properties();
-		try {
-			prop.load(new FileInputStream(System.getProperty("user.home") + "\\AppData\\Roaming\\GoJb\\settings.gojb"));
-		}catch (IOException e) {
-			
-			e.printStackTrace();
-		}
-		
-	if(prop.getProperty("x","0").equals("1")){
-		
-			new GoJb1();
-			return;
-		}
-	else {
-		namn = JOptionPane.showInputDialog("Enter name/Skriv ditt namn");
-		if(namn.equals("")||namn.equals(null)){
-			
-			System.exit(3);
-			
-		}
-		else {
-			System.err.println("Dankish shöen!");
-			
-			prop.setProperty("Namn", namn);
-			prop.setProperty("x", "1");
-			prop.setProperty("y", "1");
-			
-		
-		}
-		}
 	
-		try {
-				prop.store(new FileWriter(new File(System.getProperty("user.home") + "\\AppData\\Roaming\\GoJb\\settings.gojb")),"Inställningar för GoJbGuide");
-			} catch (Exception e) {
-				System.out.println("lijashfölivbfspxkl");
-				e.printStackTrace();
-			}
-		Namn();
-	
-	}
+
 	public GoJb1(){
+	try {
 		
-		
-		try {
-			prop.load(new FileInputStream(System.getProperty ("user.home") + "\\AppData\\Roaming\\GoJb\\settings.gojb"));
-			string = prop.getProperty("9778436klbgflf");
-			Språk();
-			if (engångsöppning==1) {
-				GörFönster();
-				}
-				engångsöppning++;
-		
-		} catch (Exception e) {
-			Språkfråga();
-		}
-		
-		if(prop.getProperty("y").equals("1")){
+	
+		if(prop.getProperty("y","2").equals("1")){
+			System.err.println("Provar skicka mejl");
 			try {
+				System.out.println("jndsnl");
 				Mail.Skicka("gojb@gojb.bl.ee", "Användande av GoJbGuide", prop.getProperty("Namn") + "  " + prop.getProperty("9778436klbgflf"));
 				prop.setProperty("y", "10");
 				System.out.println("Skickat!");
@@ -630,11 +587,28 @@ public class GoJb1 implements ActionListener{
 					e.printStackTrace();
 				}
 			} catch (Exception e) {
-				System.err.println("lsadhfbkjhv, jhxvc ,lisdhf,jsd");
+				System.err.println("Meil misslyckadess att skickas");
 				e.printStackTrace();
 			}
 			
 		}
+	} catch (Exception e) {
+		System.err.println("ljdvmxc vjzsjldvn.asmf");
+	}
+		try {
+			prop.load(new FileInputStream(System.getProperty ("user.home") + "\\AppData\\Roaming\\GoJb\\settings.gojb"));
+			string = prop.getProperty("9778436klbgflf");
+			Språk();
+			if (engångsöppning==1) {
+				GörFönster();
+			}
+			engångsöppning++;
+
+		} catch (Exception e) {
+			Språkfråga();
+		}
+		
+	
 	/**
 9778436klbgflf=lhdohf7984
 #Engelska
@@ -650,19 +624,19 @@ public class GoJb1 implements ActionListener{
 			public void actionPerformed(ActionEvent e) {
 				if (e.getSource()==svenska) {
 					string="86325yhrel";
-					if (prop.getProperty("y").equals("10")) {
+					if (prop.getProperty("y","2").equals("10")) {
 						
 						yString = " Du är verifierad, tack för att\n du använder det här programmet! :)";
-						
+						prop.setProperty("y", "1");
 					}
 				
 				}
 				else if (e.getSource()==engelska) {
 					string="lhdohf7984";
-					if (prop.getProperty("y").equals("10")) {
+					if (prop.getProperty("y","2").equals("10")) {
 							
 						yString = " You are Verified, thanks for\n using this application! :)";
-						
+						prop.setProperty("y", "1");
 					}
 				
 				}
@@ -717,7 +691,9 @@ public class GoJb1 implements ActionListener{
 			
 			//Svenska
 			
-			if (prop.getProperty("y").equals("10")) {
+			prop.setProperty("z", "86325yhrel");
+			
+			if (prop.getProperty("y","2").equals("10")) {
 
 				yString = " Du är verifierad, tack för att\n du använder det här programmet! :)";
 
@@ -1001,7 +977,9 @@ public class GoJb1 implements ActionListener{
 		else if (string.equals("lhdohf7984")){
 			//Eng
 			
-			if (prop.getProperty("y").equals("10")) {
+			prop.setProperty("z", "lhdohf7984");
+						
+			if (prop.getProperty("y","2").equals("10")) {
 				
 				yString = " You are Verified, thanks for\n using this application! :)";
 				
@@ -5016,3 +4994,214 @@ public class GoJb1 implements ActionListener{
 
 }
 
+class Ladda extends JPanel implements ActionListener{
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+
+
+	
+	
+	JFrame frame = new JFrame();
+	
+	int a;
+
+	
+	
+	static int x = 1, y,z,namnInt;
+	
+	 Timer timer = new Timer(10, this);
+	
+	static String namn, välkommen;
+	
+	public Ladda(){
+		
+		try {
+			prop.load(new FileInputStream(System.getProperty ("user.home") + "\\AppData\\Roaming\\GoJb\\settings.gojb"));
+		} catch (IOException e) {
+		
+			System.err.println("sdoövhjxcblizxg,vbs");
+		}
+
+		
+		frame.setSize(300, 200);
+		frame.setLocationRelativeTo(null);
+
+		frame.setUndecorated(true);
+		
+		frame.setBackground(new Color(220,225,242));
+		
+		frame.setVisible(true);
+		
+		timer.start();
+		
+		if (prop.getProperty("9778436klbgflf","kjg").equals("86325yhrel")){
+			välkommen = "Välkommen " + prop.getProperty("Namn");
+			frame.revalidate();
+			frame.repaint();
+			repaint();
+			revalidate();
+			namnInt = 1;
+			
+		}
+		else if (prop.getProperty("9778436klbgflf","kjg").equals("lhdohf7984")){
+			välkommen = "Welcome " + prop.getProperty("Namn");
+			frame.revalidate();
+			frame.repaint();
+			repaint();
+			revalidate();
+			namnInt = 1;
+			
+		}
+		else {
+			System.err.println(prop.getProperty("9778436klbgflf"));
+		
+			namnInt = 2;
+			
+			prop.setProperty("Namn", "");
+			
+			if (x < 125){
+				välkommen = "Welcome! Loading...";
+				
+				frame.revalidate();
+				frame.repaint();
+				repaint();
+				revalidate();
+			}
+			else if (x > 125){
+				välkommen = "Välkommen! Laddar...";
+				frame.revalidate();
+				frame.repaint();
+				repaint();
+				revalidate();
+			}
+			
+		}
+	
+	}
+	
+	public void actionPerformed(ActionEvent arg0) {
+
+		if (timer == arg0.getSource()){
+			
+	
+		
+		frame.add(this);
+		frame.revalidate();
+		
+		revalidate();
+		repaint();
+			
+	
+		}
+		a++;
+		if (z == 0 && a > 0){
+			x++;
+			a=0;
+		}
+		
+		if (z == 0 && x == 150){
+			
+		
+		}
+		if (x == 247 && namnInt == 1){
+			prop.setProperty("y", "10");
+			new GoJb1();
+			frame.dispose();
+		}
+		
+		if (x == 247 && namnInt == 2){
+
+			timer.stop();
+
+			namn = JOptionPane.showInputDialog("Enter name/Skriv ditt namn");
+			
+			if(namn.equals("")||namn.equals(null)){
+
+				System.exit(3);
+			}
+			else {
+				System.err.println("Dankish shöen!");
+
+				prop.setProperty("Namn", namn);
+				prop.setProperty("x", "1");
+				prop.setProperty("y", "1");
+
+				try {
+					prop.store(new FileWriter(new File(System.getProperty("user.home") + "\\AppData\\Roaming\\GoJb\\settings.gojb")),"Inställningar för GoJbGuide");
+				} catch (Exception e) {
+					System.out.println("lijashfölivbfspxkl");
+					e.printStackTrace();
+					Namn();
+				}
+				
+				new GoJb1();
+				
+				try {
+				prop.store(new FileWriter(new File(System.getProperty("user.home") + "\\AppData\\Roaming\\GoJb\\settings.gojb")),"Inställningar för GoJbGuide");
+			} catch (Exception e) {
+				System.out.println("lijashfölivbfspxkl");
+				e.printStackTrace();
+				Namn();
+			}
+			
+			}
+
+
+			frame.dispose();
+			
+
+		}
+	}
+			
+		
+		
+
+		
+	
+	public void paintComponent (Graphics gr) {
+
+
+	gr.setColor(new Color(0, 0, 0));
+	gr.setFont(new Font("jnd", Font.BOLD, 20));
+	gr.drawString(välkommen, 70, 70);
+	gr.fillRect(24, 128, 254, 34);
+	
+	gr.setColor(new Color(20, 240, 20));
+	gr.fillRect(27, 131, x, 29);
+	frame.repaint();
+	}
+	
+	public static void Namn() {
+		
+		try {
+			prop.load(new FileInputStream(System.getProperty("user.home") + "\\AppData\\Roaming\\GoJb\\settings.gojb"));
+		}catch (IOException e) {
+			
+			System.err.println("Kan inte ladda");
+			
+		}
+		
+		if(prop.getProperty("x","0").equals("1")){
+		
+			x = 150;
+			System.err.println("Verifierdffad");
+			y = 1;
+			z = 0;
+			return;
+			
+		}
+	else {
+		y = 2;
+		System.err.println("Måste Verifieras");
+		z = 0;
+		
+	
+		}
+	
+	}
+
+}
