@@ -5148,19 +5148,19 @@ class Ladda extends JPanel implements ActionListener{
 		}
 	}
 			
-	public void paintComponent (Graphics gr) {
+	public void paintComponent (Graphics g) {
+		Graphics2D gr = (Graphics2D)g;
+		gr.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+		gr.setColor(new Color(0, 0, 0));
+		gr.setFont(new Font("jnd", Font.BOLD, 20));
+		gr.drawString(välkommen, 70, 70);
+		gr.fillRect(24, 128, 254, 34);
 
-
-	gr.setColor(new Color(0, 0, 0));
-	gr.setFont(new Font("jnd", Font.BOLD, 20));
-	gr.drawString(välkommen, 70, 70);
-	gr.fillRect(24, 128, 254, 34);
-	
-	gr.setColor(new Color(20, 240, 20));
-	gr.fillRect(27, 131, x, 29);
-	frame.repaint();
+		gr.setColor(new Color(20, 240, 20));
+		gr.fillRect(27, 131, x, 29);
+		frame.repaint();
 	}
-	
+
 	public static void Namn() {
 		
 		try {
