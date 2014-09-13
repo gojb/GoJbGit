@@ -5155,24 +5155,10 @@ class Ladda extends JPanel implements ActionListener{
 		gr.setFont(new Font("jnd", Font.BOLD, 20));
 		gr.drawString(välkommen, 70, 70);
 		gr.fillRect(24, 128, 254, 34);
-
-<<<<<<< HEAD
-	Graphics2D g2 = (Graphics2D)gr;
-		
-	g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
-		
-	g2.setColor(new Color(0, 0, 0));
-	g2.setFont(new Font("jnd", Font.BOLD, 20));
-	g2.drawString(välkommen, 70, 70);
-	g2.fillRect(24, 128, 254, 34);
 	
-	g2.setColor(new Color(20, 240, 20));
-	g2.fillRect(27, 131, x, 29);
+	gr.setColor(new Color(20, 240, 20));
+	gr.fillRect(27, 131, x, 29);
 	frame.repaint();
-
-		gr.setColor(new Color(20, 240, 20));
-		gr.fillRect(27, 131, x, 29);
-		frame.repaint();
 
 	}
 
