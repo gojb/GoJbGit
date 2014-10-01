@@ -3,9 +3,12 @@ import java.awt.*;
 import java.awt.event.*;
 import java.io.*;
 import java.util.Properties;
+import java.util.function.DoubleToIntFunction;
 
 import javax.swing.*;
 
+import sun.security.x509.X400Address;
+import jdk.internal.dynalink.beans.StaticClass;
 import static gojbguide.GoJb1.*;
 
 
@@ -13,7 +16,7 @@ import static gojbguide.GoJb1.*;
  * @author GoJb
  *
  */
-public class GoJb1 implements ActionListener{
+public class GoJb1 implements ActionListener, KeyListener{
 
 	static int engångsöppning = 1;
 	public static Properties prop = new Properties();
@@ -25,6 +28,8 @@ public class GoJb1 implements ActionListener{
 			engelska = new JButton("English");
 	
 	JMenuBar bar = new JMenuBar();
+	
+	JTextField text = new JTextField();
 	
 	JMenu språkMeny = new JMenu(),
 			hjälpMenu = new JMenu("Hjälp");
@@ -469,7 +474,8 @@ public class GoJb1 implements ActionListener{
 				button111 = new JButton(i111),
 				button112 = new JButton(i112),
 				button113 = new JButton(i113),
-				button114 = new JButton(i114);
+				button114 = new JButton(i114),
+				stäng = new JButton();
 	
 	ImageIcon 	kullersten = new ImageIcon(getClass().getResource("/images/1.png")),
 				rödsten = new ImageIcon(getClass().getResource("/images/2.png")),
@@ -4212,6 +4218,10 @@ public class GoJb1 implements ActionListener{
 		bar.add(språkMeny);
 		bar.add(hjälpMenu);
 		
+		text.addKeyListener(this);
+		
+		bar.add(text);
+		
 		helpItem.addActionListener(this);
 
 		språkMeny.add(väljSpråk);
@@ -4223,19 +4233,16 @@ public class GoJb1 implements ActionListener{
 		frameHuvud.setLocationRelativeTo(null);
 		frameHuvud.setVisible(true);
 		
-		
-		
-
-
 
 	}
 
 	public void actionPerformed(ActionEvent e) {
-	
+		
 		if (e.getSource()==helpItem){
 		
 		JOptionPane.showMessageDialog(null, help);
 		}
+		
 		System.out.println("Någon knapp nedtryckt!");	
 		
 		frame3.setVisible(false);
@@ -4996,6 +5003,464 @@ public class GoJb1 implements ActionListener{
 		
 	}
 
+
+	@Override
+	public void keyPressed(KeyEvent arg0) {
+
+		
+	}
+
+
+	@Override
+	public void keyReleased(KeyEvent arg0) {
+
+		frame.add(button60);
+		frame.add(button23);
+		frame.add(button7);
+		frame.add(button101);
+		frame.add(button57);
+		frame.add(button105);
+		frame.add(button84);
+		frame.add(button19);
+		frame.add(button45);
+		frame.add(button73);
+		frame.add(button75);
+		frame.add(button76);
+		frame.add(button82);
+		frame.add(button56);
+		frame.add(button11);
+		frame.add(button61);
+		frame.add(button18);
+		frame.add(button26);
+		frame.add(button48);
+		frame.add(button103);
+		frame.add(button20);
+		frame.add(button39);
+		frame.add(button88);
+		frame.add(button70);
+		frame.add(button67);
+		frame.add(button50);
+		frame.add(button54);
+		frame.add(button38);
+		frame.add(button41);
+		frame.add(button106);
+		frame.add(button99);
+		frame.add(button36);
+		frame.add(button43);
+		frame.add(button112);
+		frame.add(button113);
+		frame.add(button85);
+		frame.add(button81);
+		frame.add(button86);
+		frame.add(button98);
+		frame.add(button104);
+		frame.add(button107);
+		frame.add(button79);
+		frame.add(button65);
+		frame.add(button16);
+		frame.add(button80);
+		frame.add(button74);
+		frame.add(button58);
+		frame.add(button62);
+		frame.add(button34);
+		frame.add(button40);
+		frame.add(button100);
+		frame.add(button94);
+		frame.add(button95);
+		frame.add(button22);
+		frame.add(button46);
+		frame.add(button13);
+		frame.add(button89);
+		frame.add(button32);
+		frame.add(button14);
+		frame.add(button87);
+		frame.add(button114);
+		frame.add(button52);
+		frame.add(button102);
+		frame.add(button59);
+		frame.add(button42);
+		frame.add(button97);
+		frame.add(button108);
+		frame.add(button51);
+		frame.add(button78);
+		frame.add(button9);
+		frame.add(button83);
+		frame.add(button69);
+		frame.add(button68);
+		frame.add(button71);
+		frame.add(button37);
+		frame.add(button109);
+		frame.add(button110);
+		frame.add(button111);
+		frame.add(button28);
+		frame.add(button31);
+		frame.add(button55);
+		frame.add(button47);
+		frame.add(button93);
+		frame.add(button8);
+		frame.add(button96);
+		frame.add(button12);
+		frame.add(button77);
+		frame.add(button25);
+		frame.add(button72);
+		frame.add(button49);
+		frame.add(button33);
+		frame.add(button91);
+		frame.add(button63);
+		frame.add(button29);
+		frame.add(button35);
+		frame.add(button27);
+		frame.add(button53);
+		frame.add(button66);
+		frame.add(button10);
+		frame.add(button17);
+		frame.add(button21);
+		frame.add(button44);
+		frame.add(button30);
+		frame.add(button3);
+		frame.add(button92);
+		frame.add(button24);
+		frame.add(button15);
+		frame.add(button64);
+	
+		if(!button3.getText().toLowerCase().contains(text.getText().toLowerCase())){
+			frame.remove(button3);
+			}
+			if(!button7.getText().toLowerCase().contains(text.getText().toLowerCase())){
+			frame.remove(button7);
+			}
+			if(!button8.getText().toLowerCase().contains(text.getText().toLowerCase())){
+			frame.remove(button8);
+			}
+			if(!button9.getText().toLowerCase().contains(text.getText().toLowerCase())){
+			frame.remove(button9);
+			}
+			if(!button10.getText().toLowerCase().contains(text.getText().toLowerCase())){
+			frame.remove(button10);
+			}
+			if(!button11.getText().toLowerCase().contains(text.getText().toLowerCase())){
+			frame.remove(button11);
+			}
+			if(!button12.getText().toLowerCase().contains(text.getText().toLowerCase())){
+			frame.remove(button12);
+			}
+			if(!button13.getText().toLowerCase().contains(text.getText().toLowerCase())){
+			frame.remove(button13);
+			}
+			if(!button14.getText().toLowerCase().contains(text.getText().toLowerCase())){
+			frame.remove(button14);
+			}
+			if(!button15.getText().toLowerCase().contains(text.getText().toLowerCase())){
+			frame.remove(button15);
+			}
+			if(!button16.getText().toLowerCase().contains(text.getText().toLowerCase())){
+			frame.remove(button16);
+			}
+			if(!button17.getText().toLowerCase().contains(text.getText().toLowerCase())){
+			frame.remove(button17);
+			}
+			if(!button18.getText().toLowerCase().contains(text.getText().toLowerCase())){
+			frame.remove(button18);
+			}
+			if(!button19.getText().toLowerCase().contains(text.getText().toLowerCase())){
+			frame.remove(button19);
+			}
+			if(!button20.getText().toLowerCase().contains(text.getText().toLowerCase())){
+			frame.remove(button20);
+			}
+			if(!button21.getText().toLowerCase().contains(text.getText().toLowerCase())){
+			frame.remove(button21);
+			}
+			if(!button22.getText().toLowerCase().contains(text.getText().toLowerCase())){
+			frame.remove(button22);
+			}
+			if(!button23.getText().toLowerCase().contains(text.getText().toLowerCase())){
+			frame.remove(button23);
+			}
+			if(!button24.getText().toLowerCase().contains(text.getText().toLowerCase())){
+			frame.remove(button24);
+			}
+			if(!button25.getText().toLowerCase().contains(text.getText().toLowerCase())){
+			frame.remove(button25);
+			}
+			if(!button26.getText().toLowerCase().contains(text.getText().toLowerCase())){
+			frame.remove(button26);
+			}
+			if(!button27.getText().toLowerCase().contains(text.getText().toLowerCase())){
+			frame.remove(button27);
+			}
+			if(!button28.getText().toLowerCase().contains(text.getText().toLowerCase())){
+			frame.remove(button28);
+			}
+			if(!button29.getText().toLowerCase().contains(text.getText().toLowerCase())){
+			frame.remove(button29);
+			}
+			if(!button30.getText().toLowerCase().contains(text.getText().toLowerCase())){
+			frame.remove(button30);
+			}
+			if(!button31.getText().toLowerCase().contains(text.getText().toLowerCase())){
+			frame.remove(button31);
+			}
+			if(!button32.getText().toLowerCase().contains(text.getText().toLowerCase())){
+			frame.remove(button32);
+			}
+			if(!button33.getText().toLowerCase().contains(text.getText().toLowerCase())){
+			frame.remove(button33);
+			}
+			if(!button34.getText().toLowerCase().contains(text.getText().toLowerCase())){
+			frame.remove(button34);
+			}
+			if(!button35.getText().toLowerCase().contains(text.getText().toLowerCase())){
+			frame.remove(button35);
+			}
+			if(!button36.getText().toLowerCase().contains(text.getText().toLowerCase())){
+			frame.remove(button36);
+			}
+			if(!button37.getText().toLowerCase().contains(text.getText().toLowerCase())){
+			frame.remove(button37);
+			}
+			if(!button38.getText().toLowerCase().contains(text.getText().toLowerCase())){
+			frame.remove(button38);
+			}
+			if(!button39.getText().toLowerCase().contains(text.getText().toLowerCase())){
+			frame.remove(button39);
+			}
+			if(!button40.getText().toLowerCase().contains(text.getText().toLowerCase())){
+			frame.remove(button40);
+			}
+			if(!button41.getText().toLowerCase().contains(text.getText().toLowerCase())){
+			frame.remove(button41);
+			}
+			if(!button42.getText().toLowerCase().contains(text.getText().toLowerCase())){
+			frame.remove(button42);
+			}
+			if(!button43.getText().toLowerCase().contains(text.getText().toLowerCase())){
+			frame.remove(button43);
+			}
+			if(!button44.getText().toLowerCase().contains(text.getText().toLowerCase())){
+			frame.remove(button44);
+			}
+			if(!button45.getText().toLowerCase().contains(text.getText().toLowerCase())){
+			frame.remove(button45);
+			}
+			if(!button46.getText().toLowerCase().contains(text.getText().toLowerCase())){
+			frame.remove(button46);
+			}
+			if(!button47.getText().toLowerCase().contains(text.getText().toLowerCase())){
+			frame.remove(button47);
+			}
+			if(!button48.getText().toLowerCase().contains(text.getText().toLowerCase())){
+			frame.remove(button48);
+			}
+			if(!button49.getText().toLowerCase().contains(text.getText().toLowerCase())){
+			frame.remove(button49);
+			}
+			if(!button50.getText().toLowerCase().contains(text.getText().toLowerCase())){
+			frame.remove(button50);
+			}
+			if(!button51.getText().toLowerCase().contains(text.getText().toLowerCase())){
+			frame.remove(button51);
+			}
+			if(!button52.getText().toLowerCase().contains(text.getText().toLowerCase())){
+			frame.remove(button52);
+			}
+			if(!button53.getText().toLowerCase().contains(text.getText().toLowerCase())){
+			frame.remove(button53);
+			}
+			if(!button54.getText().toLowerCase().contains(text.getText().toLowerCase())){
+			frame.remove(button54);
+			}
+			if(!button55.getText().toLowerCase().contains(text.getText().toLowerCase())){
+			frame.remove(button55);
+			}
+			if(!button56.getText().toLowerCase().contains(text.getText().toLowerCase())){
+			frame.remove(button56);
+			}
+			if(!button57.getText().toLowerCase().contains(text.getText().toLowerCase())){
+			frame.remove(button57);
+			}
+			if(!button58.getText().toLowerCase().contains(text.getText().toLowerCase())){
+			frame.remove(button58);
+			}
+			if(!button59.getText().toLowerCase().contains(text.getText().toLowerCase())){
+			frame.remove(button59);
+			}
+			if(!button60.getText().toLowerCase().contains(text.getText().toLowerCase())){
+			frame.remove(button60);
+			}
+			if(!button61.getText().toLowerCase().contains(text.getText().toLowerCase())){
+			frame.remove(button61);
+			}
+			if(!button62.getText().toLowerCase().contains(text.getText().toLowerCase())){
+			frame.remove(button62);
+			}
+			if(!button63.getText().toLowerCase().contains(text.getText().toLowerCase())){
+			frame.remove(button63);
+			}
+			if(!button64.getText().toLowerCase().contains(text.getText().toLowerCase())){
+			frame.remove(button64);
+			}
+			if(!button65.getText().toLowerCase().contains(text.getText().toLowerCase())){
+			frame.remove(button65);
+			}
+			if(!button66.getText().toLowerCase().contains(text.getText().toLowerCase())){
+			frame.remove(button66);
+			}
+			if(!button67.getText().toLowerCase().contains(text.getText().toLowerCase())){
+			frame.remove(button67);
+			}
+			if(!button68.getText().toLowerCase().contains(text.getText().toLowerCase())){
+			frame.remove(button68);
+			}
+			if(!button69.getText().toLowerCase().contains(text.getText().toLowerCase())){
+			frame.remove(button69);
+			}
+			if(!button70.getText().toLowerCase().contains(text.getText().toLowerCase())){
+			frame.remove(button70);
+			}
+			if(!button71.getText().toLowerCase().contains(text.getText().toLowerCase())){
+			frame.remove(button71);
+			}
+			if(!button72.getText().toLowerCase().contains(text.getText().toLowerCase())){
+			frame.remove(button72);
+			}
+			if(!button73.getText().toLowerCase().contains(text.getText().toLowerCase())){
+			frame.remove(button73);
+			}
+			if(!button74.getText().toLowerCase().contains(text.getText().toLowerCase())){
+			frame.remove(button74);
+			}
+			if(!button75.getText().toLowerCase().contains(text.getText().toLowerCase())){
+			frame.remove(button75);
+			}
+			if(!button76.getText().toLowerCase().contains(text.getText().toLowerCase())){
+			frame.remove(button76);
+			}
+			if(!button77.getText().toLowerCase().contains(text.getText().toLowerCase())){
+			frame.remove(button77);
+			}
+			if(!button78.getText().toLowerCase().contains(text.getText().toLowerCase())){
+			frame.remove(button78);
+			}
+			if(!button79.getText().toLowerCase().contains(text.getText().toLowerCase())){
+			frame.remove(button79);
+			}
+			if(!button80.getText().toLowerCase().contains(text.getText().toLowerCase())){
+			frame.remove(button80);
+			}
+			if(!button81.getText().toLowerCase().contains(text.getText().toLowerCase())){
+			frame.remove(button81);
+			}
+			if(!button82.getText().toLowerCase().contains(text.getText().toLowerCase())){
+			frame.remove(button82);
+			}
+			if(!button83.getText().toLowerCase().contains(text.getText().toLowerCase())){
+			frame.remove(button83);
+			}
+			if(!button84.getText().toLowerCase().contains(text.getText().toLowerCase())){
+			frame.remove(button84);
+			}
+			if(!button85.getText().toLowerCase().contains(text.getText().toLowerCase())){
+			frame.remove(button85);
+			}
+			if(!button86.getText().toLowerCase().contains(text.getText().toLowerCase())){
+			frame.remove(button86);
+			}
+			if(!button87.getText().toLowerCase().contains(text.getText().toLowerCase())){
+			frame.remove(button87);
+			}
+			if(!button88.getText().toLowerCase().contains(text.getText().toLowerCase())){
+			frame.remove(button88);
+			}
+			if(!button89.getText().toLowerCase().contains(text.getText().toLowerCase())){
+			frame.remove(button89);
+			}
+			if(!button91.getText().toLowerCase().contains(text.getText().toLowerCase())){
+			frame.remove(button91);
+			}
+			if(!button92.getText().toLowerCase().contains(text.getText().toLowerCase())){
+			frame.remove(button92);
+			}
+			if(!button93.getText().toLowerCase().contains(text.getText().toLowerCase())){
+			frame.remove(button93);
+			}
+			if(!button94.getText().toLowerCase().contains(text.getText().toLowerCase())){
+			frame.remove(button94);
+			}
+			if(!button95.getText().toLowerCase().contains(text.getText().toLowerCase())){
+			frame.remove(button95);
+			}
+			if(!button96.getText().toLowerCase().contains(text.getText().toLowerCase())){
+			frame.remove(button96);
+			}
+			if(!button97.getText().toLowerCase().contains(text.getText().toLowerCase())){
+			frame.remove(button97);
+			}
+			if(!button98.getText().toLowerCase().contains(text.getText().toLowerCase())){
+			frame.remove(button98);
+			}
+			if(!button99.getText().toLowerCase().contains(text.getText().toLowerCase())){
+			frame.remove(button99);
+			}
+			if(!button100.getText().toLowerCase().contains(text.getText().toLowerCase())){
+			frame.remove(button100);
+			}
+			if(!button101.getText().toLowerCase().contains(text.getText().toLowerCase())){
+			frame.remove(button101);
+			}
+			if(!button102.getText().toLowerCase().contains(text.getText().toLowerCase())){
+			frame.remove(button102);
+			}
+			if(!button103.getText().toLowerCase().contains(text.getText().toLowerCase())){
+			frame.remove(button103);
+			}
+			if(!button104.getText().toLowerCase().contains(text.getText().toLowerCase())){
+			frame.remove(button104);
+			}
+			if(!button105.getText().toLowerCase().contains(text.getText().toLowerCase())){
+			frame.remove(button105);
+			}
+			if(!button106.getText().toLowerCase().contains(text.getText().toLowerCase())){
+			frame.remove(button106);
+			}
+			if(!button107.getText().toLowerCase().contains(text.getText().toLowerCase())){
+			frame.remove(button107);
+			}
+			if(!button108.getText().toLowerCase().contains(text.getText().toLowerCase())){
+			frame.remove(button108);
+			}
+			if(!button109.getText().toLowerCase().contains(text.getText().toLowerCase())){
+			frame.remove(button109);
+			}
+			if(!button110.getText().toLowerCase().contains(text.getText().toLowerCase())){
+			frame.remove(button110);
+			}
+			if(!button111.getText().toLowerCase().contains(text.getText().toLowerCase())){
+			frame.remove(button111);
+			}
+			if(!button112.getText().toLowerCase().contains(text.getText().toLowerCase())){
+			frame.remove(button112);
+			}
+			if(!button113.getText().toLowerCase().contains(text.getText().toLowerCase())){
+			frame.remove(button113);
+			}
+			if(!button114.getText().toLowerCase().contains(text.getText().toLowerCase())){
+			frame.remove(button114);
+			}
+		frame.repaint();
+		frame.revalidate();
+		frameHuvud.revalidate();
+		frameHuvud.repaint();
+		
+	}
+
+
+	@Override
+	public void keyTyped(KeyEvent arg0) {
+
+		
+	}
+
 }
 
 class Ladda extends JPanel implements ActionListener{
@@ -5004,19 +5469,13 @@ class Ladda extends JPanel implements ActionListener{
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-
-
-
-	
 	
 	JFrame frame = new JFrame();
 	
 	int a;
-
-	
 	
 	static int x = 1,z,namnInt;
-	
+		
 	 Timer timer = new Timer(10, this);
 	
 	static String namn, välkommen;
@@ -5093,12 +5552,14 @@ class Ladda extends JPanel implements ActionListener{
 		}
 	
 	}
-	
+
 	public void actionPerformed(ActionEvent arg0) {
 
 		if (timer == arg0.getSource()){
-			
-	
+		
+		revalidate();
+		repaint();
+		
 		
 		frame.add(this);
 		frame.revalidate();
@@ -5148,19 +5609,27 @@ class Ladda extends JPanel implements ActionListener{
 		}
 	}
 			
+	private char[] Long(int i) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 	public void paintComponent (Graphics g) {
-		Graphics2D gr = (Graphics2D)g;
+		Graphics2D gr = (Graphics2D)g;	
+
 		gr.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
 		gr.setColor(new Color(0, 0, 0));
 		gr.setFont(new Font("jnd", Font.BOLD, 20));
 		gr.drawString(välkommen, 70, 70);
 		gr.fillRect(24, 128, 254, 34);
-	
-	gr.setColor(new Color(20, 240, 20));
-	gr.fillRect(27, 131, x, 29);
-	frame.repaint();
+		gr.drawString(Float.toString(- x / x), 50, 90);
+
+		gr.setColor(new Color(20, 240, 20));
+		gr.fillRect(27, 131, x, 29);
+		frame.repaint();
 
 	}
+
 
 	public static void Namn() {
 		
