@@ -5120,331 +5120,331 @@ public class GoJb1 implements ActionListener, KeyListener{
 		frame.add(button24);
 		frame.add(button15);
 		frame.add(button64);
-	
+
 		if(!button3.getText().toLowerCase().contains(text.getText().toLowerCase())){
 			frame.remove(button3);
-			}
-			if(!button7.getText().toLowerCase().contains(text.getText().toLowerCase())){
+		}
+		if(!button7.getText().toLowerCase().contains(text.getText().toLowerCase())){
 			frame.remove(button7);
-			}
-			if(!button8.getText().toLowerCase().contains(text.getText().toLowerCase())){
+		}
+		if(!button8.getText().toLowerCase().contains(text.getText().toLowerCase())){
 			frame.remove(button8);
-			}
-			if(!button9.getText().toLowerCase().contains(text.getText().toLowerCase())){
+		}
+		if(!button9.getText().toLowerCase().contains(text.getText().toLowerCase())){
 			frame.remove(button9);
-			}
-			if(!button10.getText().toLowerCase().contains(text.getText().toLowerCase())){
+		}
+		if(!button10.getText().toLowerCase().contains(text.getText().toLowerCase())){
 			frame.remove(button10);
-			}
-			if(!button11.getText().toLowerCase().contains(text.getText().toLowerCase())){
+		}
+		if(!button11.getText().toLowerCase().contains(text.getText().toLowerCase())){
 			frame.remove(button11);
-			}
-			if(!button12.getText().toLowerCase().contains(text.getText().toLowerCase())){
+		}
+		if(!button12.getText().toLowerCase().contains(text.getText().toLowerCase())){
 			frame.remove(button12);
-			}
-			if(!button13.getText().toLowerCase().contains(text.getText().toLowerCase())){
+		}
+		if(!button13.getText().toLowerCase().contains(text.getText().toLowerCase())){
 			frame.remove(button13);
-			}
-			if(!button14.getText().toLowerCase().contains(text.getText().toLowerCase())){
+		}
+		if(!button14.getText().toLowerCase().contains(text.getText().toLowerCase())){
 			frame.remove(button14);
-			}
-			if(!button15.getText().toLowerCase().contains(text.getText().toLowerCase())){
+		}
+		if(!button15.getText().toLowerCase().contains(text.getText().toLowerCase())){
 			frame.remove(button15);
-			}
-			if(!button16.getText().toLowerCase().contains(text.getText().toLowerCase())){
+		}
+		if(!button16.getText().toLowerCase().contains(text.getText().toLowerCase())){
 			frame.remove(button16);
-			}
-			if(!button17.getText().toLowerCase().contains(text.getText().toLowerCase())){
+		}
+		if(!button17.getText().toLowerCase().contains(text.getText().toLowerCase())){
 			frame.remove(button17);
-			}
-			if(!button18.getText().toLowerCase().contains(text.getText().toLowerCase())){
+		}
+		if(!button18.getText().toLowerCase().contains(text.getText().toLowerCase())){
 			frame.remove(button18);
-			}
-			if(!button19.getText().toLowerCase().contains(text.getText().toLowerCase())){
+		}
+		if(!button19.getText().toLowerCase().contains(text.getText().toLowerCase())){
 			frame.remove(button19);
-			}
-			if(!button20.getText().toLowerCase().contains(text.getText().toLowerCase())){
+		}
+		if(!button20.getText().toLowerCase().contains(text.getText().toLowerCase())){
 			frame.remove(button20);
-			}
-			if(!button21.getText().toLowerCase().contains(text.getText().toLowerCase())){
+		}
+		if(!button21.getText().toLowerCase().contains(text.getText().toLowerCase())){
 			frame.remove(button21);
-			}
-			if(!button22.getText().toLowerCase().contains(text.getText().toLowerCase())){
+		}
+		if(!button22.getText().toLowerCase().contains(text.getText().toLowerCase())){
 			frame.remove(button22);
-			}
-			if(!button23.getText().toLowerCase().contains(text.getText().toLowerCase())){
+		}
+		if(!button23.getText().toLowerCase().contains(text.getText().toLowerCase())){
 			frame.remove(button23);
-			}
-			if(!button24.getText().toLowerCase().contains(text.getText().toLowerCase())){
+		}
+		if(!button24.getText().toLowerCase().contains(text.getText().toLowerCase())){
 			frame.remove(button24);
-			}
-			if(!button25.getText().toLowerCase().contains(text.getText().toLowerCase())){
+		}
+		if(!button25.getText().toLowerCase().contains(text.getText().toLowerCase())){
 			frame.remove(button25);
-			}
-			if(!button26.getText().toLowerCase().contains(text.getText().toLowerCase())){
+		}
+		if(!button26.getText().toLowerCase().contains(text.getText().toLowerCase())){
 			frame.remove(button26);
-			}
-			if(!button27.getText().toLowerCase().contains(text.getText().toLowerCase())){
+		}
+		if(!button27.getText().toLowerCase().contains(text.getText().toLowerCase())){
 			frame.remove(button27);
-			}
-			if(!button28.getText().toLowerCase().contains(text.getText().toLowerCase())){
+		}
+		if(!button28.getText().toLowerCase().contains(text.getText().toLowerCase())){
 			frame.remove(button28);
-			}
-			if(!button29.getText().toLowerCase().contains(text.getText().toLowerCase())){
+		}
+		if(!button29.getText().toLowerCase().contains(text.getText().toLowerCase())){
 			frame.remove(button29);
-			}
-			if(!button30.getText().toLowerCase().contains(text.getText().toLowerCase())){
+		}
+		if(!button30.getText().toLowerCase().contains(text.getText().toLowerCase())){
 			frame.remove(button30);
-			}
-			if(!button31.getText().toLowerCase().contains(text.getText().toLowerCase())){
+		}
+		if(!button31.getText().toLowerCase().contains(text.getText().toLowerCase())){
 			frame.remove(button31);
-			}
-			if(!button32.getText().toLowerCase().contains(text.getText().toLowerCase())){
+		}
+		if(!button32.getText().toLowerCase().contains(text.getText().toLowerCase())){
 			frame.remove(button32);
-			}
-			if(!button33.getText().toLowerCase().contains(text.getText().toLowerCase())){
+		}
+		if(!button33.getText().toLowerCase().contains(text.getText().toLowerCase())){
 			frame.remove(button33);
-			}
-			if(!button34.getText().toLowerCase().contains(text.getText().toLowerCase())){
+		}
+		if(!button34.getText().toLowerCase().contains(text.getText().toLowerCase())){
 			frame.remove(button34);
-			}
-			if(!button35.getText().toLowerCase().contains(text.getText().toLowerCase())){
+		}
+		if(!button35.getText().toLowerCase().contains(text.getText().toLowerCase())){
 			frame.remove(button35);
-			}
-			if(!button36.getText().toLowerCase().contains(text.getText().toLowerCase())){
+		}
+		if(!button36.getText().toLowerCase().contains(text.getText().toLowerCase())){
 			frame.remove(button36);
-			}
-			if(!button37.getText().toLowerCase().contains(text.getText().toLowerCase())){
+		}
+		if(!button37.getText().toLowerCase().contains(text.getText().toLowerCase())){
 			frame.remove(button37);
-			}
-			if(!button38.getText().toLowerCase().contains(text.getText().toLowerCase())){
+		}
+		if(!button38.getText().toLowerCase().contains(text.getText().toLowerCase())){
 			frame.remove(button38);
-			}
-			if(!button39.getText().toLowerCase().contains(text.getText().toLowerCase())){
+		}
+		if(!button39.getText().toLowerCase().contains(text.getText().toLowerCase())){
 			frame.remove(button39);
-			}
-			if(!button40.getText().toLowerCase().contains(text.getText().toLowerCase())){
+		}
+		if(!button40.getText().toLowerCase().contains(text.getText().toLowerCase())){
 			frame.remove(button40);
-			}
-			if(!button41.getText().toLowerCase().contains(text.getText().toLowerCase())){
+		}
+		if(!button41.getText().toLowerCase().contains(text.getText().toLowerCase())){
 			frame.remove(button41);
-			}
-			if(!button42.getText().toLowerCase().contains(text.getText().toLowerCase())){
+		}
+		if(!button42.getText().toLowerCase().contains(text.getText().toLowerCase())){
 			frame.remove(button42);
-			}
-			if(!button43.getText().toLowerCase().contains(text.getText().toLowerCase())){
+		}
+		if(!button43.getText().toLowerCase().contains(text.getText().toLowerCase())){
 			frame.remove(button43);
-			}
-			if(!button44.getText().toLowerCase().contains(text.getText().toLowerCase())){
+		}
+		if(!button44.getText().toLowerCase().contains(text.getText().toLowerCase())){
 			frame.remove(button44);
-			}
-			if(!button45.getText().toLowerCase().contains(text.getText().toLowerCase())){
+		}
+		if(!button45.getText().toLowerCase().contains(text.getText().toLowerCase())){
 			frame.remove(button45);
-			}
-			if(!button46.getText().toLowerCase().contains(text.getText().toLowerCase())){
+		}
+		if(!button46.getText().toLowerCase().contains(text.getText().toLowerCase())){
 			frame.remove(button46);
-			}
-			if(!button47.getText().toLowerCase().contains(text.getText().toLowerCase())){
+		}
+		if(!button47.getText().toLowerCase().contains(text.getText().toLowerCase())){
 			frame.remove(button47);
-			}
-			if(!button48.getText().toLowerCase().contains(text.getText().toLowerCase())){
+		}
+		if(!button48.getText().toLowerCase().contains(text.getText().toLowerCase())){
 			frame.remove(button48);
-			}
-			if(!button49.getText().toLowerCase().contains(text.getText().toLowerCase())){
+		}
+		if(!button49.getText().toLowerCase().contains(text.getText().toLowerCase())){
 			frame.remove(button49);
-			}
-			if(!button50.getText().toLowerCase().contains(text.getText().toLowerCase())){
+		}
+		if(!button50.getText().toLowerCase().contains(text.getText().toLowerCase())){
 			frame.remove(button50);
-			}
-			if(!button51.getText().toLowerCase().contains(text.getText().toLowerCase())){
+		}
+		if(!button51.getText().toLowerCase().contains(text.getText().toLowerCase())){
 			frame.remove(button51);
-			}
-			if(!button52.getText().toLowerCase().contains(text.getText().toLowerCase())){
+		}
+		if(!button52.getText().toLowerCase().contains(text.getText().toLowerCase())){
 			frame.remove(button52);
-			}
-			if(!button53.getText().toLowerCase().contains(text.getText().toLowerCase())){
+		}
+		if(!button53.getText().toLowerCase().contains(text.getText().toLowerCase())){
 			frame.remove(button53);
-			}
-			if(!button54.getText().toLowerCase().contains(text.getText().toLowerCase())){
+		}
+		if(!button54.getText().toLowerCase().contains(text.getText().toLowerCase())){
 			frame.remove(button54);
-			}
-			if(!button55.getText().toLowerCase().contains(text.getText().toLowerCase())){
+		}
+		if(!button55.getText().toLowerCase().contains(text.getText().toLowerCase())){
 			frame.remove(button55);
-			}
-			if(!button56.getText().toLowerCase().contains(text.getText().toLowerCase())){
+		}
+		if(!button56.getText().toLowerCase().contains(text.getText().toLowerCase())){
 			frame.remove(button56);
-			}
-			if(!button57.getText().toLowerCase().contains(text.getText().toLowerCase())){
+		}
+		if(!button57.getText().toLowerCase().contains(text.getText().toLowerCase())){
 			frame.remove(button57);
-			}
-			if(!button58.getText().toLowerCase().contains(text.getText().toLowerCase())){
+		}
+		if(!button58.getText().toLowerCase().contains(text.getText().toLowerCase())){
 			frame.remove(button58);
-			}
-			if(!button59.getText().toLowerCase().contains(text.getText().toLowerCase())){
+		}
+		if(!button59.getText().toLowerCase().contains(text.getText().toLowerCase())){
 			frame.remove(button59);
-			}
-			if(!button60.getText().toLowerCase().contains(text.getText().toLowerCase())){
+		}
+		if(!button60.getText().toLowerCase().contains(text.getText().toLowerCase())){
 			frame.remove(button60);
-			}
-			if(!button61.getText().toLowerCase().contains(text.getText().toLowerCase())){
+		}
+		if(!button61.getText().toLowerCase().contains(text.getText().toLowerCase())){
 			frame.remove(button61);
-			}
-			if(!button62.getText().toLowerCase().contains(text.getText().toLowerCase())){
+		}
+		if(!button62.getText().toLowerCase().contains(text.getText().toLowerCase())){
 			frame.remove(button62);
-			}
-			if(!button63.getText().toLowerCase().contains(text.getText().toLowerCase())){
+		}
+		if(!button63.getText().toLowerCase().contains(text.getText().toLowerCase())){
 			frame.remove(button63);
-			}
-			if(!button64.getText().toLowerCase().contains(text.getText().toLowerCase())){
+		}
+		if(!button64.getText().toLowerCase().contains(text.getText().toLowerCase())){
 			frame.remove(button64);
-			}
-			if(!button65.getText().toLowerCase().contains(text.getText().toLowerCase())){
+		}
+		if(!button65.getText().toLowerCase().contains(text.getText().toLowerCase())){
 			frame.remove(button65);
-			}
-			if(!button66.getText().toLowerCase().contains(text.getText().toLowerCase())){
+		}
+		if(!button66.getText().toLowerCase().contains(text.getText().toLowerCase())){
 			frame.remove(button66);
-			}
-			if(!button67.getText().toLowerCase().contains(text.getText().toLowerCase())){
+		}
+		if(!button67.getText().toLowerCase().contains(text.getText().toLowerCase())){
 			frame.remove(button67);
-			}
-			if(!button68.getText().toLowerCase().contains(text.getText().toLowerCase())){
+		}
+		if(!button68.getText().toLowerCase().contains(text.getText().toLowerCase())){
 			frame.remove(button68);
-			}
-			if(!button69.getText().toLowerCase().contains(text.getText().toLowerCase())){
+		}
+		if(!button69.getText().toLowerCase().contains(text.getText().toLowerCase())){
 			frame.remove(button69);
-			}
-			if(!button70.getText().toLowerCase().contains(text.getText().toLowerCase())){
+		}
+		if(!button70.getText().toLowerCase().contains(text.getText().toLowerCase())){
 			frame.remove(button70);
-			}
-			if(!button71.getText().toLowerCase().contains(text.getText().toLowerCase())){
+		}
+		if(!button71.getText().toLowerCase().contains(text.getText().toLowerCase())){
 			frame.remove(button71);
-			}
-			if(!button72.getText().toLowerCase().contains(text.getText().toLowerCase())){
+		}
+		if(!button72.getText().toLowerCase().contains(text.getText().toLowerCase())){
 			frame.remove(button72);
-			}
-			if(!button73.getText().toLowerCase().contains(text.getText().toLowerCase())){
+		}
+		if(!button73.getText().toLowerCase().contains(text.getText().toLowerCase())){
 			frame.remove(button73);
-			}
-			if(!button74.getText().toLowerCase().contains(text.getText().toLowerCase())){
+		}
+		if(!button74.getText().toLowerCase().contains(text.getText().toLowerCase())){
 			frame.remove(button74);
-			}
-			if(!button75.getText().toLowerCase().contains(text.getText().toLowerCase())){
+		}
+		if(!button75.getText().toLowerCase().contains(text.getText().toLowerCase())){
 			frame.remove(button75);
-			}
-			if(!button76.getText().toLowerCase().contains(text.getText().toLowerCase())){
+		}
+		if(!button76.getText().toLowerCase().contains(text.getText().toLowerCase())){
 			frame.remove(button76);
-			}
-			if(!button77.getText().toLowerCase().contains(text.getText().toLowerCase())){
+		}
+		if(!button77.getText().toLowerCase().contains(text.getText().toLowerCase())){
 			frame.remove(button77);
-			}
-			if(!button78.getText().toLowerCase().contains(text.getText().toLowerCase())){
+		}
+		if(!button78.getText().toLowerCase().contains(text.getText().toLowerCase())){
 			frame.remove(button78);
-			}
-			if(!button79.getText().toLowerCase().contains(text.getText().toLowerCase())){
+		}
+		if(!button79.getText().toLowerCase().contains(text.getText().toLowerCase())){
 			frame.remove(button79);
-			}
-			if(!button80.getText().toLowerCase().contains(text.getText().toLowerCase())){
+		}
+		if(!button80.getText().toLowerCase().contains(text.getText().toLowerCase())){
 			frame.remove(button80);
-			}
-			if(!button81.getText().toLowerCase().contains(text.getText().toLowerCase())){
+		}
+		if(!button81.getText().toLowerCase().contains(text.getText().toLowerCase())){
 			frame.remove(button81);
-			}
-			if(!button82.getText().toLowerCase().contains(text.getText().toLowerCase())){
+		}
+		if(!button82.getText().toLowerCase().contains(text.getText().toLowerCase())){
 			frame.remove(button82);
-			}
-			if(!button83.getText().toLowerCase().contains(text.getText().toLowerCase())){
+		}
+		if(!button83.getText().toLowerCase().contains(text.getText().toLowerCase())){
 			frame.remove(button83);
-			}
-			if(!button84.getText().toLowerCase().contains(text.getText().toLowerCase())){
+		}
+		if(!button84.getText().toLowerCase().contains(text.getText().toLowerCase())){
 			frame.remove(button84);
-			}
-			if(!button85.getText().toLowerCase().contains(text.getText().toLowerCase())){
+		}
+		if(!button85.getText().toLowerCase().contains(text.getText().toLowerCase())){
 			frame.remove(button85);
-			}
-			if(!button86.getText().toLowerCase().contains(text.getText().toLowerCase())){
+		}
+		if(!button86.getText().toLowerCase().contains(text.getText().toLowerCase())){
 			frame.remove(button86);
-			}
-			if(!button87.getText().toLowerCase().contains(text.getText().toLowerCase())){
+		}
+		if(!button87.getText().toLowerCase().contains(text.getText().toLowerCase())){
 			frame.remove(button87);
-			}
-			if(!button88.getText().toLowerCase().contains(text.getText().toLowerCase())){
+		}
+		if(!button88.getText().toLowerCase().contains(text.getText().toLowerCase())){
 			frame.remove(button88);
-			}
-			if(!button89.getText().toLowerCase().contains(text.getText().toLowerCase())){
+		}
+		if(!button89.getText().toLowerCase().contains(text.getText().toLowerCase())){
 			frame.remove(button89);
-			}
-			if(!button91.getText().toLowerCase().contains(text.getText().toLowerCase())){
+		}
+		if(!button91.getText().toLowerCase().contains(text.getText().toLowerCase())){
 			frame.remove(button91);
-			}
-			if(!button92.getText().toLowerCase().contains(text.getText().toLowerCase())){
+		}
+		if(!button92.getText().toLowerCase().contains(text.getText().toLowerCase())){
 			frame.remove(button92);
-			}
-			if(!button93.getText().toLowerCase().contains(text.getText().toLowerCase())){
+		}
+		if(!button93.getText().toLowerCase().contains(text.getText().toLowerCase())){
 			frame.remove(button93);
-			}
-			if(!button94.getText().toLowerCase().contains(text.getText().toLowerCase())){
+		}
+		if(!button94.getText().toLowerCase().contains(text.getText().toLowerCase())){
 			frame.remove(button94);
-			}
-			if(!button95.getText().toLowerCase().contains(text.getText().toLowerCase())){
+		}
+		if(!button95.getText().toLowerCase().contains(text.getText().toLowerCase())){
 			frame.remove(button95);
-			}
-			if(!button96.getText().toLowerCase().contains(text.getText().toLowerCase())){
+		}
+		if(!button96.getText().toLowerCase().contains(text.getText().toLowerCase())){
 			frame.remove(button96);
-			}
-			if(!button97.getText().toLowerCase().contains(text.getText().toLowerCase())){
+		}
+		if(!button97.getText().toLowerCase().contains(text.getText().toLowerCase())){
 			frame.remove(button97);
-			}
-			if(!button98.getText().toLowerCase().contains(text.getText().toLowerCase())){
+		}
+		if(!button98.getText().toLowerCase().contains(text.getText().toLowerCase())){
 			frame.remove(button98);
-			}
-			if(!button99.getText().toLowerCase().contains(text.getText().toLowerCase())){
+		}
+		if(!button99.getText().toLowerCase().contains(text.getText().toLowerCase())){
 			frame.remove(button99);
-			}
-			if(!button100.getText().toLowerCase().contains(text.getText().toLowerCase())){
+		}
+		if(!button100.getText().toLowerCase().contains(text.getText().toLowerCase())){
 			frame.remove(button100);
-			}
-			if(!button101.getText().toLowerCase().contains(text.getText().toLowerCase())){
+		}
+		if(!button101.getText().toLowerCase().contains(text.getText().toLowerCase())){
 			frame.remove(button101);
-			}
-			if(!button102.getText().toLowerCase().contains(text.getText().toLowerCase())){
+		}
+		if(!button102.getText().toLowerCase().contains(text.getText().toLowerCase())){
 			frame.remove(button102);
-			}
-			if(!button103.getText().toLowerCase().contains(text.getText().toLowerCase())){
+		}
+		if(!button103.getText().toLowerCase().contains(text.getText().toLowerCase())){
 			frame.remove(button103);
-			}
-			if(!button104.getText().toLowerCase().contains(text.getText().toLowerCase())){
+		}
+		if(!button104.getText().toLowerCase().contains(text.getText().toLowerCase())){
 			frame.remove(button104);
-			}
-			if(!button105.getText().toLowerCase().contains(text.getText().toLowerCase())){
+		}
+		if(!button105.getText().toLowerCase().contains(text.getText().toLowerCase())){
 			frame.remove(button105);
-			}
-			if(!button106.getText().toLowerCase().contains(text.getText().toLowerCase())){
+		}
+		if(!button106.getText().toLowerCase().contains(text.getText().toLowerCase())){
 			frame.remove(button106);
-			}
-			if(!button107.getText().toLowerCase().contains(text.getText().toLowerCase())){
+		}
+		if(!button107.getText().toLowerCase().contains(text.getText().toLowerCase())){
 			frame.remove(button107);
-			}
-			if(!button108.getText().toLowerCase().contains(text.getText().toLowerCase())){
+		}
+		if(!button108.getText().toLowerCase().contains(text.getText().toLowerCase())){
 			frame.remove(button108);
-			}
-			if(!button109.getText().toLowerCase().contains(text.getText().toLowerCase())){
+		}
+		if(!button109.getText().toLowerCase().contains(text.getText().toLowerCase())){
 			frame.remove(button109);
-			}
-			if(!button110.getText().toLowerCase().contains(text.getText().toLowerCase())){
+		}
+		if(!button110.getText().toLowerCase().contains(text.getText().toLowerCase())){
 			frame.remove(button110);
-			}
-			if(!button111.getText().toLowerCase().contains(text.getText().toLowerCase())){
+		}
+		if(!button111.getText().toLowerCase().contains(text.getText().toLowerCase())){
 			frame.remove(button111);
-			}
-			if(!button112.getText().toLowerCase().contains(text.getText().toLowerCase())){
+		}
+		if(!button112.getText().toLowerCase().contains(text.getText().toLowerCase())){
 			frame.remove(button112);
-			}
-			if(!button113.getText().toLowerCase().contains(text.getText().toLowerCase())){
+		}
+		if(!button113.getText().toLowerCase().contains(text.getText().toLowerCase())){
 			frame.remove(button113);
-			}
-			if(!button114.getText().toLowerCase().contains(text.getText().toLowerCase())){
+		}
+		if(!button114.getText().toLowerCase().contains(text.getText().toLowerCase())){
 			frame.remove(button114);
-			}
+		}
 		while (frame.getComponents().length<9) {
 			frame.add(Box.createGlue());
 		}
@@ -5452,7 +5452,7 @@ public class GoJb1 implements ActionListener, KeyListener{
 		frame.revalidate();
 		frameHuvud.revalidate();
 		frameHuvud.repaint();
-		
+
 	}
 
 
