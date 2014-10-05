@@ -664,7 +664,7 @@ public class GoJb1 implements ActionListener, KeyListener{
 			
 			if (prop.getProperty("y","2").equals("10")) {
 
-				yString = " Du är verifierad, tack för att\n du använder det här programmet! :)";
+				yString = " Tack för att\n du använder det här programmet! :)";
 			}
 			else {
 				yString = "";
@@ -842,7 +842,7 @@ public class GoJb1 implements ActionListener, KeyListener{
 						
 			if (prop.getProperty("y","2").equals("10")) {
 				
-				yString = " You are Verified, thanks for\n using this application! :)";
+				yString = " Thanks for \nusing this application! :)";
 				
 			}
 			else {
@@ -2295,7 +2295,7 @@ public class GoJb1 implements ActionListener, KeyListener{
 		buttons45[3].setIcon(null);
 		buttons45[4].setIcon(null);
 		buttons45[5].setIcon(blaze);
-		buttons45[6].setIcon(kullersten);
+		buttons45[6].setIcon(null);
 		buttons45[7].setIcon(kullersten);
 		buttons45[8].setIcon(kullersten);
 		buttons45[9].setIcon(kullersten);
@@ -5387,7 +5387,7 @@ class Ladda extends JPanel implements ActionListener{
 	
 	static int x = 1,z,namnInt;
 	 
-	static String namn, välkommen;
+	static String namn, välkommen, hej = "123456789", namn2;
 	
 	static Boolean mailSkickat,start = false, språkValt;
 	
@@ -5410,6 +5410,7 @@ class Ladda extends JPanel implements ActionListener{
 		frame.setLayeredPane(layeredPane);
 
 		frame.setBackground(white);
+		frame.setIconImage(new ImageIcon(getClass().getResource("/images/Java-icon.png")).getImage());
 
 		layeredPane.add(background);
 		layeredPane.add(background1);
@@ -5432,7 +5433,7 @@ class Ladda extends JPanel implements ActionListener{
 		background1.setOpaque(false);
 		background1.setBackground(Color.black);
 		background1.setSize(300,54);
-		background1.setLocation(40,30);
+		background1.setLocation(20, 30);
 		background1.setFont(new Font("Arial",Font.BOLD,25));
 		
 		background2.setForeground(Color.white);
@@ -5535,6 +5536,7 @@ class Ladda extends JPanel implements ActionListener{
 				namn = "";
 			}
 			
+
 			background1.setText(välkommen + " " + namn);			
 			progressBar.setValue(progressBar.getValue()+1);
 			background2.setText(Integer.toString(progressBar.getValue())+"%");
@@ -5548,7 +5550,10 @@ class Ladda extends JPanel implements ActionListener{
 			progressBar.revalidate();
 			revalidate();
 			repaint();
-
+			
+		
+			System.out.println(prop.getProperty("Namn").length() + " + + + +");
+			
 			System.err.println(progressBar.getBackground());
 			System.out.println(progressBar.getForeground());
 			System.err.println(välkommen + "     ");
@@ -5678,3 +5683,10 @@ class Update implements Runnable{
 		}
 	}
 }
+
+
+/*Idéer:
+ * 
+ * Ta imot mail, om ämmnet.equals(getNamn) visas ett meddelande. Alltså kan man skicka meddelanden till
+ *  användare
+ */
