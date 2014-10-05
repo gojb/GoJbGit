@@ -573,7 +573,7 @@ public class GoJb1 implements ActionListener, KeyListener{
 	}
 	
 	public GoJb1(){
-		new Thread(new Update()).start();
+		
 
 		try {
 			prop.load(new FileInputStream(System.getProperty ("user.home") + "\\AppData\\Roaming\\GoJb\\settings.gojb"));
@@ -5387,7 +5387,7 @@ class Ladda extends JPanel implements ActionListener{
 	
 	static int x = 1,z,namnInt;
 	 
-	static String namn, välkommen, hej = "123456789", namn2;
+	static String namn, välkommen, hej = "123456789", namn2, string;
 	
 	static Boolean mailSkickat,start = false, språkValt;
 	
@@ -5475,6 +5475,7 @@ class Ladda extends JPanel implements ActionListener{
 		
 		if (prop.getProperty("9778436klbgflf","kjg").equals("86325yhrel")){
 			välkommen = "Välkommen " + prop.getProperty("Namn");
+			string="Uppdatering tillgänglig. Vill du uppdatera?";
 			frame.revalidate();
 			frame.repaint();
 			repaint();
@@ -5484,6 +5485,7 @@ class Ladda extends JPanel implements ActionListener{
 		}
 		else if (prop.getProperty("9778436klbgflf","kjg").equals("lhdohf7984")){
 			välkommen = "Welcome " + prop.getProperty("Namn");
+			string="Update available. Do you want to update?";
 			frame.revalidate();
 			frame.repaint();
 			repaint();
@@ -5505,6 +5507,8 @@ class Ladda extends JPanel implements ActionListener{
 			if (progressBar.getValue() < 50){
 				välkommen = "Welcome! Loading...";
 				
+			
+				
 				frame.revalidate();
 				frame.repaint();
 				repaint();
@@ -5512,6 +5516,7 @@ class Ladda extends JPanel implements ActionListener{
 			}
 			else if (progressBar.getValue() >= 50){
 				välkommen = "Välkommen! Laddar...";
+		
 				frame.revalidate();
 				frame.repaint();
 				repaint();
@@ -5551,13 +5556,6 @@ class Ladda extends JPanel implements ActionListener{
 			revalidate();
 			repaint();
 			
-		
-			System.out.println(prop.getProperty("Namn").length() + " + + + +");
-			
-			System.err.println(progressBar.getBackground());
-			System.out.println(progressBar.getForeground());
-			System.err.println(välkommen + "     ");
-			
 			frame.revalidate();
 
 		}
@@ -5568,6 +5566,7 @@ class Ladda extends JPanel implements ActionListener{
 		}
 		if (progressBar.getValue() == 50 && namnInt == 1){
 			start=true;
+			new Thread(new Update()).start();
 			prop.setProperty("y", "9");
 		}
 		if(progressBar.getValue()==100&&start==true){
@@ -5623,14 +5622,13 @@ class Ladda extends JPanel implements ActionListener{
 		}
 		
 	}
+	
 }
 class Update implements Runnable{
+	
+	
+	
 	public synchronized void run(){
-		try {
-			wait(1000);
-		} catch (InterruptedException e2) {
-			System.err.println("e2");
-		}
 		if (getClass().getResource("/" + getClass().getName().replace('.','/') + ".class").toString().startsWith("jar:")) {
 			try {
 				URL u = new URL("http://gojb.bl.ee/GoJbGuide.jar");
@@ -5641,14 +5639,14 @@ class Update implements Runnable{
 					System.out.println("Lokal:  "+ new File(loc.toURI()).lastModified());
 				} catch (Exception e1) {}
 				if (new File(loc.toURI()).lastModified() + 60000 < u.openConnection().getLastModified()) {
-					if (showConfirmDialog(null, "En nyare version av programmet är tillgängligt.\nVill du uppdatera nu?","Uppdatering",YES_NO_OPTION,WARNING_MESSAGE)==YES_OPTION) {
+					if (showConfirmDialog(null, Ladda.string,"Update",YES_NO_OPTION,WARNING_MESSAGE)==YES_OPTION) {
 						InputStream in = new BufferedInputStream(u.openStream());
 						ByteArrayOutputStream out = new ByteArrayOutputStream();
 						byte[] buf = new byte[1024];
 						int n = 0;
 						
 						JProgressBar bar = new JProgressBar(0, in.available()/2);
-						JFrame frame = new JFrame("Laddar ner...");
+						JFrame frame = new JFrame("Downloading...");
 						frame.add(bar);
 						frame.setIconImage(new ImageIcon(getClass().getResource("/images/Java-icon.png")).getImage());
 						frame.setLocationRelativeTo(null);
@@ -5689,4 +5687,5 @@ class Update implements Runnable{
  * 
  * Ta imot mail, om ämmnet.equals(getNamn) visas ett meddelande. Alltså kan man skicka meddelanden till
  *  användare
+ *  
  */
