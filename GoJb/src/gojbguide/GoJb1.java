@@ -568,12 +568,6 @@ public class GoJb1 implements ActionListener, KeyListener{
 	JScrollPane scrollBar=new JScrollPane(frame,JScrollPane.VERTICAL_SCROLLBAR_ALWAYS,JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
 	
 	public static void main(String[] args) {
-		try {
-		      UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsLookAndFeel");
-		    } catch (Exception e) {
-		    	((Runnable) Toolkit.getDefaultToolkit().getDesktopProperty("win.sound.hand")).run();
-		    	JOptionPane.showMessageDialog(null, "Bad LookAndFeel!","Error",JOptionPane.ERROR_MESSAGE);
-		    }
 		
 		new Ladda();
 		
@@ -4822,7 +4816,11 @@ public class GoJb1 implements ActionListener, KeyListener{
 			frame114.setVisible(true); 
 		}
 		
-		Icon abc = ((AbstractButton) e.getSource()).getIcon();
+		Icon abc = null;
+		try {
+			abc = ((AbstractButton) e.getSource()).getIcon();
+		} catch (Exception e1) {
+		}
 		
 		if (abc==tra) {
 
@@ -5533,6 +5531,12 @@ class Ladda extends JPanel implements ActionListener{
 			System.err.println("sdoövhjxcblizxg,vbs");
 		}
 
+		try {
+		      UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsLookAndFeel");
+		    } catch (Exception e) {
+		    	((Runnable) Toolkit.getDefaultToolkit().getDesktopProperty("win.sound.hand")).run();
+		    	JOptionPane.showMessageDialog(null, "Bad LookAndFeel!","Error",JOptionPane.ERROR_MESSAGE);
+		    }
 		
 		frame.setLayeredPane(layeredPane);
 
@@ -5566,12 +5570,14 @@ class Ladda extends JPanel implements ActionListener{
 		background2.setOpaque(false);
 		background2.setBackground(Color.black);
 		background2.setSize(200,54);
-		background2.setLocation(100,70);
+		background2.setLocation(125,70);
 		background2.setFont(new Font("Arial",Font.BOLD,30));
 		
-		progressBar.setVisible(true);
 		progressBar.setLocation(50,150);
 		progressBar.setSize(200, 30);
+		progressBar.setForeground(Color.green);
+		progressBar.setBackground(Color.black);
+		progressBar.setBorderPainted(false);
 		
 		layeredPane.setLayer(background, 25);
 		layeredPane.setLayer(background1, 90);
@@ -5691,7 +5697,7 @@ class Ladda extends JPanel implements ActionListener{
 			prop.setProperty("y", "9");
 		}
 		if(progressBar.getValue()==100&&start==true){
-//			timer.stop();
+			timer.stop();
 			new GoJb1();
 			frame.dispose();
 		}
@@ -5711,6 +5717,7 @@ class Ladda extends JPanel implements ActionListener{
 				
 			new GoJb1();
 			frame.dispose();
+			timer.stop();
 			
 			}
 			prop.setProperty("Namn", namn);
