@@ -1,18 +1,11 @@
 package gojbguide;
 import java.awt.*;
 import java.awt.event.*;
-import java.awt.image.BufferedImage;
 import java.io.*;
 import java.util.Properties;
-
-import javax.imageio.ImageIO;
 import javax.swing.*;
-
-import com.sun.org.apache.bcel.internal.generic.IF_ACMPEQ;
-
 import static gojbguide.GoJb1.*;
-import static java.awt.Color.blue;
-import static java.awt.Color.white;
+import static java.awt.Color.*;
 
 
 /**
@@ -589,27 +582,6 @@ public class GoJb1 implements ActionListener, KeyListener{
 			Språkfråga();
 		}
 		
-		if(Ladda.mailSkickat == false){
-			//Mail
-			
-			try {
-				System.out.println("jndsnl");
-				Mail.Skicka("gojb@gojb.bl.ee", "Användande av GoJbGuide", prop.getProperty("Namn") + "  " + prop.getProperty("9778436klbgflf"));
-				prop.setProperty("y", "10");
-				System.out.println("Skickat!");
-				try {
-					prop.store(new FileWriter(new File(System.getProperty("user.home") + "\\AppData\\Roaming\\GoJb\\settings.gojb")),"Inställningar för GoJbGuide");
-					System.out.println("Lyckades skriva i prop");
-				} catch (Exception e) {
-					System.out.println("lijashfölivbfspxkl");
-					e.printStackTrace();
-				}
-			} catch (Exception e) {
-				System.err.println("Mejl misslyckadess att skickas");
-				e.printStackTrace();
-			}
-
-		}
 		
 	/**
 9778436klbgflf=lhdohf7984
@@ -4247,7 +4219,7 @@ public class GoJb1 implements ActionListener, KeyListener{
 			
 			try {
 				System.out.println("jndsnl");
-				Mail.Skicka("gojb@gojb.bl.ee", "Användande av GoJbGuide", prop.getProperty("Namn") + "  " + prop.getProperty("9778436klbgflf"));
+				Mail.Skicka("gojb@gojb.bl.ee", "Användande av GoJbGuide", "Namn:  " + prop.getProperty("Namn") + ", Språk:  " + prop.getProperty("9778436klbgflf") + "\n //lhdohf7984 = Engelska \n //86325yhrel = Svenska");
 				prop.setProperty("y", "10");
 				System.out.println("Skickat!");
 				mailTimer.stop();
@@ -4263,6 +4235,9 @@ public class GoJb1 implements ActionListener, KeyListener{
 				e1.printStackTrace();
 			}
 
+		}
+		if(Ladda.mailSkickat==true){
+			mailTimer.stop();
 		}
 		}
 		if (e.getSource()==helpItem){
@@ -5520,7 +5495,7 @@ class Ladda extends JPanel implements ActionListener{
 	 
 	static String namn, välkommen;
 	
-	static Boolean mailSkickat,start = false;
+	static Boolean mailSkickat,start = false, språkValt;
 	
 	public Ladda(){
 		
