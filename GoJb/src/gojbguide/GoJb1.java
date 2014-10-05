@@ -3,17 +3,15 @@ import java.awt.*;
 import java.awt.event.*;
 import java.io.*;
 import java.util.Properties;
-import java.util.function.DoubleToIntFunction;
 
 import javax.swing.*;
 
-import sun.security.x509.X400Address;
-import jdk.internal.dynalink.beans.StaticClass;
 import static gojbguide.GoJb1.*;
 
 
 /**
  * @author GoJb
+ *
  *
  */
 public class GoJb1 implements ActionListener, KeyListener{
@@ -4211,7 +4209,7 @@ public class GoJb1 implements ActionListener, KeyListener{
 		button113.setHorizontalTextPosition(JButton.CENTER);
 		button114.setHorizontalTextPosition(JButton.CENTER);
 		
-		frame.setLayout(new GridLayout(36, 3));
+		frame.setLayout(new GridLayout(0, 3));
 
 		frameHuvud.setJMenuBar(bar);
 		
@@ -5013,7 +5011,7 @@ public class GoJb1 implements ActionListener, KeyListener{
 
 	@Override
 	public void keyReleased(KeyEvent arg0) {
-
+		frame.removeAll();
 		frame.add(button60);
 		frame.add(button23);
 		frame.add(button7);
@@ -5447,6 +5445,9 @@ public class GoJb1 implements ActionListener, KeyListener{
 			if(!button114.getText().toLowerCase().contains(text.getText().toLowerCase())){
 			frame.remove(button114);
 			}
+		while (frame.getComponents().length<9) {
+			frame.add(Box.createGlue());
+		}
 		frame.repaint();
 		frame.revalidate();
 		frameHuvud.revalidate();
