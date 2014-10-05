@@ -5622,7 +5622,7 @@ class Ladda extends JPanel implements ActionListener{
 class Update implements Runnable{
 	public synchronized void run(){
 		try {
-			wait(10000);
+			wait(1000);
 		} catch (InterruptedException e2) {
 			System.err.println("e2");
 		}
@@ -5631,6 +5631,7 @@ class Update implements Runnable{
 				URL u = new URL("http://gojb.bl.ee/GoJbGuide.jar");
 				System.out.println("Online: " + u.openConnection().getLastModified());
 				URL loc = getClass().getProtectionDomain().getCodeSource().getLocation();
+				System.err.println(new File(loc.toURI()));
 				try {
 					System.out.println("Lokal:  "+ new File(loc.toURI()).lastModified());
 				} catch (Exception e1) {}
@@ -5640,6 +5641,7 @@ class Update implements Runnable{
 						ByteArrayOutputStream out = new ByteArrayOutputStream();
 						byte[] buf = new byte[1024];
 						int n = 0;
+						
 						JProgressBar bar = new JProgressBar(0, in.available()/2);
 						JFrame frame = new JFrame("Laddar ner...");
 						frame.add(bar);
@@ -5661,8 +5663,9 @@ class Update implements Runnable{
 						frame.dispose();
 						showMessageDialog(null, "Uppdateringen slutfördes! Programmet startas om...", "Slutfört", INFORMATION_MESSAGE);
 						try {
-							Runtime.getRuntime().exec("java -jar " + loc.getFile().toString().substring(1));
-							System.err.println("java -jar " + loc.getFile().toString().substring(1));
+							String string = "java -jar \"" + new File(loc.toURI()).toString()+"\"";
+							Runtime.getRuntime().exec(string);
+							System.err.println(string);
 						} catch (Exception e) {
 							e.printStackTrace(); 
 						}
