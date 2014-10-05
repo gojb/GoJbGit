@@ -664,7 +664,7 @@ public class GoJb1 implements ActionListener, KeyListener{
 			
 			if (prop.getProperty("y","2").equals("10")) {
 
-				yString = " Du är verifierad, tack för att\n du använder det här programmet! :)";
+				yString = " Tack för att\n du använder det här programmet! :)";
 			}
 			else {
 				yString = "";
@@ -842,7 +842,7 @@ public class GoJb1 implements ActionListener, KeyListener{
 						
 			if (prop.getProperty("y","2").equals("10")) {
 				
-				yString = " You are Verified, thanks for\n using this application! :)";
+				yString = " Thanks for \nusing this application! :)";
 				
 			}
 			else {
@@ -2295,7 +2295,7 @@ public class GoJb1 implements ActionListener, KeyListener{
 		buttons45[3].setIcon(null);
 		buttons45[4].setIcon(null);
 		buttons45[5].setIcon(blaze);
-		buttons45[6].setIcon(kullersten);
+		buttons45[6].setIcon(null);
 		buttons45[7].setIcon(kullersten);
 		buttons45[8].setIcon(kullersten);
 		buttons45[9].setIcon(kullersten);
@@ -5680,3 +5680,10 @@ class Update implements Runnable{
 		}
 	}
 }
+
+
+/*Idéer:
+ * 
+ * Ta imot mail, om ämmnet.equals(getNamn) visas ett meddelande. Alltså kan man skicka meddelanden till
+ *  användare
+ */
