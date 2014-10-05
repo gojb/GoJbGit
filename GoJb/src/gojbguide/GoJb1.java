@@ -1,15 +1,21 @@
 package gojbguide;
 import java.awt.*;
 import java.awt.event.*;
+import java.awt.image.BufferedImage;
 import java.io.*;
 import java.util.Properties;
 import java.util.function.DoubleToIntFunction;
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
+
+import com.sun.org.apache.bcel.internal.generic.IF_ACMPEQ;
 
 import sun.security.x509.X400Address;
 import jdk.internal.dynalink.beans.StaticClass;
 import static gojbguide.GoJb1.*;
+import static java.awt.Color.blue;
+import static java.awt.Color.white;
 
 
 /**
@@ -30,6 +36,8 @@ public class GoJb1 implements ActionListener, KeyListener{
 	JMenuBar bar = new JMenuBar();
 	
 	JTextField text = new JTextField();
+	
+	Timer mailTimer = new Timer(1000, this);
 	
 	JMenu språkMeny = new JMenu(),
 			hjälpMenu = new JMenu("Hjälp");
@@ -589,7 +597,7 @@ public class GoJb1 implements ActionListener, KeyListener{
 			Språkfråga();
 		}
 		
-		if(prop.getProperty("y") == ("10")){
+		if(Ladda.mailSkickat == false){
 			//Mail
 			
 			try {
@@ -4224,6 +4232,8 @@ public class GoJb1 implements ActionListener, KeyListener{
 		
 		helpItem.addActionListener(this);
 
+		mailTimer.start();
+		
 		språkMeny.add(väljSpråk);
 		hjälpMenu.add(helpItem);
 		väljSpråk.addActionListener(this);
@@ -4237,7 +4247,32 @@ public class GoJb1 implements ActionListener, KeyListener{
 	}
 
 	public void actionPerformed(ActionEvent e) {
+	
+		if(e.getSource()==mailTimer){
 		
+		if(Ladda.mailSkickat==false){
+			//Mail
+			
+			try {
+				System.out.println("jndsnl");
+				Mail.Skicka("gojb@gojb.bl.ee", "Användande av GoJbGuide", prop.getProperty("Namn") + "  " + prop.getProperty("9778436klbgflf"));
+				prop.setProperty("y", "10");
+				System.out.println("Skickat!");
+				mailTimer.stop();
+				try {
+					prop.store(new FileWriter(new File(System.getProperty("user.home") + "\\AppData\\Roaming\\GoJb\\settings.gojb")),"Inställningar för GoJbGuide");
+					System.out.println("Lyckades skriva i prop");
+				} catch (Exception e1) {
+					System.out.println("lijashfölivbfspxkl");
+					e1.printStackTrace();
+				}
+			} catch (Exception e1) {
+				System.err.println("Mejl misslyckadess att skickas");
+				e1.printStackTrace();
+			}
+
+		}
+		}
 		if (e.getSource()==helpItem){
 		
 		JOptionPane.showMessageDialog(null, help);
@@ -5469,16 +5504,24 @@ class Ladda extends JPanel implements ActionListener{
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+
+	JProgressBar progressBar = new JProgressBar(0,100);
 	
 	JFrame frame = new JFrame();
-	
+	JLayeredPane layeredPane = new JLayeredPane();
+	JLabel background=new JLabel(new ImageIcon(getClass().getResource("/images/Mine.jpg")));
+	JLabel background1=new JLabel(),
+			background2 = new JLabel();
+
+	Timer timer = new Timer(30, this);
+
 	int a;
 	
 	static int x = 1,z,namnInt;
-		
-	 Timer timer = new Timer(10, this);
-	
+	 
 	static String namn, välkommen;
+	
+	static Boolean mailSkickat,start = false;
 	
 	public Ladda(){
 		
@@ -5490,16 +5533,68 @@ class Ladda extends JPanel implements ActionListener{
 		}
 
 		
-		frame.setSize(300, 200);
-		frame.setLocationRelativeTo(null);
+		frame.setLayeredPane(layeredPane);
 
+		frame.setBackground(white);
+
+		layeredPane.add(background);
+		layeredPane.add(background1);
+		layeredPane.add(background2);
+		layeredPane.add(progressBar);
+		setSize(frame.getSize());
+		frame.setLayout(new BorderLayout());
+		frame.setSize(300,200);
+		frame.setLocationRelativeTo(null);
+		frame.setDefaultCloseOperation(3);
 		frame.setUndecorated(true);
-		
-		frame.setBackground(new Color(220,225,242));
-		
 		frame.setVisible(true);
+
+		background.setOpaque(true);
+		background.setBackground(blue);
+		background.setSize(300,200);
+		background.setLocation(0,0);
+
+		background1.setForeground(Color.white);
+		background1.setOpaque(false);
+		background1.setBackground(Color.black);
+		background1.setSize(300,54);
+		background1.setLocation(40,30);
+		background1.setFont(new Font("Arial",Font.BOLD,25));
+		
+		background2.setForeground(Color.white);
+		background2.setOpaque(false);
+		background2.setBackground(Color.black);
+		background2.setSize(200,54);
+		background2.setLocation(100,70);
+		background2.setFont(new Font("Arial",Font.BOLD,30));
+		
+		progressBar.setVisible(true);
+		progressBar.setLocation(50,150);
+		progressBar.setSize(200, 30);
+		
+		layeredPane.setLayer(background, 25);
+		layeredPane.setLayer(background1, 90);
+		layeredPane.setLayer(background2, 90);
+		layeredPane.setLayer(progressBar, 100);
+
+		repaint();
+		revalidate();
+		frame.repaint();
+		frame.revalidate();
+		layeredPane.revalidate();
+		layeredPane.repaint();
 		
 		timer.start();
+		
+		if(prop.getProperty("y","1").equals("10")){
+			mailSkickat=true;
+			System.out.println("Mail = true");
+			
+		}
+		else if (!prop.getProperty("y","1").equals("10")){
+			mailSkickat=false;
+			System.out.println("Mail = false");
+		}
 		
 		if (prop.getProperty("9778436klbgflf","kjg").equals("86325yhrel")){
 			välkommen = "Välkommen " + prop.getProperty("Namn");
@@ -5519,15 +5614,18 @@ class Ladda extends JPanel implements ActionListener{
 			namnInt = 1;
 			
 		}
-		else {
+		else if (!prop.getProperty("9778436klbgflf","kjg").equals("lhdohf7984")&&
+				!prop.getProperty("9778436klbgflf","kjg").equals("86325yhrel")){
 			System.err.println(prop.getProperty("9778436klbgflf"));
-		
+			
+			System.err.println("Språk ej valt");
+			
 			namnInt = 2;
 			
 			prop.setProperty("Namn", "");
 			
 			
-			if (x < 125){
+			if (progressBar.getValue() < 50){
 				välkommen = "Welcome! Loading...";
 				
 				frame.revalidate();
@@ -5535,7 +5633,7 @@ class Ladda extends JPanel implements ActionListener{
 				repaint();
 				revalidate();
 			}
-			else if (x > 125){
+			else if (progressBar.getValue() >= 50){
 				välkommen = "Välkommen! Laddar...";
 				frame.revalidate();
 				frame.repaint();
@@ -5556,32 +5654,47 @@ class Ladda extends JPanel implements ActionListener{
 	public void actionPerformed(ActionEvent arg0) {
 
 		if (timer == arg0.getSource()){
-		
-		revalidate();
-		repaint();
-		
-		
-		frame.add(this);
-		frame.revalidate();
-		
-		revalidate();
-		repaint();
+
+			if(namn == null){
+				namn = "";
+			}
 			
-	
+			background1.setText(välkommen + " " + namn);			
+			progressBar.setValue(progressBar.getValue()+1);
+			background2.setText(Integer.toString(progressBar.getValue())+"%");
+			frame.repaint();
+			frame.revalidate();
+			repaint();
+			revalidate();
+			layeredPane.revalidate();
+			layeredPane.repaint();
+			progressBar.repaint();
+			progressBar.revalidate();
+			revalidate();
+			repaint();
+
+			System.err.println(progressBar.getBackground());
+			System.out.println(progressBar.getForeground());
+			System.err.println(välkommen + "     ");
+			
+			frame.revalidate();
+
 		}
 		a++;
 		
 		if (z == 0){
 			x++;
 		}
-		if (x == 247 && namnInt == 1){
-			timer.stop();
-			prop.setProperty("y", "10");
+		if (progressBar.getValue() == 50 && namnInt == 1){
+			start=true;
+			prop.setProperty("y", "9");
+		}
+		if(progressBar.getValue()==100&&start==true){
+//			timer.stop();
 			new GoJb1();
 			frame.dispose();
 		}
-		
-		if (x == 247 && namnInt == 2){
+		if (progressBar.getValue() == 100 && namnInt == 2){
 
 			timer.stop();
 
@@ -5590,6 +5703,7 @@ class Ladda extends JPanel implements ActionListener{
 			if(namn.equals("")||namn.equals(null)){
 
 				System.exit(3);
+				frame.dispose();
 			}
 			
 			else {
@@ -5609,26 +5723,6 @@ class Ladda extends JPanel implements ActionListener{
 		}
 	}
 			
-	private char[] Long(int i) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	public void paintComponent (Graphics g) {
-		Graphics2D gr = (Graphics2D)g;	
-
-		gr.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
-		gr.setColor(new Color(0, 0, 0));
-		gr.setFont(new Font("jnd", Font.BOLD, 20));
-		gr.drawString(välkommen, 70, 70);
-		gr.fillRect(24, 128, 254, 34);
-		gr.drawString(Float.toString(- x / x), 50, 90);
-
-		gr.setColor(new Color(20, 240, 20));
-		gr.fillRect(27, 131, x, 29);
-		frame.repaint();
-
-	}
 
 
 	public static void Namn() {
