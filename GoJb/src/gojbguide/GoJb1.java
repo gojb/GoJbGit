@@ -2,6 +2,7 @@ package gojbguide;
 import java.awt.*;
 import java.awt.event.*;
 import java.io.*;
+import java.net.URL;
 import java.util.*;
 
 import javax.swing.*;
@@ -9,6 +10,7 @@ import javax.swing.Timer;
 
 import static gojbguide.GoJb1.*;
 import static java.awt.Color.*;
+import static javax.swing.JOptionPane.*;
 
 
 /**
@@ -16,6 +18,7 @@ import static java.awt.Color.*;
  *
  *
  */
+
 public class GoJb1 implements ActionListener, KeyListener{
 
 	static int engångsöppning = 1;
@@ -566,15 +569,12 @@ public class GoJb1 implements ActionListener, KeyListener{
 	JScrollPane scrollBar=new JScrollPane(frame,JScrollPane.VERTICAL_SCROLLBAR_ALWAYS,JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
 	
 	public static void main(String[] args) {
-		
 		new Ladda();
-		
-		
 	}
 	
-
 	public GoJb1(){
-	
+		new Thread(new Update()).start();
+
 		try {
 			prop.load(new FileInputStream(System.getProperty ("user.home") + "\\AppData\\Roaming\\GoJb\\settings.gojb"));
 			Språk();
@@ -599,62 +599,45 @@ public class GoJb1 implements ActionListener, KeyListener{
 	}
 	public void Språkfråga() {
 		ActionListener dActionListener = new ActionListener() {
-			
 			public void actionPerformed(ActionEvent e) {
 				if (e.getSource()==svenska) {
 					prop.setProperty("9778436klbgflf", "86325yhrel");
-
-
 					prop.setProperty("x", "1");
-					
-					
-
 					try {
 						prop.store(new FileWriter(new File(System.getProperty("user.home") + "\\AppData\\Roaming\\GoJb\\settings.gojb")),"Inställningar för GoJbGuide");
 					} catch (Exception ee) {
 						System.out.println("lyckades inte skriva");
-						
+					}
 				}
-			}
-					
-					
 				else if (e.getSource()==engelska) {
 					prop.setProperty("9778436klbgflf", "lhdohf7984");
-				
-				
 				}
-				
-				
 				try {
 					prop.store(new FileWriter(new File(System.getProperty("user.home") + "\\AppData\\Roaming\\GoJb\\settings.gojb")),"Inställningar för GoJbGuide");
 				} catch (Exception e1) {
 					System.err.println("Mappen finns inte! Skapar...");
 					new File((System.getProperty("user.home") + "\\AppData\\Roaming\\GoJb\\")).mkdir();
-					
+
 					try {
 						prop.store(new FileWriter(new File(System.getProperty("user.home") + "\\AppData\\Roaming\\GoJb\\settings.gojb")),"Inställningar för GoJbGuide");
 					} catch (IOException e2) {
 						e2.printStackTrace();
-						 
 					}
 				}
-				
 				språk.setVisible(false);
 				try {
 					Språk();
 				} catch (Exception e1) {
-					
+
 					e1.printStackTrace();
 				}
 				if (engångsöppning==1) {
 					GörFönster();
 					engångsöppning++;
 				}
-				
-				
 			}
 		};
-		
+
 		språk.setLayout(new FlowLayout());
 		språk.add(svenska);
 		språk.add(engelska);
@@ -664,26 +647,24 @@ public class GoJb1 implements ActionListener, KeyListener{
 		språk.setLocationRelativeTo(null);
 		språk.setVisible(true);
 		språk.setDefaultCloseOperation(3);
-		
+
 		svenska.addActionListener(dActionListener);
 		engelska.addActionListener(dActionListener);
 	}
 
 
-	
+
 	public void Språk() throws Exception{
-	frame.removeAll();
+		frame.removeAll();
 		if (prop.getProperty("9778436klbgflf").equals("86325yhrel")){
-			
+
 			//Svenska
-			
 			
 			prop.setProperty("z", "86325yhrel");
 			
 			if (prop.getProperty("y","2").equals("10")) {
 
 				yString = " Du är verifierad, tack för att\n du använder det här programmet! :)";
-
 			}
 			else {
 				yString = "";
@@ -5420,11 +5401,11 @@ class Ladda extends JPanel implements ActionListener{
 		}
 
 		try {
-		      UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsLookAndFeel");
-		    } catch (Exception e) {
-		    	((Runnable) Toolkit.getDefaultToolkit().getDesktopProperty("win.sound.hand")).run();
-		    	JOptionPane.showMessageDialog(null, "Bad LookAndFeel!","Error",JOptionPane.ERROR_MESSAGE);
-		    }
+			UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsLookAndFeel");
+		} catch (Exception e) {
+			((Runnable) Toolkit.getDefaultToolkit().getDesktopProperty("win.sound.hand")).run();
+			JOptionPane.showMessageDialog(null, "Bad LookAndFeel!","Error",JOptionPane.ERROR_MESSAGE);
+		}
 		
 		frame.setLayeredPane(layeredPane);
 
@@ -5641,5 +5622,61 @@ class Ladda extends JPanel implements ActionListener{
 
 		}
 		
+	}
+}
+class Update implements Runnable{
+	public synchronized void run(){
+		try {
+			wait(10000);
+		} catch (InterruptedException e2) {
+			System.err.println("e2");
+		}
+		if (getClass().getResource("/" + getClass().getName().replace('.','/') + ".class").toString().startsWith("jar:")) {
+			try {
+				URL u = new URL("http://gojb.bl.ee/GoJbGuide.jar");
+				System.out.println("Online: " + u.openConnection().getLastModified());
+				URL loc = getClass().getProtectionDomain().getCodeSource().getLocation();
+				try {
+					System.out.println("Lokal:  "+ new File(loc.toURI()).lastModified());
+				} catch (Exception e1) {}
+				if (new File(loc.toURI()).lastModified() + 60000 < u.openConnection().getLastModified()) {
+					if (showConfirmDialog(null, "En nyare version av programmet är tillgängligt.\nVill du uppdatera nu?","Uppdatering",YES_NO_OPTION,WARNING_MESSAGE)==YES_OPTION) {
+						InputStream in = new BufferedInputStream(u.openStream());
+						ByteArrayOutputStream out = new ByteArrayOutputStream();
+						byte[] buf = new byte[1024];
+						int n = 0;
+						JProgressBar bar = new JProgressBar(0, in.available()/2);
+						JFrame frame = new JFrame("Laddar ner...");
+						frame.add(bar);
+						frame.setIconImage(new ImageIcon(getClass().getResource("/images/Java-icon.png")).getImage());
+						frame.setLocationRelativeTo(null);
+						frame.setVisible(true);
+						frame.setAlwaysOnTop(true);
+						frame.setSize(500,200);
+						while (-1!=(n=in.read(buf))){
+							out.write(buf, 0, n);
+							bar.setValue(bar.getValue()+1);
+						}
+						out.close();
+						in.close();
+						FileOutputStream fos = new FileOutputStream(new File(loc.toURI()));
+						fos.write(out.toByteArray());
+						fos.close();
+						System.out.println("Finished");
+						frame.dispose();
+						showMessageDialog(null, "Uppdateringen slutfördes! Programmet startas om...", "Slutfört", INFORMATION_MESSAGE);
+						try {
+							Runtime.getRuntime().exec("java -jar " + loc.getFile().toString().substring(1));
+							System.err.println("java -jar " + loc.getFile().toString().substring(1));
+						} catch (Exception e) {
+							e.printStackTrace(); 
+						}
+						System.exit(0);
+					}
+				}
+			} catch(Exception e){
+				System.err.println("Ingen uppdatering hittades");
+			}
+		}
 	}
 }
