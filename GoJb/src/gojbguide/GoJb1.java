@@ -5631,14 +5631,14 @@ class Ladda extends JPanel implements ActionListener{
 				System.out.println("lyckades inte skriva");
 				e.printStackTrace();
 				Namn();
-				}
+			}
 		}
 	}
-			
+
 
 
 	public static void Namn() {
-		
+
 		try {
 			prop.load(new FileInputStream(System.getProperty("user.home") + "\\AppData\\Roaming\\GoJb\\settings.gojb"));
 		}catch (IOException e) {
@@ -5651,9 +5651,9 @@ class Ladda extends JPanel implements ActionListener{
 			new GoJb1();
 
 		}
-		
+
 	}
-	
+
 }
 class Update implements Runnable{
 
@@ -5663,53 +5663,47 @@ class Update implements Runnable{
 				URL u = new URL("http://gojb.bl.ee/GoJbGuide.jar");
 				File file = new File(getClass().getProtectionDomain().getCodeSource().getLocation().toURI());
 				System.out.println("Online: " + u.openConnection().getLastModified());
-				System.err.println(file);
-				try {
-					System.out.println("Lokal:  "+ file.lastModified());
-				} catch (Exception e1) {}
+				System.out.println("File: " + file);
+				System.out.println("Lokal:  "+ file.lastModified());
 				if (file.lastModified() + 60000 < u.openConnection().getLastModified()) {
 					Object[] options = { Ladda.laddaString, Ladda.cancelString };
 					if(JOptionPane.showOptionDialog(null, Ladda.string, "Update",
 							JOptionPane.DEFAULT_OPTION, JOptionPane.WARNING_MESSAGE,
 							null, options, options[0])==OK_OPTION) {
-						System.out.println("File: " + file);
-						System.out.println("Lokal:  "+ file.lastModified());
-						if (file.lastModified() + 60000 < u.openConnection().getLastModified()) {
-							if (showConfirmDialog(null, Ladda.string,"GoJbGuide",YES_NO_OPTION,WARNING_MESSAGE)==YES_OPTION) {
-								InputStream in = new BufferedInputStream(u.openStream());
-								ByteArrayOutputStream out = new ByteArrayOutputStream();
-								byte[] buf = new byte[1024];
-								JProgressBar bar = new JProgressBar(0, in.available()/2);
-								JFrame frame = new JFrame("Downloading...");
-								frame.add(bar);
-								frame.setIconImage(new ImageIcon(getClass().getResource("/images/Java-icon.png")).getImage());
-								frame.setLocationRelativeTo(null);
-								frame.setVisible(true);
-								frame.setSize(500,200);
-								int n = 0;
-								while (-1!=(n=in.read(buf))){
-									out.write(buf, 0, n);
-									bar.setValue(bar.getValue()+1);
-								}
-								out.close();
-								in.close();
-								FileOutputStream fos = new FileOutputStream(file);
-								fos.write(out.toByteArray());
-								fos.close();
-								System.out.println("Finished");
-								frame.dispose();
-								showMessageDialog(null, Ladda.finishedString, "Update Finished", INFORMATION_MESSAGE);
-								try {
-									String string = "java -jar \"" + file.toString()+"\"";
-									Runtime.getRuntime().exec(string);
-									System.err.println(string);
-								} catch (Exception e) {
-									e.printStackTrace(); 
-								}
-								System.exit(0);
-							}
+
+						InputStream in = new BufferedInputStream(u.openStream());
+						ByteArrayOutputStream out = new ByteArrayOutputStream();
+						byte[] buf = new byte[1024];
+						JProgressBar bar = new JProgressBar(0, in.available()/2);
+						JFrame frame = new JFrame("Downloading...");
+						frame.add(bar);
+						frame.setIconImage(new ImageIcon(getClass().getResource("/images/Java-icon.png")).getImage());
+						frame.setLocationRelativeTo(null);
+						frame.setVisible(true);
+						frame.setSize(500,200);
+						int n = 0;
+						while (-1!=(n=in.read(buf))){
+							out.write(buf, 0, n);
+							bar.setValue(bar.getValue()+1);
 						}
+						out.close();
+						in.close();
+						FileOutputStream fos = new FileOutputStream(file);
+						fos.write(out.toByteArray());
+						fos.close();
+						System.out.println("Finished");
+						frame.dispose();
+						showMessageDialog(null, Ladda.finishedString, "Update Finished", INFORMATION_MESSAGE);
+						try {
+							String string = "java -jar \"" + file.toString()+"\"";
+							Runtime.getRuntime().exec(string);
+							System.err.println(string);
+						} catch (Exception e) {
+							e.printStackTrace(); 
+						}
+						System.exit(0);
 					}
+
 				}
 			} catch(Exception e){
 				System.err.println("Ingen uppdatering hittades");
