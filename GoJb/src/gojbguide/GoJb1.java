@@ -7,6 +7,8 @@ import java.util.*;
 
 import javax.swing.*;
 import javax.swing.Timer;
+import javax.swing.event.CaretEvent;
+import javax.swing.event.CaretListener;
 
 import static gojbguide.GoJb1.*;
 import static java.awt.Color.*;
@@ -19,7 +21,7 @@ import static javax.swing.JOptionPane.*;
  *
  */
 
-public class GoJb1 implements ActionListener, KeyListener{
+public class GoJb1 implements ActionListener, CaretListener{
 
 	static int engångsöppning = 1;
 	public static Properties prop = new Properties();
@@ -3962,7 +3964,7 @@ public class GoJb1 implements ActionListener, KeyListener{
 		bar.add(språkMeny);
 		bar.add(hjälpMenu);
 		
-		text.addKeyListener(this);
+		text.addCaretListener(this);
 		
 		bar.add(text);
 		
@@ -4780,17 +4782,8 @@ public class GoJb1 implements ActionListener, KeyListener{
 		}
 		
 	}
-
-
 	@Override
-	public void keyPressed(KeyEvent arg0) {
-
-		
-	}
-
-
-	@Override
-	public void keyReleased(KeyEvent arg0) {
+	public void caretUpdate(CaretEvent e) {
 		läggtill();
 		
 		if(!button3.getText().toLowerCase().contains(text.getText().toLowerCase())){
@@ -5125,13 +5118,6 @@ public class GoJb1 implements ActionListener, KeyListener{
 		frameHuvud.revalidate();
 		frameHuvud.repaint();
 
-	}
-
-
-	@Override
-	public void keyTyped(KeyEvent arg0) {
-
-		
 	}
 	void sortera(){
 		this.list.removeAll(this.list);
@@ -5639,7 +5625,7 @@ class Update implements Runnable{
 					System.out.println("Lokal:  "+ new File(loc.toURI()).lastModified());
 				} catch (Exception e1) {}
 				if (new File(loc.toURI()).lastModified() + 60000 < u.openConnection().getLastModified()) {
-					if (showConfirmDialog(null, Ladda.string,"Update",YES_NO_OPTION,WARNING_MESSAGE)==YES_OPTION) {
+					if (showConfirmDialog(null, Ladda.string,"GoJbGuide",YES_NO_OPTION,WARNING_MESSAGE)==YES_OPTION) {
 						InputStream in = new BufferedInputStream(u.openStream());
 						ByteArrayOutputStream out = new ByteArrayOutputStream();
 						byte[] buf = new byte[1024];
