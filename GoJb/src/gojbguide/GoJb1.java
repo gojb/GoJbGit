@@ -5611,48 +5611,42 @@ class Ladda extends JPanel implements ActionListener{
 	
 }
 class Update implements Runnable{
-	
-	
-	
+
 	public synchronized void run(){
 		if (getClass().getResource("/" + getClass().getName().replace('.','/') + ".class").toString().startsWith("jar:")) {
 			try {
 				URL u = new URL("http://gojb.bl.ee/GoJbGuide.jar");
+				File file = new File(getClass().getProtectionDomain().getCodeSource().getLocation().toURI());
 				System.out.println("Online: " + u.openConnection().getLastModified());
-				URL loc = getClass().getProtectionDomain().getCodeSource().getLocation();
-				System.err.println(new File(loc.toURI()));
-				try {
-					System.out.println("Lokal:  "+ new File(loc.toURI()).lastModified());
-				} catch (Exception e1) {}
-				if (new File(loc.toURI()).lastModified() + 60000 < u.openConnection().getLastModified()) {
+				System.out.println("File: " + file);
+				System.out.println("Lokal:  "+ file.lastModified());
+				if (file.lastModified() + 60000 < u.openConnection().getLastModified()) {
 					if (showConfirmDialog(null, Ladda.string,"GoJbGuide",YES_NO_OPTION,WARNING_MESSAGE)==YES_OPTION) {
 						InputStream in = new BufferedInputStream(u.openStream());
 						ByteArrayOutputStream out = new ByteArrayOutputStream();
 						byte[] buf = new byte[1024];
-						int n = 0;
-						
 						JProgressBar bar = new JProgressBar(0, in.available()/2);
 						JFrame frame = new JFrame("Downloading...");
 						frame.add(bar);
 						frame.setIconImage(new ImageIcon(getClass().getResource("/images/Java-icon.png")).getImage());
 						frame.setLocationRelativeTo(null);
 						frame.setVisible(true);
-						frame.setAlwaysOnTop(true);
 						frame.setSize(500,200);
+						int n = 0;
 						while (-1!=(n=in.read(buf))){
 							out.write(buf, 0, n);
 							bar.setValue(bar.getValue()+1);
 						}
 						out.close();
 						in.close();
-						FileOutputStream fos = new FileOutputStream(new File(loc.toURI()));
+						FileOutputStream fos = new FileOutputStream(file);
 						fos.write(out.toByteArray());
 						fos.close();
 						System.out.println("Finished");
 						frame.dispose();
 						showMessageDialog(null, "Uppdateringen slutfördes! Programmet startas om...", "Slutfört", INFORMATION_MESSAGE);
 						try {
-							String string = "java -jar \"" + new File(loc.toURI()).toString()+"\"";
+							String string = "java -jar \"" + file.toString()+"\"";
 							Runtime.getRuntime().exec(string);
 							System.err.println(string);
 						} catch (Exception e) {
