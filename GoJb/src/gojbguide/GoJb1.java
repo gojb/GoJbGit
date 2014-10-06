@@ -4,12 +4,12 @@ import java.awt.event.*;
 import java.io.*;
 import java.net.URL;
 import java.util.*;
+
 import javax.swing.*;
 import javax.swing.Timer;
 import javax.swing.event.CaretEvent;
 import javax.swing.event.CaretListener;
 
-import static gojbguide.GoJb1.*;
 import static java.awt.Color.*;
 import static javax.swing.JOptionPane.*;
 
@@ -24,544 +24,544 @@ public class GoJb1 implements ActionListener, CaretListener{
 
 	static int engångsöppning = 1;
 	public static Properties prop = new Properties();
-	
+
 	static String help;
-	static String namn,yString;
-	
+	static String yString;
+
 	JButton svenska = new JButton("Svenska"),
 			engelska = new JButton("English");
-	
+
 	JMenuBar bar = new JMenuBar();
-	
+
 	ArrayList<JButton> list = new ArrayList<JButton>();
-	
+
 	JTextField text = new JTextField();
-	
+
 	JTextArea area = new JTextArea();
 	static JTextArea label = new JTextArea();
-	
+
 	Timer mailTimer = new Timer(1000, this);
-	
-	
+
+
 	JMenu språkMeny = new JMenu(),
 			hjälpMenu = new JMenu("Hjälp");
-	
+
 	JMenuItem 	väljSpråk = new JMenuItem(),
-				helpItem = new JMenuItem("Hjälp"),
-				ideasItem = new JMenuItem("Ideas/bugs");
-	
+			helpItem = new JMenuItem("Hjälp"),
+			ideasItem = new JMenuItem("Ideas/bugs");
+
 	JButton[] 	buttons3 = new JButton[10],
-				buttons7 = new JButton[10],
-				buttons8 = new JButton[10],
-				buttons9 = new JButton[10],
-				buttons10 = new JButton[10],
-				buttons11 = new JButton[10],
-				buttons12 = new JButton[10],
-				buttons13 = new JButton[10],
-				buttons14 = new JButton[10],
-				buttons15 = new JButton[10],
-				buttons16 = new JButton[10],
-				buttons17 = new JButton[10],
-				buttons18 = new JButton[10],
-				buttons19 = new JButton[10],
-				buttons20 = new JButton[10],
-				buttons21 = new JButton[10],
-				buttons22 = new JButton[10],
-				buttons23 = new JButton[10],
-				buttons24 = new JButton[10],
-				buttons25 = new JButton[10],
-				buttons26 = new JButton[10],
-				buttons27 = new JButton[10],
-				buttons28 = new JButton[10],
-				buttons29 = new JButton[10],
-				buttons30 = new JButton[10],
-				buttons31 = new JButton[10],
-				buttons32 = new JButton[10],
-				buttons33 = new JButton[10],
-				buttons34 = new JButton[10],
-				buttons35 = new JButton[10],
-				buttons36 = new JButton[10],
-				buttons37 = new JButton[10],
-				buttons38 = new JButton[10],
-				buttons39 = new JButton[10],
-				buttons40 = new JButton[10],
-				buttons41 = new JButton[10],
-				buttons42 = new JButton[10],
-				buttons43 = new JButton[10],
-				buttons44 = new JButton[10],
-				buttons45 = new JButton[10],
-				buttons46 = new JButton[10],
-				buttons47 = new JButton[10],
-				buttons48 = new JButton[10],
-				buttons49 = new JButton[10],
-				buttons50 = new JButton[10],
-				buttons51 = new JButton[10],
-				buttons52 = new JButton[10],
-				buttons53 = new JButton[10],
-				buttons54 = new JButton[10],
-				buttons55 = new JButton[10],
-				buttons56 = new JButton[10],
-				buttons57 = new JButton[10],
-				buttons58 = new JButton[10],
-				buttons59 = new JButton[10],
-				buttons60 = new JButton[10],
-				buttons61 = new JButton[10],
-				buttons62 = new JButton[10],
-				buttons63 = new JButton[10],
-				buttons64 = new JButton[10],
-				buttons65 = new JButton[10],
-				buttons66 = new JButton[10],
-				buttons67 = new JButton[10],
-				buttons68 = new JButton[10],
-				buttons69 = new JButton[10],
-				buttons70 = new JButton[10],
-				buttons71 = new JButton[10],
-				buttons72 = new JButton[10],
-				buttons73 = new JButton[10],
-				buttons74 = new JButton[10],
-				buttons75 = new JButton[10],
-				buttons76 = new JButton[10],
-				buttons77 = new JButton[10],
-				buttons78 = new JButton[10],
-				buttons79 = new JButton[10],
-				buttons80 = new JButton[10],
-				buttons81 = new JButton[10],
-				buttons82 = new JButton[10],
-				buttons83 = new JButton[10],
-				buttons84 = new JButton[10],
-				buttons85 = new JButton[10],
-				buttons86 = new JButton[10],
-				buttons87 = new JButton[10],
-				buttons88 = new JButton[10],
-				buttons89 = new JButton[10],
-				buttons91 = new JButton[10],
-				buttons92 = new JButton[10],
-				buttons93 = new JButton[10],
-				buttons94 = new JButton[10],
-				buttons95 = new JButton[10],
-				buttons96 = new JButton[10],
-				buttons97 = new JButton[10],
-				buttons98 = new JButton[10],
-				buttons99 = new JButton[10],
-				buttons100 = new JButton[10],
-				buttons101 = new JButton[10],
-				buttons102 = new JButton[10],
-				buttons103 = new JButton[10],
-				buttons104 = new JButton[10],
-				buttons105 = new JButton[10],
-				buttons106 = new JButton[10],
-				buttons107 = new JButton[10],
-				buttons108 = new JButton[10],
-				buttons109 = new JButton[10],
-				buttons110 = new JButton[10],
-				buttons111 = new JButton[10],
-				buttons112 = new JButton[10],
-				buttons113 = new JButton[10],
-				buttons114 = new JButton[10];
+			buttons7 = new JButton[10],
+			buttons8 = new JButton[10],
+			buttons9 = new JButton[10],
+			buttons10 = new JButton[10],
+			buttons11 = new JButton[10],
+			buttons12 = new JButton[10],
+			buttons13 = new JButton[10],
+			buttons14 = new JButton[10],
+			buttons15 = new JButton[10],
+			buttons16 = new JButton[10],
+			buttons17 = new JButton[10],
+			buttons18 = new JButton[10],
+			buttons19 = new JButton[10],
+			buttons20 = new JButton[10],
+			buttons21 = new JButton[10],
+			buttons22 = new JButton[10],
+			buttons23 = new JButton[10],
+			buttons24 = new JButton[10],
+			buttons25 = new JButton[10],
+			buttons26 = new JButton[10],
+			buttons27 = new JButton[10],
+			buttons28 = new JButton[10],
+			buttons29 = new JButton[10],
+			buttons30 = new JButton[10],
+			buttons31 = new JButton[10],
+			buttons32 = new JButton[10],
+			buttons33 = new JButton[10],
+			buttons34 = new JButton[10],
+			buttons35 = new JButton[10],
+			buttons36 = new JButton[10],
+			buttons37 = new JButton[10],
+			buttons38 = new JButton[10],
+			buttons39 = new JButton[10],
+			buttons40 = new JButton[10],
+			buttons41 = new JButton[10],
+			buttons42 = new JButton[10],
+			buttons43 = new JButton[10],
+			buttons44 = new JButton[10],
+			buttons45 = new JButton[10],
+			buttons46 = new JButton[10],
+			buttons47 = new JButton[10],
+			buttons48 = new JButton[10],
+			buttons49 = new JButton[10],
+			buttons50 = new JButton[10],
+			buttons51 = new JButton[10],
+			buttons52 = new JButton[10],
+			buttons53 = new JButton[10],
+			buttons54 = new JButton[10],
+			buttons55 = new JButton[10],
+			buttons56 = new JButton[10],
+			buttons57 = new JButton[10],
+			buttons58 = new JButton[10],
+			buttons59 = new JButton[10],
+			buttons60 = new JButton[10],
+			buttons61 = new JButton[10],
+			buttons62 = new JButton[10],
+			buttons63 = new JButton[10],
+			buttons64 = new JButton[10],
+			buttons65 = new JButton[10],
+			buttons66 = new JButton[10],
+			buttons67 = new JButton[10],
+			buttons68 = new JButton[10],
+			buttons69 = new JButton[10],
+			buttons70 = new JButton[10],
+			buttons71 = new JButton[10],
+			buttons72 = new JButton[10],
+			buttons73 = new JButton[10],
+			buttons74 = new JButton[10],
+			buttons75 = new JButton[10],
+			buttons76 = new JButton[10],
+			buttons77 = new JButton[10],
+			buttons78 = new JButton[10],
+			buttons79 = new JButton[10],
+			buttons80 = new JButton[10],
+			buttons81 = new JButton[10],
+			buttons82 = new JButton[10],
+			buttons83 = new JButton[10],
+			buttons84 = new JButton[10],
+			buttons85 = new JButton[10],
+			buttons86 = new JButton[10],
+			buttons87 = new JButton[10],
+			buttons88 = new JButton[10],
+			buttons89 = new JButton[10],
+			buttons91 = new JButton[10],
+			buttons92 = new JButton[10],
+			buttons93 = new JButton[10],
+			buttons94 = new JButton[10],
+			buttons95 = new JButton[10],
+			buttons96 = new JButton[10],
+			buttons97 = new JButton[10],
+			buttons98 = new JButton[10],
+			buttons99 = new JButton[10],
+			buttons100 = new JButton[10],
+			buttons101 = new JButton[10],
+			buttons102 = new JButton[10],
+			buttons103 = new JButton[10],
+			buttons104 = new JButton[10],
+			buttons105 = new JButton[10],
+			buttons106 = new JButton[10],
+			buttons107 = new JButton[10],
+			buttons108 = new JButton[10],
+			buttons109 = new JButton[10],
+			buttons110 = new JButton[10],
+			buttons111 = new JButton[10],
+			buttons112 = new JButton[10],
+			buttons113 = new JButton[10],
+			buttons114 = new JButton[10];
 
 
 	JFrame 		frame3 = new JFrame(),
-				frame7 = new JFrame(),
-				frame8 = new JFrame(),
-				frame9 = new JFrame(),
-				frame10 = new JFrame(),
-				frame11 = new JFrame(),
-				frame12 = new JFrame(),
-				frame13 = new JFrame(),
-				frame14 = new JFrame(),
-				frame15 = new JFrame(),
-				frame16 = new JFrame(),
-				frame17 = new JFrame(),
-				frame18 = new JFrame(),
-				frame19 = new JFrame(),
-				frame20 = new JFrame(),
-				frame21 = new JFrame(),
-				frame22 = new JFrame(),
-				frame23 = new JFrame(),
-				frame24 = new JFrame(),
-				frame25 = new JFrame(),
-				frame26 = new JFrame(),
-				frame27 = new JFrame(),
-				frame28 = new JFrame(),
-				frame29 = new JFrame(),
-				frame30 = new JFrame(),
-				frame31 = new JFrame(),
-				frame32 = new JFrame(),
-				frame33 = new JFrame(),
-				frame34 = new JFrame(),
-				frame35 = new JFrame(),
-				frame36 = new JFrame(),
-				frame37 = new JFrame(),
-				frame38 = new JFrame(),
-				frame39 = new JFrame(),
-				frame40 = new JFrame(),
-				frame41 = new JFrame(),
-				frame42 = new JFrame(),
-				frame43 = new JFrame(),
-				frame44 = new JFrame(),
-				frame45 = new JFrame(),
-				frame46 = new JFrame(),
-				frame47 = new JFrame(),
-				frame48 = new JFrame(),
-				frame49 = new JFrame(),
-				frame50 = new JFrame(),
-				frame51 = new JFrame(),
-				frame52 = new JFrame(),
-				frame53 = new JFrame(),
-				frame54 = new JFrame(),
-				frame55 = new JFrame(),
-				frame56 = new JFrame(),
-				frame57 = new JFrame(),
-				frame58 = new JFrame(),
-				frame59 = new JFrame(),
-				frame60 = new JFrame(),
-				frame61 = new JFrame(),
-				frame62 = new JFrame(),
-				frame63 = new JFrame(),
-				frame64 = new JFrame(),
-				frame65 = new JFrame(),
-				frame66 = new JFrame(),
-				frame67 = new JFrame(),
-				frame68 = new JFrame(),
-				frame69 = new JFrame(),
-				frame70 = new JFrame(),
-				frame71 = new JFrame(),
-				frame72 = new JFrame(),
-				frame73 = new JFrame(),
-				frame74 = new JFrame(),
-				frame75 = new JFrame(),
-				frame76 = new JFrame(),
-				frame77 = new JFrame(),
-				frame78 = new JFrame(),
-				frame79 = new JFrame(),
-				frame80 = new JFrame(),
-				frame81 = new JFrame(),
-				frame82 = new JFrame(),
-				frame83 = new JFrame(),
-				frame84 = new JFrame(),
-				frame85 = new JFrame(),
-				frame86 = new JFrame(),
-				frame87 = new JFrame(),
-				frame88 = new JFrame(),
-				frame89 = new JFrame(),
-				frame91 = new JFrame(),
-				frame92 = new JFrame(),
-				frame93 = new JFrame(),
-				frame94 = new JFrame(),
-				frame95 = new JFrame(),
-				frame96 = new JFrame(),
-				frame97 = new JFrame(),
-				frame98 = new JFrame(),
-				frame99 = new JFrame(),
-				frame100 = new JFrame(),
-				frame101 = new JFrame(),
-				frame102 = new JFrame(),
-				frame103 = new JFrame(),
-				frame104 = new JFrame(),
-				frame105 = new JFrame(),
-				frame106 = new JFrame(),
-				frame107 = new JFrame(),
-				frame108 = new JFrame(),
-				frame109 = new JFrame(),
-				frame110 = new JFrame(),
-				frame111 = new JFrame(),
-				frame112 = new JFrame(),
-				frame113 = new JFrame(),
-				frame114 = new JFrame(),
-				frameHuvud = new JFrame("GoJbGuide"),
-				språk = new JFrame("Language"),
-				ideasFrame = new JFrame("Ideas");
-	
+			frame7 = new JFrame(),
+			frame8 = new JFrame(),
+			frame9 = new JFrame(),
+			frame10 = new JFrame(),
+			frame11 = new JFrame(),
+			frame12 = new JFrame(),
+			frame13 = new JFrame(),
+			frame14 = new JFrame(),
+			frame15 = new JFrame(),
+			frame16 = new JFrame(),
+			frame17 = new JFrame(),
+			frame18 = new JFrame(),
+			frame19 = new JFrame(),
+			frame20 = new JFrame(),
+			frame21 = new JFrame(),
+			frame22 = new JFrame(),
+			frame23 = new JFrame(),
+			frame24 = new JFrame(),
+			frame25 = new JFrame(),
+			frame26 = new JFrame(),
+			frame27 = new JFrame(),
+			frame28 = new JFrame(),
+			frame29 = new JFrame(),
+			frame30 = new JFrame(),
+			frame31 = new JFrame(),
+			frame32 = new JFrame(),
+			frame33 = new JFrame(),
+			frame34 = new JFrame(),
+			frame35 = new JFrame(),
+			frame36 = new JFrame(),
+			frame37 = new JFrame(),
+			frame38 = new JFrame(),
+			frame39 = new JFrame(),
+			frame40 = new JFrame(),
+			frame41 = new JFrame(),
+			frame42 = new JFrame(),
+			frame43 = new JFrame(),
+			frame44 = new JFrame(),
+			frame45 = new JFrame(),
+			frame46 = new JFrame(),
+			frame47 = new JFrame(),
+			frame48 = new JFrame(),
+			frame49 = new JFrame(),
+			frame50 = new JFrame(),
+			frame51 = new JFrame(),
+			frame52 = new JFrame(),
+			frame53 = new JFrame(),
+			frame54 = new JFrame(),
+			frame55 = new JFrame(),
+			frame56 = new JFrame(),
+			frame57 = new JFrame(),
+			frame58 = new JFrame(),
+			frame59 = new JFrame(),
+			frame60 = new JFrame(),
+			frame61 = new JFrame(),
+			frame62 = new JFrame(),
+			frame63 = new JFrame(),
+			frame64 = new JFrame(),
+			frame65 = new JFrame(),
+			frame66 = new JFrame(),
+			frame67 = new JFrame(),
+			frame68 = new JFrame(),
+			frame69 = new JFrame(),
+			frame70 = new JFrame(),
+			frame71 = new JFrame(),
+			frame72 = new JFrame(),
+			frame73 = new JFrame(),
+			frame74 = new JFrame(),
+			frame75 = new JFrame(),
+			frame76 = new JFrame(),
+			frame77 = new JFrame(),
+			frame78 = new JFrame(),
+			frame79 = new JFrame(),
+			frame80 = new JFrame(),
+			frame81 = new JFrame(),
+			frame82 = new JFrame(),
+			frame83 = new JFrame(),
+			frame84 = new JFrame(),
+			frame85 = new JFrame(),
+			frame86 = new JFrame(),
+			frame87 = new JFrame(),
+			frame88 = new JFrame(),
+			frame89 = new JFrame(),
+			frame91 = new JFrame(),
+			frame92 = new JFrame(),
+			frame93 = new JFrame(),
+			frame94 = new JFrame(),
+			frame95 = new JFrame(),
+			frame96 = new JFrame(),
+			frame97 = new JFrame(),
+			frame98 = new JFrame(),
+			frame99 = new JFrame(),
+			frame100 = new JFrame(),
+			frame101 = new JFrame(),
+			frame102 = new JFrame(),
+			frame103 = new JFrame(),
+			frame104 = new JFrame(),
+			frame105 = new JFrame(),
+			frame106 = new JFrame(),
+			frame107 = new JFrame(),
+			frame108 = new JFrame(),
+			frame109 = new JFrame(),
+			frame110 = new JFrame(),
+			frame111 = new JFrame(),
+			frame112 = new JFrame(),
+			frame113 = new JFrame(),
+			frame114 = new JFrame();
+	static JFrame frameHuvud = new JFrame("GoJbGuide");
+	JFrame språk = new JFrame("Language");
+	JFrame ideasFrame = new JFrame("Ideas");
+
 	ImageIcon 	i3 = new ImageIcon(getClass().getResource("/images/3.png")),
-				i7= new ImageIcon(getClass().getResource("/images/7.png")),
-				i8= new ImageIcon(getClass().getResource("/images/8.gif")),
-				i9= new ImageIcon(getClass().getResource("/images/9.png")),
-				i10= new ImageIcon(getClass().getResource("/images/10.png")),
-				i11= new ImageIcon(getClass().getResource("/images/11.gif")),
-				i12= new ImageIcon(getClass().getResource("/images/12.gif")),
-				i13= new ImageIcon(getClass().getResource("/images/13.gif")),
-				i14= new ImageIcon(getClass().getResource("/images/14.gif")),
-				i15= new ImageIcon(getClass().getResource("/images/15.png")),
-				i16= new ImageIcon(getClass().getResource("/images/16.png")),
-				i17= new ImageIcon(getClass().getResource("/images/17.png")),
-				i18= new ImageIcon(getClass().getResource("/images/18.png")),
-				i19= new ImageIcon(getClass().getResource("/images/19.png")),
-				i20= new ImageIcon(getClass().getResource("/images/20.png")),
-				i21= new ImageIcon(getClass().getResource("/images/21.png")),
-				i22= new ImageIcon(getClass().getResource("/images/22.gif")),
-				i23= new ImageIcon(getClass().getResource("/images/23.png")),
-				i24= new ImageIcon(getClass().getResource("/images/24.png")),
-				i25= new ImageIcon(getClass().getResource("/images/25.png")),
-				i26= new ImageIcon(getClass().getResource("/images/26.png")),
-				i27= new ImageIcon(getClass().getResource("/images/27.png")),
-				i28= new ImageIcon(getClass().getResource("/images/28.png")),
-				i29= new ImageIcon(getClass().getResource("/images/29.gif")),
-				i30= new ImageIcon(getClass().getResource("/images/30.png")),
-				i31= new ImageIcon(getClass().getResource("/images/31.png")),
-				i32= new ImageIcon(getClass().getResource("/images/32.png")),
-				i33= new ImageIcon(getClass().getResource("/images/33.png")),
-				i34= new ImageIcon(getClass().getResource("/images/34.png")),
-				i35= new ImageIcon(getClass().getResource("/images/35.png")),
-				i36= new ImageIcon(getClass().getResource("/images/36.png")),
-				i37= new ImageIcon(getClass().getResource("/images/37.png")),
-				i38= new ImageIcon(getClass().getResource("/images/38.png")),
-				i39= new ImageIcon(getClass().getResource("/images/39.png")),
-				i40= new ImageIcon(getClass().getResource("/images/40.png")),
-				i41= new ImageIcon(getClass().getResource("/images/41.png")),
-				i42= new ImageIcon(getClass().getResource("/images/42.png")),
-				i43= new ImageIcon(getClass().getResource("/images/43.gif")),
-				i44= new ImageIcon(getClass().getResource("/images/44.png")),
-				i45= new ImageIcon(getClass().getResource("/images/45.png")),
-				i46= new ImageIcon(getClass().getResource("/images/46.png")),
-				i47= new ImageIcon(getClass().getResource("/images/47.png")),
-				i48= new ImageIcon(getClass().getResource("/images/48.gif")),
-				i49= new ImageIcon(getClass().getResource("/images/49.gif")),
-				i50= new ImageIcon(getClass().getResource("/images/50.png")),
-				i51= new ImageIcon(getClass().getResource("/images/51.png")),
-				i52= new ImageIcon(getClass().getResource("/images/52.png")),
-				i53= new ImageIcon(getClass().getResource("/images/53.png")),
-				i54= new ImageIcon(getClass().getResource("/images/54.png")),
-				i55= new ImageIcon(getClass().getResource("/images/55.gif")),
-				i56= new ImageIcon(getClass().getResource("/images/56.png")),
-				i57= new ImageIcon(getClass().getResource("/images/57.png")),
-				i58= new ImageIcon(getClass().getResource("/images/58.png")),
-				i59= new ImageIcon(getClass().getResource("/images/59.png")),
-				i60= new ImageIcon(getClass().getResource("/images/60.gif")),
-				i61= new ImageIcon(getClass().getResource("/images/61.png")),
-				i62= new ImageIcon(getClass().getResource("/images/62.png")),
-				i63= new ImageIcon(getClass().getResource("/images/63.gif")),
-				i64= new ImageIcon(getClass().getResource("/images/64.gif")),
-				i65= new ImageIcon(getClass().getResource("/images/1010.gif")),
-				i66= new ImageIcon(getClass().getResource("/images/66.gif")),
-				i67= new ImageIcon(getClass().getResource("/images/67.gif")),
-				i68= new ImageIcon(getClass().getResource("/images/68.gif")),
-				i69= new ImageIcon(getClass().getResource("/images/69.png")),
-				i70= new ImageIcon(getClass().getResource("/images/70.png")),
-				i71= new ImageIcon(getClass().getResource("/images/71.png")),
-				i72= new ImageIcon(getClass().getResource("/images/72.png")),
-				i73= new ImageIcon(getClass().getResource("/images/73.png")),
-				i74= new ImageIcon(getClass().getResource("/images/74.png")),
-				i75= new ImageIcon(getClass().getResource("/images/75.png")),
-				i76= new ImageIcon(getClass().getResource("/images/76.png")),
-				i77= new ImageIcon(getClass().getResource("/images/77.png")),
-				i78= new ImageIcon(getClass().getResource("/images/78.png")),
-				i79= new ImageIcon(getClass().getResource("/images/79.png")),
-				i80= new ImageIcon(getClass().getResource("/images/80.png")),
-				i81= new ImageIcon(getClass().getResource("/images/81.png")),
-				i82= new ImageIcon(getClass().getResource("/images/82.png")),
-				i83= new ImageIcon(getClass().getResource("/images/83.png")),
-				i84= new ImageIcon(getClass().getResource("/images/84.png")),
-				i85= new ImageIcon(getClass().getResource("/images/85.png")),
-				i86= new ImageIcon(getClass().getResource("/images/86.png")),
-				i87= new ImageIcon(getClass().getResource("/images/87.png")),
-				i88= new ImageIcon(getClass().getResource("/images/88.png")),
-				i89= new ImageIcon(getClass().getResource("/images/89.png")),
-				i91= new ImageIcon(getClass().getResource("/images/91.png")),
-				i92= new ImageIcon(getClass().getResource("/images/92.png")),
-				i93= new ImageIcon(getClass().getResource("/images/93.gif")),
-				i94= new ImageIcon(getClass().getResource("/images/94.png")),
-				i95= new ImageIcon(getClass().getResource("/images/95.png")),
-				i96= new ImageIcon(getClass().getResource("/images/96.png")),
-				i97= new ImageIcon(getClass().getResource("/images/97.png")),
-				i98= new ImageIcon(getClass().getResource("/images/98.png")),
-				i99= new ImageIcon(getClass().getResource("/images/99.png")),
-				i100= new ImageIcon(getClass().getResource("/images/100.png")),
-				i101= new ImageIcon(getClass().getResource("/images/101.png")),
-				i102= new ImageIcon(getClass().getResource("/images/102.png")),
-				i103= new ImageIcon(getClass().getResource("/images/103.png")),
-				i104= new ImageIcon(getClass().getResource("/images/104.png")),
-				i105= new ImageIcon(getClass().getResource("/images/105.png")),
-				i106= new ImageIcon(getClass().getResource("/images/106.png")),
-				i107= new ImageIcon(getClass().getResource("/images/107.png")),
-				i108= new ImageIcon(getClass().getResource("/images/108.png")),
-				i109= new ImageIcon(getClass().getResource("/images/109.png")),
-				i110= new ImageIcon(getClass().getResource("/images/110.png")),
-				i111= new ImageIcon(getClass().getResource("/images/111.png")),
-				i112= new ImageIcon(getClass().getResource("/images/112.png")),
-				i113= new ImageIcon(getClass().getResource("/images/113.png")),
-				i114= new ImageIcon(getClass().getResource("/images/114.png"));
+			i7= new ImageIcon(getClass().getResource("/images/7.png")),
+			i8= new ImageIcon(getClass().getResource("/images/8.gif")),
+			i9= new ImageIcon(getClass().getResource("/images/9.png")),
+			i10= new ImageIcon(getClass().getResource("/images/10.png")),
+			i11= new ImageIcon(getClass().getResource("/images/11.gif")),
+			i12= new ImageIcon(getClass().getResource("/images/12.gif")),
+			i13= new ImageIcon(getClass().getResource("/images/13.gif")),
+			i14= new ImageIcon(getClass().getResource("/images/14.gif")),
+			i15= new ImageIcon(getClass().getResource("/images/15.png")),
+			i16= new ImageIcon(getClass().getResource("/images/16.png")),
+			i17= new ImageIcon(getClass().getResource("/images/17.png")),
+			i18= new ImageIcon(getClass().getResource("/images/18.png")),
+			i19= new ImageIcon(getClass().getResource("/images/19.png")),
+			i20= new ImageIcon(getClass().getResource("/images/20.png")),
+			i21= new ImageIcon(getClass().getResource("/images/21.png")),
+			i22= new ImageIcon(getClass().getResource("/images/22.gif")),
+			i23= new ImageIcon(getClass().getResource("/images/23.png")),
+			i24= new ImageIcon(getClass().getResource("/images/24.png")),
+			i25= new ImageIcon(getClass().getResource("/images/25.png")),
+			i26= new ImageIcon(getClass().getResource("/images/26.png")),
+			i27= new ImageIcon(getClass().getResource("/images/27.png")),
+			i28= new ImageIcon(getClass().getResource("/images/28.png")),
+			i29= new ImageIcon(getClass().getResource("/images/29.gif")),
+			i30= new ImageIcon(getClass().getResource("/images/30.png")),
+			i31= new ImageIcon(getClass().getResource("/images/31.png")),
+			i32= new ImageIcon(getClass().getResource("/images/32.png")),
+			i33= new ImageIcon(getClass().getResource("/images/33.png")),
+			i34= new ImageIcon(getClass().getResource("/images/34.png")),
+			i35= new ImageIcon(getClass().getResource("/images/35.png")),
+			i36= new ImageIcon(getClass().getResource("/images/36.png")),
+			i37= new ImageIcon(getClass().getResource("/images/37.png")),
+			i38= new ImageIcon(getClass().getResource("/images/38.png")),
+			i39= new ImageIcon(getClass().getResource("/images/39.png")),
+			i40= new ImageIcon(getClass().getResource("/images/40.png")),
+			i41= new ImageIcon(getClass().getResource("/images/41.png")),
+			i42= new ImageIcon(getClass().getResource("/images/42.png")),
+			i43= new ImageIcon(getClass().getResource("/images/43.gif")),
+			i44= new ImageIcon(getClass().getResource("/images/44.png")),
+			i45= new ImageIcon(getClass().getResource("/images/45.png")),
+			i46= new ImageIcon(getClass().getResource("/images/46.png")),
+			i47= new ImageIcon(getClass().getResource("/images/47.png")),
+			i48= new ImageIcon(getClass().getResource("/images/48.gif")),
+			i49= new ImageIcon(getClass().getResource("/images/49.gif")),
+			i50= new ImageIcon(getClass().getResource("/images/50.png")),
+			i51= new ImageIcon(getClass().getResource("/images/51.png")),
+			i52= new ImageIcon(getClass().getResource("/images/52.png")),
+			i53= new ImageIcon(getClass().getResource("/images/53.png")),
+			i54= new ImageIcon(getClass().getResource("/images/54.png")),
+			i55= new ImageIcon(getClass().getResource("/images/55.gif")),
+			i56= new ImageIcon(getClass().getResource("/images/56.png")),
+			i57= new ImageIcon(getClass().getResource("/images/57.png")),
+			i58= new ImageIcon(getClass().getResource("/images/58.png")),
+			i59= new ImageIcon(getClass().getResource("/images/59.png")),
+			i60= new ImageIcon(getClass().getResource("/images/60.gif")),
+			i61= new ImageIcon(getClass().getResource("/images/61.png")),
+			i62= new ImageIcon(getClass().getResource("/images/62.png")),
+			i63= new ImageIcon(getClass().getResource("/images/63.gif")),
+			i64= new ImageIcon(getClass().getResource("/images/64.gif")),
+			i65= new ImageIcon(getClass().getResource("/images/1010.gif")),
+			i66= new ImageIcon(getClass().getResource("/images/66.gif")),
+			i67= new ImageIcon(getClass().getResource("/images/67.gif")),
+			i68= new ImageIcon(getClass().getResource("/images/68.gif")),
+			i69= new ImageIcon(getClass().getResource("/images/69.png")),
+			i70= new ImageIcon(getClass().getResource("/images/70.png")),
+			i71= new ImageIcon(getClass().getResource("/images/71.png")),
+			i72= new ImageIcon(getClass().getResource("/images/72.png")),
+			i73= new ImageIcon(getClass().getResource("/images/73.png")),
+			i74= new ImageIcon(getClass().getResource("/images/74.png")),
+			i75= new ImageIcon(getClass().getResource("/images/75.png")),
+			i76= new ImageIcon(getClass().getResource("/images/76.png")),
+			i77= new ImageIcon(getClass().getResource("/images/77.png")),
+			i78= new ImageIcon(getClass().getResource("/images/78.png")),
+			i79= new ImageIcon(getClass().getResource("/images/79.png")),
+			i80= new ImageIcon(getClass().getResource("/images/80.png")),
+			i81= new ImageIcon(getClass().getResource("/images/81.png")),
+			i82= new ImageIcon(getClass().getResource("/images/82.png")),
+			i83= new ImageIcon(getClass().getResource("/images/83.png")),
+			i84= new ImageIcon(getClass().getResource("/images/84.png")),
+			i85= new ImageIcon(getClass().getResource("/images/85.png")),
+			i86= new ImageIcon(getClass().getResource("/images/86.png")),
+			i87= new ImageIcon(getClass().getResource("/images/87.png")),
+			i88= new ImageIcon(getClass().getResource("/images/88.png")),
+			i89= new ImageIcon(getClass().getResource("/images/89.png")),
+			i91= new ImageIcon(getClass().getResource("/images/91.png")),
+			i92= new ImageIcon(getClass().getResource("/images/92.png")),
+			i93= new ImageIcon(getClass().getResource("/images/93.gif")),
+			i94= new ImageIcon(getClass().getResource("/images/94.png")),
+			i95= new ImageIcon(getClass().getResource("/images/95.png")),
+			i96= new ImageIcon(getClass().getResource("/images/96.png")),
+			i97= new ImageIcon(getClass().getResource("/images/97.png")),
+			i98= new ImageIcon(getClass().getResource("/images/98.png")),
+			i99= new ImageIcon(getClass().getResource("/images/99.png")),
+			i100= new ImageIcon(getClass().getResource("/images/100.png")),
+			i101= new ImageIcon(getClass().getResource("/images/101.png")),
+			i102= new ImageIcon(getClass().getResource("/images/102.png")),
+			i103= new ImageIcon(getClass().getResource("/images/103.png")),
+			i104= new ImageIcon(getClass().getResource("/images/104.png")),
+			i105= new ImageIcon(getClass().getResource("/images/105.png")),
+			i106= new ImageIcon(getClass().getResource("/images/106.png")),
+			i107= new ImageIcon(getClass().getResource("/images/107.png")),
+			i108= new ImageIcon(getClass().getResource("/images/108.png")),
+			i109= new ImageIcon(getClass().getResource("/images/109.png")),
+			i110= new ImageIcon(getClass().getResource("/images/110.png")),
+			i111= new ImageIcon(getClass().getResource("/images/111.png")),
+			i112= new ImageIcon(getClass().getResource("/images/112.png")),
+			i113= new ImageIcon(getClass().getResource("/images/113.png")),
+			i114= new ImageIcon(getClass().getResource("/images/114.png"));
 
 	JButton 	button3 = new JButton(i3),
-				button7 = new JButton(i7),
-				button8 = new JButton(i8),
-				button9 = new JButton(i9),
-				button10 = new JButton(i10),
-				button11 = new JButton(i11),
-				button12 = new JButton(i12),
-				button13 = new JButton(i13),
-				button14 = new JButton(i14),
-				button15 = new JButton(i15),
-				button16 = new JButton(i16),
-				button17 = new JButton(i17),
-				button18 = new JButton(i18),
-				button19 = new JButton(i19),
-				button20 = new JButton(i20),
-				button21 = new JButton(i21),
-				button22 = new JButton(i22),
-				button23 = new JButton(i23),
-				button24 = new JButton(i24),
-				button25 = new JButton(i25),
-				button26 = new JButton(i26),
-				button27 = new JButton(i27),
-				button28 = new JButton(i28),
-				button29 = new JButton(i29),
-				button30 = new JButton(i30),
-				button31 = new JButton(i31),
-				button32 = new JButton(i32),
-				button33 = new JButton(i33),
-				button34 = new JButton(i34),
-				button35 = new JButton(i35),
-				button36 = new JButton(i36),
-				button37 = new JButton(i37),
-				button38 = new JButton(i38),
-				button39 = new JButton(i39),
-				button40 = new JButton(i40),
-				button41 = new JButton(i41),
-				button42 = new JButton(i42),
-				button43 = new JButton(i43),
-				button44 = new JButton(i44),
-				button45 = new JButton(i45),
-				button46 = new JButton(i46),
-				button47 = new JButton(i47),
-				button48 = new JButton(i48),
-				button49 = new JButton(i49),
-				button50 = new JButton(i50),
-				button51 = new JButton(i51),
-				button52 = new JButton(i52),
-				button53 = new JButton(i53),
-				button54 = new JButton(i54),
-				button55 = new JButton(i55),
-				button56 = new JButton(i56),
-				button57 = new JButton(i57),
-				button58 = new JButton(i58),
-				button59 = new JButton(i59),
-				button60 = new JButton(i60),
-				button61 = new JButton(i61),
-				button62 = new JButton(i62),
-				button63 = new JButton(i63),
-				button64 = new JButton(i64),
-				button65 = new JButton(i65),
-				button66 = new JButton(i66),
-				button67 = new JButton(i67),
-				button68 = new JButton(i68),
-				button69 = new JButton(i69),
-				button70 = new JButton(i70),
-				button71 = new JButton(i71),
-				button72 = new JButton(i72),
-				button73 = new JButton(i73),
-				button74 = new JButton(i74),
-				button75 = new JButton(i75),
-				button76 = new JButton(i76),
-				button77 = new JButton(i77),
-				button78 = new JButton(i78),
-				button79 = new JButton(i79),
-				button80 = new JButton(i80),
-				button81 = new JButton(i81),
-				button82 = new JButton(i82),
-				button83 = new JButton(i83),
-				button84 = new JButton(i84),
-				button85 = new JButton(i85),
-				button86 = new JButton(i86),
-				button87 = new JButton(i87),
-				button88 = new JButton(i88),
-				button89 = new JButton(i89),
-				button91 = new JButton(i91),
-				button92 = new JButton(i92),
-				button93 = new JButton(i93),
-				button94 = new JButton(i94),
-				button95 = new JButton(i95),
-				button96 = new JButton(i96),
-				button97 = new JButton(i97),
-				button98 = new JButton(i98),
-				button99 = new JButton(i99),
-				button100 = new JButton(i100),
-				button101 = new JButton(i101),
-				button102 = new JButton(i102),
-				button103 = new JButton(i103),
-				button104 = new JButton(i104),
-				button105 = new JButton(i105),
-				button106 = new JButton(i106),
-				button107 = new JButton(i107),
-				button108 = new JButton(i108),
-				button109 = new JButton(i109),
-				button110 = new JButton(i110),
-				button111 = new JButton(i111),
-				button112 = new JButton(i112),
-				button113 = new JButton(i113),
-				button114 = new JButton(i114),
-				stäng = new JButton(),
-				skicka = new JButton("Send");
-				
+			button7 = new JButton(i7),
+			button8 = new JButton(i8),
+			button9 = new JButton(i9),
+			button10 = new JButton(i10),
+			button11 = new JButton(i11),
+			button12 = new JButton(i12),
+			button13 = new JButton(i13),
+			button14 = new JButton(i14),
+			button15 = new JButton(i15),
+			button16 = new JButton(i16),
+			button17 = new JButton(i17),
+			button18 = new JButton(i18),
+			button19 = new JButton(i19),
+			button20 = new JButton(i20),
+			button21 = new JButton(i21),
+			button22 = new JButton(i22),
+			button23 = new JButton(i23),
+			button24 = new JButton(i24),
+			button25 = new JButton(i25),
+			button26 = new JButton(i26),
+			button27 = new JButton(i27),
+			button28 = new JButton(i28),
+			button29 = new JButton(i29),
+			button30 = new JButton(i30),
+			button31 = new JButton(i31),
+			button32 = new JButton(i32),
+			button33 = new JButton(i33),
+			button34 = new JButton(i34),
+			button35 = new JButton(i35),
+			button36 = new JButton(i36),
+			button37 = new JButton(i37),
+			button38 = new JButton(i38),
+			button39 = new JButton(i39),
+			button40 = new JButton(i40),
+			button41 = new JButton(i41),
+			button42 = new JButton(i42),
+			button43 = new JButton(i43),
+			button44 = new JButton(i44),
+			button45 = new JButton(i45),
+			button46 = new JButton(i46),
+			button47 = new JButton(i47),
+			button48 = new JButton(i48),
+			button49 = new JButton(i49),
+			button50 = new JButton(i50),
+			button51 = new JButton(i51),
+			button52 = new JButton(i52),
+			button53 = new JButton(i53),
+			button54 = new JButton(i54),
+			button55 = new JButton(i55),
+			button56 = new JButton(i56),
+			button57 = new JButton(i57),
+			button58 = new JButton(i58),
+			button59 = new JButton(i59),
+			button60 = new JButton(i60),
+			button61 = new JButton(i61),
+			button62 = new JButton(i62),
+			button63 = new JButton(i63),
+			button64 = new JButton(i64),
+			button65 = new JButton(i65),
+			button66 = new JButton(i66),
+			button67 = new JButton(i67),
+			button68 = new JButton(i68),
+			button69 = new JButton(i69),
+			button70 = new JButton(i70),
+			button71 = new JButton(i71),
+			button72 = new JButton(i72),
+			button73 = new JButton(i73),
+			button74 = new JButton(i74),
+			button75 = new JButton(i75),
+			button76 = new JButton(i76),
+			button77 = new JButton(i77),
+			button78 = new JButton(i78),
+			button79 = new JButton(i79),
+			button80 = new JButton(i80),
+			button81 = new JButton(i81),
+			button82 = new JButton(i82),
+			button83 = new JButton(i83),
+			button84 = new JButton(i84),
+			button85 = new JButton(i85),
+			button86 = new JButton(i86),
+			button87 = new JButton(i87),
+			button88 = new JButton(i88),
+			button89 = new JButton(i89),
+			button91 = new JButton(i91),
+			button92 = new JButton(i92),
+			button93 = new JButton(i93),
+			button94 = new JButton(i94),
+			button95 = new JButton(i95),
+			button96 = new JButton(i96),
+			button97 = new JButton(i97),
+			button98 = new JButton(i98),
+			button99 = new JButton(i99),
+			button100 = new JButton(i100),
+			button101 = new JButton(i101),
+			button102 = new JButton(i102),
+			button103 = new JButton(i103),
+			button104 = new JButton(i104),
+			button105 = new JButton(i105),
+			button106 = new JButton(i106),
+			button107 = new JButton(i107),
+			button108 = new JButton(i108),
+			button109 = new JButton(i109),
+			button110 = new JButton(i110),
+			button111 = new JButton(i111),
+			button112 = new JButton(i112),
+			button113 = new JButton(i113),
+			button114 = new JButton(i114),
+			stäng = new JButton(),
+			skicka = new JButton("Send");
+
 	ImageIcon 	kullersten = new ImageIcon(getClass().getResource("/images/1.png")),
-				rödsten = new ImageIcon(getClass().getResource("/images/2.png")),
-				plankor = new ImageIcon(getClass().getResource("/images/3.png")),
-				pilbåge = new ImageIcon(getClass().getResource("/images/68.gif")),
-				tra = new ImageIcon(getClass().getResource("/images/200.png")),
-				sand = new ImageIcon(getClass().getResource("/images/4.png")),
-				ull = new ImageIcon(getClass().getResource("/images/1026.gif")),
-				guld = new ImageIcon(getClass().getResource("/images/5.png")),
-				pinne = new ImageIcon(getClass().getResource("/images/71.png")),
-				tryckplatta = new ImageIcon(getClass().getResource("/images/30.png")),
-				kolv = new ImageIcon(getClass().getResource("/images/14.gif")),
-				slime = new ImageIcon(getClass().getResource("/images/1000.png")),
-				tråd = new ImageIcon(getClass().getResource("/images/1001.png")),
-				tegel = new ImageIcon(getClass().getResource("/images/1006.png")),
-				krut = new ImageIcon(getClass().getResource("/images/1005.png")),
-				järn = new ImageIcon(getClass().getResource("/images/6.png")),
-				diamant = new ImageIcon(getClass().getResource("/images/1013.png")),
-				snöboll = new ImageIcon(getClass().getResource("/images/1012.png")),
-				obsidian = new ImageIcon(getClass().getResource("/images/1018.png")),
-				enderöga = new ImageIcon(getClass().getResource("/images/103.png")),
-				bok = new ImageIcon(getClass().getResource("/images/84.png")),
-				papper = new ImageIcon(getClass().getResource("/images/83.png")),
-				läder = new ImageIcon(getClass().getResource("/images/1032.png")),
-				gruvvagn = new ImageIcon(getClass().getResource("/images/81.png")),
-				hopper = new ImageIcon(getClass().getResource("/images/58.png")),
-				kista = new ImageIcon(getClass().getResource("/images/22.gif")),
-				ugn = new ImageIcon(getClass().getResource("/images/24.png")),
-				färger = new ImageIcon(getClass().getResource("/images/90.gif")),
-				raketstjärna = new ImageIcon(getClass().getResource("/images/111.png")),
-				dynamit = new ImageIcon(getClass().getResource("/images/18.png")),
-				block = new ImageIcon(getClass().getResource("/images/1008.gif")),
-				socker = new ImageIcon(getClass().getResource("/images/91.png")),
-				ägg = new ImageIcon(getClass().getResource("/images/1035.png")),
-				pumpa = new ImageIcon(getClass().getResource("/images/1015.png")),
-				kol = new ImageIcon(getClass().getResource("/images/1007.png")),
-				morot = new ImageIcon(getClass().getResource("/images/1042.png")),
-				fiskespö = new ImageIcon(getClass().getResource("/images/88.png")),
-				guldklimp = new ImageIcon(getClass().getResource("/images/98.png")),
-				järnträ = new ImageIcon(getClass().getResource("/images/1009.gif")),
-				fjäder = new ImageIcon(getClass().getResource("/images/1030.png")),
-				bläck = new ImageIcon(getClass().getResource("/images/1041.png")),
-				tryck = new ImageIcon(getClass().getResource("/images/1011.gif")),
-				melon = new ImageIcon(getClass().getResource("/images/1017.png")),
-				blazepulver = new ImageIcon(getClass().getResource("/images/101.png")),
-				blaze = new ImageIcon(getClass().getResource("/images/1019.png")),
-				enderpärla = new ImageIcon(getClass().getResource("/images/1040.png")),
-				svamp = new ImageIcon(getClass().getResource("/images/1039.png")),
-				spindelöga = new ImageIcon(getClass().getResource("/images/1038.png")),
-				glödstenspulver = new ImageIcon(getClass().getResource("/images/1014.png")),
-				fackla = new ImageIcon(getClass().getResource("/images/20.png")),
-				glas = new ImageIcon(getClass().getResource("/images/1016.png")),
-				vete = new ImageIcon(getClass().getResource("/images/1028.png")),
-				kakao = new ImageIcon(getClass().getResource("/images/1037.png")),
-				kompass = new ImageIcon(getClass().getResource("/images/87.png")),
-				sten = new ImageIcon(getClass().getResource("/images/1002.png")),
-				rödstensfackla = new ImageIcon(getClass().getResource("/images/31.png")),
-				mjölk = new ImageIcon(getClass().getResource("/images/1036.png")),
-				färgglas = new ImageIcon(getClass().getResource("/images/1012.gif")),
-				sockerrör = new ImageIcon(getClass().getResource("/images/1034.png")),
-				glödstenslampa = new ImageIcon(getClass().getResource("/images/36.png")),
-				äpple = new ImageIcon(getClass().getResource("/images/1033.png")),
-				flinta = new ImageIcon(getClass().getResource("/images/1031.png")),
-				järnStenTrä = new ImageIcon(getClass().getResource("/images/1029.gif")),
-				nederstjärna = new ImageIcon(getClass().getResource("/images/1020.png")),
-				järnblock = new ImageIcon(getClass().getResource("/images/1021.png")),
-				trähalvblock = new ImageIcon(getClass().getResource("/images/1023.png")),
-				nederkvarts = new ImageIcon(getClass().getResource("/images/1022.png")),
-				material = new ImageIcon(getClass().getResource("/images/1027.gif")),
-				snubbeltrådskrok = new ImageIcon(getClass().getResource("/images/49.gif"));
-	
+			rödsten = new ImageIcon(getClass().getResource("/images/2.png")),
+			plankor = new ImageIcon(getClass().getResource("/images/3.png")),
+			pilbåge = new ImageIcon(getClass().getResource("/images/68.gif")),
+			tra = new ImageIcon(getClass().getResource("/images/200.png")),
+			sand = new ImageIcon(getClass().getResource("/images/4.png")),
+			ull = new ImageIcon(getClass().getResource("/images/1026.gif")),
+			guld = new ImageIcon(getClass().getResource("/images/5.png")),
+			pinne = new ImageIcon(getClass().getResource("/images/71.png")),
+			tryckplatta = new ImageIcon(getClass().getResource("/images/30.png")),
+			kolv = new ImageIcon(getClass().getResource("/images/14.gif")),
+			slime = new ImageIcon(getClass().getResource("/images/1000.png")),
+			tråd = new ImageIcon(getClass().getResource("/images/1001.png")),
+			tegel = new ImageIcon(getClass().getResource("/images/1006.png")),
+			krut = new ImageIcon(getClass().getResource("/images/1005.png")),
+			järn = new ImageIcon(getClass().getResource("/images/6.png")),
+			diamant = new ImageIcon(getClass().getResource("/images/1013.png")),
+			snöboll = new ImageIcon(getClass().getResource("/images/1012.png")),
+			obsidian = new ImageIcon(getClass().getResource("/images/1018.png")),
+			enderöga = new ImageIcon(getClass().getResource("/images/103.png")),
+			bok = new ImageIcon(getClass().getResource("/images/84.png")),
+			papper = new ImageIcon(getClass().getResource("/images/83.png")),
+			läder = new ImageIcon(getClass().getResource("/images/1032.png")),
+			gruvvagn = new ImageIcon(getClass().getResource("/images/81.png")),
+			hopper = new ImageIcon(getClass().getResource("/images/58.png")),
+			kista = new ImageIcon(getClass().getResource("/images/22.gif")),
+			ugn = new ImageIcon(getClass().getResource("/images/24.png")),
+			färger = new ImageIcon(getClass().getResource("/images/90.gif")),
+			raketstjärna = new ImageIcon(getClass().getResource("/images/111.png")),
+			dynamit = new ImageIcon(getClass().getResource("/images/18.png")),
+			block = new ImageIcon(getClass().getResource("/images/1008.gif")),
+			socker = new ImageIcon(getClass().getResource("/images/91.png")),
+			ägg = new ImageIcon(getClass().getResource("/images/1035.png")),
+			pumpa = new ImageIcon(getClass().getResource("/images/1015.png")),
+			kol = new ImageIcon(getClass().getResource("/images/1007.png")),
+			morot = new ImageIcon(getClass().getResource("/images/1042.png")),
+			fiskespö = new ImageIcon(getClass().getResource("/images/88.png")),
+			guldklimp = new ImageIcon(getClass().getResource("/images/98.png")),
+			järnträ = new ImageIcon(getClass().getResource("/images/1009.gif")),
+			fjäder = new ImageIcon(getClass().getResource("/images/1030.png")),
+			bläck = new ImageIcon(getClass().getResource("/images/1041.png")),
+			tryck = new ImageIcon(getClass().getResource("/images/1011.gif")),
+			melon = new ImageIcon(getClass().getResource("/images/1017.png")),
+			blazepulver = new ImageIcon(getClass().getResource("/images/101.png")),
+			blaze = new ImageIcon(getClass().getResource("/images/1019.png")),
+			enderpärla = new ImageIcon(getClass().getResource("/images/1040.png")),
+			svamp = new ImageIcon(getClass().getResource("/images/1039.png")),
+			spindelöga = new ImageIcon(getClass().getResource("/images/1038.png")),
+			glödstenspulver = new ImageIcon(getClass().getResource("/images/1014.png")),
+			fackla = new ImageIcon(getClass().getResource("/images/20.png")),
+			glas = new ImageIcon(getClass().getResource("/images/1016.png")),
+			vete = new ImageIcon(getClass().getResource("/images/1028.png")),
+			kakao = new ImageIcon(getClass().getResource("/images/1037.png")),
+			kompass = new ImageIcon(getClass().getResource("/images/87.png")),
+			sten = new ImageIcon(getClass().getResource("/images/1002.png")),
+			rödstensfackla = new ImageIcon(getClass().getResource("/images/31.png")),
+			mjölk = new ImageIcon(getClass().getResource("/images/1036.png")),
+			färgglas = new ImageIcon(getClass().getResource("/images/1012.gif")),
+			sockerrör = new ImageIcon(getClass().getResource("/images/1034.png")),
+			glödstenslampa = new ImageIcon(getClass().getResource("/images/36.png")),
+			äpple = new ImageIcon(getClass().getResource("/images/1033.png")),
+			flinta = new ImageIcon(getClass().getResource("/images/1031.png")),
+			järnStenTrä = new ImageIcon(getClass().getResource("/images/1029.gif")),
+			nederstjärna = new ImageIcon(getClass().getResource("/images/1020.png")),
+			järnblock = new ImageIcon(getClass().getResource("/images/1021.png")),
+			trähalvblock = new ImageIcon(getClass().getResource("/images/1023.png")),
+			nederkvarts = new ImageIcon(getClass().getResource("/images/1022.png")),
+			material = new ImageIcon(getClass().getResource("/images/1027.gif")),
+			snubbeltrådskrok = new ImageIcon(getClass().getResource("/images/49.gif"));
+
 	String traString = "",kullerString = "",rödString = "",sandString = "",guldString = "",
 			slimesString = "",trådsString = "",tegelString = "",krutString = "",järnString = "",
 			diamantString = "",snöbollString = "",obsidianString = "",lädersString = "",färgerString = "",
@@ -571,17 +571,13 @@ public class GoJb1 implements ActionListener, CaretListener{
 			veteString = "",kakaoString = "",stenString = "",sockerrörString = "",mjölkString = "",
 			äppleString = "",flintaString = "",järnstenträString = "",nederstjärnaString = "",
 			nederkvartString = "",materialString = "";
-	
+
 	JPanel frame = new JPanel();
 
 	JScrollPane scrollBar=new JScrollPane(frame,JScrollPane.VERTICAL_SCROLLBAR_ALWAYS,JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
-	
-	public static void main(String[] args) {
-		new Ladda();
-	}
-	
+
 	public GoJb1(){
-		
+
 
 		try {
 			prop.load(new FileInputStream(System.getProperty ("user.home") + "\\AppData\\Roaming\\GoJb\\settings.gojb"));
@@ -594,16 +590,16 @@ public class GoJb1 implements ActionListener, CaretListener{
 		} catch (Exception e) {
 			Språkfråga();
 		}
-		
-		
-	/**
+
+
+		/**
 9778436klbgflf=lhdohf7984
 #Engelska
 #lhdohf7984
 #Svenska
 #86325yhrel
-	 */
-		
+		 */
+
 	}
 	public void Språkfråga() {
 		ActionListener dActionListener = new ActionListener() {
@@ -611,7 +607,7 @@ public class GoJb1 implements ActionListener, CaretListener{
 				if (e.getSource()==svenska) {
 					prop.setProperty("9778436klbgflf", "86325yhrel");
 					prop.setProperty("x", "1");
-					Ladda.SpråkVoid();
+					SpråkVoid();
 					try {
 						prop.store(new FileWriter(new File(System.getProperty("user.home") + "\\AppData\\Roaming\\GoJb\\settings.gojb")),"Inställningar för GoJbGuide");
 					} catch (Exception ee) {
@@ -620,7 +616,7 @@ public class GoJb1 implements ActionListener, CaretListener{
 				}
 				else if (e.getSource()==engelska) {
 					prop.setProperty("9778436klbgflf", "lhdohf7984");
-					Ladda.SpråkVoid();
+					SpråkVoid();
 				}
 				try {
 					prop.store(new FileWriter(new File(System.getProperty("user.home") + "\\AppData\\Roaming\\GoJb\\settings.gojb")),"Inställningar för GoJbGuide");
@@ -669,9 +665,9 @@ public class GoJb1 implements ActionListener, CaretListener{
 		if (prop.getProperty("9778436klbgflf").equals("86325yhrel")){
 
 			//Svenska
-			
+
 			prop.setProperty("z", "86325yhrel");
-			
+
 			if (prop.getProperty("y","2").equals("10")) {
 
 				yString = " Tack för att\n du använder det här programmet! :)";
@@ -679,20 +675,20 @@ public class GoJb1 implements ActionListener, CaretListener{
 			else {
 				yString = "";
 			}
-			
+
 			help = "Hej! Det här programmet är programmerat av \n GoJbs Javaprogramering." + yString;
-			
+
 			språkMeny.setIcon(new ImageIcon(getClass().getResource("/images/Swedish.jpg")));
-			
+
 			System.out.println("Hej!");
-			
+
 			väljSpråk.setText("Språk");
 			språkMeny.setText("Språk");
 
 			hjälpMenu.setText("Hjälp");
 			helpItem.setText("Hjälp");
 			ideasItem.setText("Idéer/buggar");
-			
+
 			button3.setText("Träplankor");
 			button7.setText("Automat");
 			button8.setText("Sandsten");
@@ -803,7 +799,7 @@ public class GoJb1 implements ActionListener, CaretListener{
 			button114.setText("Koppel");
 
 			sortera();
-			
+
 			traString = "Trä";
 			kullerString = "Kullersten";
 			rödString = "Rödsten";
@@ -844,35 +840,35 @@ public class GoJb1 implements ActionListener, CaretListener{
 			nederstjärnaString = "Nederstjärna";
 			nederkvartString = "Nederkvarts";
 			materialString = "Material";
-			
+
 		}
 		else if (prop.getProperty("9778436klbgflf").equals("lhdohf7984")){
 			//Eng
-			
+
 			prop.setProperty("z", "lhdohf7984");
-						
+
 			if (prop.getProperty("y","2").equals("10")) {
-				
+
 				yString = " Thanks for \nusing this application! :)";
-				
+
 			}
 			else {
 				yString = "";
 			}
-			
+
 			help = "Hello! This program is coded by\n GoJbs Javaprogramming." + yString;
-			
+
 			språkMeny.setIcon(new ImageIcon(getClass().getResource("/images/Brittish.jpg")));
-			
+
 			väljSpråk.setText("Language");
 			språkMeny.setText("Language");
-			
+
 			hjälpMenu.setText("Help");
 			helpItem.setText("Help");
 			ideasItem.setText("Ideas/Bugs");
-			
-			
-			
+
+
+
 			button3.setText("Planks");
 			button7.setText("Dispenser");
 			button8.setText("Sandstone");
@@ -983,7 +979,7 @@ public class GoJb1 implements ActionListener, CaretListener{
 			button114.setText("Lead");
 
 			sortera();
-			
+
 			traString = "Wood";
 			kullerString = "Cobblestone";
 			rödString = "Redstone";
@@ -1024,7 +1020,7 @@ public class GoJb1 implements ActionListener, CaretListener{
 			nederstjärnaString = "Nether Star";
 			nederkvartString = "Nether Quartz";
 			materialString = "Elements (like Diamods, Iron etc)";
-			
+
 		}
 		else {
 			throw new Exception();
@@ -1143,8 +1139,8 @@ public class GoJb1 implements ActionListener, CaretListener{
 		frameHuvud.revalidate();
 		frameHuvud.setSize(800,700);
 		frameHuvud.setLocationRelativeTo(null);
-		
-		
+
+
 	}
 	public void GörFönster() {
 
@@ -3748,7 +3744,7 @@ public class GoJb1 implements ActionListener, CaretListener{
 		frame112.setIconImage(frameHuvud.getIconImage());
 		frame113.setIconImage(frameHuvud.getIconImage());
 		frame114.setIconImage(frameHuvud.getIconImage());
-		
+
 		button3.setVerticalTextPosition(JButton.BOTTOM);
 		button7.setVerticalTextPosition(JButton.BOTTOM);
 		button8.setVerticalTextPosition(JButton.BOTTOM);
@@ -3857,7 +3853,7 @@ public class GoJb1 implements ActionListener, CaretListener{
 		button112.setVerticalTextPosition(JButton.BOTTOM);
 		button113.setVerticalTextPosition(JButton.BOTTOM);
 		button114.setVerticalTextPosition(JButton.BOTTOM);
-	
+
 		button3.setHorizontalTextPosition(JButton.CENTER);
 		button7.setHorizontalTextPosition(JButton.CENTER);
 		button8.setHorizontalTextPosition(JButton.CENTER);
@@ -3966,27 +3962,29 @@ public class GoJb1 implements ActionListener, CaretListener{
 		button112.setHorizontalTextPosition(JButton.CENTER);
 		button113.setHorizontalTextPosition(JButton.CENTER);
 		button114.setHorizontalTextPosition(JButton.CENTER);
-		
+
 		frame.setLayout(new GridLayout(0, 3));
 
 		frameHuvud.setJMenuBar(bar);
-		
+
 		bar.add(språkMeny);
 		bar.add(hjälpMenu);
-		
+
 		text.addCaretListener(this);
-		
+
 		bar.add(text);
-		
+
 		helpItem.addActionListener(this);
 		ideasItem.addActionListener(this);
 
 		mailTimer.start();
-		
+
 		label.setEditable(false);
+		label.setBackground(BLACK);
+		label.setForeground(WHITE);
 		label.setFont(new Font("Areal", Font.BOLD, 30));
-		
-		
+
+
 		språkMeny.add(väljSpråk);
 		hjälpMenu.add(helpItem);
 		hjälpMenu.add(ideasItem);
@@ -3995,59 +3993,75 @@ public class GoJb1 implements ActionListener, CaretListener{
 		frameHuvud.add(scrollBar);
 		frameHuvud.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frameHuvud.setLocationRelativeTo(null);
-		frameHuvud.setVisible(true);
-		
 
-	}
 
-	public void actionPerformed(ActionEvent e) {
-	
-		if(e.getSource()==mailTimer){
-		
-		if(Ladda.mailSkickat==false){
-			//Mail
-			
-			try {
-				System.out.println("jndsnl");
-				Mail.Skicka("gojb@gojb.bl.ee", "Användande av GoJbGuide", "Namn:  " + prop.getProperty("Namn") + ", Språk:  " + prop.getProperty("9778436klbgflf") + "\n //lhdohf7984 = Engelska \n //86325yhrel = Svenska");
-				prop.setProperty("y", "10");
-				System.out.println("Skickat!");
-				mailTimer.stop();
-				try {
-					prop.store(new FileWriter(new File(System.getProperty("user.home") + "\\AppData\\Roaming\\GoJb\\settings.gojb")),"Inställningar för GoJbGuide");
-					System.out.println("Lyckades skriva i prop");
-				} catch (Exception e1) {
-					System.out.println("lijashfölivbfspxkl");
-					e1.printStackTrace();
-				}
-			} catch (Exception e1) {
-				System.err.println("Mejl misslyckadess att skickas");
-				e1.printStackTrace();
-			}
-
-		}
-		if(Ladda.mailSkickat==true){
-			mailTimer.stop();
-		}
-		}
-		if (e.getSource()==helpItem){
-		
-		JOptionPane.showMessageDialog(null, help);
-		}
-		if (e.getSource()==ideasItem) {
-			
 		ideasFrame.setSize(525,500);
 		ideasFrame.setLocationRelativeTo(null);
-		ideasFrame.setVisible(true);
 		ideasFrame.setLayout(new GridLayout(3,1));
 		ideasFrame.add(label);
 		ideasFrame.add(area);
 		ideasFrame.add(skicka);
-			
+		skicka.addActionListener(this);
+
+
+	}
+
+	public void actionPerformed(ActionEvent e) {
+
+		if(e.getSource()==mailTimer){
+
+			if(GoJb1.mailSkickat==false){
+				//Mail
+
+				try {
+					System.out.println("jndsnl");
+					Mail.Skicka("gojb@gojb.bl.ee", "Användande av GoJbGuide", "Namn:  " + prop.getProperty("Namn") + ", Språk:  " + prop.getProperty("9778436klbgflf") + "\n //lhdohf7984 = Engelska \n //86325yhrel = Svenska");
+					prop.setProperty("y", "10");
+					System.out.println("Skickat!");
+					mailTimer.stop();
+					try {
+						prop.store(new FileWriter(new File(System.getProperty("user.home") + "\\AppData\\Roaming\\GoJb\\settings.gojb")),"Inställningar för GoJbGuide");
+						System.out.println("Lyckades skriva i prop");
+					} catch (Exception e1) {
+						System.out.println("lijashfölivbfspxkl");
+						e1.printStackTrace();
+					}
+				} catch (Exception e1) {
+					System.err.println("Mejl misslyckadess att skickas");
+					e1.printStackTrace();
+				}
+
+			}
+			if(GoJb1.mailSkickat==true){
+				mailTimer.stop();
+			}
 		}
-		
+		if (e.getSource()==helpItem){
+
+			JOptionPane.showMessageDialog(null, help);
+		}
+		if (e.getSource()==ideasItem) {
+
+
+			ideasFrame.setVisible(true);
+
+
+		}
+		if(skicka==e.getSource()){
+			try {
+				Mail.Skicka("gojb@gojb.bl.ee","--Bugg/idéer--",prop.getProperty("Namn") 
+						+ " skriver: \n" + area.getText());
+				ideasFrame.dispose();
+			} catch (Exception e1) {
+
+				System.err.println("Mail skickades inte!!");
+
+			}
+		}
+
+
 		System.out.println("Någon knapp nedtryckt!");	
-		
+
 		frame3.setVisible(false);
 		frame7.setVisible(false);
 		frame8.setVisible(false);
@@ -4157,7 +4171,7 @@ public class GoJb1 implements ActionListener, CaretListener{
 		frame113.setVisible(false);
 		frame114.setVisible(false);
 
-		
+
 		frame3.setLocationRelativeTo(frameHuvud);
 		frame7.setLocationRelativeTo(frameHuvud);
 		frame8.setLocationRelativeTo(frameHuvud);
@@ -4591,13 +4605,13 @@ public class GoJb1 implements ActionListener, CaretListener{
 		if (e.getSource() == button114){
 			frame114.setVisible(true); 
 		}
-		
+
 		Icon abc = null;
 		try {
 			abc = ((AbstractButton) e.getSource()).getIcon();
 		} catch (Exception e1) {
 		}
-		
+
 		if (abc==tra) {
 
 			JOptionPane.showMessageDialog(null, traString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
@@ -4807,12 +4821,12 @@ public class GoJb1 implements ActionListener, CaretListener{
 			Språkfråga();
 
 		}
-		
+
 	}
 	@Override
 	public void caretUpdate(CaretEvent e) {
 		läggtill();
-		
+
 		if(!button3.getText().toLowerCase().contains(text.getText().toLowerCase())){
 			frame.remove(button3);
 		}
@@ -5377,39 +5391,104 @@ public class GoJb1 implements ActionListener, CaretListener{
 			frame.add(jButton);
 		}
 	}
-}
-
-class Ladda extends JPanel implements ActionListener{
+ActionListener actionListener2 = new ActionListener() {
+		
+		public void actionPerformed(ActionEvent arg0) {
+			// TODO Auto-generated method stub
+			
 	
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
 
-	JProgressBar progressBar = new JProgressBar(0,100);
-	
-	static JFrame frame = new JFrame();
+		if (timer == arg0.getSource()){
+
+			if(namn == null){
+				namn = "";
+			}
+
+
+			background1.setText(välkommen + " " + namn);			
+			progressBar.setValue(progressBar.getValue()+1);
+			background2.setText(Integer.toString(progressBar.getValue())+"%");
+			frame2.repaint();
+			frame2.revalidate();
+			layeredPane.revalidate();
+			layeredPane.repaint();
+			progressBar.repaint();
+			progressBar.revalidate();
+
+			frame2.revalidate();
+
+		}
+		a++;
+
+		if (z == 0){
+			x++;
+		}
+		if (progressBar.getValue() == 50 && namnInt == 1){
+			start=true;
+			new GoJb1();
+			new Thread(new Update()).start();
+			prop.setProperty("y", "9");
+		}
+		if(progressBar.getValue()==101&&start==true){
+			timer.stop();
+			frameHuvud.setVisible(true);
+			frame2.dispose();
+		}
+		if (progressBar.getValue() == 100 && namnInt == 2){
+
+			timer.stop();
+
+			namn = JOptionPane.showInputDialog("Enter name/Skriv ditt namn");
+
+			if(namn.equals("")||namn.equals(null)){
+
+				System.exit(3);
+				frame2.dispose();
+			}
+
+			else {
+
+				new GoJb1();
+				frame2.dispose();
+				timer.stop();
+
+			}
+			prop.setProperty("Namn", namn);
+			try {
+				prop.store(new FileWriter(new File(System.getProperty("user.home") + "\\AppData\\Roaming\\GoJb\\settings.gojb")),"Inställningar för GoJbGuide");
+			} catch (Exception e) {
+				System.out.println("lyckades inte skriva");
+				e.printStackTrace();
+				Namn();
+			}
+		}
+	}};
+
+	static int x = 1,z,namnInt;
+
+	static String namn, välkommen, hej = "123456789", namn2, string, laddaString, cancelString, finishedString;
+
+	static Boolean mailSkickat,start = false, språkValt;
+
+	JProgressBar progressBar = new JProgressBar(0,101);
+
+	static JFrame frame2 = new JFrame();
 	JLayeredPane layeredPane = new JLayeredPane();
 	JLabel background=new JLabel(new ImageIcon(getClass().getResource("/images/Mine.jpg")));
 	JLabel background1=new JLabel(),
 			background2 = new JLabel();
 
-	Timer timer = new Timer(30, this);
+	Timer timer = new Timer(30, actionListener2);
 
 	int a;
-	
-	static int x = 1,z,namnInt;
-	 
-	static String namn, välkommen, hej = "123456789", namn2, string, laddaString, cancelString, finishedString;
-	
-	static Boolean mailSkickat,start = false, språkValt;
-	
-	public Ladda(){
-		
+
+
+	public void Ladda(){
+
 		try {
 			prop.load(new FileInputStream(System.getProperty ("user.home") + "\\AppData\\Roaming\\GoJb\\settings.gojb"));
 		} catch (IOException e) {
-		
+
 			System.err.println("sdoövhjxcblizxg,vbs");
 		}
 
@@ -5419,23 +5498,22 @@ class Ladda extends JPanel implements ActionListener{
 			((Runnable) Toolkit.getDefaultToolkit().getDesktopProperty("win.sound.hand")).run();
 			JOptionPane.showMessageDialog(null, "Bad LookAndFeel!","Error",JOptionPane.ERROR_MESSAGE);
 		}
-		
-		frame.setLayeredPane(layeredPane);
 
-		frame.setBackground(white);
-		frame.setIconImage(new ImageIcon(getClass().getResource("/images/Java-icon.png")).getImage());
+		frame2.setLayeredPane(layeredPane);
+
+		frame2.setBackground(white);
+		frame2.setIconImage(new ImageIcon(getClass().getResource("/images/Java-icon.png")).getImage());
 
 		layeredPane.add(background);
 		layeredPane.add(background1);
 		layeredPane.add(background2);
 		layeredPane.add(progressBar);
-		setSize(frame.getSize());
-		frame.setLayout(new BorderLayout());
-		frame.setSize(300,200);
-		frame.setLocationRelativeTo(null);
-		frame.setDefaultCloseOperation(3);
-		frame.setUndecorated(true);
-		frame.setVisible(true);
+		frame2.setLayout(new BorderLayout());
+		frame2.setSize(300,200);
+		frame2.setLocationRelativeTo(null);
+		frame2.setDefaultCloseOperation(3);
+		frame2.setUndecorated(true);
+		frame2.setVisible(true);
 
 		background.setOpaque(true);
 		background.setBackground(blue);
@@ -5448,74 +5526,68 @@ class Ladda extends JPanel implements ActionListener{
 		background1.setSize(300,54);
 		background1.setLocation(20, 30);
 		background1.setFont(new Font("Arial",Font.BOLD,25));
-		
+
 		background2.setForeground(Color.white);
 		background2.setOpaque(false);
 		background2.setBackground(Color.black);
 		background2.setSize(200,54);
 		background2.setLocation(125,70);
 		background2.setFont(new Font("Arial",Font.BOLD,30));
-		
+
 		progressBar.setLocation(50,150);
 		progressBar.setSize(200, 30);
 		progressBar.setForeground(Color.green);
 		progressBar.setBackground(Color.black);
 		progressBar.setBorderPainted(false);
-		
+
 		layeredPane.setLayer(background, 25);
 		layeredPane.setLayer(background1, 90);
 		layeredPane.setLayer(background2, 90);
 		layeredPane.setLayer(progressBar, 100);
 
-		repaint();
-		revalidate();
-		frame.repaint();
-		frame.revalidate();
+		frame2.repaint();
+		frame2.revalidate();
 		layeredPane.revalidate();
 		layeredPane.repaint();
-		
+
 		timer.start();
-		
+
 		SpråkVoid();
-		
+
 		if(prop.getProperty("y","1").equals("10")){
 			mailSkickat=true;
 			System.out.println("Mail = true");
-			
+
 		}
 		else if (!prop.getProperty("y","1").equals("10")){
 			mailSkickat=false;
 			System.out.println("Mail = false");
 		}
-	
+
 		if (!prop.getProperty("9778436klbgflf","kjg").equals("lhdohf7984")&&
 				!prop.getProperty("9778436klbgflf","kjg").equals("86325yhrel")){
 			System.err.println(prop.getProperty("9778436klbgflf"));
-			
+
 			System.err.println("Språk ej valt");
-			
+
 			namnInt = 2;
-			
+
 			prop.setProperty("Namn", "");
-			
-			
+
+
 			if (progressBar.getValue() < 50){
 				välkommen = "Welcome! Loading...";
-				
-			
-				
-				frame.revalidate();
-				frame.repaint();
-				repaint();
-				revalidate();
+
+
+
+				frame2.revalidate();
+				frame2.repaint();
 			}
 			else if (progressBar.getValue() >= 50){
 				välkommen = "Välkommen! Laddar...";
-		
-				frame.revalidate();
-				frame.repaint();
-				repaint();
-				revalidate();
+
+				frame2.revalidate();
+				frame2.repaint();
 			}
 			try {
 				prop.store(new FileWriter(new File(System.getProperty("user.home") + "\\AppData\\Roaming\\GoJb\\settings.gojb")),"Inställningar för GoJbGuide");
@@ -5525,108 +5597,38 @@ class Ladda extends JPanel implements ActionListener{
 				Namn();
 			}
 		}
-	
+
 	}
 	public static void SpråkVoid(){
-	if (prop.getProperty("9778436klbgflf","kjg").equals("86325yhrel")){
-		välkommen = "Välkommen " + prop.getProperty("Namn");
-		string="Uppdatering tillgänglig. Vill du uppdatera?";
-		laddaString="Uppdatera nu";
-		cancelString="Uppdatera senare";
-		finishedString="Uppdatering slutförd. \nProgrammet kommer nu att starta om";
-		GoJb1.label.setText("Skriv vad du har på hjärtat här. Det\nspelar ingen roll om det "
-				+ "är buggar,\nförslag till programmet, eller förslag \ntill nya program. Skriv "
-				+ "det här! :D");
-		frame.revalidate();
-		frame.repaint();
-		namnInt = 1;
-		
-	}
-	else if (prop.getProperty("9778436klbgflf","kjg").equals("lhdohf7984")){
-		välkommen = "Welcome " + prop.getProperty("Namn");
-		string="Update available. Do you want to update?";
-		laddaString = "Update now";
-		cancelString = "Update later";
-		finishedString = "Uppdate finished. \nThe program will now restart";
-		GoJb1.label.setText("Write what's on your mind here. It doesn't matter \n if it's about buggs, ideas"
-				+ "for this program, or ideas for a new program. Write it here! :D");
-		frame.revalidate();
-		frame.repaint();
-		namnInt = 1;
-		
-	}
-	}
-	public void actionPerformed(ActionEvent arg0) {
-
-		if (timer == arg0.getSource()){
-
-			if(namn == null){
-				namn = "";
-			}
-			
-
-			background1.setText(välkommen + " " + namn);			
-			progressBar.setValue(progressBar.getValue()+1);
-			background2.setText(Integer.toString(progressBar.getValue())+"%");
-			frame.repaint();
-			frame.revalidate();
-			repaint();
-			revalidate();
-			layeredPane.revalidate();
-			layeredPane.repaint();
-			progressBar.repaint();
-			progressBar.revalidate();
-			revalidate();
-			repaint();
-			
-			frame.revalidate();
+		if (prop.getProperty("9778436klbgflf","kjg").equals("86325yhrel")){
+			välkommen = "Välkommen " + prop.getProperty("Namn");
+			string="Uppdatering tillgänglig. Vill du uppdatera?";
+			laddaString="Uppdatera nu";
+			cancelString="Uppdatera senare";
+			finishedString="Uppdatering slutförd. \nProgrammet kommer nu att starta om";
+			GoJb1.label.setText("Skriv vad du har på hjärtat här. Det\nspelar ingen roll om det "
+					+ "är buggar,\nförslag till programmet, eller förslag \ntill nya program. Skriv "
+					+ "det här! :D");
+			frame2.revalidate();
+			frame2.repaint();
+			namnInt = 1;
 
 		}
-		a++;
-		
-		if (z == 0){
-			x++;
-		}
-		if (progressBar.getValue() == 50 && namnInt == 1){
-			start=true;
-			new Thread(new Update()).start();
-			prop.setProperty("y", "9");
-		}
-		if(progressBar.getValue()==100&&start==true){
-			timer.stop();
-			new GoJb1();
-			frame.dispose();
-		}
-		if (progressBar.getValue() == 100 && namnInt == 2){
+		else if (prop.getProperty("9778436klbgflf","kjg").equals("lhdohf7984")){
+			välkommen = "Welcome " + prop.getProperty("Namn");
+			string="Update available. Do you want to update?";
+			laddaString = "Update now";
+			cancelString = "Update later";
+			finishedString = "Uppdate finished. \nThe program will now restart";
+			GoJb1.label.setText("Write what's on your mind here. It \ndoesn't matter if it's about buggs or\nideas "
+					+ "for this program, or ideas for \na new program. Write it here! :D");
+			frame2.revalidate();
+			frame2.repaint();
+			namnInt = 1;
 
-			timer.stop();
-
-			namn = JOptionPane.showInputDialog("Enter name/Skriv ditt namn");
-			
-			if(namn.equals("")||namn.equals(null)){
-
-				System.exit(3);
-				frame.dispose();
-			}
-			
-			else {
-				
-			new GoJb1();
-			frame.dispose();
-			timer.stop();
-			
-			}
-			prop.setProperty("Namn", namn);
-			try {
-				prop.store(new FileWriter(new File(System.getProperty("user.home") + "\\AppData\\Roaming\\GoJb\\settings.gojb")),"Inställningar för GoJbGuide");
-			} catch (Exception e) {
-				System.out.println("lyckades inte skriva");
-				e.printStackTrace();
-				Namn();
-			}
 		}
 	}
-
+	
 
 
 	public static void Namn() {
@@ -5645,11 +5647,17 @@ class Ladda extends JPanel implements ActionListener{
 		}
 
 	}
-
+	public static void main(String[] args) {
+		new GoJb1("iaordfh");
+	}
+	GoJb1(String s){
+		Ladda();
+	}
+	
 }
 class Update implements Runnable{
 
-	
+
 	public synchronized void run(){
 		if (getClass().getResource("/" + getClass().getName().replace('.','/') + ".class").toString().startsWith("jar:")) {
 			try {
@@ -5659,8 +5667,8 @@ class Update implements Runnable{
 				System.out.println("File: " + file);
 				System.out.println("Lokal:  "+ file.lastModified());
 				if (file.lastModified() + 60000 < u.openConnection().getLastModified()) {
-					Object[] options = { Ladda.laddaString, Ladda.cancelString };
-					if(JOptionPane.showOptionDialog(null, Ladda.string, "Update",
+					Object[] options = { GoJb1.laddaString, GoJb1.cancelString };
+					if(JOptionPane.showOptionDialog(null, GoJb1.string, "Update",
 							JOptionPane.DEFAULT_OPTION, JOptionPane.WARNING_MESSAGE,
 							null, options, options[0])==OK_OPTION) {
 
@@ -5686,7 +5694,7 @@ class Update implements Runnable{
 						fos.close();
 						System.out.println("Finished");
 						frame.dispose();
-						showMessageDialog(null, Ladda.finishedString, "Update Finished", INFORMATION_MESSAGE);
+						showMessageDialog(null, GoJb1.finishedString, "Update Finished", INFORMATION_MESSAGE);
 						try {
 							String string = "java -jar \"" + file.toString()+"\"";
 							Runtime.getRuntime().exec(string);
@@ -5710,4 +5718,4 @@ class Update implements Runnable{
  * Ta imot mail, om ämmnet.equals(getNamn) visas ett meddelande. Alltså kan man skicka meddelanden till
  *  användare
  *  
-		 */
+ */
