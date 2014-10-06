@@ -3,12 +3,19 @@ import java.awt.*;
 import java.awt.event.*;
 import java.io.*;
 import java.net.URL;
+import java.security.PublicKey;
 import java.util.*;
+import java.util.PrimitiveIterator.OfDouble;
 
+import javax.print.attribute.standard.Finishings;
 import javax.swing.*;
 import javax.swing.Timer;
 import javax.swing.event.CaretEvent;
 import javax.swing.event.CaretListener;
+
+import jdk.internal.dynalink.beans.StaticClass;
+
+import org.omg.CORBA.PUBLIC_MEMBER;
 
 import static gojbguide.GoJb1.*;
 import static java.awt.Color.*;
@@ -38,13 +45,18 @@ public class GoJb1 implements ActionListener, CaretListener{
 	
 	JTextField text = new JTextField();
 	
+	JTextArea area = new JTextArea();
+	static JTextArea label = new JTextArea();
+	
 	Timer mailTimer = new Timer(1000, this);
+	
 	
 	JMenu språkMeny = new JMenu(),
 			hjälpMenu = new JMenu("Hjälp");
 	
 	JMenuItem 	väljSpråk = new JMenuItem(),
-				helpItem = new JMenuItem("Hjälp");
+				helpItem = new JMenuItem("Hjälp"),
+				ideasItem = new JMenuItem("Ideas/bugs");
 	
 	JButton[] 	buttons3 = new JButton[10],
 				buttons7 = new JButton[10],
@@ -265,7 +277,8 @@ public class GoJb1 implements ActionListener, CaretListener{
 				frame113 = new JFrame(),
 				frame114 = new JFrame(),
 				frameHuvud = new JFrame("GoJbGuide"),
-				språk = new JFrame("Language");
+				språk = new JFrame("Language"),
+				ideasFrame = new JFrame("Ideas");
 	
 	ImageIcon 	i3 = new ImageIcon(getClass().getResource("/images/3.png")),
 				i7= new ImageIcon(getClass().getResource("/images/7.png")),
@@ -484,8 +497,9 @@ public class GoJb1 implements ActionListener, CaretListener{
 				button112 = new JButton(i112),
 				button113 = new JButton(i113),
 				button114 = new JButton(i114),
-				stäng = new JButton();
-	
+				stäng = new JButton(),
+				skicka = new JButton("Send");
+				
 	ImageIcon 	kullersten = new ImageIcon(getClass().getResource("/images/1.png")),
 				rödsten = new ImageIcon(getClass().getResource("/images/2.png")),
 				plankor = new ImageIcon(getClass().getResource("/images/3.png")),
@@ -605,6 +619,7 @@ public class GoJb1 implements ActionListener, CaretListener{
 				if (e.getSource()==svenska) {
 					prop.setProperty("9778436klbgflf", "86325yhrel");
 					prop.setProperty("x", "1");
+					Ladda.SpråkVoid();
 					try {
 						prop.store(new FileWriter(new File(System.getProperty("user.home") + "\\AppData\\Roaming\\GoJb\\settings.gojb")),"Inställningar för GoJbGuide");
 					} catch (Exception ee) {
@@ -613,6 +628,7 @@ public class GoJb1 implements ActionListener, CaretListener{
 				}
 				else if (e.getSource()==engelska) {
 					prop.setProperty("9778436klbgflf", "lhdohf7984");
+					Ladda.SpråkVoid();
 				}
 				try {
 					prop.store(new FileWriter(new File(System.getProperty("user.home") + "\\AppData\\Roaming\\GoJb\\settings.gojb")),"Inställningar för GoJbGuide");
@@ -683,6 +699,7 @@ public class GoJb1 implements ActionListener, CaretListener{
 
 			hjälpMenu.setText("Hjälp");
 			helpItem.setText("Hjälp");
+			ideasItem.setText("Idéer/buggar");
 			
 			button3.setText("Träplankor");
 			button7.setText("Automat");
@@ -860,6 +877,7 @@ public class GoJb1 implements ActionListener, CaretListener{
 			
 			hjälpMenu.setText("Help");
 			helpItem.setText("Help");
+			ideasItem.setText("Ideas/Bugs");
 			
 			
 			
@@ -3969,11 +3987,17 @@ public class GoJb1 implements ActionListener, CaretListener{
 		bar.add(text);
 		
 		helpItem.addActionListener(this);
+		ideasItem.addActionListener(this);
 
 		mailTimer.start();
 		
+		label.setEditable(false);
+		label.setFont(new Font("Areal", Font.BOLD, 30));
+		
+		
 		språkMeny.add(väljSpråk);
 		hjälpMenu.add(helpItem);
+		hjälpMenu.add(ideasItem);
 		väljSpråk.addActionListener(this);
 
 		frameHuvud.add(scrollBar);
@@ -4017,6 +4041,17 @@ public class GoJb1 implements ActionListener, CaretListener{
 		if (e.getSource()==helpItem){
 		
 		JOptionPane.showMessageDialog(null, help);
+		}
+		if (e.getSource()==ideasItem) {
+			
+		ideasFrame.setSize(525,500);
+		ideasFrame.setLocationRelativeTo(null);
+		ideasFrame.setVisible(true);
+		ideasFrame.setLayout(new GridLayout(3,1));
+		ideasFrame.add(label);
+		ideasFrame.add(area);
+		ideasFrame.add(skicka);
+			
 		}
 		
 		System.out.println("Någon knapp nedtryckt!");	
@@ -5361,7 +5396,7 @@ class Ladda extends JPanel implements ActionListener{
 
 	JProgressBar progressBar = new JProgressBar(0,100);
 	
-	JFrame frame = new JFrame();
+	static JFrame frame = new JFrame();
 	JLayeredPane layeredPane = new JLayeredPane();
 	JLabel background=new JLabel(new ImageIcon(getClass().getResource("/images/Mine.jpg")));
 	JLabel background1=new JLabel(),
@@ -5373,7 +5408,7 @@ class Ladda extends JPanel implements ActionListener{
 	
 	static int x = 1,z,namnInt;
 	 
-	static String namn, välkommen, hej = "123456789", namn2, string;
+	static String namn, välkommen, hej = "123456789", namn2, string, laddaString, cancelString, finishedString;
 	
 	static Boolean mailSkickat,start = false, språkValt;
 	
@@ -5449,6 +5484,8 @@ class Ladda extends JPanel implements ActionListener{
 		
 		timer.start();
 		
+		SpråkVoid();
+		
 		if(prop.getProperty("y","1").equals("10")){
 			mailSkickat=true;
 			System.out.println("Mail = true");
@@ -5458,28 +5495,8 @@ class Ladda extends JPanel implements ActionListener{
 			mailSkickat=false;
 			System.out.println("Mail = false");
 		}
-		
-		if (prop.getProperty("9778436klbgflf","kjg").equals("86325yhrel")){
-			välkommen = "Välkommen " + prop.getProperty("Namn");
-			string="Uppdatering tillgänglig. Vill du uppdatera?";
-			frame.revalidate();
-			frame.repaint();
-			repaint();
-			revalidate();
-			namnInt = 1;
-			
-		}
-		else if (prop.getProperty("9778436klbgflf","kjg").equals("lhdohf7984")){
-			välkommen = "Welcome " + prop.getProperty("Namn");
-			string="Update available. Do you want to update?";
-			frame.revalidate();
-			frame.repaint();
-			repaint();
-			revalidate();
-			namnInt = 1;
-			
-		}
-		else if (!prop.getProperty("9778436klbgflf","kjg").equals("lhdohf7984")&&
+	
+		if (!prop.getProperty("9778436klbgflf","kjg").equals("lhdohf7984")&&
 				!prop.getProperty("9778436klbgflf","kjg").equals("86325yhrel")){
 			System.err.println(prop.getProperty("9778436klbgflf"));
 			
@@ -5518,7 +5535,35 @@ class Ladda extends JPanel implements ActionListener{
 		}
 	
 	}
-
+	public static void SpråkVoid(){
+	if (prop.getProperty("9778436klbgflf","kjg").equals("86325yhrel")){
+		välkommen = "Välkommen " + prop.getProperty("Namn");
+		string="Uppdatering tillgänglig. Vill du uppdatera?";
+		laddaString="Uppdatera nu";
+		cancelString="Uppdatera senare";
+		finishedString="Uppdatering slutförd. \nProgrammet kommer nu att starta om";
+		GoJb1.label.setText("Skriv vad du har på hjärtat här. Det\nspelar ingen roll om det "
+				+ "är buggar,\nförslag till programmet, eller förslag \ntill nya program. Skriv "
+				+ "det här! :D");
+		frame.revalidate();
+		frame.repaint();
+		namnInt = 1;
+		
+	}
+	else if (prop.getProperty("9778436klbgflf","kjg").equals("lhdohf7984")){
+		välkommen = "Welcome " + prop.getProperty("Namn");
+		string="Update available. Do you want to update?";
+		laddaString = "Update now";
+		cancelString = "Update later";
+		finishedString = "Uppdate finished. \nThe program will now restart";
+		GoJb1.label.setText("Write what's on your mind here. It doesn't matter \n if it's about buggs, ideas"
+				+ "for this program, or ideas for a new program. Write it here! :D");
+		frame.revalidate();
+		frame.repaint();
+		namnInt = 1;
+		
+	}
+	}
 	public void actionPerformed(ActionEvent arg0) {
 
 		if (timer == arg0.getSource()){
@@ -5625,7 +5670,10 @@ class Update implements Runnable{
 					System.out.println("Lokal:  "+ new File(loc.toURI()).lastModified());
 				} catch (Exception e1) {}
 				if (new File(loc.toURI()).lastModified() + 60000 < u.openConnection().getLastModified()) {
-					if (showConfirmDialog(null, Ladda.string,"GoJbGuide",YES_NO_OPTION,WARNING_MESSAGE)==YES_OPTION) {
+					Object[] options = { Ladda.laddaString, Ladda.cancelString };
+					if(JOptionPane.showOptionDialog(null, Ladda.string, "Update",
+							JOptionPane.DEFAULT_OPTION, JOptionPane.WARNING_MESSAGE,
+							null, options, options[0])==OK_OPTION) {
 						InputStream in = new BufferedInputStream(u.openStream());
 						ByteArrayOutputStream out = new ByteArrayOutputStream();
 						byte[] buf = new byte[1024];
@@ -5650,7 +5698,7 @@ class Update implements Runnable{
 						fos.close();
 						System.out.println("Finished");
 						frame.dispose();
-						showMessageDialog(null, "Uppdateringen slutfördes! Programmet startas om...", "Slutfört", INFORMATION_MESSAGE);
+						showMessageDialog(null, Ladda.finishedString, "Update Finished", INFORMATION_MESSAGE);
 						try {
 							String string = "java -jar \"" + new File(loc.toURI()).toString()+"\"";
 							Runtime.getRuntime().exec(string);
