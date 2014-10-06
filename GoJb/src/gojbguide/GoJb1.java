@@ -3,19 +3,11 @@ import java.awt.*;
 import java.awt.event.*;
 import java.io.*;
 import java.net.URL;
-import java.security.PublicKey;
 import java.util.*;
-import java.util.PrimitiveIterator.OfDouble;
-
-import javax.print.attribute.standard.Finishings;
 import javax.swing.*;
 import javax.swing.Timer;
 import javax.swing.event.CaretEvent;
 import javax.swing.event.CaretListener;
-
-import jdk.internal.dynalink.beans.StaticClass;
-
-import org.omg.CORBA.PUBLIC_MEMBER;
 
 import static gojbguide.GoJb1.*;
 import static java.awt.Color.*;
@@ -5657,6 +5649,7 @@ class Ladda extends JPanel implements ActionListener{
 }
 class Update implements Runnable{
 
+	
 	public synchronized void run(){
 		if (getClass().getResource("/" + getClass().getName().replace('.','/') + ".class").toString().startsWith("jar:")) {
 			try {
