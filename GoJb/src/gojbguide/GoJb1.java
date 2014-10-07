@@ -22,7 +22,7 @@ import static javax.swing.JOptionPane.*;
 
 public class GoJb1 implements ActionListener, CaretListener{
 
-	static boolean oöppnad = true;
+	static boolean öppnad;
 	public static Properties prop = new Properties();
 
 	static String help;
@@ -595,9 +595,7 @@ public class GoJb1 implements ActionListener, CaretListener{
 	void start(){
 		try {
 			Språk();
-			if (oöppnad) {
 				GörFönster();
-			}
 		} catch (Exception e) {
 			Språkfråga();
 		}
@@ -640,8 +638,11 @@ public class GoJb1 implements ActionListener, CaretListener{
 				} catch (Exception e1) {
 					e1.printStackTrace();
 				}
-				if (oöppnad) {
+				if (!öppnad) {
 					GörFönster();
+					ladda2();
+					ladda3();
+					ladda4();
 				}
 			}
 		};
@@ -1142,6 +1143,7 @@ public class GoJb1 implements ActionListener, CaretListener{
 
 	}
 	void GörFönster() {
+		öppnad=true;
 		System.err.println("posjg");
 
 		scrollBar.getVerticalScrollBar().setUnitIncrement(20);
@@ -1477,7 +1479,6 @@ public class GoJb1 implements ActionListener, CaretListener{
 
 	}
 	void ladda2(){
-
 		for (int j = 1; j < buttons3.length; j++) {
 			buttons3[j] = new JButton();
 			frame3.add(buttons3[j]);
@@ -4007,8 +4008,6 @@ public class GoJb1 implements ActionListener, CaretListener{
 		ideasFrame.add(area);
 		ideasFrame.add(skicka);
 		skicka.addActionListener(this);
-
-		oöppnad=false;
 	}
 	public void actionPerformed(ActionEvent e) {
 
@@ -5428,13 +5427,19 @@ public class GoJb1 implements ActionListener, CaretListener{
 				prop.setProperty("y", "9");
 			}
 			if (progressBar.getValue() == 50 && namnInt == 1){
-				ladda2();
+				if (öppnad) {
+					ladda2();
+				}
 			}
 			if (progressBar.getValue() == 65 && namnInt == 1){
-				ladda3();
+				if (öppnad) {
+					ladda3();
+				}
 			}
 			if (progressBar.getValue() == 80 && namnInt == 1){
-				ladda4();
+				if (öppnad) {
+					ladda4();
+				}
 			}
 			if(progressBar.getValue()==101&&start==true){
 				timer.stop();
@@ -5463,7 +5468,6 @@ public class GoJb1 implements ActionListener, CaretListener{
 				} catch (Exception e) {
 					System.out.println("lyckades inte skriva");
 					e.printStackTrace();
-					Namn();
 				}
 			}
 		}};
@@ -5571,7 +5575,6 @@ public class GoJb1 implements ActionListener, CaretListener{
 				} catch (Exception e) {
 					System.out.println("lyckades inte skriva");
 					e.printStackTrace();
-					Namn();
 				}
 			}
 
@@ -5605,21 +5608,7 @@ public class GoJb1 implements ActionListener, CaretListener{
 
 			}
 		}
-		public void Namn() {
-
-			try {
-				prop.load(new FileInputStream(System.getProperty("user.home") + "\\AppData\\Roaming\\GoJb\\settings.gojb"));
-			}catch (IOException e) {
-
-				System.err.println("Kan inte ladda");
-
-			}
-
-			if(prop.getProperty("y","2").equals("10")){
-				start();
-			}
-		}
-		public static void main(String[] args) {
+			public static void main(String[] args) {
 			progressBar = new JProgressBar(0,101);
 			try {
 				UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
