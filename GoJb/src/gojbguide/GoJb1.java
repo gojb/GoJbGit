@@ -22,7 +22,7 @@ import static javax.swing.JOptionPane.*;
 
 public class GoJb1 implements ActionListener, CaretListener{
 
-	static int engångsöppning = 1;
+	static boolean oöppnad = true;
 	public static Properties prop = new Properties();
 
 	static String help;
@@ -576,31 +576,40 @@ public class GoJb1 implements ActionListener, CaretListener{
 
 	JScrollPane scrollBar=new JScrollPane(frame,JScrollPane.VERTICAL_SCROLLBAR_ALWAYS,JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
 
-	public GoJb1(){
+	static int x = 1,z,namnInt;
 
+	static String namn, välkommen, hej = "123456789", namn2, string, laddaString, cancelString, finishedString;
 
+	static Boolean mailSkickat,start = false, språkValt;
+
+	static JProgressBar progressBar;
+
+	static JFrame frame2 = new JFrame();
+	JLayeredPane layeredPane = new JLayeredPane();
+	JLabel background=new JLabel(new ImageIcon(getClass().getResource("/images/Mine.jpg")));
+	JLabel background1=new JLabel(),
+			background2 = new JLabel();
+
+	int a;
+	
+	void start(){
 		try {
-			prop.load(new FileInputStream(System.getProperty ("user.home") + "\\AppData\\Roaming\\GoJb\\settings.gojb"));
 			Språk();
-			if (engångsöppning==1) {
+			if (oöppnad) {
 				GörFönster();
 			}
-			engångsöppning++;
-
 		} catch (Exception e) {
 			Språkfråga();
 		}
-
-
-		/**
+	}
+	/**
 9778436klbgflf=lhdohf7984
 #Engelska
 #lhdohf7984
 #Svenska
 #86325yhrel
-		 */
+	 */
 
-	}
 	public void Språkfråga() {
 		ActionListener dActionListener = new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -608,11 +617,6 @@ public class GoJb1 implements ActionListener, CaretListener{
 					prop.setProperty("9778436klbgflf", "86325yhrel");
 					prop.setProperty("x", "1");
 					SpråkVoid();
-					try {
-						prop.store(new FileWriter(new File(System.getProperty("user.home") + "\\AppData\\Roaming\\GoJb\\settings.gojb")),"Inställningar för GoJbGuide");
-					} catch (Exception ee) {
-						System.out.println("lyckades inte skriva");
-					}
 				}
 				else if (e.getSource()==engelska) {
 					prop.setProperty("9778436klbgflf", "lhdohf7984");
@@ -622,7 +626,7 @@ public class GoJb1 implements ActionListener, CaretListener{
 					prop.store(new FileWriter(new File(System.getProperty("user.home") + "\\AppData\\Roaming\\GoJb\\settings.gojb")),"Inställningar för GoJbGuide");
 				} catch (Exception e1) {
 					System.err.println("Mappen finns inte! Skapar...");
-					new File((System.getProperty("user.home") + "\\AppData\\Roaming\\GoJb\\")).mkdir();
+					new File(System.getProperty("user.home") + "\\AppData\\Roaming\\GoJb\\").mkdir();
 
 					try {
 						prop.store(new FileWriter(new File(System.getProperty("user.home") + "\\AppData\\Roaming\\GoJb\\settings.gojb")),"Inställningar för GoJbGuide");
@@ -634,12 +638,10 @@ public class GoJb1 implements ActionListener, CaretListener{
 				try {
 					Språk();
 				} catch (Exception e1) {
-
 					e1.printStackTrace();
 				}
-				if (engångsöppning==1) {
+				if (oöppnad) {
 					GörFönster();
-					engångsöppning++;
 				}
 			}
 		};
@@ -661,7 +663,6 @@ public class GoJb1 implements ActionListener, CaretListener{
 
 
 	public void Språk() throws Exception{
-		frame.removeAll();
 		if (prop.getProperty("9778436klbgflf").equals("86325yhrel")){
 
 			//Svenska
@@ -866,8 +867,6 @@ public class GoJb1 implements ActionListener, CaretListener{
 			hjälpMenu.setText("Help");
 			helpItem.setText("Help");
 			ideasItem.setText("Ideas/Bugs");
-
-
 
 			button3.setText("Planks");
 			button7.setText("Dispenser");
@@ -1142,7 +1141,8 @@ public class GoJb1 implements ActionListener, CaretListener{
 
 
 	}
-	public void GörFönster() {
+	void GörFönster() {
+		System.err.println("posjg");
 
 		scrollBar.getVerticalScrollBar().setUnitIncrement(20);
 		frameHuvud.setIconImage(new ImageIcon(getClass().getResource("/images/Java-icon.png")).getImage());
@@ -1475,6 +1475,9 @@ public class GoJb1 implements ActionListener, CaretListener{
 		frame113.setLayout(new GridLayout(3,3));
 		frame114.setLayout(new GridLayout(3,3));
 
+	}
+	void ladda2(){
+
 		for (int j = 1; j < buttons3.length; j++) {
 			buttons3[j] = new JButton();
 			frame3.add(buttons3[j]);
@@ -1650,7 +1653,10 @@ public class GoJb1 implements ActionListener, CaretListener{
 		for (int j = 1; j < buttons49.length; j++) {
 			buttons49[j] = new JButton();
 			frame49.add(buttons49[j]);
-		}
+		}	
+
+	}
+	void ladda3(){
 		for (int j = 1; j < buttons50.length; j++) {
 			buttons50[j] = new JButton();
 			frame50.add(buttons50[j]);
@@ -1907,7 +1913,7 @@ public class GoJb1 implements ActionListener, CaretListener{
 			buttons114[j] = new JButton();
 			frame114.add(buttons114[j]);
 		}
-
+		
 		buttons3[1].setIcon(null);
 		buttons3[2].setIcon(null);
 		buttons3[3].setIcon(null);
@@ -3251,7 +3257,6 @@ public class GoJb1 implements ActionListener, CaretListener{
 				buttons49[j].addActionListener(this);
 			}
 		}
-
 		for (int j = 1; j < buttons50.length; j++) {
 			if(buttons50[j].getIcon() != null){
 				buttons50[j].addActionListener(this);
@@ -3635,7 +3640,9 @@ public class GoJb1 implements ActionListener, CaretListener{
 				buttons114[j].addActionListener(this);
 			}
 		}
-
+		
+	}
+	void ladda4(){
 		frame3.setIconImage(frameHuvud.getIconImage());
 		frame7.setIconImage(frameHuvud.getIconImage());
 		frame8.setIconImage(frameHuvud.getIconImage());
@@ -3853,7 +3860,7 @@ public class GoJb1 implements ActionListener, CaretListener{
 		button112.setVerticalTextPosition(JButton.BOTTOM);
 		button113.setVerticalTextPosition(JButton.BOTTOM);
 		button114.setVerticalTextPosition(JButton.BOTTOM);
-
+		
 		button3.setHorizontalTextPosition(JButton.CENTER);
 		button7.setHorizontalTextPosition(JButton.CENTER);
 		button8.setHorizontalTextPosition(JButton.CENTER);
@@ -3984,7 +3991,6 @@ public class GoJb1 implements ActionListener, CaretListener{
 		label.setForeground(WHITE);
 		label.setFont(new Font("Areal", Font.BOLD, 30));
 
-
 		språkMeny.add(väljSpråk);
 		hjälpMenu.add(helpItem);
 		hjälpMenu.add(ideasItem);
@@ -3994,7 +4000,6 @@ public class GoJb1 implements ActionListener, CaretListener{
 		frameHuvud.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frameHuvud.setLocationRelativeTo(null);
 
-
 		ideasFrame.setSize(525,500);
 		ideasFrame.setLocationRelativeTo(null);
 		ideasFrame.setLayout(new GridLayout(3,1));
@@ -4003,9 +4008,8 @@ public class GoJb1 implements ActionListener, CaretListener{
 		ideasFrame.add(skicka);
 		skicka.addActionListener(this);
 
-
+		oöppnad=false;
 	}
-
 	public void actionPerformed(ActionEvent e) {
 
 		if(e.getSource()==mailTimer){
@@ -5391,269 +5395,242 @@ public class GoJb1 implements ActionListener, CaretListener{
 			frame.add(jButton);
 		}
 	}
-ActionListener actionListener2 = new ActionListener() {
-		
+	ActionListener actionListener2 = new ActionListener() {
+
 		public void actionPerformed(ActionEvent arg0) {
-			// TODO Auto-generated method stub
-			
-	
+			if (timer == arg0.getSource()){
+				if(namn == null){
+					namn = "";
+				}
 
-		if (timer == arg0.getSource()){
+				background1.setText(välkommen + " " + namn);			
+				progressBar.setValue(progressBar.getValue()+1);
+				background2.setText(Integer.toString(progressBar.getValue())+"%");
+				frame2.repaint();
+				//				frame2.revalidate();
+				//				layeredPane.revalidate();
+				//				layeredPane.repaint();
+				//				progressBar.repaint();
+				//				progressBar.revalidate();
 
-			if(namn == null){
-				namn = "";
+				//				frame2.revalidate();
+
 			}
+			a++;
 
+			if (z == 0){
+				x++;
+			}
+			if (progressBar.getValue() == 25 && namnInt == 1){
+				start=true;
+				start();
+				new Thread(new Update()).start();
+				prop.setProperty("y", "9");
+			}
+			if (progressBar.getValue() == 50 && namnInt == 1){
+				ladda2();
+			}
+			if (progressBar.getValue() == 65 && namnInt == 1){
+				ladda3();
+			}
+			if (progressBar.getValue() == 80 && namnInt == 1){
+				ladda4();
+			}
+			if(progressBar.getValue()==101&&start==true){
+				timer.stop();
+				frameHuvud.setVisible(true);
+				frame2.dispose();
+			}
+			if (progressBar.getValue() == 100 && namnInt == 2){
 
-			background1.setText(välkommen + " " + namn);			
-			progressBar.setValue(progressBar.getValue()+1);
-			background2.setText(Integer.toString(progressBar.getValue())+"%");
+				timer.stop();
+
+				namn = JOptionPane.showInputDialog("Enter name/Skriv ditt namn");
+
+				if(namn.equals("")||namn.equals(null)){
+					System.exit(3);
+				}
+				else {
+					start();
+					frame2.dispose();
+					timer.stop();
+					frameHuvud.setVisible(true);
+
+				}
+				prop.setProperty("Namn", namn);
+				try {
+					prop.store(new FileWriter(new File(System.getProperty("user.home") + "\\AppData\\Roaming\\GoJb\\settings.gojb")),"Inställningar för GoJbGuide");
+				} catch (Exception e) {
+					System.out.println("lyckades inte skriva");
+					e.printStackTrace();
+					Namn();
+				}
+			}
+		}};
+		Timer timer = new Timer(30, actionListener2);
+		public GoJb1(){
+			try {
+				prop.load(new FileInputStream(System.getProperty ("user.home") + "\\AppData\\Roaming\\GoJb\\settings.gojb"));
+			} catch (IOException e) {
+				System.err.println("sdoövhjxcblizxg,vbs");
+			}
+			
+
+			frame2.setLayeredPane(layeredPane);
+
+			frame2.setBackground(white);
+			frame2.setIconImage(new ImageIcon(getClass().getResource("/images/Java-icon.png")).getImage());
+
+			layeredPane.add(background);
+			layeredPane.add(background1);
+			layeredPane.add(background2);
+			layeredPane.add(progressBar);
+			frame2.setLayout(new BorderLayout());
+			frame2.setSize(300,200);
+			frame2.setLocationRelativeTo(null);
+			frame2.setDefaultCloseOperation(3);
+			frame2.setUndecorated(true);
+			frame2.setVisible(true);
+
+			background.setOpaque(true);
+			background.setBackground(blue);
+			background.setSize(300,200);
+			background.setLocation(0,0);
+
+			background1.setForeground(Color.white);
+			background1.setOpaque(false);
+			background1.setBackground(Color.black);
+			background1.setSize(300,54);
+			background1.setLocation(20, 30);
+			background1.setFont(new Font("Arial",Font.BOLD,25));
+
+			background2.setForeground(Color.white);
+			background2.setOpaque(false);
+			background2.setBackground(Color.black);
+			background2.setSize(200,54);
+			background2.setLocation(125,70);
+			background2.setFont(new Font("Arial",Font.BOLD,30));
+
+			progressBar.setLocation(50,150);
+			progressBar.setSize(200, 30);
+			progressBar.setForeground(Color.green);
+			progressBar.setBackground(Color.black);
+			progressBar.setBorderPainted(false);
+
+			layeredPane.setLayer(background, 25);
+			layeredPane.setLayer(background1, 90);
+			layeredPane.setLayer(background2, 90);
+			layeredPane.setLayer(progressBar, 100);
+
 			frame2.repaint();
 			frame2.revalidate();
 			layeredPane.revalidate();
 			layeredPane.repaint();
-			progressBar.repaint();
-			progressBar.revalidate();
 
-			frame2.revalidate();
+			timer.start();
 
-		}
-		a++;
+			SpråkVoid();
 
-		if (z == 0){
-			x++;
-		}
-		if (progressBar.getValue() == 50 && namnInt == 1){
-			start=true;
-			new GoJb1();
-			new Thread(new Update()).start();
-			prop.setProperty("y", "9");
-		}
-		if(progressBar.getValue()==101&&start==true){
-			timer.stop();
-			frameHuvud.setVisible(true);
-			frame2.dispose();
-		}
-		if (progressBar.getValue() == 100 && namnInt == 2){
-
-			timer.stop();
-
-			namn = JOptionPane.showInputDialog("Enter name/Skriv ditt namn");
-
-			if(namn.equals("")||namn.equals(null)){
-
-				System.exit(3);
-				frame2.dispose();
-			}
-
-			else {
-
-				new GoJb1();
-				frame2.dispose();
-				timer.stop();
+			if(prop.getProperty("y","1").equals("10")){
+				mailSkickat=true;
+				System.out.println("Mail = true");
 
 			}
-			prop.setProperty("Namn", namn);
-			try {
-				prop.store(new FileWriter(new File(System.getProperty("user.home") + "\\AppData\\Roaming\\GoJb\\settings.gojb")),"Inställningar för GoJbGuide");
-			} catch (Exception e) {
-				System.out.println("lyckades inte skriva");
-				e.printStackTrace();
-				Namn();
+			else if (!prop.getProperty("y","1").equals("10")){
+				mailSkickat=false;
+				System.out.println("Mail = false");
 			}
-		}
-	}};
 
-	static int x = 1,z,namnInt;
+			if (!prop.getProperty("9778436klbgflf","kjg").equals("lhdohf7984")&&
+					!prop.getProperty("9778436klbgflf","kjg").equals("86325yhrel")){
+				System.err.println(prop.getProperty("9778436klbgflf"));
 
-	static String namn, välkommen, hej = "123456789", namn2, string, laddaString, cancelString, finishedString;
+				System.err.println("Språk ej valt");
 
-	static Boolean mailSkickat,start = false, språkValt;
+				namnInt = 2;
 
-	JProgressBar progressBar = new JProgressBar(0,101);
-
-	static JFrame frame2 = new JFrame();
-	JLayeredPane layeredPane = new JLayeredPane();
-	JLabel background=new JLabel(new ImageIcon(getClass().getResource("/images/Mine.jpg")));
-	JLabel background1=new JLabel(),
-			background2 = new JLabel();
-
-	Timer timer = new Timer(30, actionListener2);
-
-	int a;
+				prop.setProperty("Namn", "");
 
 
-	public void Ladda(){
+				if (progressBar.getValue() < 50){
+					välkommen = "Welcome! Loading...";
 
-		try {
-			prop.load(new FileInputStream(System.getProperty ("user.home") + "\\AppData\\Roaming\\GoJb\\settings.gojb"));
-		} catch (IOException e) {
 
-			System.err.println("sdoövhjxcblizxg,vbs");
-		}
 
-		try {
-			UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsLookAndFeel");
-		} catch (Exception e) {
-			((Runnable) Toolkit.getDefaultToolkit().getDesktopProperty("win.sound.hand")).run();
-			JOptionPane.showMessageDialog(null, "Bad LookAndFeel!","Error",JOptionPane.ERROR_MESSAGE);
-		}
+					frame2.revalidate();
+					frame2.repaint();
+				}
+				else if (progressBar.getValue() >= 50){
+					välkommen = "Välkommen! Laddar...";
 
-		frame2.setLayeredPane(layeredPane);
-
-		frame2.setBackground(white);
-		frame2.setIconImage(new ImageIcon(getClass().getResource("/images/Java-icon.png")).getImage());
-
-		layeredPane.add(background);
-		layeredPane.add(background1);
-		layeredPane.add(background2);
-		layeredPane.add(progressBar);
-		frame2.setLayout(new BorderLayout());
-		frame2.setSize(300,200);
-		frame2.setLocationRelativeTo(null);
-		frame2.setDefaultCloseOperation(3);
-		frame2.setUndecorated(true);
-		frame2.setVisible(true);
-
-		background.setOpaque(true);
-		background.setBackground(blue);
-		background.setSize(300,200);
-		background.setLocation(0,0);
-
-		background1.setForeground(Color.white);
-		background1.setOpaque(false);
-		background1.setBackground(Color.black);
-		background1.setSize(300,54);
-		background1.setLocation(20, 30);
-		background1.setFont(new Font("Arial",Font.BOLD,25));
-
-		background2.setForeground(Color.white);
-		background2.setOpaque(false);
-		background2.setBackground(Color.black);
-		background2.setSize(200,54);
-		background2.setLocation(125,70);
-		background2.setFont(new Font("Arial",Font.BOLD,30));
-
-		progressBar.setLocation(50,150);
-		progressBar.setSize(200, 30);
-		progressBar.setForeground(Color.green);
-		progressBar.setBackground(Color.black);
-		progressBar.setBorderPainted(false);
-
-		layeredPane.setLayer(background, 25);
-		layeredPane.setLayer(background1, 90);
-		layeredPane.setLayer(background2, 90);
-		layeredPane.setLayer(progressBar, 100);
-
-		frame2.repaint();
-		frame2.revalidate();
-		layeredPane.revalidate();
-		layeredPane.repaint();
-
-		timer.start();
-
-		SpråkVoid();
-
-		if(prop.getProperty("y","1").equals("10")){
-			mailSkickat=true;
-			System.out.println("Mail = true");
+					frame2.revalidate();
+					frame2.repaint();
+				}
+				try {
+					prop.store(new FileWriter(new File(System.getProperty("user.home") + "\\AppData\\Roaming\\GoJb\\settings.gojb")),"Inställningar för GoJbGuide");
+				} catch (Exception e) {
+					System.out.println("lyckades inte skriva");
+					e.printStackTrace();
+					Namn();
+				}
+			}
 
 		}
-		else if (!prop.getProperty("y","1").equals("10")){
-			mailSkickat=false;
-			System.out.println("Mail = false");
-		}
-
-		if (!prop.getProperty("9778436klbgflf","kjg").equals("lhdohf7984")&&
-				!prop.getProperty("9778436klbgflf","kjg").equals("86325yhrel")){
-			System.err.println(prop.getProperty("9778436klbgflf"));
-
-			System.err.println("Språk ej valt");
-
-			namnInt = 2;
-
-			prop.setProperty("Namn", "");
-
-
-			if (progressBar.getValue() < 50){
-				välkommen = "Welcome! Loading...";
-
-
-
+		public static void SpråkVoid(){
+			if (prop.getProperty("9778436klbgflf","kjg").equals("86325yhrel")){
+				välkommen = "Välkommen " + prop.getProperty("Namn");
+				string="Uppdatering tillgänglig. Vill du uppdatera?";
+				laddaString="Uppdatera nu";
+				cancelString="Uppdatera senare";
+				finishedString="Uppdatering slutförd. \nProgrammet kommer nu att starta om";
+				GoJb1.label.setText("Skriv vad du har på hjärtat här. Det\nspelar ingen roll om det "
+						+ "är buggar,\nförslag till programmet, eller förslag \ntill nya program. Skriv "
+						+ "det här! :D");
 				frame2.revalidate();
 				frame2.repaint();
-			}
-			else if (progressBar.getValue() >= 50){
-				välkommen = "Välkommen! Laddar...";
+				namnInt = 1;
 
+			}
+			else if (prop.getProperty("9778436klbgflf","kjg").equals("lhdohf7984")){
+				välkommen = "Welcome " + prop.getProperty("Namn");
+				string="Update available. Do you want to update?";
+				laddaString = "Update now";
+				cancelString = "Update later";
+				finishedString = "Uppdate finished. \nThe program will now restart";
+				GoJb1.label.setText("Write what's on your mind here. It \ndoesn't matter if it's about buggs or\nideas "
+						+ "for this program, or ideas for \na new program. Write it here! :D");
 				frame2.revalidate();
 				frame2.repaint();
+				namnInt = 1;
+
 			}
+		}
+		public void Namn() {
+
 			try {
-				prop.store(new FileWriter(new File(System.getProperty("user.home") + "\\AppData\\Roaming\\GoJb\\settings.gojb")),"Inställningar för GoJbGuide");
-			} catch (Exception e) {
-				System.out.println("lyckades inte skriva");
-				e.printStackTrace();
-				Namn();
+				prop.load(new FileInputStream(System.getProperty("user.home") + "\\AppData\\Roaming\\GoJb\\settings.gojb"));
+			}catch (IOException e) {
+
+				System.err.println("Kan inte ladda");
+
+			}
+
+			if(prop.getProperty("y","2").equals("10")){
+				start();
 			}
 		}
-
-	}
-	public static void SpråkVoid(){
-		if (prop.getProperty("9778436klbgflf","kjg").equals("86325yhrel")){
-			välkommen = "Välkommen " + prop.getProperty("Namn");
-			string="Uppdatering tillgänglig. Vill du uppdatera?";
-			laddaString="Uppdatera nu";
-			cancelString="Uppdatera senare";
-			finishedString="Uppdatering slutförd. \nProgrammet kommer nu att starta om";
-			GoJb1.label.setText("Skriv vad du har på hjärtat här. Det\nspelar ingen roll om det "
-					+ "är buggar,\nförslag till programmet, eller förslag \ntill nya program. Skriv "
-					+ "det här! :D");
-			frame2.revalidate();
-			frame2.repaint();
-			namnInt = 1;
-
-		}
-		else if (prop.getProperty("9778436klbgflf","kjg").equals("lhdohf7984")){
-			välkommen = "Welcome " + prop.getProperty("Namn");
-			string="Update available. Do you want to update?";
-			laddaString = "Update now";
-			cancelString = "Update later";
-			finishedString = "Uppdate finished. \nThe program will now restart";
-			GoJb1.label.setText("Write what's on your mind here. It \ndoesn't matter if it's about buggs or\nideas "
-					+ "for this program, or ideas for \na new program. Write it here! :D");
-			frame2.revalidate();
-			frame2.repaint();
-			namnInt = 1;
-
-		}
-	}
-	
-
-
-	public static void Namn() {
-
-		try {
-			prop.load(new FileInputStream(System.getProperty("user.home") + "\\AppData\\Roaming\\GoJb\\settings.gojb"));
-		}catch (IOException e) {
-
-			System.err.println("Kan inte ladda");
-
-		}
-
-		if(prop.getProperty("y","2").equals("10")){
+		public static void main(String[] args) {
+			progressBar = new JProgressBar(0,101);
+			try {
+				UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+			} catch (Exception e) {
+				((Runnable) Toolkit.getDefaultToolkit().getDesktopProperty("win.sound.hand")).run();
+				JOptionPane.showMessageDialog(null, "Bad LookAndFeel!","Error",JOptionPane.ERROR_MESSAGE);
+			}
+			
 			new GoJb1();
-
 		}
 
-	}
-	public static void main(String[] args) {
-		new GoJb1("iaordfh");
-	}
-	GoJb1(String s){
-		Ladda();
-	}
-	
 }
 class Update implements Runnable{
 
