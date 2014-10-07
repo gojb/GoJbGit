@@ -5479,7 +5479,6 @@ public class GoJb1 implements ActionListener, CaretListener{
 				System.err.println("sdoövhjxcblizxg,vbs");
 			}
 			
-
 			frame2.setLayeredPane(layeredPane);
 
 			frame2.setBackground(white);
