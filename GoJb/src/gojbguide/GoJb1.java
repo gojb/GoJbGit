@@ -5630,46 +5630,45 @@ class Update implements Runnable{
 				System.out.println("Online: " + connection.getLastModified());
 				System.out.println("File: " + file);
 				System.out.println("Lokal:  "+ file.lastModified());
-				if (file.lastModified() + 60000 < connection.getLastModified()) {
-					Object[] options = { GoJb1.laddaString, GoJb1.cancelString };
-					if(JOptionPane.showOptionDialog(null, GoJb1.string, "GoJbGuide",
-							JOptionPane.DEFAULT_OPTION, JOptionPane.WARNING_MESSAGE,
-							null, options, options[0])==OK_OPTION) {
-						
-						JProgressBar bar = new JProgressBar(0, connection.getContentLength());
-						JFrame frame = new JFrame("Downloading update...");
-						frame.add(bar);
-						frame.setIconImage(new ImageIcon(getClass().getResource("/images/Java-icon.png")).getImage());
-						frame.setLocationRelativeTo(null);
-						frame.setSize(500,100);
-						frame.setVisible(true);
-						InputStream in = connection.getInputStream();
-						ByteArrayOutputStream out = new ByteArrayOutputStream();
-						int n = 0;
-						byte[] buf = new byte[1024];
-						while (-1!=(n=in.read(buf))){
-							out.write(buf, 0, n);
-							bar.setValue(bar.getValue()+n);
-						}
-						frame.setTitle("Saving...");
-						bar.setIndeterminate(true);
-						FileOutputStream fos = new FileOutputStream(file);
-						fos.write(out.toByteArray());
-						fos.close();
-						out.close();
-						in.close();
-						System.out.println("Klart!");
-						frame.dispose();
-						showMessageDialog(null, GoJb1.finishedString, "Update Finished", INFORMATION_MESSAGE);
-						try {
-							String string = "java -jar \"" + file.toString()+"\"";
-							Runtime.getRuntime().exec(string);
-							System.err.println(string);
-						} catch (Exception e) {
-							e.printStackTrace(); 
-						}
-						System.exit(0);
+				Object[] options = { GoJb1.laddaString, GoJb1.cancelString };
+				if (file.lastModified() + 60000 < connection.getLastModified()&&
+						showOptionDialog(null, GoJb1.string, "GoJbGuide",
+								DEFAULT_OPTION, WARNING_MESSAGE,
+								null, options, options[0])==OK_OPTION) {
+					
+					JProgressBar bar = new JProgressBar(0, connection.getContentLength());
+					JFrame frame = new JFrame("Downloading update...");
+					frame.add(bar);
+					frame.setIconImage(new ImageIcon(getClass().getResource("/images/Java-icon.png")).getImage());
+					frame.setLocationRelativeTo(null);
+					frame.setSize(500,100);
+					frame.setVisible(true);
+					InputStream in = connection.getInputStream();
+					ByteArrayOutputStream out = new ByteArrayOutputStream();
+					int n = 0;
+					byte[] buf = new byte[1024];
+					while (-1!=(n=in.read(buf))){
+						out.write(buf, 0, n);
+						bar.setValue(bar.getValue()+n);
 					}
+					frame.setTitle("Saving...");
+					bar.setIndeterminate(true);
+					FileOutputStream fos = new FileOutputStream(file);
+					fos.write(out.toByteArray());
+					fos.close();
+					out.close();
+					in.close();
+					System.out.println("Klart!");
+					frame.dispose();
+					showMessageDialog(null, GoJb1.finishedString, "Update Finished", INFORMATION_MESSAGE);
+					try {
+						String string = "java -jar \"" + file.toString()+"\"";
+						Runtime.getRuntime().exec(string);
+						System.err.println(string);
+					} catch (Exception e) {
+						e.printStackTrace(); 
+					}
+					System.exit(0);
 				}
 			} catch(Exception e){
 				System.err.println("Ingen uppdatering hittades");
