@@ -5409,6 +5409,7 @@ public class GoJb1 implements ActionListener, CaretListener{
 			}
 		}
 	};
+	
 	Timer timer = new Timer(30, actionListener2);
 	public GoJb1(){
 		try {
