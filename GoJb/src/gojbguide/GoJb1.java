@@ -3,6 +3,7 @@ import java.awt.*;
 import java.awt.event.*;
 import java.io.*;
 import java.net.URL;
+import java.net.URLConnection;
 import java.util.*;
 
 import javax.swing.*;
@@ -5621,43 +5622,43 @@ public class GoJb1 implements ActionListener, CaretListener{
 
 }
 class Update implements Runnable{
-
-
 	public synchronized void run(){
 		if (getClass().getResource("/" + getClass().getName().replace('.','/') + ".class").toString().startsWith("jar:")) {
 			try {
-				URL u = new URL("http://gojb.bl.ee/GoJbGuide.jar");
+				URLConnection connection = new URL("http://gojb.bl.ee/GoJbGuide.jar").openConnection();
 				File file = new File(getClass().getProtectionDomain().getCodeSource().getLocation().toURI());
-				System.out.println("Online: " + u.openConnection().getLastModified());
+				System.out.println("Online: " + connection.getLastModified());
 				System.out.println("File: " + file);
 				System.out.println("Lokal:  "+ file.lastModified());
-				if (file.lastModified() + 60000 < u.openConnection().getLastModified()) {
+				if (file.lastModified() + 60000 < connection.getLastModified()) {
 					Object[] options = { GoJb1.laddaString, GoJb1.cancelString };
-					if(JOptionPane.showOptionDialog(null, GoJb1.string, "Update",
+					if(JOptionPane.showOptionDialog(null, GoJb1.string, "GoJbGuide",
 							JOptionPane.DEFAULT_OPTION, JOptionPane.WARNING_MESSAGE,
 							null, options, options[0])==OK_OPTION) {
-
-						InputStream in = new BufferedInputStream(u.openStream());
-						ByteArrayOutputStream out = new ByteArrayOutputStream();
-						byte[] buf = new byte[1024];
-						JProgressBar bar = new JProgressBar(0, in.available()/2);
-						JFrame frame = new JFrame("Downloading...");
+						
+						JProgressBar bar = new JProgressBar(0, connection.getContentLength());
+						JFrame frame = new JFrame("Downloading update...");
 						frame.add(bar);
 						frame.setIconImage(new ImageIcon(getClass().getResource("/images/Java-icon.png")).getImage());
 						frame.setLocationRelativeTo(null);
+						frame.setSize(500,100);
 						frame.setVisible(true);
-						frame.setSize(500,200);
+						InputStream in = connection.getInputStream();
+						ByteArrayOutputStream out = new ByteArrayOutputStream();
 						int n = 0;
+						byte[] buf = new byte[1024];
 						while (-1!=(n=in.read(buf))){
 							out.write(buf, 0, n);
-							bar.setValue(bar.getValue()+1);
+							bar.setValue(bar.getValue()+n);
 						}
-						out.close();
-						in.close();
+						frame.setTitle("Saving...");
+						bar.setIndeterminate(true);
 						FileOutputStream fos = new FileOutputStream(file);
 						fos.write(out.toByteArray());
 						fos.close();
-						System.out.println("Finished");
+						out.close();
+						in.close();
+						System.out.println("Klart!");
 						frame.dispose();
 						showMessageDialog(null, GoJb1.finishedString, "Update Finished", INFORMATION_MESSAGE);
 						try {
@@ -5669,14 +5670,12 @@ class Update implements Runnable{
 						}
 						System.exit(0);
 					}
-
 				}
 			} catch(Exception e){
 				System.err.println("Ingen uppdatering hittades");
 			}
 		}
 	}
-
 }
 /*Idéer:
  * 
