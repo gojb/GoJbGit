@@ -21,7 +21,6 @@ import static javax.swing.JOptionPane.*;
 
 public class GoJb1 implements ActionListener, CaretListener{
 
-	private static boolean öppnad;
 	private static Properties prop = new Properties();
 
 	private JButton svenska = new JButton("Svenska",new ImageIcon(getClass().getResource("/images/Swedish.jpg"))),
@@ -585,16 +584,6 @@ public class GoJb1 implements ActionListener, CaretListener{
 	private JLabel background=new JLabel(new ImageIcon(getClass().getResource("/images/Mine.jpg")));
 	private JLabel background1=new JLabel(),
 			background2 = new JLabel();
-
-
-	void start(){
-		try {
-			Språk();
-			GörFönster();
-		} catch (Exception e) {
-			Språkfråga();
-		}
-	}
 	/**
 9778436klbgflf=lhdohf7984
 #Engelska
@@ -617,18 +606,9 @@ public class GoJb1 implements ActionListener, CaretListener{
 					SpråkVoid();
 				}
 				sparaProp();
-				språk.setVisible(false);
-				try {
-					Språk();
-				} catch (Exception e1) {
-					e1.printStackTrace();
-				}
-				if (!öppnad) {
-					GörFönster();
-					ladda2();
-					ladda3();
-					ladda4();
-				}
+				språk.dispose();
+				Språk();
+				frameHuvud.setVisible(true);
 			}
 		};
 
@@ -646,371 +626,373 @@ public class GoJb1 implements ActionListener, CaretListener{
 		engelska.addActionListener(dActionListener);
 	}
 
+	public void Språk(){
+		try {
+			if (prop.getProperty("9778436klbgflf").equals("86325yhrel")){
 
+				//Svenska
 
-	public void Språk() throws Exception{
-		if (prop.getProperty("9778436klbgflf").equals("86325yhrel")){
+				prop.setProperty("z", "86325yhrel");
 
-			//Svenska
+				if (prop.getProperty("y","2").equals("10")) {
 
-			prop.setProperty("z", "86325yhrel");
+					yString = " Tack för att\n du använder det här programmet! :)";
+				}
+				else {
+					yString = "";
+				}
 
-			if (prop.getProperty("y","2").equals("10")) {
+				help = "Hej! Det här programmet är programmerat av \n GoJbs Javaprogramering." + yString;
 
-				yString = " Tack för att\n du använder det här programmet! :)";
+				språkMeny.setIcon(new ImageIcon(getClass().getResource("/images/Swedish.jpg")));
+
+				System.out.println("Hej!");
+
+				väljSpråk.setText("Språk");
+				språkMeny.setText("Språk");
+
+				hjälpMenu.setText("Hjälp");
+				helpItem.setText("Hjälp");
+				ideasItem.setText("Idéer/buggar");
+
+				button3.setText("Träplankor");
+				button7.setText("Automat");
+				button8.setText("Sandsten");
+				button9.setText("Notblock");
+				button10.setText("Säng");
+				button11.setText("Driven räls");
+				button12.setText("Sensorräls");
+				button13.setText("Klibbig kolv");
+				button14.setText("Kolv");
+				button15.setText("Ull");
+				button16.setText("Halvblock");
+				button17.setText("Tegelstensblock");
+				button18.setText("Dynamit");
+				button19.setText("Bokhylla");
+				button20.setText("Fackla");
+				button21.setText("Trappa");
+				button22.setText("Kista");
+				button23.setText("Arbetsbänk");
+				button24.setText("Ugn");
+				button25.setText("Skylt");
+				button26.setText("Dörr");
+				button27.setText("Stege");
+				button28.setText("Räls");
+				button29.setText("Spak");
+				button30.setText("Tryckplatta");
+				button31.setText("Rödstensfackla");
+				button32.setText("Knapp");
+				button33.setText("Snöblock");
+				button34.setText("Jukebox");
+				button35.setText("Staket");
+				button36.setText("Glödstenslampa");
+				button37.setText("Pumpalykta");
+				button38.setText("Färgat glas");
+				button39.setText("Fallucka");
+				button40.setText("Järngaller");
+				button41.setText("Fönster");
+				button42.setText("Melonblock");
+				button43.setText("Grind");
+				button44.setText("Trolleribänk");
+				button45.setText("Bryggeri");
+				button46.setText("Kittel");
+				button47.setText("Rödstenslampa");
+				button48.setText("Enderkista");
+				button49.setText("Slubbeltrådskrok");
+				button50.setText("Fyr");
+				button51.setText("Mur");
+				button52.setText("Kruka");
+				button53.setText("Städ");
+				button54.setText("Fällkista");
+				button55.setText("Rödstensjämförare");
+				button56.setText("Dagsljussensor");
+				button57.setText("Block");
+				button58.setText("Hopper");
+				button59.setText("Matta");
+				button60.setText("Aktiveringsräls");
+				button61.setText("Droppare");
+				button62.setText("Höbal");
+				button63.setText("Spade");
+				button64.setText("Yxa");
+				button65.setText("Hacka");
+				button66.setText("Svärd");
+				button67.setText("Flohacka");
+				button68.setText("Pilbåge");
+				button69.setText("Pil");
+				button70.setText("Flintstål");
+				button71.setText("Pinne");
+				button72.setText("Skål");
+				button73.setText("Bröd");
+				button74.setText("Hjälm");
+				button75.setText("Bröstplatta");
+				button76.setText("Byxor");
+				button77.setText("Skor");
+				button78.setText("Målning");
+				button79.setText("Gyllene Äpple");
+				button80.setText("Hink");
+				button81.setText("Gruvvagn");
+				button82.setText("Båt");
+				button83.setText("Papper");
+				button84.setText("Bok");
+				button85.setText("Gruvvagn med kista");
+				button86.setText("Gruvvagnslok");
+				button87.setText("Kompass");
+				button88.setText("Fiskespö");
+				button89.setText("Klocka");
+				button91.setText("Socker");
+				button92.setText("Tårta");
+				button93.setText("Rödstensrepeterare");
+				button94.setText("Kaka");
+				button95.setText("Karta");
+				button96.setText("Sax");
+				button97.setText("Melonfrön");
+				button98.setText("Guldklimp");
+				button99.setText("Glasflaska");
+				button100.setText("Jäst Spindelöga");
+				button101.setText("Blaze pulver");
+				button102.setText("Magma cremé");
+				button103.setText("Enderöga");
+				button104.setText("Guldmelon");
+				button105.setText("Bok ock fjäderpenna");
+				button106.setText("Föremålsram");
+				button107.setText("Guldmorot");
+				button108.setText("Morot på pinne");
+				button109.setText("Pumpapaj");
+				button110.setText("Raket");
+				button111.setText("Raketstärna");
+				button112.setText("Gruvvagn med dynamit");
+				button113.setText("Gruvvagn med hopper");
+				button114.setText("Koppel");
+
+				sortera();
+
+				traString = "Trä";
+				kullerString = "Kullersten";
+				rödString = "Rödsten";
+				sandString = "Sandsten";
+				guldString = "Guld";
+				slimesString = "Slime";
+				trådsString = "Tråd";
+				tegelString = "Tegelsten";
+				krutString = "Krut";
+				järnString = "Järn";
+				diamantString = "Diamant";
+				snöbollString = "Snöboll";
+				obsidianString = "Obsidian";
+				lädersString = "Läder";
+				färgerString = "Färger, Skapas t.ex. med blommor";
+				pumpaString = "Pumpa";
+				äggString = "Ägg";
+				kolString = "Kol";
+				morotString = "Morot";
+				järnelrträdString = "Järn eller trä";
+				fjäderString = "Fjäder";
+				bläckString = "Bläck";
+				träjärnstenString = "Sten, järn eller trä";
+				melonString = "Melon";
+				blazeString = "Blaze";
+				spindelögaString = "Spindelöga";
+				glasString = "Glas";
+				svampString = "Svamp";
+				glödstenspulverString = "Glödstenspulver";
+				veteString = "Vete";
+				kakaoString = "Kakao";
+				stenString = "Sten";
+				sockerrörString = "Sockerrör";
+				mjölkString = "Mjölk";
+				äppleString = "Äpple";
+				flintaString = "Flinta";
+				järnstenträString = "Järn, kullersten eller trä";
+				nederstjärnaString = "Nederstjärna";
+				nederkvartString = "Nederkvarts";
+				materialString = "Material";
+				enderString = "Enderpärla";
+
+			}
+			else if (prop.getProperty("9778436klbgflf").equals("lhdohf7984")){
+				//Eng
+
+				prop.setProperty("z", "lhdohf7984");
+
+				if (prop.getProperty("y","2").equals("10")) {
+
+					yString = " Thanks for \nusing this application! :)";
+
+				}
+				else {
+					yString = "";
+				}
+
+				help = "Hello! This program is coded by\n GoJbs Javaprogramming." + yString;
+
+				språkMeny.setIcon(new ImageIcon(getClass().getResource("/images/Brittish.jpg")));
+
+				väljSpråk.setText("Language");
+				språkMeny.setText("Language");
+
+				hjälpMenu.setText("Help");
+				helpItem.setText("Help");
+				ideasItem.setText("Ideas/Bugs");
+
+				button3.setText("Planks");
+				button7.setText("Dispenser");
+				button8.setText("Sandstone");
+				button9.setText("Note Block");
+				button10.setText("Bed");
+				button11.setText("Powered Rail");
+				button12.setText("Detector Rail");
+				button13.setText("Sticky Piston");
+				button14.setText("Piston");
+				button15.setText("Wool");
+				button16.setText("Slab");
+				button17.setText("Bricks");
+				button18.setText("TNT");
+				button19.setText("Bookshelf");
+				button20.setText("Torch");
+				button21.setText("Stairs");
+				button22.setText("Chest");
+				button23.setText("Crafting Table");
+				button24.setText("Furnace");
+				button25.setText("Sign");
+				button26.setText("Door");
+				button27.setText("Ladder");
+				button28.setText("Rail");
+				button29.setText("Lever");
+				button30.setText("Pressure Plate");
+				button31.setText("Redstone Torch");
+				button32.setText("Button");
+				button33.setText("Snow Block");
+				button34.setText("Jukebox");
+				button35.setText("Fence");
+				button36.setText("Glowstone");
+				button37.setText("Jack-O-Lantern");
+				button38.setText("Stained Glass");
+				button39.setText("Trap Door");
+				button40.setText("Iron Bars");
+				button41.setText("Glass Pane");
+				button42.setText("Melon Block");
+				button43.setText("Fence Gate");
+				button44.setText("Enchantment Table");
+				button45.setText("Brewing Stand");
+				button46.setText("Cauldron");
+				button47.setText("Redstone Lamp");
+				button48.setText("Ender Chest");
+				button49.setText("Tripwire Hook");
+				button50.setText("Becon");
+				button51.setText("Cobblestone Wall");
+				button52.setText("Flower Pot");
+				button53.setText("Anvil");
+				button54.setText("Trapped Chest");
+				button55.setText("Redstone Comparator");
+				button56.setText("Daylight Sensor");
+				button57.setText("Block");
+				button58.setText("Hopper");
+				button59.setText("Carpet");
+				button60.setText("Activator Rail");
+				button61.setText("Dropper");
+				button62.setText("Hay Bales");
+				button63.setText("Shovel");
+				button64.setText("Axe");
+				button65.setText("Pickaxe");
+				button66.setText("Sword");
+				button67.setText("Hoe");
+				button68.setText("Bow");
+				button69.setText("Arrow");
+				button70.setText("Flint & Steel");
+				button71.setText("Stick");
+				button72.setText("Bowl");
+				button73.setText("Bread");
+				button74.setText("Helmet");
+				button75.setText("Chestplate");
+				button76.setText("Leggings");
+				button77.setText("Boots");
+				button78.setText("Painting");
+				button79.setText("Golden Apple");
+				button80.setText("Bucket");
+				button81.setText("Minecart");
+				button82.setText("Boat");
+				button83.setText("Paper");
+				button84.setText("Book");
+				button85.setText("Minecart with Chest");
+				button86.setText("Minecart with Furnace");
+				button87.setText("Compass");
+				button88.setText("Fishing Rod");
+				button89.setText("Clock");
+				button91.setText("Sugar");
+				button92.setText("Cake");
+				button93.setText("Redstone Repeter");
+				button94.setText("Cookie");
+				button95.setText("Map");
+				button96.setText("Shears");
+				button97.setText("Melon Seeds");
+				button98.setText("Gold nugget");
+				button99.setText("Glass Bottle");
+				button100.setText("Fermented Spider Eye");
+				button101.setText("Blaze Powder");
+				button102.setText("Magma Cream");
+				button103.setText("Eye Of Ender");
+				button104.setText("Glistering Melon");
+				button105.setText("Book & Quil");
+				button106.setText("Item Frame");
+				button107.setText("Golden Carrot");
+				button108.setText("Carrot On A Stick");
+				button109.setText("Pumpkin Pie");
+				button110.setText("Firework Rocket");
+				button111.setText("Firework Star");
+				button112.setText("Minecart With TNT");
+				button113.setText("Minecart With Hopper");
+				button114.setText("Lead");
+
+				sortera();
+
+				traString = "Wood";
+				kullerString = "Cobblestone";
+				rödString = "Redstone";
+				sandString = "Sand";
+				guldString = "Gold";
+				slimesString = "Slime";
+				trådsString = "String";
+				tegelString = "Brick";
+				krutString = "Gunpowder";
+				järnString = "Iron";
+				diamantString = "Diamond";
+				snöbollString = "Snowball";
+				obsidianString = "Obsidian";
+				lädersString = "Leather";
+				färgerString = "Dyes";
+				pumpaString = "Pumpkin";
+				äggString = "Egg";
+				kolString = "Coal";
+				morotString = "Carrot";
+				järnelrträdString = "Wood or Iron";
+				fjäderString = "Feather";
+				bläckString = "Ink Sac";
+				träjärnstenString = "Wood, Stone or Iron";
+				melonString = "Melon";
+				blazeString = "Blaze";
+				spindelögaString = "Spider Eye";
+				glasString = "Glass";
+				svampString = "Mushrooms";
+				glödstenspulverString = "Glowstone Dust";
+				veteString = "Wheat";
+				kakaoString = "Cocoa Beans";
+				stenString = "Stone";
+				sockerrörString = "Sugar Canes";
+				mjölkString = "Milk";
+				äppleString = "Apple";
+				flintaString = "Flint";
+				järnstenträString = "Wood, Cobblestone or Iron";
+				nederstjärnaString = "Nether Star";
+				nederkvartString = "Nether Quartz";
+				materialString = "Elements (like Diamods, Iron etc)";
+				enderString = "Ender Pearl";
+
 			}
 			else {
-				yString = "";
+				throw new Exception();
 			}
-
-			help = "Hej! Det här programmet är programmerat av \n GoJbs Javaprogramering." + yString;
-
-			språkMeny.setIcon(new ImageIcon(getClass().getResource("/images/Swedish.jpg")));
-
-			System.out.println("Hej!");
-
-			väljSpråk.setText("Språk");
-			språkMeny.setText("Språk");
-
-			hjälpMenu.setText("Hjälp");
-			helpItem.setText("Hjälp");
-			ideasItem.setText("Idéer/buggar");
-
-			button3.setText("Träplankor");
-			button7.setText("Automat");
-			button8.setText("Sandsten");
-			button9.setText("Notblock");
-			button10.setText("Säng");
-			button11.setText("Driven räls");
-			button12.setText("Sensorräls");
-			button13.setText("Klibbig kolv");
-			button14.setText("Kolv");
-			button15.setText("Ull");
-			button16.setText("Halvblock");
-			button17.setText("Tegelstensblock");
-			button18.setText("Dynamit");
-			button19.setText("Bokhylla");
-			button20.setText("Fackla");
-			button21.setText("Trappa");
-			button22.setText("Kista");
-			button23.setText("Arbetsbänk");
-			button24.setText("Ugn");
-			button25.setText("Skylt");
-			button26.setText("Dörr");
-			button27.setText("Stege");
-			button28.setText("Räls");
-			button29.setText("Spak");
-			button30.setText("Tryckplatta");
-			button31.setText("Rödstensfackla");
-			button32.setText("Knapp");
-			button33.setText("Snöblock");
-			button34.setText("Jukebox");
-			button35.setText("Staket");
-			button36.setText("Glödstenslampa");
-			button37.setText("Pumpalykta");
-			button38.setText("Färgat glas");
-			button39.setText("Fallucka");
-			button40.setText("Järngaller");
-			button41.setText("Fönster");
-			button42.setText("Melonblock");
-			button43.setText("Grind");
-			button44.setText("Trolleribänk");
-			button45.setText("Bryggeri");
-			button46.setText("Kittel");
-			button47.setText("Rödstenslampa");
-			button48.setText("Enderkista");
-			button49.setText("Slubbeltrådskrok");
-			button50.setText("Fyr");
-			button51.setText("Mur");
-			button52.setText("Kruka");
-			button53.setText("Städ");
-			button54.setText("Fällkista");
-			button55.setText("Rödstensjämförare");
-			button56.setText("Dagsljussensor");
-			button57.setText("Block");
-			button58.setText("Hopper");
-			button59.setText("Matta");
-			button60.setText("Aktiveringsräls");
-			button61.setText("Droppare");
-			button62.setText("Höbal");
-			button63.setText("Spade");
-			button64.setText("Yxa");
-			button65.setText("Hacka");
-			button66.setText("Svärd");
-			button67.setText("Flohacka");
-			button68.setText("Pilbåge");
-			button69.setText("Pil");
-			button70.setText("Flintstål");
-			button71.setText("Pinne");
-			button72.setText("Skål");
-			button73.setText("Bröd");
-			button74.setText("Hjälm");
-			button75.setText("Bröstplatta");
-			button76.setText("Byxor");
-			button77.setText("Skor");
-			button78.setText("Målning");
-			button79.setText("Gyllene Äpple");
-			button80.setText("Hink");
-			button81.setText("Gruvvagn");
-			button82.setText("Båt");
-			button83.setText("Papper");
-			button84.setText("Bok");
-			button85.setText("Gruvvagn med kista");
-			button86.setText("Gruvvagnslok");
-			button87.setText("Kompass");
-			button88.setText("Fiskespö");
-			button89.setText("Klocka");
-			button91.setText("Socker");
-			button92.setText("Tårta");
-			button93.setText("Rödstensrepeterare");
-			button94.setText("Kaka");
-			button95.setText("Karta");
-			button96.setText("Sax");
-			button97.setText("Melonfrön");
-			button98.setText("Guldklimp");
-			button99.setText("Glasflaska");
-			button100.setText("Jäst Spindelöga");
-			button101.setText("Blaze pulver");
-			button102.setText("Magma cremé");
-			button103.setText("Enderöga");
-			button104.setText("Guldmelon");
-			button105.setText("Bok ock fjäderpenna");
-			button106.setText("Föremålsram");
-			button107.setText("Guldmorot");
-			button108.setText("Morot på pinne");
-			button109.setText("Pumpapaj");
-			button110.setText("Raket");
-			button111.setText("Raketstärna");
-			button112.setText("Gruvvagn med dynamit");
-			button113.setText("Gruvvagn med hopper");
-			button114.setText("Koppel");
-
-			sortera();
-
-			traString = "Trä";
-			kullerString = "Kullersten";
-			rödString = "Rödsten";
-			sandString = "Sandsten";
-			guldString = "Guld";
-			slimesString = "Slime";
-			trådsString = "Tråd";
-			tegelString = "Tegelsten";
-			krutString = "Krut";
-			järnString = "Järn";
-			diamantString = "Diamant";
-			snöbollString = "Snöboll";
-			obsidianString = "Obsidian";
-			lädersString = "Läder";
-			färgerString = "Färger, Skapas t.ex. med blommor";
-			pumpaString = "Pumpa";
-			äggString = "Ägg";
-			kolString = "Kol";
-			morotString = "Morot";
-			järnelrträdString = "Järn eller trä";
-			fjäderString = "Fjäder";
-			bläckString = "Bläck";
-			träjärnstenString = "Sten, järn eller trä";
-			melonString = "Melon";
-			blazeString = "Blaze";
-			spindelögaString = "Spindelöga";
-			glasString = "Glas";
-			svampString = "Svamp";
-			glödstenspulverString = "Glödstenspulver";
-			veteString = "Vete";
-			kakaoString = "Kakao";
-			stenString = "Sten";
-			sockerrörString = "Sockerrör";
-			mjölkString = "Mjölk";
-			äppleString = "Äpple";
-			flintaString = "Flinta";
-			järnstenträString = "Järn, kullersten eller trä";
-			nederstjärnaString = "Nederstjärna";
-			nederkvartString = "Nederkvarts";
-			materialString = "Material";
-			enderString = "Enderpärla";
-
-		}
-		else if (prop.getProperty("9778436klbgflf").equals("lhdohf7984")){
-			//Eng
-
-			prop.setProperty("z", "lhdohf7984");
-
-			if (prop.getProperty("y","2").equals("10")) {
-
-				yString = " Thanks for \nusing this application! :)";
-
-			}
-			else {
-				yString = "";
-			}
-
-			help = "Hello! This program is coded by\n GoJbs Javaprogramming." + yString;
-
-			språkMeny.setIcon(new ImageIcon(getClass().getResource("/images/Brittish.jpg")));
-
-			väljSpråk.setText("Language");
-			språkMeny.setText("Language");
-
-			hjälpMenu.setText("Help");
-			helpItem.setText("Help");
-			ideasItem.setText("Ideas/Bugs");
-
-			button3.setText("Planks");
-			button7.setText("Dispenser");
-			button8.setText("Sandstone");
-			button9.setText("Note Block");
-			button10.setText("Bed");
-			button11.setText("Powered Rail");
-			button12.setText("Detector Rail");
-			button13.setText("Sticky Piston");
-			button14.setText("Piston");
-			button15.setText("Wool");
-			button16.setText("Slab");
-			button17.setText("Bricks");
-			button18.setText("TNT");
-			button19.setText("Bookshelf");
-			button20.setText("Torch");
-			button21.setText("Stairs");
-			button22.setText("Chest");
-			button23.setText("Crafting Table");
-			button24.setText("Furnace");
-			button25.setText("Sign");
-			button26.setText("Door");
-			button27.setText("Ladder");
-			button28.setText("Rail");
-			button29.setText("Lever");
-			button30.setText("Pressure Plate");
-			button31.setText("Redstone Torch");
-			button32.setText("Button");
-			button33.setText("Snow Block");
-			button34.setText("Jukebox");
-			button35.setText("Fence");
-			button36.setText("Glowstone");
-			button37.setText("Jack-O-Lantern");
-			button38.setText("Stained Glass");
-			button39.setText("Trap Door");
-			button40.setText("Iron Bars");
-			button41.setText("Glass Pane");
-			button42.setText("Melon Block");
-			button43.setText("Fence Gate");
-			button44.setText("Enchantment Table");
-			button45.setText("Brewing Stand");
-			button46.setText("Cauldron");
-			button47.setText("Redstone Lamp");
-			button48.setText("Ender Chest");
-			button49.setText("Tripwire Hook");
-			button50.setText("Becon");
-			button51.setText("Cobblestone Wall");
-			button52.setText("Flower Pot");
-			button53.setText("Anvil");
-			button54.setText("Trapped Chest");
-			button55.setText("Redstone Comparator");
-			button56.setText("Daylight Sensor");
-			button57.setText("Block");
-			button58.setText("Hopper");
-			button59.setText("Carpet");
-			button60.setText("Activator Rail");
-			button61.setText("Dropper");
-			button62.setText("Hay Bales");
-			button63.setText("Shovel");
-			button64.setText("Axe");
-			button65.setText("Pickaxe");
-			button66.setText("Sword");
-			button67.setText("Hoe");
-			button68.setText("Bow");
-			button69.setText("Arrow");
-			button70.setText("Flint & Steel");
-			button71.setText("Stick");
-			button72.setText("Bowl");
-			button73.setText("Bread");
-			button74.setText("Helmet");
-			button75.setText("Chestplate");
-			button76.setText("Leggings");
-			button77.setText("Boots");
-			button78.setText("Painting");
-			button79.setText("Golden Apple");
-			button80.setText("Bucket");
-			button81.setText("Minecart");
-			button82.setText("Boat");
-			button83.setText("Paper");
-			button84.setText("Book");
-			button85.setText("Minecart with Chest");
-			button86.setText("Minecart with Furnace");
-			button87.setText("Compass");
-			button88.setText("Fishing Rod");
-			button89.setText("Clock");
-			button91.setText("Sugar");
-			button92.setText("Cake");
-			button93.setText("Redstone Repeter");
-			button94.setText("Cookie");
-			button95.setText("Map");
-			button96.setText("Shears");
-			button97.setText("Melon Seeds");
-			button98.setText("Gold nugget");
-			button99.setText("Glass Bottle");
-			button100.setText("Fermented Spider Eye");
-			button101.setText("Blaze Powder");
-			button102.setText("Magma Cream");
-			button103.setText("Eye Of Ender");
-			button104.setText("Glistering Melon");
-			button105.setText("Book & Quil");
-			button106.setText("Item Frame");
-			button107.setText("Golden Carrot");
-			button108.setText("Carrot On A Stick");
-			button109.setText("Pumpkin Pie");
-			button110.setText("Firework Rocket");
-			button111.setText("Firework Star");
-			button112.setText("Minecart With TNT");
-			button113.setText("Minecart With Hopper");
-			button114.setText("Lead");
-
-			sortera();
-
-			traString = "Wood";
-			kullerString = "Cobblestone";
-			rödString = "Redstone";
-			sandString = "Sand";
-			guldString = "Gold";
-			slimesString = "Slime";
-			trådsString = "String";
-			tegelString = "Brick";
-			krutString = "Gunpowder";
-			järnString = "Iron";
-			diamantString = "Diamond";
-			snöbollString = "Snowball";
-			obsidianString = "Obsidian";
-			lädersString = "Leather";
-			färgerString = "Dyes";
-			pumpaString = "Pumpkin";
-			äggString = "Egg";
-			kolString = "Coal";
-			morotString = "Carrot";
-			järnelrträdString = "Wood or Iron";
-			fjäderString = "Feather";
-			bläckString = "Ink Sac";
-			träjärnstenString = "Wood, Stone or Iron";
-			melonString = "Melon";
-			blazeString = "Blaze";
-			spindelögaString = "Spider Eye";
-			glasString = "Glass";
-			svampString = "Mushrooms";
-			glödstenspulverString = "Glowstone Dust";
-			veteString = "Wheat";
-			kakaoString = "Cocoa Beans";
-			stenString = "Stone";
-			sockerrörString = "Sugar Canes";
-			mjölkString = "Milk";
-			äppleString = "Apple";
-			flintaString = "Flint";
-			järnstenträString = "Wood, Cobblestone or Iron";
-			nederstjärnaString = "Nether Star";
-			nederkvartString = "Nether Quartz";
-			materialString = "Elements (like Diamods, Iron etc)";
-			enderString = "Ender Pearl";
-
-		}
-		else {
-			throw new Exception();
+		} catch (Exception e) {
+			Språkfråga();
 		}
 
 		frame3.setTitle(button3.getText());
@@ -1121,20 +1103,19 @@ public class GoJb1 implements ActionListener, CaretListener{
 		frame112.setTitle(button112.getText());
 		frame113.setTitle(button113.getText());
 		frame114.setTitle(button114.getText());
-
-		frameHuvud.repaint();
-		frameHuvud.revalidate();
-		frameHuvud.setSize(800,700);
-		frameHuvud.setLocationRelativeTo(null);
-
-
+		
 	}
 	void GörFönster() {
-		öppnad=true;
 
 		scrollBar.getVerticalScrollBar().setUnitIncrement(20);
+		
 		frameHuvud.setIconImage(new ImageIcon(getClass().getResource("/images/Java-icon.png")).getImage());
-
+		frameHuvud.setSize(800,700);
+		frameHuvud.setLocationRelativeTo(null);
+		frameHuvud.add(scrollBar);
+		frameHuvud.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frameHuvud.setJMenuBar(bar);
+		
 		frame3.setSize(500,500);
 		frame7.setSize(500,500);
 		frame8.setSize(500,500);
@@ -3958,7 +3939,7 @@ public class GoJb1 implements ActionListener, CaretListener{
 
 		frame.setLayout(new GridLayout(0, 3));
 
-		frameHuvud.setJMenuBar(bar);
+		
 
 		bar.add(språkMeny);
 		bar.add(hjälpMenu);
@@ -3982,10 +3963,6 @@ public class GoJb1 implements ActionListener, CaretListener{
 		hjälpMenu.add(ideasItem);
 		väljSpråk.addActionListener(this);
 
-		frameHuvud.add(scrollBar);
-		frameHuvud.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frameHuvud.setLocationRelativeTo(null);
-
 		ideasFrame.setSize(525,500);
 		ideasFrame.setLocationRelativeTo(null);
 		ideasFrame.setLayout(new GridLayout(3,1));
@@ -3998,9 +3975,8 @@ public class GoJb1 implements ActionListener, CaretListener{
 
 		if(e.getSource()==mailTimer){
 
-			if(GoJb1.mailSkickat==false){
+			if(mailSkickat==false){
 				//Mail
-
 				try {
 					System.out.println("jndsnl");
 					Mail.Skicka("gojb@gojb.bl.ee", "Användande av GoJbGuide", "Namn:  " + prop.getProperty("Namn") + ", Språk:  " + prop.getProperty("9778436klbgflf") + "\n //lhdohf7984 = Engelska \n //86325yhrel = Svenska");
@@ -4012,22 +3988,16 @@ public class GoJb1 implements ActionListener, CaretListener{
 					System.err.println("Mejl misslyckadess att skickas");
 					e1.printStackTrace();
 				}
-
 			}
-			if(GoJb1.mailSkickat==true){
+			if(mailSkickat==true){
 				mailTimer.stop();
 			}
 		}
 		if (e.getSource()==helpItem){
-
 			JOptionPane.showMessageDialog(null, help);
 		}
 		if (e.getSource()==ideasItem) {
-
-
 			ideasFrame.setVisible(true);
-
-
 		}
 		if(skicka==e.getSource()){
 			try {
@@ -4035,12 +4005,9 @@ public class GoJb1 implements ActionListener, CaretListener{
 						+ " skriver: \n" + area.getText());
 				ideasFrame.dispose();
 			} catch (Exception e1) {
-
 				System.err.println("Mail skickades inte!!");
-
 			}
 		}
-
 
 		System.out.println("Någon knapp nedtryckt!");	
 
@@ -4152,7 +4119,6 @@ public class GoJb1 implements ActionListener, CaretListener{
 		frame112.setVisible(false);
 		frame113.setVisible(false);
 		frame114.setVisible(false);
-
 
 		frame3.setLocationRelativeTo(frameHuvud);
 		frame7.setLocationRelativeTo(frameHuvud);
@@ -5138,8 +5104,6 @@ public class GoJb1 implements ActionListener, CaretListener{
 		while (frame.getComponents().length<9) {
 			frame.add(Box.createGlue());
 		}
-		frame.repaint();
-		frame.revalidate();
 		frameHuvud.revalidate();
 		frameHuvud.repaint();
 
@@ -5397,24 +5361,25 @@ public class GoJb1 implements ActionListener, CaretListener{
 
 			if (progressBar.getValue() == 25 && namnInt == 1){
 				start=true;
-				start();
+				Språk();
 				new Thread(new Update()).start();
 				prop.setProperty("y", "9");
 			}
-			if (progressBar.getValue() == 50 && namnInt == 1){
-				if (öppnad) {
-					ladda2();
-				}
+			if (progressBar.getValue() == 50 && namnInt==2){
+				välkommen = "Välkommen! Laddar...";
 			}
-			if (progressBar.getValue() == 65 && namnInt == 1){
-				if (öppnad) {
-					ladda3();
-				}
+			if (progressBar.getValue() == 25){
+				GörFönster();
 			}
-			if (progressBar.getValue() == 80 && namnInt == 1){
-				if (öppnad) {
-					ladda4();
-				}
+			if (progressBar.getValue() == 50){
+				ladda2();
+			}
+			
+			if (progressBar.getValue() == 65){
+				ladda3();
+			}
+			if (progressBar.getValue() == 80){
+				ladda4();
 			}
 			if(progressBar.getValue()==101&&start==true){
 				timer.stop();
@@ -5426,16 +5391,14 @@ public class GoJb1 implements ActionListener, CaretListener{
 			if (progressBar.getValue() == 100 && namnInt == 2){
 
 				timer.stop();
+				namn = showInputDialog("Enter name/Skriv ditt namn");
 
-				namn = JOptionPane.showInputDialog("Enter name/Skriv ditt namn");
-
-				if(namn.equals("")||namn.equals(null)){
+				if(namn==null||namn.equals("")){
 					System.exit(3);
 				}
 				else {
-					start();
+					Språk();
 					frame2.dispose();
-					frameHuvud.setVisible(true);
 				}
 				prop.setProperty("Namn", namn);
 				sparaProp();
@@ -5524,20 +5487,7 @@ public class GoJb1 implements ActionListener, CaretListener{
 			namnInt = 2;
 
 			prop.setProperty("Namn", "");
-
-
-			if (progressBar.getValue() < 50){
-				välkommen = "Welcome! Loading...";
-
-				frame2.revalidate();
-				frame2.repaint();
-			}
-			else if (progressBar.getValue() >= 50){
-				välkommen = "Välkommen! Laddar...";
-
-				frame2.revalidate();
-				frame2.repaint();
-			}
+			välkommen = "Welcome! Loading...";
 			sparaProp();
 		}
 	}
