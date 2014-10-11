@@ -571,7 +571,7 @@ public class GoJb1 implements ActionListener, CaretListener{
 
 	private JScrollPane scrollBar=new JScrollPane(frame,JScrollPane.VERTICAL_SCROLLBAR_ALWAYS,JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
 
-	private static int x = 1,z,namnInt;
+	private static int namnInt;
 
 	static String laddaString, cancelString, string, finishedString;
 	private static String help, yString, namn, välkommen;
@@ -5404,9 +5404,6 @@ public class GoJb1 implements ActionListener, CaretListener{
 			background2.setText(Integer.toString(progressBar.getValue())+"%");
 			frame2.repaint();
 
-			if (z == 0){
-				x++;
-			}
 			if (progressBar.getValue() == 25 && namnInt == 1){
 				start=true;
 				start();
