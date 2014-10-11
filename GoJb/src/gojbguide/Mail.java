@@ -32,7 +32,6 @@ class Mail {
 		msg.setSubject(Ämne);
 		msg.setText(Meddelande);
 
-
 		Transport.send( msg );
 
 	}
