@@ -2,14 +2,12 @@ package gojbguide;
 import java.awt.*;
 import java.awt.event.*;
 import java.io.*;
-import java.net.URL;
-import java.net.URLConnection;
+import java.net.*;
 import java.util.*;
 
 import javax.swing.*;
 import javax.swing.Timer;
-import javax.swing.event.CaretEvent;
-import javax.swing.event.CaretListener;
+import javax.swing.event.*;
 
 import static java.awt.Color.*;
 import static javax.swing.JOptionPane.*;
@@ -42,7 +40,6 @@ public class GoJb1 implements ActionListener, CaretListener{
 	static JTextArea label = new JTextArea();
 
 	Timer mailTimer = new Timer(1000, this);
-
 
 	JMenu språkMeny = new JMenu(),
 			hjälpMenu = new JMenu("Hjälp");
@@ -161,7 +158,7 @@ public class GoJb1 implements ActionListener, CaretListener{
 			buttons114 = new JButton[10];
 
 
-	JFrame 		frame3 = new JFrame(),
+	JFrame 	frame3 = new JFrame(),
 			frame7 = new JFrame(),
 			frame8 = new JFrame(),
 			frame9 = new JFrame(),
@@ -273,7 +270,7 @@ public class GoJb1 implements ActionListener, CaretListener{
 	JFrame språk = new JFrame("Language");
 	JFrame ideasFrame = new JFrame("Ideas");
 
-	ImageIcon 	i3 = new ImageIcon(getClass().getResource("/images/3.png")),
+	ImageIcon i3 = new ImageIcon(getClass().getResource("/images/3.png")),
 			i7 = new ImageIcon(getClass().getResource("/images/7.png")),
 			i8 = new ImageIcon(getClass().getResource("/images/8.gif")),
 			i9 = new ImageIcon(getClass().getResource("/images/9.png")),
@@ -571,7 +568,7 @@ public class GoJb1 implements ActionListener, CaretListener{
 			spindelögaString = "",glasString = "",svampString = "",glödstenspulverString = "",
 			veteString = "",kakaoString = "",stenString = "",sockerrörString = "",mjölkString = "",
 			äppleString = "",flintaString = "",järnstenträString = "",nederstjärnaString = "",
-			nederkvartString = "",materialString = "";
+			nederkvartString = "",materialString = "", enderString;
 
 	JPanel frame = new JPanel();
 
@@ -843,6 +840,7 @@ public class GoJb1 implements ActionListener, CaretListener{
 			nederstjärnaString = "Nederstjärna";
 			nederkvartString = "Nederkvarts";
 			materialString = "Material";
+			enderString = "Enderpärla";
 
 		}
 		else if (prop.getProperty("9778436klbgflf").equals("lhdohf7984")){
@@ -1021,6 +1019,7 @@ public class GoJb1 implements ActionListener, CaretListener{
 			nederstjärnaString = "Nether Star";
 			nederkvartString = "Nether Quartz";
 			materialString = "Elements (like Diamods, Iron etc)";
+			enderString = "Ender Pearl";
 
 		}
 		else {
@@ -4821,7 +4820,9 @@ public class GoJb1 implements ActionListener, CaretListener{
 		}
 		if (e.getSource()==väljSpråk){
 			Språkfråga();
-
+		}
+		if (abc==enderpärla) {
+			JOptionPane.showMessageDialog(null, enderString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
 		}
 
 	}
