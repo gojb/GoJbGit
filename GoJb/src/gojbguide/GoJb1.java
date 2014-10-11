@@ -27,8 +27,8 @@ public class GoJb1 implements ActionListener, CaretListener{
 	static String help;
 	static String yString;
 
-	JButton svenska = new JButton("Svenska"),
-			engelska = new JButton("English");
+	JButton svenska = new JButton("Svenska",new ImageIcon(getClass().getResource("/images/Swedish.jpg"))),
+			engelska = new JButton("English",new ImageIcon(getClass().getResource("/images/Brittish.jpg")));
 
 	JMenuBar bar = new JMenuBar();
 
@@ -37,7 +37,7 @@ public class GoJb1 implements ActionListener, CaretListener{
 	JTextField text = new JTextField();
 
 	JTextArea area = new JTextArea();
-	static JTextArea label = new JTextArea();
+	JTextArea label = new JTextArea();
 
 	Timer mailTimer = new Timer(1000, this);
 
@@ -266,9 +266,9 @@ public class GoJb1 implements ActionListener, CaretListener{
 			frame112 = new JFrame(),
 			frame113 = new JFrame(),
 			frame114 = new JFrame();
-	static JFrame frameHuvud = new JFrame("GoJbGuide");
-	JFrame språk = new JFrame("Language");
-	JFrame ideasFrame = new JFrame("Ideas");
+	JFrame frameHuvud = new JFrame("GoJbGuide"),
+			språk = new JFrame("Language"),
+			ideasFrame = new JFrame("Ideas");
 
 	ImageIcon i3 = new ImageIcon(getClass().getResource("/images/3.png")),
 			i7 = new ImageIcon(getClass().getResource("/images/7.png")),
@@ -589,11 +589,11 @@ public class GoJb1 implements ActionListener, CaretListener{
 			background2 = new JLabel();
 
 	int a;
-	
+
 	void start(){
 		try {
 			Språk();
-				GörFönster();
+			GörFönster();
 		} catch (Exception e) {
 			Språkfråga();
 		}
@@ -609,6 +609,7 @@ public class GoJb1 implements ActionListener, CaretListener{
 	public void Språkfråga() {
 		ActionListener dActionListener = new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				scrollBar.getVerticalScrollBar().setValue(0);
 				if (e.getSource()==svenska) {
 					prop.setProperty("9778436klbgflf", "86325yhrel");
 					prop.setProperty("x", "1");
@@ -1912,7 +1913,7 @@ public class GoJb1 implements ActionListener, CaretListener{
 			buttons114[j] = new JButton();
 			frame114.add(buttons114[j]);
 		}
-		
+
 		buttons3[1].setIcon(null);
 		buttons3[2].setIcon(null);
 		buttons3[3].setIcon(null);
@@ -3639,7 +3640,7 @@ public class GoJb1 implements ActionListener, CaretListener{
 				buttons114[j].addActionListener(this);
 			}
 		}
-		
+
 	}
 	void ladda4(){
 		frame3.setIconImage(frameHuvud.getIconImage());
@@ -3859,7 +3860,7 @@ public class GoJb1 implements ActionListener, CaretListener{
 		button112.setVerticalTextPosition(JButton.BOTTOM);
 		button113.setVerticalTextPosition(JButton.BOTTOM);
 		button114.setVerticalTextPosition(JButton.BOTTOM);
-		
+
 		button3.setHorizontalTextPosition(JButton.CENTER);
 		button7.setHorizontalTextPosition(JButton.CENTER);
 		button8.setHorizontalTextPosition(JButton.CENTER);
@@ -5478,7 +5479,7 @@ public class GoJb1 implements ActionListener, CaretListener{
 			} catch (IOException e) {
 				System.err.println("sdoövhjxcblizxg,vbs");
 			}
-			
+
 			frame2.setLayeredPane(layeredPane);
 
 			frame2.setBackground(white);
@@ -5525,14 +5526,14 @@ public class GoJb1 implements ActionListener, CaretListener{
 			layeredPane.setLayer(background2, 90);
 			layeredPane.setLayer(progressBar, 100);
 
+			SpråkVoid();
+
 			frame2.repaint();
 			frame2.revalidate();
 			layeredPane.revalidate();
 			layeredPane.repaint();
 
 			timer.start();
-
-			SpråkVoid();
 
 			if(prop.getProperty("y","1").equals("10")){
 				mailSkickat=true;
@@ -5558,8 +5559,6 @@ public class GoJb1 implements ActionListener, CaretListener{
 				if (progressBar.getValue() < 50){
 					välkommen = "Welcome! Loading...";
 
-
-
 					frame2.revalidate();
 					frame2.repaint();
 				}
@@ -5576,20 +5575,17 @@ public class GoJb1 implements ActionListener, CaretListener{
 					e.printStackTrace();
 				}
 			}
-
 		}
-		public static void SpråkVoid(){
+		public void SpråkVoid(){
 			if (prop.getProperty("9778436klbgflf","kjg").equals("86325yhrel")){
 				välkommen = "Välkommen " + prop.getProperty("Namn");
 				string="Uppdatering tillgänglig. Vill du uppdatera?";
 				laddaString="Uppdatera nu";
 				cancelString="Uppdatera senare";
 				finishedString="Uppdatering slutförd. \nProgrammet kommer nu att starta om";
-				GoJb1.label.setText("Skriv vad du har på hjärtat här. Det\nspelar ingen roll om det "
+				label.setText("Skriv vad du har på hjärtat här. Det\nspelar ingen roll om det "
 						+ "är buggar,\nförslag till programmet, eller förslag \ntill nya program. Skriv "
 						+ "det här! :D");
-				frame2.revalidate();
-				frame2.repaint();
 				namnInt = 1;
 
 			}
@@ -5599,15 +5595,13 @@ public class GoJb1 implements ActionListener, CaretListener{
 				laddaString = "Update now";
 				cancelString = "Update later";
 				finishedString = "Uppdate finished. \nThe program will now restart";
-				GoJb1.label.setText("Write what's on your mind here. It \ndoesn't matter if it's about buggs or\nideas "
+				label.setText("Write what's on your mind here. It \ndoesn't matter if it's about buggs or\nideas "
 						+ "for this program, or ideas for \na new program. Write it here! :D");
-				frame2.revalidate();
-				frame2.repaint();
 				namnInt = 1;
 
 			}
 		}
-			public static void main(String[] args) {
+		public static void main(String[] args) {
 			progressBar = new JProgressBar(0,101);
 			try {
 				UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
@@ -5615,7 +5609,7 @@ public class GoJb1 implements ActionListener, CaretListener{
 				((Runnable) Toolkit.getDefaultToolkit().getDesktopProperty("win.sound.hand")).run();
 				JOptionPane.showMessageDialog(null, "Bad LookAndFeel!","Error",JOptionPane.ERROR_MESSAGE);
 			}
-			
+
 			new GoJb1();
 		}
 
@@ -5634,14 +5628,16 @@ class Update implements Runnable{
 						showOptionDialog(null, GoJb1.string, "GoJbGuide",
 								DEFAULT_OPTION, WARNING_MESSAGE,
 								null, options, options[0])==OK_OPTION) {
-					
+
 					JProgressBar bar = new JProgressBar(0, connection.getContentLength());
 					JFrame frame = new JFrame("Downloading update...");
 					frame.add(bar);
 					frame.setIconImage(new ImageIcon(getClass().getResource("/images/Java-icon.png")).getImage());
-					frame.setLocationRelativeTo(null);
-					frame.setSize(500,100);
+					frame.setSize(500,100);	
+					frame.setLocation(Toolkit.getDefaultToolkit().getScreenSize().width-frame.getWidth(),
+							Toolkit.getDefaultToolkit().getScreenSize().height-frame.getHeight()*2);
 					frame.setVisible(true);
+					frame.toFront();
 					InputStream in = connection.getInputStream();
 					ByteArrayOutputStream out = new ByteArrayOutputStream();
 					int n = 0;
