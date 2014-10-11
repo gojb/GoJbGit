@@ -5,6 +5,7 @@ import java.io.*;
 import java.net.*;
 import java.util.*;
 
+import javax.mail.MessagingException;
 import javax.swing.*;
 import javax.swing.Timer;
 import javax.swing.event.*;
@@ -579,7 +580,7 @@ public class GoJb1 implements ActionListener, CaretListener{
 
 	private static JProgressBar progressBar;
 
-	private static JFrame frame2 = new JFrame();
+	private JFrame frame2 = new JFrame();
 	private JLayeredPane layeredPane = new JLayeredPane();
 	private JLabel background=new JLabel(new ImageIcon(getClass().getResource("/images/Mine.jpg")));
 	private JLabel background1=new JLabel(),
@@ -3939,8 +3940,6 @@ public class GoJb1 implements ActionListener, CaretListener{
 
 		frame.setLayout(new GridLayout(0, 3));
 
-		
-
 		bar.add(språkMeny);
 		bar.add(hjälpMenu);
 
@@ -3971,25 +3970,32 @@ public class GoJb1 implements ActionListener, CaretListener{
 		ideasFrame.add(skicka);
 		skicka.addActionListener(this);
 	}
+	int a = 1;
 	public void actionPerformed(ActionEvent e) {
-
+		System.out.println("Någon knapp nedtryckt!");	
 		if(e.getSource()==mailTimer){
-
-			if(mailSkickat==false){
-				//Mail
-				try {
-					System.out.println("jndsnl");
+			try {
+				if(mailSkickat==false&&!prop.getProperty("Namn","").equals("")&&!prop.getProperty("9778436klbgflf","").equals("")){
+					//Mail
+					System.out.println("Försök " + a);
 					Mail.Skicka("gojb@gojb.bl.ee", "Användande av GoJbGuide", "Namn:  " + prop.getProperty("Namn") + ", Språk:  " + prop.getProperty("9778436klbgflf") + "\n //lhdohf7984 = Engelska \n //86325yhrel = Svenska");
 					prop.setProperty("y", "10");
 					System.out.println("Skickat!");
 					mailTimer.stop();
 					sparaProp();
-				} catch (Exception e1) {
-					System.err.println("Mejl misslyckadess att skickas");
-					e1.printStackTrace();
-				}
+				} 
+			}
+			catch (MessagingException e1) {
+				a++;
+				System.err.println("Mejl misslyckades att skickas");
+			}catch (Exception e1) {
+				System.err.println("Mejl misslyckades");
 			}
 			if(mailSkickat==true){
+				mailTimer.stop();
+			}
+			if (a>10) {
+				System.err.println("Problem med internetåtkomst");
 				mailTimer.stop();
 			}
 		}
@@ -4008,9 +4014,7 @@ public class GoJb1 implements ActionListener, CaretListener{
 				System.err.println("Mail skickades inte!!");
 			}
 		}
-
-		System.out.println("Någon knapp nedtryckt!");	
-
+		
 		frame3.setVisible(false);
 		frame7.setVisible(false);
 		frame8.setVisible(false);
@@ -5412,21 +5416,15 @@ public class GoJb1 implements ActionListener, CaretListener{
 		} catch (IOException e) {
 			System.err.println("sdoövhjxcblizxg,vbs");
 		}
-
+		
 		frame2.setLayeredPane(layeredPane);
-
 		frame2.setBackground(white);
 		frame2.setIconImage(new ImageIcon(getClass().getResource("/images/Java-icon.png")).getImage());
-
-		layeredPane.add(background);
-		layeredPane.add(background1);
-		layeredPane.add(background2);
-		layeredPane.add(progressBar);
+		frame2.setUndecorated(true);
 		frame2.setLayout(new BorderLayout());
 		frame2.setSize(300,200);
 		frame2.setLocationRelativeTo(null);
 		frame2.setDefaultCloseOperation(3);
-		frame2.setUndecorated(true);
 		frame2.setVisible(true);
 
 		background.setOpaque(true);
@@ -5453,7 +5451,11 @@ public class GoJb1 implements ActionListener, CaretListener{
 		progressBar.setForeground(Color.green);
 		progressBar.setBackground(Color.black);
 		progressBar.setBorderPainted(false);
-
+		
+		layeredPane.add(background);
+		layeredPane.add(background1);
+		layeredPane.add(background2);
+		layeredPane.add(progressBar);
 		layeredPane.setLayer(background, 25);
 		layeredPane.setLayer(background1, 90);
 		layeredPane.setLayer(background2, 90);
@@ -5473,7 +5475,7 @@ public class GoJb1 implements ActionListener, CaretListener{
 			System.out.println("Mail = true");
 
 		}
-		else if (!prop.getProperty("y","1").equals("10")){
+		else{
 			mailSkickat=false;
 			System.out.println("Mail = false");
 		}
