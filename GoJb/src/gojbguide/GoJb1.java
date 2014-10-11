@@ -574,7 +574,7 @@ public class GoJb1 implements ActionListener, CaretListener{
 	private static int namnInt;
 
 	static String laddaString, cancelString, string, finishedString;
-	private static String help, yString, namn, välkommen;
+	private static String help, yString, namn = "", välkommen;
 
 	private static Boolean mailSkickat,start = false;
 
@@ -616,18 +616,7 @@ public class GoJb1 implements ActionListener, CaretListener{
 					prop.setProperty("9778436klbgflf", "lhdohf7984");
 					SpråkVoid();
 				}
-				try {
-					prop.store(new FileWriter(new File(System.getProperty("user.home") + "\\AppData\\Roaming\\GoJb\\settings.gojb")),"Inställningar för GoJbGuide");
-				} catch (Exception e1) {
-					System.err.println("Mappen finns inte! Skapar...");
-					new File(System.getProperty("user.home") + "\\AppData\\Roaming\\GoJb\\").mkdir();
-
-					try {
-						prop.store(new FileWriter(new File(System.getProperty("user.home") + "\\AppData\\Roaming\\GoJb\\settings.gojb")),"Inställningar för GoJbGuide");
-					} catch (IOException e2) {
-						e2.printStackTrace();
-					}
-				}
+				sparaProp();
 				språk.setVisible(false);
 				try {
 					Språk();
@@ -4018,13 +4007,7 @@ public class GoJb1 implements ActionListener, CaretListener{
 					prop.setProperty("y", "10");
 					System.out.println("Skickat!");
 					mailTimer.stop();
-					try {
-						prop.store(new FileWriter(new File(System.getProperty("user.home") + "\\AppData\\Roaming\\GoJb\\settings.gojb")),"Inställningar för GoJbGuide");
-						System.out.println("Lyckades skriva i prop");
-					} catch (Exception e1) {
-						System.out.println("lijashfölivbfspxkl");
-						e1.printStackTrace();
-					}
+					sparaProp();
 				} catch (Exception e1) {
 					System.err.println("Mejl misslyckadess att skickas");
 					e1.printStackTrace();
@@ -5392,13 +5375,21 @@ public class GoJb1 implements ActionListener, CaretListener{
 			frame.add(jButton);
 		}
 	}
-	ActionListener actionListener2 = new ActionListener() {
-
-		public void actionPerformed(ActionEvent arg0) {
-
-			if(namn == null){
-				namn = "";
+	void sparaProp(){
+		try {
+			prop.store(new FileWriter(new File(System.getProperty("user.home") + "\\AppData\\Roaming\\GoJb\\settings.gojb")),"Inställningar för GoJbGuide");
+		} catch (Exception e1) {
+			System.err.println("Mappen finns inte! Skapar...");
+			new File(System.getProperty("user.home") + "\\AppData\\Roaming\\GoJb\\").mkdir();
+			try {
+				prop.store(new FileWriter(new File(System.getProperty("user.home") + "\\AppData\\Roaming\\GoJb\\settings.gojb")),"Inställningar för GoJbGuide");
+			} catch (IOException e2) {
+				e2.printStackTrace();
 			}
+		}
+	}
+	ActionListener actionListener2 = new ActionListener() {
+		public void actionPerformed(ActionEvent arg0) {
 			background1.setText(välkommen + " " + namn);			
 			progressBar.setValue(progressBar.getValue()+1);
 			background2.setText(Integer.toString(progressBar.getValue())+"%");
@@ -5427,8 +5418,10 @@ public class GoJb1 implements ActionListener, CaretListener{
 			}
 			if(progressBar.getValue()==101&&start==true){
 				timer.stop();
-				frameHuvud.setVisible(true);
 				frame2.dispose();
+			}
+			if (progressBar.getValue() == 101 && namnInt == 1){
+				frameHuvud.setVisible(true);
 			}
 			if (progressBar.getValue() == 100 && namnInt == 2){
 
@@ -5442,17 +5435,10 @@ public class GoJb1 implements ActionListener, CaretListener{
 				else {
 					start();
 					frame2.dispose();
-					timer.stop();
 					frameHuvud.setVisible(true);
-
 				}
 				prop.setProperty("Namn", namn);
-				try {
-					prop.store(new FileWriter(new File(System.getProperty("user.home") + "\\AppData\\Roaming\\GoJb\\settings.gojb")),"Inställningar för GoJbGuide");
-				} catch (Exception e) {
-					System.out.println("lyckades inte skriva");
-					e.printStackTrace();
-				}
+				sparaProp();
 			}
 		}
 	};
@@ -5552,12 +5538,7 @@ public class GoJb1 implements ActionListener, CaretListener{
 				frame2.revalidate();
 				frame2.repaint();
 			}
-			try {
-				prop.store(new FileWriter(new File(System.getProperty("user.home") + "\\AppData\\Roaming\\GoJb\\settings.gojb")),"Inställningar för GoJbGuide");
-			} catch (Exception e) {
-				System.out.println("lyckades inte skriva");
-				e.printStackTrace();
-			}
+			sparaProp();
 		}
 	}
 	public void SpråkVoid(){
@@ -5582,7 +5563,6 @@ public class GoJb1 implements ActionListener, CaretListener{
 			label.setText("Write what's on your mind here. It \ndoesn't matter if it's about buggs or\nideas "
 					+ "for this program, or ideas for \na new program. Write it here! :D");
 			namnInt = 1;
-
 		}
 	}
 	public static void main(String[] args) {
