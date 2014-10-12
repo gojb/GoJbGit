@@ -287,7 +287,7 @@ public class GoJb1 implements ActionListener, CaretListener{
 			i23 = new ImageIcon(getClass().getResource("/images/23.png")),
 			i24 = new ImageIcon(getClass().getResource("/images/24.png")),
 			i25 = new ImageIcon(getClass().getResource("/images/25.png")),
-			i26 = new ImageIcon(getClass().getResource("/images/1010.gif")),
+			i26 = new ImageIcon(getClass().getResource("/images/26.gif")),
 			i27 = new ImageIcon(getClass().getResource("/images/27.png")),
 			i28 = new ImageIcon(getClass().getResource("/images/28.png")),
 			i29 = new ImageIcon(getClass().getResource("/images/29.gif")),
