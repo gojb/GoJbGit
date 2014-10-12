@@ -6,8 +6,8 @@ import java.util.*;
 import javax.mail.*;
 import javax.mail.internet.*;
 
-class Mail {
-	static void Skicka(String Till, String Ämne, String Meddelande) throws AddressException, MessagingException{
+public class Mail {
+	public static void Skicka(String Till, String Ämne, String Meddelande) throws AddressException, MessagingException{
 
 		Properties props = new Properties();
 		props.put("mail.smtp.host", "mx1.hostinger.se");
