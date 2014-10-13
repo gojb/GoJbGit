@@ -2,13 +2,13 @@ package gojbguide;
 import java.awt.*;
 import java.awt.event.*;
 import java.io.*;
-import java.net.URL;
+import java.net.*;
 import java.util.*;
 
+import javax.mail.MessagingException;
 import javax.swing.*;
 import javax.swing.Timer;
-import javax.swing.event.CaretEvent;
-import javax.swing.event.CaretListener;
+import javax.swing.event.*;
 
 import static java.awt.Color.*;
 import static javax.swing.JOptionPane.*;
@@ -22,35 +22,30 @@ import static javax.swing.JOptionPane.*;
 
 public class GoJb1 implements ActionListener, CaretListener{
 
-	static boolean öppnad;
-	public static Properties prop = new Properties();
+	private static Properties prop = new Properties();
 
-	static String help;
-	static String yString;
+	private JButton svenska = new JButton("Svenska",new ImageIcon(getClass().getResource("/images/Swedish.jpg"))),
+			engelska = new JButton("English",new ImageIcon(getClass().getResource("/images/Brittish.jpg")));
 
-	JButton svenska = new JButton("Svenska"),
-			engelska = new JButton("English");
+	private JMenuBar bar = new JMenuBar();
 
-	JMenuBar bar = new JMenuBar();
+	private ArrayList<JButton> list = new ArrayList<JButton>();
 
-	ArrayList<JButton> list = new ArrayList<JButton>();
+	private JTextField text = new JTextField();
 
-	JTextField text = new JTextField();
+	private JTextArea area = new JTextArea(),
+			label = new JTextArea();
 
-	JTextArea area = new JTextArea();
-	static JTextArea label = new JTextArea();
+	private Timer mailTimer = new Timer(1000, this);
 
-	Timer mailTimer = new Timer(1000, this);
-
-
-	JMenu språkMeny = new JMenu(),
+	private JMenu språkMeny = new JMenu(),
 			hjälpMenu = new JMenu("Hjälp");
 
-	JMenuItem 	väljSpråk = new JMenuItem(),
+	private JMenuItem 	väljSpråk = new JMenuItem(),
 			helpItem = new JMenuItem("Hjälp"),
 			ideasItem = new JMenuItem("Ideas/bugs");
 
-	JButton[] 	buttons3 = new JButton[10],
+	private JButton[] 	buttons3 = new JButton[10],
 			buttons7 = new JButton[10],
 			buttons8 = new JButton[10],
 			buttons9 = new JButton[10],
@@ -160,7 +155,7 @@ public class GoJb1 implements ActionListener, CaretListener{
 			buttons114 = new JButton[10];
 
 
-	JFrame 		frame3 = new JFrame(),
+	private JFrame 	frame3 = new JFrame(),
 			frame7 = new JFrame(),
 			frame8 = new JFrame(),
 			frame9 = new JFrame(),
@@ -268,120 +263,120 @@ public class GoJb1 implements ActionListener, CaretListener{
 			frame112 = new JFrame(),
 			frame113 = new JFrame(),
 			frame114 = new JFrame();
-	static JFrame frameHuvud = new JFrame("GoJbGuide");
-	JFrame språk = new JFrame("Language");
-	JFrame ideasFrame = new JFrame("Ideas");
+	private JFrame frameHuvud = new JFrame("GoJbGuide"),
+			språk = new JFrame("Language"),
+			ideasFrame = new JFrame("Ideas");
 
-	ImageIcon 	i3 = new ImageIcon(getClass().getResource("/images/3.png")),
-			i7= new ImageIcon(getClass().getResource("/images/7.png")),
-			i8= new ImageIcon(getClass().getResource("/images/8.gif")),
-			i9= new ImageIcon(getClass().getResource("/images/9.png")),
-			i10= new ImageIcon(getClass().getResource("/images/10.png")),
-			i11= new ImageIcon(getClass().getResource("/images/11.gif")),
-			i12= new ImageIcon(getClass().getResource("/images/12.gif")),
-			i13= new ImageIcon(getClass().getResource("/images/13.gif")),
-			i14= new ImageIcon(getClass().getResource("/images/14.gif")),
-			i15= new ImageIcon(getClass().getResource("/images/15.png")),
-			i16= new ImageIcon(getClass().getResource("/images/16.png")),
-			i17= new ImageIcon(getClass().getResource("/images/17.png")),
-			i18= new ImageIcon(getClass().getResource("/images/18.png")),
-			i19= new ImageIcon(getClass().getResource("/images/19.png")),
-			i20= new ImageIcon(getClass().getResource("/images/20.png")),
-			i21= new ImageIcon(getClass().getResource("/images/21.png")),
-			i22= new ImageIcon(getClass().getResource("/images/22.gif")),
-			i23= new ImageIcon(getClass().getResource("/images/23.png")),
-			i24= new ImageIcon(getClass().getResource("/images/24.png")),
-			i25= new ImageIcon(getClass().getResource("/images/25.png")),
-			i26= new ImageIcon(getClass().getResource("/images/26.png")),
-			i27= new ImageIcon(getClass().getResource("/images/27.png")),
-			i28= new ImageIcon(getClass().getResource("/images/28.png")),
-			i29= new ImageIcon(getClass().getResource("/images/29.gif")),
-			i30= new ImageIcon(getClass().getResource("/images/30.png")),
-			i31= new ImageIcon(getClass().getResource("/images/31.png")),
-			i32= new ImageIcon(getClass().getResource("/images/32.png")),
-			i33= new ImageIcon(getClass().getResource("/images/33.png")),
-			i34= new ImageIcon(getClass().getResource("/images/34.png")),
-			i35= new ImageIcon(getClass().getResource("/images/35.png")),
-			i36= new ImageIcon(getClass().getResource("/images/36.png")),
-			i37= new ImageIcon(getClass().getResource("/images/37.png")),
-			i38= new ImageIcon(getClass().getResource("/images/38.png")),
-			i39= new ImageIcon(getClass().getResource("/images/39.png")),
-			i40= new ImageIcon(getClass().getResource("/images/40.png")),
-			i41= new ImageIcon(getClass().getResource("/images/41.png")),
-			i42= new ImageIcon(getClass().getResource("/images/42.png")),
-			i43= new ImageIcon(getClass().getResource("/images/43.gif")),
-			i44= new ImageIcon(getClass().getResource("/images/44.png")),
-			i45= new ImageIcon(getClass().getResource("/images/45.png")),
-			i46= new ImageIcon(getClass().getResource("/images/46.png")),
-			i47= new ImageIcon(getClass().getResource("/images/47.png")),
-			i48= new ImageIcon(getClass().getResource("/images/48.gif")),
-			i49= new ImageIcon(getClass().getResource("/images/49.gif")),
-			i50= new ImageIcon(getClass().getResource("/images/50.png")),
-			i51= new ImageIcon(getClass().getResource("/images/51.png")),
-			i52= new ImageIcon(getClass().getResource("/images/52.png")),
-			i53= new ImageIcon(getClass().getResource("/images/53.png")),
-			i54= new ImageIcon(getClass().getResource("/images/54.png")),
-			i55= new ImageIcon(getClass().getResource("/images/55.gif")),
-			i56= new ImageIcon(getClass().getResource("/images/56.png")),
-			i57= new ImageIcon(getClass().getResource("/images/57.png")),
-			i58= new ImageIcon(getClass().getResource("/images/58.png")),
-			i59= new ImageIcon(getClass().getResource("/images/59.png")),
-			i60= new ImageIcon(getClass().getResource("/images/60.gif")),
-			i61= new ImageIcon(getClass().getResource("/images/61.png")),
-			i62= new ImageIcon(getClass().getResource("/images/62.png")),
-			i63= new ImageIcon(getClass().getResource("/images/63.gif")),
-			i64= new ImageIcon(getClass().getResource("/images/64.gif")),
-			i65= new ImageIcon(getClass().getResource("/images/1010.gif")),
-			i66= new ImageIcon(getClass().getResource("/images/66.gif")),
-			i67= new ImageIcon(getClass().getResource("/images/67.gif")),
-			i68= new ImageIcon(getClass().getResource("/images/68.gif")),
-			i69= new ImageIcon(getClass().getResource("/images/69.png")),
-			i70= new ImageIcon(getClass().getResource("/images/70.png")),
-			i71= new ImageIcon(getClass().getResource("/images/71.png")),
-			i72= new ImageIcon(getClass().getResource("/images/72.png")),
-			i73= new ImageIcon(getClass().getResource("/images/73.png")),
-			i74= new ImageIcon(getClass().getResource("/images/74.png")),
-			i75= new ImageIcon(getClass().getResource("/images/75.png")),
-			i76= new ImageIcon(getClass().getResource("/images/76.png")),
-			i77= new ImageIcon(getClass().getResource("/images/77.png")),
-			i78= new ImageIcon(getClass().getResource("/images/78.png")),
-			i79= new ImageIcon(getClass().getResource("/images/79.png")),
-			i80= new ImageIcon(getClass().getResource("/images/80.png")),
-			i81= new ImageIcon(getClass().getResource("/images/81.png")),
-			i82= new ImageIcon(getClass().getResource("/images/82.png")),
-			i83= new ImageIcon(getClass().getResource("/images/83.png")),
-			i84= new ImageIcon(getClass().getResource("/images/84.png")),
-			i85= new ImageIcon(getClass().getResource("/images/85.png")),
-			i86= new ImageIcon(getClass().getResource("/images/86.png")),
-			i87= new ImageIcon(getClass().getResource("/images/87.png")),
-			i88= new ImageIcon(getClass().getResource("/images/88.png")),
-			i89= new ImageIcon(getClass().getResource("/images/89.png")),
-			i91= new ImageIcon(getClass().getResource("/images/91.png")),
-			i92= new ImageIcon(getClass().getResource("/images/92.png")),
-			i93= new ImageIcon(getClass().getResource("/images/93.gif")),
-			i94= new ImageIcon(getClass().getResource("/images/94.png")),
-			i95= new ImageIcon(getClass().getResource("/images/95.png")),
-			i96= new ImageIcon(getClass().getResource("/images/96.png")),
-			i97= new ImageIcon(getClass().getResource("/images/97.png")),
-			i98= new ImageIcon(getClass().getResource("/images/98.png")),
-			i99= new ImageIcon(getClass().getResource("/images/99.png")),
-			i100= new ImageIcon(getClass().getResource("/images/100.png")),
-			i101= new ImageIcon(getClass().getResource("/images/101.png")),
-			i102= new ImageIcon(getClass().getResource("/images/102.png")),
-			i103= new ImageIcon(getClass().getResource("/images/103.png")),
-			i104= new ImageIcon(getClass().getResource("/images/104.png")),
-			i105= new ImageIcon(getClass().getResource("/images/105.png")),
-			i106= new ImageIcon(getClass().getResource("/images/106.png")),
-			i107= new ImageIcon(getClass().getResource("/images/107.png")),
-			i108= new ImageIcon(getClass().getResource("/images/108.png")),
-			i109= new ImageIcon(getClass().getResource("/images/109.png")),
-			i110= new ImageIcon(getClass().getResource("/images/110.png")),
-			i111= new ImageIcon(getClass().getResource("/images/111.png")),
-			i112= new ImageIcon(getClass().getResource("/images/112.png")),
-			i113= new ImageIcon(getClass().getResource("/images/113.png")),
-			i114= new ImageIcon(getClass().getResource("/images/114.png"));
+	private ImageIcon i3 = new ImageIcon(getClass().getResource("/images/3.png")),
+			i7 = new ImageIcon(getClass().getResource("/images/7.png")),
+			i8 = new ImageIcon(getClass().getResource("/images/8.gif")),
+			i9 = new ImageIcon(getClass().getResource("/images/9.png")),
+			i10 = new ImageIcon(getClass().getResource("/images/10.png")),
+			i11 = new ImageIcon(getClass().getResource("/images/11.gif")),
+			i12 = new ImageIcon(getClass().getResource("/images/12.gif")),
+			i13 = new ImageIcon(getClass().getResource("/images/13.gif")),
+			i14 = new ImageIcon(getClass().getResource("/images/14.gif")),
+			i15 = new ImageIcon(getClass().getResource("/images/15.png")),
+			i16 = new ImageIcon(getClass().getResource("/images/16.png")),
+			i17 = new ImageIcon(getClass().getResource("/images/17.png")),
+			i18 = new ImageIcon(getClass().getResource("/images/18.png")),
+			i19 = new ImageIcon(getClass().getResource("/images/19.png")),
+			i20 = new ImageIcon(getClass().getResource("/images/20.png")),
+			i21 = new ImageIcon(getClass().getResource("/images/21.png")),
+			i22 = new ImageIcon(getClass().getResource("/images/22.gif")),
+			i23 = new ImageIcon(getClass().getResource("/images/23.png")),
+			i24 = new ImageIcon(getClass().getResource("/images/24.png")),
+			i25 = new ImageIcon(getClass().getResource("/images/25.png")),
+			i26 = new ImageIcon(getClass().getResource("/images/26.gif")),
+			i27 = new ImageIcon(getClass().getResource("/images/27.png")),
+			i28 = new ImageIcon(getClass().getResource("/images/28.png")),
+			i29 = new ImageIcon(getClass().getResource("/images/29.gif")),
+			i30 = new ImageIcon(getClass().getResource("/images/30.png")),
+			i31 = new ImageIcon(getClass().getResource("/images/31.png")),
+			i32 = new ImageIcon(getClass().getResource("/images/32.png")),
+			i33 = new ImageIcon(getClass().getResource("/images/33.png")),
+			i34 = new ImageIcon(getClass().getResource("/images/34.png")),
+			i35 = new ImageIcon(getClass().getResource("/images/35.png")),
+			i36 = new ImageIcon(getClass().getResource("/images/36.png")),
+			i37 = new ImageIcon(getClass().getResource("/images/37.png")),
+			i38 = new ImageIcon(getClass().getResource("/images/38.png")),
+			i39 = new ImageIcon(getClass().getResource("/images/39.png")),
+			i40 = new ImageIcon(getClass().getResource("/images/40.png")),
+			i41 = new ImageIcon(getClass().getResource("/images/41.png")),
+			i42 = new ImageIcon(getClass().getResource("/images/42.png")),
+			i43 = new ImageIcon(getClass().getResource("/images/43.gif")),
+			i44 = new ImageIcon(getClass().getResource("/images/44.png")),
+			i45 = new ImageIcon(getClass().getResource("/images/45.png")),
+			i46 = new ImageIcon(getClass().getResource("/images/46.png")),
+			i47 = new ImageIcon(getClass().getResource("/images/47.png")),
+			i48 = new ImageIcon(getClass().getResource("/images/48.gif")),
+			i49 = new ImageIcon(getClass().getResource("/images/49.gif")),
+			i50 = new ImageIcon(getClass().getResource("/images/50.png")),
+			i51 = new ImageIcon(getClass().getResource("/images/51.png")),
+			i52 = new ImageIcon(getClass().getResource("/images/52.png")),
+			i53 = new ImageIcon(getClass().getResource("/images/53.png")),
+			i54 = new ImageIcon(getClass().getResource("/images/54.png")),
+			i55 = new ImageIcon(getClass().getResource("/images/55.gif")),
+			i56 = new ImageIcon(getClass().getResource("/images/56.png")),
+			i57 = new ImageIcon(getClass().getResource("/images/57.png")),
+			i58 = new ImageIcon(getClass().getResource("/images/58.png")),
+			i59 = new ImageIcon(getClass().getResource("/images/59.png")),
+			i60 = new ImageIcon(getClass().getResource("/images/60.gif")),
+			i61 = new ImageIcon(getClass().getResource("/images/61.png")),
+			i62 = new ImageIcon(getClass().getResource("/images/62.png")),
+			i63 = new ImageIcon(getClass().getResource("/images/63.gif")),
+			i64 = new ImageIcon(getClass().getResource("/images/64.gif")),
+			i65 = new ImageIcon(getClass().getResource("/images/65.gif")),
+			i66 = new ImageIcon(getClass().getResource("/images/66.gif")),
+			i67 = new ImageIcon(getClass().getResource("/images/67.gif")),
+			i68 = new ImageIcon(getClass().getResource("/images/68.gif")),
+			i69 = new ImageIcon(getClass().getResource("/images/69.png")),
+			i70 = new ImageIcon(getClass().getResource("/images/70.png")),
+			i71 = new ImageIcon(getClass().getResource("/images/71.png")),
+			i72 = new ImageIcon(getClass().getResource("/images/72.png")),
+			i73 = new ImageIcon(getClass().getResource("/images/73.png")),
+			i74 = new ImageIcon(getClass().getResource("/images/74.png")),
+			i75 = new ImageIcon(getClass().getResource("/images/75.png")),
+			i76 = new ImageIcon(getClass().getResource("/images/76.png")),
+			i77 = new ImageIcon(getClass().getResource("/images/77.png")),
+			i78 = new ImageIcon(getClass().getResource("/images/78.png")),
+			i79 = new ImageIcon(getClass().getResource("/images/79.png")),
+			i80 = new ImageIcon(getClass().getResource("/images/80.png")),
+			i81 = new ImageIcon(getClass().getResource("/images/81.png")),
+			i82 = new ImageIcon(getClass().getResource("/images/82.png")),
+			i83 = new ImageIcon(getClass().getResource("/images/83.png")),
+			i84 = new ImageIcon(getClass().getResource("/images/84.png")),
+			i85 = new ImageIcon(getClass().getResource("/images/85.png")),
+			i86 = new ImageIcon(getClass().getResource("/images/86.png")),
+			i87 = new ImageIcon(getClass().getResource("/images/87.png")),
+			i88 = new ImageIcon(getClass().getResource("/images/88.png")),
+			i89 = new ImageIcon(getClass().getResource("/images/89.png")),
+			i91 = new ImageIcon(getClass().getResource("/images/91.png")),
+			i92 = new ImageIcon(getClass().getResource("/images/92.png")),
+			i93 = new ImageIcon(getClass().getResource("/images/93.gif")),
+			i94 = new ImageIcon(getClass().getResource("/images/94.png")),
+			i95 = new ImageIcon(getClass().getResource("/images/95.png")),
+			i96 = new ImageIcon(getClass().getResource("/images/96.png")),
+			i97 = new ImageIcon(getClass().getResource("/images/97.png")),
+			i98 = new ImageIcon(getClass().getResource("/images/98.png")),
+			i99 = new ImageIcon(getClass().getResource("/images/99.png")),
+			i100 = new ImageIcon(getClass().getResource("/images/100.png")),
+			i101 = new ImageIcon(getClass().getResource("/images/101.png")),
+			i102 = new ImageIcon(getClass().getResource("/images/102.png")),
+			i103 = new ImageIcon(getClass().getResource("/images/103.png")),
+			i104 = new ImageIcon(getClass().getResource("/images/104.png")),
+			i105 = new ImageIcon(getClass().getResource("/images/105.png")),
+			i106 = new ImageIcon(getClass().getResource("/images/106.png")),
+			i107 = new ImageIcon(getClass().getResource("/images/107.png")),
+			i108 = new ImageIcon(getClass().getResource("/images/108.png")),
+			i109 = new ImageIcon(getClass().getResource("/images/109.png")),
+			i110 = new ImageIcon(getClass().getResource("/images/110.png")),
+			i111 = new ImageIcon(getClass().getResource("/images/111.png")),
+			i112 = new ImageIcon(getClass().getResource("/images/112.png")),
+			i113 = new ImageIcon(getClass().getResource("/images/113.png")),
+			i114 = new ImageIcon(getClass().getResource("/images/114.png"));
 
-	JButton 	button3 = new JButton(i3),
+	private JButton button3 = new JButton(i3),
 			button7 = new JButton(i7),
 			button8 = new JButton(i8),
 			button9 = new JButton(i9),
@@ -492,7 +487,7 @@ public class GoJb1 implements ActionListener, CaretListener{
 			stäng = new JButton(),
 			skicka = new JButton("Send");
 
-	ImageIcon 	kullersten = new ImageIcon(getClass().getResource("/images/1.png")),
+	private ImageIcon 	kullersten = new ImageIcon(getClass().getResource("/images/1.png")),
 			rödsten = new ImageIcon(getClass().getResource("/images/2.png")),
 			plankor = new ImageIcon(getClass().getResource("/images/3.png")),
 			pilbåge = new ImageIcon(getClass().getResource("/images/68.gif")),
@@ -562,7 +557,7 @@ public class GoJb1 implements ActionListener, CaretListener{
 			material = new ImageIcon(getClass().getResource("/images/1027.gif")),
 			snubbeltrådskrok = new ImageIcon(getClass().getResource("/images/49.gif"));
 
-	String traString = "",kullerString = "",rödString = "",sandString = "",guldString = "",
+	private String traString = "",kullerString = "",rödString = "",sandString = "",guldString = "",
 			slimesString = "",trådsString = "",tegelString = "",krutString = "",järnString = "",
 			diamantString = "",snöbollString = "",obsidianString = "",lädersString = "",färgerString = "",
 			pumpaString = "",äggString = "",kolString = "",morotString = "",järnelrträdString = "",
@@ -570,36 +565,26 @@ public class GoJb1 implements ActionListener, CaretListener{
 			spindelögaString = "",glasString = "",svampString = "",glödstenspulverString = "",
 			veteString = "",kakaoString = "",stenString = "",sockerrörString = "",mjölkString = "",
 			äppleString = "",flintaString = "",järnstenträString = "",nederstjärnaString = "",
-			nederkvartString = "",materialString = "";
+			nederkvartString = "",materialString = "", enderString;
 
-	JPanel frame = new JPanel();
+	private JPanel frame = new JPanel();
 
-	JScrollPane scrollBar=new JScrollPane(frame,JScrollPane.VERTICAL_SCROLLBAR_ALWAYS,JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
+	private JScrollPane scrollBar=new JScrollPane(frame,JScrollPane.VERTICAL_SCROLLBAR_ALWAYS,JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
 
-	static int x = 1,z,namnInt;
+	private static int namnInt;
 
-	static String namn, välkommen, hej = "123456789", namn2, string, laddaString, cancelString, finishedString;
+	static String laddaString, cancelString, string, finishedString;
+	private static String help, yString, namn = "", välkommen;
 
-	static Boolean mailSkickat,start = false, språkValt;
+	private static Boolean mailSkickat,start = false;
 
-	static JProgressBar progressBar;
+	private static JProgressBar progressBar;
 
-	static JFrame frame2 = new JFrame();
-	JLayeredPane layeredPane = new JLayeredPane();
-	JLabel background=new JLabel(new ImageIcon(getClass().getResource("/images/Mine.jpg")));
-	JLabel background1=new JLabel(),
+	private JFrame frame2 = new JFrame();
+	private JLayeredPane layeredPane = new JLayeredPane();
+	private JLabel background=new JLabel(new ImageIcon(getClass().getResource("/images/Mine.jpg")));
+	private JLabel background1=new JLabel(),
 			background2 = new JLabel();
-
-	int a;
-	
-	void start(){
-		try {
-			Språk();
-				GörFönster();
-		} catch (Exception e) {
-			Språkfråga();
-		}
-	}
 	/**
 9778436klbgflf=lhdohf7984
 #Engelska
@@ -611,6 +596,7 @@ public class GoJb1 implements ActionListener, CaretListener{
 	public void Språkfråga() {
 		ActionListener dActionListener = new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				scrollBar.getVerticalScrollBar().setValue(0);
 				if (e.getSource()==svenska) {
 					prop.setProperty("9778436klbgflf", "86325yhrel");
 					prop.setProperty("x", "1");
@@ -620,30 +606,10 @@ public class GoJb1 implements ActionListener, CaretListener{
 					prop.setProperty("9778436klbgflf", "lhdohf7984");
 					SpråkVoid();
 				}
-				try {
-					prop.store(new FileWriter(new File(System.getProperty("user.home") + "\\AppData\\Roaming\\GoJb\\settings.gojb")),"Inställningar för GoJbGuide");
-				} catch (Exception e1) {
-					System.err.println("Mappen finns inte! Skapar...");
-					new File(System.getProperty("user.home") + "\\AppData\\Roaming\\GoJb\\").mkdir();
-
-					try {
-						prop.store(new FileWriter(new File(System.getProperty("user.home") + "\\AppData\\Roaming\\GoJb\\settings.gojb")),"Inställningar för GoJbGuide");
-					} catch (IOException e2) {
-						e2.printStackTrace();
-					}
-				}
-				språk.setVisible(false);
-				try {
-					Språk();
-				} catch (Exception e1) {
-					e1.printStackTrace();
-				}
-				if (!öppnad) {
-					GörFönster();
-					ladda2();
-					ladda3();
-					ladda4();
-				}
+				sparaProp();
+				språk.dispose();
+				Språk();
+				frameHuvud.setVisible(true);
 			}
 		};
 
@@ -661,369 +627,373 @@ public class GoJb1 implements ActionListener, CaretListener{
 		engelska.addActionListener(dActionListener);
 	}
 
+	public void Språk(){
+		try {
+			if (prop.getProperty("9778436klbgflf").equals("86325yhrel")){
 
+				//Svenska
 
-	public void Språk() throws Exception{
-		if (prop.getProperty("9778436klbgflf").equals("86325yhrel")){
+				prop.setProperty("z", "86325yhrel");
 
-			//Svenska
+				if (prop.getProperty("y","2").equals("10")) {
 
-			prop.setProperty("z", "86325yhrel");
+					yString = " Tack för att\n du använder det här programmet! :)";
+				}
+				else {
+					yString = "";
+				}
 
-			if (prop.getProperty("y","2").equals("10")) {
+				help = "Hej! Det här programmet är programmerat av \n GoJbs Javaprogramering." + yString;
 
-				yString = " Tack för att\n du använder det här programmet! :)";
+				språkMeny.setIcon(new ImageIcon(getClass().getResource("/images/Swedish.jpg")));
+
+				System.out.println("Hej!");
+
+				väljSpråk.setText("Språk");
+				språkMeny.setText("Språk");
+
+				hjälpMenu.setText("Hjälp");
+				helpItem.setText("Hjälp");
+				ideasItem.setText("Idéer/buggar");
+
+				button3.setText("Träplankor");
+				button7.setText("Automat");
+				button8.setText("Sandsten");
+				button9.setText("Notblock");
+				button10.setText("Säng");
+				button11.setText("Driven räls");
+				button12.setText("Sensorräls");
+				button13.setText("Klibbig kolv");
+				button14.setText("Kolv");
+				button15.setText("Ull");
+				button16.setText("Halvblock");
+				button17.setText("Tegelstensblock");
+				button18.setText("Dynamit");
+				button19.setText("Bokhylla");
+				button20.setText("Fackla");
+				button21.setText("Trappa");
+				button22.setText("Kista");
+				button23.setText("Arbetsbänk");
+				button24.setText("Ugn");
+				button25.setText("Skylt");
+				button26.setText("Dörr");
+				button27.setText("Stege");
+				button28.setText("Räls");
+				button29.setText("Spak");
+				button30.setText("Tryckplatta");
+				button31.setText("Rödstensfackla");
+				button32.setText("Knapp");
+				button33.setText("Snöblock");
+				button34.setText("Jukebox");
+				button35.setText("Staket");
+				button36.setText("Glödstenslampa");
+				button37.setText("Pumpalykta");
+				button38.setText("Färgat glas");
+				button39.setText("Fallucka");
+				button40.setText("Järngaller");
+				button41.setText("Fönster");
+				button42.setText("Melonblock");
+				button43.setText("Grind");
+				button44.setText("Trolleribänk");
+				button45.setText("Bryggeri");
+				button46.setText("Kittel");
+				button47.setText("Rödstenslampa");
+				button48.setText("Enderkista");
+				button49.setText("Slubbeltrådskrok");
+				button50.setText("Fyr");
+				button51.setText("Mur");
+				button52.setText("Kruka");
+				button53.setText("Städ");
+				button54.setText("Fällkista");
+				button55.setText("Rödstensjämförare");
+				button56.setText("Dagsljussensor");
+				button57.setText("Block");
+				button58.setText("Hopper");
+				button59.setText("Matta");
+				button60.setText("Aktiveringsräls");
+				button61.setText("Droppare");
+				button62.setText("Höbal");
+				button63.setText("Spade");
+				button64.setText("Yxa");
+				button65.setText("Hacka");
+				button66.setText("Svärd");
+				button67.setText("Flohacka");
+				button68.setText("Pilbåge");
+				button69.setText("Pil");
+				button70.setText("Flintstål");
+				button71.setText("Pinne");
+				button72.setText("Skål");
+				button73.setText("Bröd");
+				button74.setText("Hjälm");
+				button75.setText("Bröstplatta");
+				button76.setText("Byxor");
+				button77.setText("Skor");
+				button78.setText("Målning");
+				button79.setText("Gyllene Äpple");
+				button80.setText("Hink");
+				button81.setText("Gruvvagn");
+				button82.setText("Båt");
+				button83.setText("Papper");
+				button84.setText("Bok");
+				button85.setText("Gruvvagn med kista");
+				button86.setText("Gruvvagnslok");
+				button87.setText("Kompass");
+				button88.setText("Fiskespö");
+				button89.setText("Klocka");
+				button91.setText("Socker");
+				button92.setText("Tårta");
+				button93.setText("Rödstensrepeterare");
+				button94.setText("Kaka");
+				button95.setText("Karta");
+				button96.setText("Sax");
+				button97.setText("Melonfrön");
+				button98.setText("Guldklimp");
+				button99.setText("Glasflaska");
+				button100.setText("Jäst Spindelöga");
+				button101.setText("Blaze pulver");
+				button102.setText("Magma cremé");
+				button103.setText("Enderöga");
+				button104.setText("Guldmelon");
+				button105.setText("Bok ock fjäderpenna");
+				button106.setText("Föremålsram");
+				button107.setText("Guldmorot");
+				button108.setText("Morot på pinne");
+				button109.setText("Pumpapaj");
+				button110.setText("Raket");
+				button111.setText("Raketstärna");
+				button112.setText("Gruvvagn med dynamit");
+				button113.setText("Gruvvagn med hopper");
+				button114.setText("Koppel");
+
+				sortera();
+
+				traString = "Trä";
+				kullerString = "Kullersten";
+				rödString = "Rödsten";
+				sandString = "Sandsten";
+				guldString = "Guld";
+				slimesString = "Slime";
+				trådsString = "Tråd";
+				tegelString = "Tegelsten";
+				krutString = "Krut";
+				järnString = "Järn";
+				diamantString = "Diamant";
+				snöbollString = "Snöboll";
+				obsidianString = "Obsidian";
+				lädersString = "Läder";
+				färgerString = "Färger, Skapas t.ex. med blommor";
+				pumpaString = "Pumpa";
+				äggString = "Ägg";
+				kolString = "Kol";
+				morotString = "Morot";
+				järnelrträdString = "Järn eller trä";
+				fjäderString = "Fjäder";
+				bläckString = "Bläck";
+				träjärnstenString = "Sten, järn eller trä";
+				melonString = "Melon";
+				blazeString = "Blaze";
+				spindelögaString = "Spindelöga";
+				glasString = "Glas";
+				svampString = "Svamp";
+				glödstenspulverString = "Glödstenspulver";
+				veteString = "Vete";
+				kakaoString = "Kakao";
+				stenString = "Sten";
+				sockerrörString = "Sockerrör";
+				mjölkString = "Mjölk";
+				äppleString = "Äpple";
+				flintaString = "Flinta";
+				järnstenträString = "Järn, kullersten eller trä";
+				nederstjärnaString = "Nederstjärna";
+				nederkvartString = "Nederkvarts";
+				materialString = "Material";
+				enderString = "Enderpärla";
+
+			}
+			else if (prop.getProperty("9778436klbgflf").equals("lhdohf7984")){
+				//Eng
+
+				prop.setProperty("z", "lhdohf7984");
+
+				if (prop.getProperty("y","2").equals("10")) {
+
+					yString = " Thanks for \nusing this application! :)";
+
+				}
+				else {
+					yString = "";
+				}
+
+				help = "Hello! This program is coded by\n GoJbs Javaprogramming." + yString;
+
+				språkMeny.setIcon(new ImageIcon(getClass().getResource("/images/Brittish.jpg")));
+
+				väljSpråk.setText("Language");
+				språkMeny.setText("Language");
+
+				hjälpMenu.setText("Help");
+				helpItem.setText("Help");
+				ideasItem.setText("Ideas/Bugs");
+
+				button3.setText("Planks");
+				button7.setText("Dispenser");
+				button8.setText("Sandstone");
+				button9.setText("Note Block");
+				button10.setText("Bed");
+				button11.setText("Powered Rail");
+				button12.setText("Detector Rail");
+				button13.setText("Sticky Piston");
+				button14.setText("Piston");
+				button15.setText("Wool");
+				button16.setText("Slab");
+				button17.setText("Bricks");
+				button18.setText("TNT");
+				button19.setText("Bookshelf");
+				button20.setText("Torch");
+				button21.setText("Stairs");
+				button22.setText("Chest");
+				button23.setText("Crafting Table");
+				button24.setText("Furnace");
+				button25.setText("Sign");
+				button26.setText("Door");
+				button27.setText("Ladder");
+				button28.setText("Rail");
+				button29.setText("Lever");
+				button30.setText("Pressure Plate");
+				button31.setText("Redstone Torch");
+				button32.setText("Button");
+				button33.setText("Snow Block");
+				button34.setText("Jukebox");
+				button35.setText("Fence");
+				button36.setText("Glowstone");
+				button37.setText("Jack-O-Lantern");
+				button38.setText("Stained Glass");
+				button39.setText("Trap Door");
+				button40.setText("Iron Bars");
+				button41.setText("Glass Pane");
+				button42.setText("Melon Block");
+				button43.setText("Fence Gate");
+				button44.setText("Enchantment Table");
+				button45.setText("Brewing Stand");
+				button46.setText("Cauldron");
+				button47.setText("Redstone Lamp");
+				button48.setText("Ender Chest");
+				button49.setText("Tripwire Hook");
+				button50.setText("Becon");
+				button51.setText("Cobblestone Wall");
+				button52.setText("Flower Pot");
+				button53.setText("Anvil");
+				button54.setText("Trapped Chest");
+				button55.setText("Redstone Comparator");
+				button56.setText("Daylight Sensor");
+				button57.setText("Block");
+				button58.setText("Hopper");
+				button59.setText("Carpet");
+				button60.setText("Activator Rail");
+				button61.setText("Dropper");
+				button62.setText("Hay Bales");
+				button63.setText("Shovel");
+				button64.setText("Axe");
+				button65.setText("Pickaxe");
+				button66.setText("Sword");
+				button67.setText("Hoe");
+				button68.setText("Bow");
+				button69.setText("Arrow");
+				button70.setText("Flint & Steel");
+				button71.setText("Stick");
+				button72.setText("Bowl");
+				button73.setText("Bread");
+				button74.setText("Helmet");
+				button75.setText("Chestplate");
+				button76.setText("Leggings");
+				button77.setText("Boots");
+				button78.setText("Painting");
+				button79.setText("Golden Apple");
+				button80.setText("Bucket");
+				button81.setText("Minecart");
+				button82.setText("Boat");
+				button83.setText("Paper");
+				button84.setText("Book");
+				button85.setText("Minecart with Chest");
+				button86.setText("Minecart with Furnace");
+				button87.setText("Compass");
+				button88.setText("Fishing Rod");
+				button89.setText("Clock");
+				button91.setText("Sugar");
+				button92.setText("Cake");
+				button93.setText("Redstone Repeter");
+				button94.setText("Cookie");
+				button95.setText("Map");
+				button96.setText("Shears");
+				button97.setText("Melon Seeds");
+				button98.setText("Gold nugget");
+				button99.setText("Glass Bottle");
+				button100.setText("Fermented Spider Eye");
+				button101.setText("Blaze Powder");
+				button102.setText("Magma Cream");
+				button103.setText("Eye Of Ender");
+				button104.setText("Glistering Melon");
+				button105.setText("Book & Quil");
+				button106.setText("Item Frame");
+				button107.setText("Golden Carrot");
+				button108.setText("Carrot On A Stick");
+				button109.setText("Pumpkin Pie");
+				button110.setText("Firework Rocket");
+				button111.setText("Firework Star");
+				button112.setText("Minecart With TNT");
+				button113.setText("Minecart With Hopper");
+				button114.setText("Lead");
+
+				sortera();
+
+				traString = "Wood";
+				kullerString = "Cobblestone";
+				rödString = "Redstone";
+				sandString = "Sand";
+				guldString = "Gold";
+				slimesString = "Slime";
+				trådsString = "String";
+				tegelString = "Brick";
+				krutString = "Gunpowder";
+				järnString = "Iron";
+				diamantString = "Diamond";
+				snöbollString = "Snowball";
+				obsidianString = "Obsidian";
+				lädersString = "Leather";
+				färgerString = "Dyes";
+				pumpaString = "Pumpkin";
+				äggString = "Egg";
+				kolString = "Coal";
+				morotString = "Carrot";
+				järnelrträdString = "Wood or Iron";
+				fjäderString = "Feather";
+				bläckString = "Ink Sac";
+				träjärnstenString = "Wood, Stone or Iron";
+				melonString = "Melon";
+				blazeString = "Blaze";
+				spindelögaString = "Spider Eye";
+				glasString = "Glass";
+				svampString = "Mushrooms";
+				glödstenspulverString = "Glowstone Dust";
+				veteString = "Wheat";
+				kakaoString = "Cocoa Beans";
+				stenString = "Stone";
+				sockerrörString = "Sugar Canes";
+				mjölkString = "Milk";
+				äppleString = "Apple";
+				flintaString = "Flint";
+				järnstenträString = "Wood, Cobblestone or Iron";
+				nederstjärnaString = "Nether Star";
+				nederkvartString = "Nether Quartz";
+				materialString = "Elements (like Diamods, Iron etc)";
+				enderString = "Ender Pearl";
+
 			}
 			else {
-				yString = "";
+				throw new Exception();
 			}
-
-			help = "Hej! Det här programmet är programmerat av \n GoJbs Javaprogramering." + yString;
-
-			språkMeny.setIcon(new ImageIcon(getClass().getResource("/images/Swedish.jpg")));
-
-			System.out.println("Hej!");
-
-			väljSpråk.setText("Språk");
-			språkMeny.setText("Språk");
-
-			hjälpMenu.setText("Hjälp");
-			helpItem.setText("Hjälp");
-			ideasItem.setText("Idéer/buggar");
-
-			button3.setText("Träplankor");
-			button7.setText("Automat");
-			button8.setText("Sandsten");
-			button9.setText("Notblock");
-			button10.setText("Säng");
-			button11.setText("Driven räls");
-			button12.setText("Sensorräls");
-			button13.setText("Klibbig kolv");
-			button14.setText("Kolv");
-			button15.setText("Ull");
-			button16.setText("Halvblock");
-			button17.setText("Tegelstensblock");
-			button18.setText("Dynamit");
-			button19.setText("Bokhylla");
-			button20.setText("Fackla");
-			button21.setText("Trappa");
-			button22.setText("Kista");
-			button23.setText("Arbetsbänk");
-			button24.setText("Ugn");
-			button25.setText("Skylt");
-			button26.setText("Dörr");
-			button27.setText("Stege");
-			button28.setText("Räls");
-			button29.setText("Spak");
-			button30.setText("Tryckplatta");
-			button31.setText("Rödstensfackla");
-			button32.setText("Knapp");
-			button33.setText("Snöblock");
-			button34.setText("Jukebox");
-			button35.setText("Staket");
-			button36.setText("Glödstenslampa");
-			button37.setText("Pumpalykta");
-			button38.setText("Färgat glas");
-			button39.setText("Fallucka");
-			button40.setText("Järngaller");
-			button41.setText("Fönster");
-			button42.setText("Melonblock");
-			button43.setText("Grind");
-			button44.setText("Trolleribänk");
-			button45.setText("Bryggeri");
-			button46.setText("Kittel");
-			button47.setText("Rödstenslampa");
-			button48.setText("Enderkista");
-			button49.setText("Slubbeltrådskrok");
-			button50.setText("Fyr");
-			button51.setText("Mur");
-			button52.setText("Kruka");
-			button53.setText("Städ");
-			button54.setText("Fällkista");
-			button55.setText("Rödstensjämförare");
-			button56.setText("Dagsljussensor");
-			button57.setText("Block");
-			button58.setText("Hopper");
-			button59.setText("Matta");
-			button60.setText("Aktiveringsräls");
-			button61.setText("Droppare");
-			button62.setText("Höbal");
-			button63.setText("Spade");
-			button64.setText("Yxa");
-			button65.setText("Hacka");
-			button66.setText("Svärd");
-			button67.setText("Flohacka");
-			button68.setText("Pilbåge");
-			button69.setText("Pil");
-			button70.setText("Flintstål");
-			button71.setText("Pinne");
-			button72.setText("Skål");
-			button73.setText("Bröd");
-			button74.setText("Hjälm");
-			button75.setText("Bröstplatta");
-			button76.setText("Byxor");
-			button77.setText("Skor");
-			button78.setText("Målning");
-			button79.setText("Gyllene Äpple");
-			button80.setText("Hink");
-			button81.setText("Gruvvagn");
-			button82.setText("Båt");
-			button83.setText("Papper");
-			button84.setText("Bok");
-			button85.setText("Gruvvagn med kista");
-			button86.setText("Gruvvagnslok");
-			button87.setText("Kompass");
-			button88.setText("Fiskespö");
-			button89.setText("Klocka");
-			button91.setText("Socker");
-			button92.setText("Tårta");
-			button93.setText("Rödstensrepeterare");
-			button94.setText("Kaka");
-			button95.setText("Karta");
-			button96.setText("Sax");
-			button97.setText("Melonfrön");
-			button98.setText("Guldklimp");
-			button99.setText("Glasflaska");
-			button100.setText("Jäst Spindelöga");
-			button101.setText("Blaze pulver");
-			button102.setText("Magma cremé");
-			button103.setText("Enderöga");
-			button104.setText("Guldmelon");
-			button105.setText("Bok ock fjäderpenna");
-			button106.setText("Föremålsram");
-			button107.setText("Guldmorot");
-			button108.setText("Morot på pinne");
-			button109.setText("Pumpapaj");
-			button110.setText("Raket");
-			button111.setText("Raketstärna");
-			button112.setText("Gruvvagn med dynamit");
-			button113.setText("Gruvvagn med hopper");
-			button114.setText("Koppel");
-
-			sortera();
-
-			traString = "Trä";
-			kullerString = "Kullersten";
-			rödString = "Rödsten";
-			sandString = "Sandsten";
-			guldString = "Guld";
-			slimesString = "Slime";
-			trådsString = "Tråd";
-			tegelString = "Tegelsten";
-			krutString = "Krut";
-			järnString = "Järn";
-			diamantString = "Diamant";
-			snöbollString = "Snöboll";
-			obsidianString = "Obsidian";
-			lädersString = "Läder";
-			färgerString = "Färger, Skapas t.ex. med blommor";
-			pumpaString = "Pumpa";
-			äggString = "Ägg";
-			kolString = "Kol";
-			morotString = "Morot";
-			järnelrträdString = "Järn eller trä";
-			fjäderString = "Fjäder";
-			bläckString = "Bläck";
-			träjärnstenString = "Sten, järn eller trä";
-			melonString = "Melon";
-			blazeString = "Blaze";
-			spindelögaString = "Spindelöga";
-			glasString = "Glas";
-			svampString = "Svamp";
-			glödstenspulverString = "Glödstenspulver";
-			veteString = "Vete";
-			kakaoString = "Kakao";
-			stenString = "Sten";
-			sockerrörString = "Sockerrör";
-			mjölkString = "Mjölk";
-			äppleString = "Äpple";
-			flintaString = "Flinta";
-			järnstenträString = "Järn, kullersten eller trä";
-			nederstjärnaString = "Nederstjärna";
-			nederkvartString = "Nederkvarts";
-			materialString = "Material";
-
-		}
-		else if (prop.getProperty("9778436klbgflf").equals("lhdohf7984")){
-			//Eng
-
-			prop.setProperty("z", "lhdohf7984");
-
-			if (prop.getProperty("y","2").equals("10")) {
-
-				yString = " Thanks for \nusing this application! :)";
-
-			}
-			else {
-				yString = "";
-			}
-
-			help = "Hello! This program is coded by\n GoJbs Javaprogramming." + yString;
-
-			språkMeny.setIcon(new ImageIcon(getClass().getResource("/images/Brittish.jpg")));
-
-			väljSpråk.setText("Language");
-			språkMeny.setText("Language");
-
-			hjälpMenu.setText("Help");
-			helpItem.setText("Help");
-			ideasItem.setText("Ideas/Bugs");
-
-			button3.setText("Planks");
-			button7.setText("Dispenser");
-			button8.setText("Sandstone");
-			button9.setText("Note Block");
-			button10.setText("Bed");
-			button11.setText("Powered Rail");
-			button12.setText("Detector Rail");
-			button13.setText("Sticky Piston");
-			button14.setText("Piston");
-			button15.setText("Wool");
-			button16.setText("Slab");
-			button17.setText("Bricks");
-			button18.setText("TNT");
-			button19.setText("Bookshelf");
-			button20.setText("Torch");
-			button21.setText("Stairs");
-			button22.setText("Chest");
-			button23.setText("Crafting Table");
-			button24.setText("Furnace");
-			button25.setText("Sign");
-			button26.setText("Door");
-			button27.setText("Ladder");
-			button28.setText("Rail");
-			button29.setText("Lever");
-			button30.setText("Pressure Plate");
-			button31.setText("Redstone Torch");
-			button32.setText("Button");
-			button33.setText("Snow Block");
-			button34.setText("Jukebox");
-			button35.setText("Fence");
-			button36.setText("Glowstone");
-			button37.setText("Jack-O-Lantern");
-			button38.setText("Stained Glass");
-			button39.setText("Trap Door");
-			button40.setText("Iron Bars");
-			button41.setText("Glass Pane");
-			button42.setText("Melon Block");
-			button43.setText("Fence Gate");
-			button44.setText("Enchantment Table");
-			button45.setText("Brewing Stand");
-			button46.setText("Cauldron");
-			button47.setText("Redstone Lamp");
-			button48.setText("Ender Chest");
-			button49.setText("Tripwire Hook");
-			button50.setText("Becon");
-			button51.setText("Cobblestone Wall");
-			button52.setText("Flower Pot");
-			button53.setText("Anvil");
-			button54.setText("Trapped Chest");
-			button55.setText("Redstone Comparator");
-			button56.setText("Daylight Sensor");
-			button57.setText("Block");
-			button58.setText("Hopper");
-			button59.setText("Carpet");
-			button60.setText("Activator Rail");
-			button61.setText("Dropper");
-			button62.setText("Hay Bales");
-			button63.setText("Shovel");
-			button64.setText("Axe");
-			button65.setText("Pickaxe");
-			button66.setText("Sword");
-			button67.setText("Hoe");
-			button68.setText("Bow");
-			button69.setText("Arrow");
-			button70.setText("Flint & Steel");
-			button71.setText("Stick");
-			button72.setText("Bowl");
-			button73.setText("Bread");
-			button74.setText("Helmet");
-			button75.setText("Chestplate");
-			button76.setText("Leggings");
-			button77.setText("Boots");
-			button78.setText("Painting");
-			button79.setText("Golden Apple");
-			button80.setText("Bucket");
-			button81.setText("Minecart");
-			button82.setText("Boat");
-			button83.setText("Paper");
-			button84.setText("Book");
-			button85.setText("Minecart with Chest");
-			button86.setText("Minecart with Furnace");
-			button87.setText("Compass");
-			button88.setText("Fishing Rod");
-			button89.setText("Clock");
-			button91.setText("Sugar");
-			button92.setText("Cake");
-			button93.setText("Redstone Repeter");
-			button94.setText("Cookie");
-			button95.setText("Map");
-			button96.setText("Shears");
-			button97.setText("Melon Seeds");
-			button98.setText("Gold nugget");
-			button99.setText("Glass Bottle");
-			button100.setText("Fermented Spider Eye");
-			button101.setText("Blaze Powder");
-			button102.setText("Magma Cream");
-			button103.setText("Eye Of Ender");
-			button104.setText("Glistering Melon");
-			button105.setText("Book & Quil");
-			button106.setText("Item Frame");
-			button107.setText("Golden Carrot");
-			button108.setText("Carrot On A Stick");
-			button109.setText("Pumpkin Pie");
-			button110.setText("Firework Rocket");
-			button111.setText("Firework Star");
-			button112.setText("Minecart With TNT");
-			button113.setText("Minecart With Hopper");
-			button114.setText("Lead");
-
-			sortera();
-
-			traString = "Wood";
-			kullerString = "Cobblestone";
-			rödString = "Redstone";
-			sandString = "Sand";
-			guldString = "Gold";
-			slimesString = "Slime";
-			trådsString = "String";
-			tegelString = "Brick";
-			krutString = "Gunpowder";
-			järnString = "Iron";
-			diamantString = "Diamond";
-			snöbollString = "Snowball";
-			obsidianString = "Obsidian";
-			lädersString = "Leather";
-			färgerString = "Dyes";
-			pumpaString = "Pumpkin";
-			äggString = "Egg";
-			kolString = "Coal";
-			morotString = "Carrot";
-			järnelrträdString = "Wood or Iron";
-			fjäderString = "Feather";
-			bläckString = "Ink Sac";
-			träjärnstenString = "Wood, Stone or Iron";
-			melonString = "Melon";
-			blazeString = "Blaze";
-			spindelögaString = "Spider Eye";
-			glasString = "Glass";
-			svampString = "Mushrooms";
-			glödstenspulverString = "Glowstone Dust";
-			veteString = "Wheat";
-			kakaoString = "Cocoa Beans";
-			stenString = "Stone";
-			sockerrörString = "Sugar Canes";
-			mjölkString = "Milk";
-			äppleString = "Apple";
-			flintaString = "Flint";
-			järnstenträString = "Wood, Cobblestone or Iron";
-			nederstjärnaString = "Nether Star";
-			nederkvartString = "Nether Quartz";
-			materialString = "Elements (like Diamods, Iron etc)";
-
-		}
-		else {
-			throw new Exception();
+		} catch (Exception e) {
+			Språkfråga();
 		}
 
 		frame3.setTitle(button3.getText());
@@ -1134,21 +1104,19 @@ public class GoJb1 implements ActionListener, CaretListener{
 		frame112.setTitle(button112.getText());
 		frame113.setTitle(button113.getText());
 		frame114.setTitle(button114.getText());
-
-		frameHuvud.repaint();
-		frameHuvud.revalidate();
-		frameHuvud.setSize(800,700);
-		frameHuvud.setLocationRelativeTo(null);
-
-
+		
 	}
 	void GörFönster() {
-		öppnad=true;
-		System.err.println("posjg");
 
 		scrollBar.getVerticalScrollBar().setUnitIncrement(20);
+		
 		frameHuvud.setIconImage(new ImageIcon(getClass().getResource("/images/Java-icon.png")).getImage());
-
+		frameHuvud.setSize(800,700);
+		frameHuvud.setLocationRelativeTo(null);
+		frameHuvud.add(scrollBar);
+		frameHuvud.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frameHuvud.setJMenuBar(bar);
+		
 		frame3.setSize(500,500);
 		frame7.setSize(500,500);
 		frame8.setSize(500,500);
@@ -1257,7 +1225,6 @@ public class GoJb1 implements ActionListener, CaretListener{
 		frame112.setSize(500,500);
 		frame113.setSize(500,500);
 		frame114.setSize(500,500);
-
 
 		button3.addActionListener(this);
 		button7.addActionListener(this);
@@ -1914,7 +1881,7 @@ public class GoJb1 implements ActionListener, CaretListener{
 			buttons114[j] = new JButton();
 			frame114.add(buttons114[j]);
 		}
-		
+
 		buttons3[1].setIcon(null);
 		buttons3[2].setIcon(null);
 		buttons3[3].setIcon(null);
@@ -2059,10 +2026,10 @@ public class GoJb1 implements ActionListener, CaretListener{
 		buttons20[2].setIcon(null);
 		buttons20[3].setIcon(null);
 		buttons20[4].setIcon(null);
-		buttons20[5].setIcon(pinne);
+		buttons20[5].setIcon(kol);
 		buttons20[6].setIcon(null);
 		buttons20[7].setIcon(null);
-		buttons20[8].setIcon(kol);
+		buttons20[8].setIcon(pinne);
 		buttons20[9].setIcon(null);
 
 		buttons21[1].setIcon(null);
@@ -3641,7 +3608,7 @@ public class GoJb1 implements ActionListener, CaretListener{
 				buttons114[j].addActionListener(this);
 			}
 		}
-		
+
 	}
 	void ladda4(){
 		frame3.setIconImage(frameHuvud.getIconImage());
@@ -3861,7 +3828,7 @@ public class GoJb1 implements ActionListener, CaretListener{
 		button112.setVerticalTextPosition(JButton.BOTTOM);
 		button113.setVerticalTextPosition(JButton.BOTTOM);
 		button114.setVerticalTextPosition(JButton.BOTTOM);
-		
+
 		button3.setHorizontalTextPosition(JButton.CENTER);
 		button7.setHorizontalTextPosition(JButton.CENTER);
 		button8.setHorizontalTextPosition(JButton.CENTER);
@@ -3973,8 +3940,6 @@ public class GoJb1 implements ActionListener, CaretListener{
 
 		frame.setLayout(new GridLayout(0, 3));
 
-		frameHuvud.setJMenuBar(bar);
-
 		bar.add(språkMeny);
 		bar.add(hjälpMenu);
 
@@ -3997,10 +3962,6 @@ public class GoJb1 implements ActionListener, CaretListener{
 		hjälpMenu.add(ideasItem);
 		väljSpråk.addActionListener(this);
 
-		frameHuvud.add(scrollBar);
-		frameHuvud.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frameHuvud.setLocationRelativeTo(null);
-
 		ideasFrame.setSize(525,500);
 		ideasFrame.setLocationRelativeTo(null);
 		ideasFrame.setLayout(new GridLayout(3,1));
@@ -4009,46 +3970,40 @@ public class GoJb1 implements ActionListener, CaretListener{
 		ideasFrame.add(skicka);
 		skicka.addActionListener(this);
 	}
+	int a = 1;
 	public void actionPerformed(ActionEvent e) {
-
+		System.out.println("Någon knapp nedtryckt!");	
 		if(e.getSource()==mailTimer){
-
-			if(GoJb1.mailSkickat==false){
-				//Mail
-
-				try {
-					System.out.println("jndsnl");
+			try {
+				if(mailSkickat==false&&!prop.getProperty("Namn","").equals("")&&!prop.getProperty("9778436klbgflf","").equals("")){
+					//Mail
+					System.out.println("Försök " + a);
 					Mail.Skicka("gojb@gojb.bl.ee", "Användande av GoJbGuide", "Namn:  " + prop.getProperty("Namn") + ", Språk:  " + prop.getProperty("9778436klbgflf") + "\n //lhdohf7984 = Engelska \n //86325yhrel = Svenska");
 					prop.setProperty("y", "10");
 					System.out.println("Skickat!");
 					mailTimer.stop();
-					try {
-						prop.store(new FileWriter(new File(System.getProperty("user.home") + "\\AppData\\Roaming\\GoJb\\settings.gojb")),"Inställningar för GoJbGuide");
-						System.out.println("Lyckades skriva i prop");
-					} catch (Exception e1) {
-						System.out.println("lijashfölivbfspxkl");
-						e1.printStackTrace();
-					}
-				} catch (Exception e1) {
-					System.err.println("Mejl misslyckadess att skickas");
-					e1.printStackTrace();
-				}
-
+					sparaProp();
+				} 
 			}
-			if(GoJb1.mailSkickat==true){
+			catch (MessagingException e1) {
+				a++;
+				System.err.println("Mejl misslyckades att skickas");
+			}catch (Exception e1) {
+				System.err.println("Mejl misslyckades");
+			}
+			if(mailSkickat==true){
+				mailTimer.stop();
+			}
+			if (a>10) {
+				System.err.println("Problem med internetåtkomst");
 				mailTimer.stop();
 			}
 		}
 		if (e.getSource()==helpItem){
-
 			JOptionPane.showMessageDialog(null, help);
 		}
 		if (e.getSource()==ideasItem) {
-
-
 			ideasFrame.setVisible(true);
-
-
 		}
 		if(skicka==e.getSource()){
 			try {
@@ -4056,15 +4011,10 @@ public class GoJb1 implements ActionListener, CaretListener{
 						+ " skriver: \n" + area.getText());
 				ideasFrame.dispose();
 			} catch (Exception e1) {
-
 				System.err.println("Mail skickades inte!!");
-
 			}
 		}
-
-
-		System.out.println("Någon knapp nedtryckt!");	
-
+		
 		frame3.setVisible(false);
 		frame7.setVisible(false);
 		frame8.setVisible(false);
@@ -4173,7 +4123,6 @@ public class GoJb1 implements ActionListener, CaretListener{
 		frame112.setVisible(false);
 		frame113.setVisible(false);
 		frame114.setVisible(false);
-
 
 		frame3.setLocationRelativeTo(frameHuvud);
 		frame7.setLocationRelativeTo(frameHuvud);
@@ -4822,7 +4771,9 @@ public class GoJb1 implements ActionListener, CaretListener{
 		}
 		if (e.getSource()==väljSpråk){
 			Språkfråga();
-
+		}
+		if (abc==enderpärla) {
+			JOptionPane.showMessageDialog(null, enderString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
 		}
 
 	}
@@ -5157,8 +5108,6 @@ public class GoJb1 implements ActionListener, CaretListener{
 		while (frame.getComponents().length<9) {
 			frame.add(Box.createGlue());
 		}
-		frame.repaint();
-		frame.revalidate();
 		frameHuvud.revalidate();
 		frameHuvud.repaint();
 
@@ -5394,289 +5343,249 @@ public class GoJb1 implements ActionListener, CaretListener{
 			frame.add(jButton);
 		}
 	}
+	void sparaProp(){
+		try {
+			prop.store(new FileWriter(new File(System.getProperty("user.home") + "\\AppData\\Roaming\\GoJb\\settings.gojb")),"Inställningar för GoJbGuide");
+		} catch (Exception e1) {
+			System.err.println("Mappen finns inte! Skapar...");
+			new File(System.getProperty("user.home") + "\\AppData\\Roaming\\GoJb\\").mkdir();
+			try {
+				prop.store(new FileWriter(new File(System.getProperty("user.home") + "\\AppData\\Roaming\\GoJb\\settings.gojb")),"Inställningar för GoJbGuide");
+			} catch (IOException e2) {
+				e2.printStackTrace();
+			}
+		}
+	}
 	ActionListener actionListener2 = new ActionListener() {
-
 		public void actionPerformed(ActionEvent arg0) {
-			if (timer == arg0.getSource()){
-				if(namn == null){
-					namn = "";
-				}
+			background1.setText(välkommen + " " + namn);			
+			progressBar.setValue(progressBar.getValue()+1);
+			background2.setText(Integer.toString(progressBar.getValue())+"%");
+			frame2.repaint();
 
-				background1.setText(välkommen + " " + namn);			
-				progressBar.setValue(progressBar.getValue()+1);
-				background2.setText(Integer.toString(progressBar.getValue())+"%");
-				frame2.repaint();
-				//				frame2.revalidate();
-				//				layeredPane.revalidate();
-				//				layeredPane.repaint();
-				//				progressBar.repaint();
-				//				progressBar.revalidate();
-
-				//				frame2.revalidate();
-
-			}
-			a++;
-
-			if (z == 0){
-				x++;
-			}
 			if (progressBar.getValue() == 25 && namnInt == 1){
 				start=true;
-				start();
+				Språk();
 				new Thread(new Update()).start();
 				prop.setProperty("y", "9");
 			}
-			if (progressBar.getValue() == 50 && namnInt == 1){
-				if (öppnad) {
-					ladda2();
-				}
+			if (progressBar.getValue() == 50 && namnInt==2){
+				välkommen = "Välkommen! Laddar...";
 			}
-			if (progressBar.getValue() == 65 && namnInt == 1){
-				if (öppnad) {
-					ladda3();
-				}
+			if (progressBar.getValue() == 25){
+				GörFönster();
 			}
-			if (progressBar.getValue() == 80 && namnInt == 1){
-				if (öppnad) {
-					ladda4();
-				}
+			if (progressBar.getValue() == 50){
+				ladda2();
+			}
+			
+			if (progressBar.getValue() == 65){
+				ladda3();
+			}
+			if (progressBar.getValue() == 80){
+				ladda4();
 			}
 			if(progressBar.getValue()==101&&start==true){
 				timer.stop();
-				frameHuvud.setVisible(true);
 				frame2.dispose();
+			}
+			if (progressBar.getValue() == 101 && namnInt == 1){
+				frameHuvud.setVisible(true);
 			}
 			if (progressBar.getValue() == 100 && namnInt == 2){
 
 				timer.stop();
+				namn = showInputDialog("Enter name/Skriv ditt namn");
 
-				namn = JOptionPane.showInputDialog("Enter name/Skriv ditt namn");
-
-				if(namn.equals("")||namn.equals(null)){
+				if(namn==null||namn.equals("")){
 					System.exit(3);
 				}
 				else {
-					start();
+					Språk();
 					frame2.dispose();
-					timer.stop();
-					frameHuvud.setVisible(true);
-
 				}
 				prop.setProperty("Namn", namn);
-				try {
-					prop.store(new FileWriter(new File(System.getProperty("user.home") + "\\AppData\\Roaming\\GoJb\\settings.gojb")),"Inställningar för GoJbGuide");
-				} catch (Exception e) {
-					System.out.println("lyckades inte skriva");
-					e.printStackTrace();
-				}
-			}
-		}};;
-		Timer timer = new Timer(30, actionListener2);
-		public GoJb1(){
-			try {
-				prop.load(new FileInputStream(System.getProperty ("user.home") + "\\AppData\\Roaming\\GoJb\\settings.gojb"));
-			} catch (IOException e) {
-				System.err.println("sdoövhjxcblizxg,vbs");
-			}
-			
-			frame2.setLayeredPane(layeredPane);
-
-			frame2.setBackground(white);
-			frame2.setIconImage(new ImageIcon(getClass().getResource("/images/Java-icon.png")).getImage());
-
-			layeredPane.add(background);
-			layeredPane.add(background1);
-			layeredPane.add(background2);
-			layeredPane.add(progressBar);
-			frame2.setLayout(new BorderLayout());
-			frame2.setSize(300,200);
-			frame2.setLocationRelativeTo(null);
-			frame2.setDefaultCloseOperation(3);
-			frame2.setUndecorated(true);
-			frame2.setVisible(true);
-
-			background.setOpaque(true);
-			background.setBackground(blue);
-			background.setSize(300,200);
-			background.setLocation(0,0);
-
-			background1.setForeground(Color.white);
-			background1.setOpaque(false);
-			background1.setBackground(Color.black);
-			background1.setSize(300,54);
-			background1.setLocation(20, 30);
-			background1.setFont(new Font("Arial",Font.BOLD,25));
-
-			background2.setForeground(Color.white);
-			background2.setOpaque(false);
-			background2.setBackground(Color.black);
-			background2.setSize(200,54);
-			background2.setLocation(125,70);
-			background2.setFont(new Font("Arial",Font.BOLD,30));
-
-			progressBar.setLocation(50,150);
-			progressBar.setSize(200, 30);
-			progressBar.setForeground(Color.green);
-			progressBar.setBackground(Color.black);
-			progressBar.setBorderPainted(false);
-
-			layeredPane.setLayer(background, 25);
-			layeredPane.setLayer(background1, 90);
-			layeredPane.setLayer(background2, 90);
-			layeredPane.setLayer(progressBar, 100);
-
-			frame2.repaint();
-			frame2.revalidate();
-			layeredPane.revalidate();
-			layeredPane.repaint();
-
-			timer.start();
-
-			SpråkVoid();
-
-			if(prop.getProperty("y","1").equals("10")){
-				mailSkickat=true;
-				System.out.println("Mail = true");
-
-			}
-			else if (!prop.getProperty("y","1").equals("10")){
-				mailSkickat=false;
-				System.out.println("Mail = false");
-			}
-
-			if (!prop.getProperty("9778436klbgflf","kjg").equals("lhdohf7984")&&
-					!prop.getProperty("9778436klbgflf","kjg").equals("86325yhrel")){
-				System.err.println(prop.getProperty("9778436klbgflf"));
-
-				System.err.println("Språk ej valt");
-
-				namnInt = 2;
-
-				prop.setProperty("Namn", "");
-
-
-				if (progressBar.getValue() < 50){
-					välkommen = "Welcome! Loading...";
-
-
-
-					frame2.revalidate();
-					frame2.repaint();
-				}
-				else if (progressBar.getValue() >= 50){
-					välkommen = "Välkommen! Laddar...";
-
-					frame2.revalidate();
-					frame2.repaint();
-				}
-				try {
-					prop.store(new FileWriter(new File(System.getProperty("user.home") + "\\AppData\\Roaming\\GoJb\\settings.gojb")),"Inställningar för GoJbGuide");
-				} catch (Exception e) {
-					System.out.println("lyckades inte skriva");
-					e.printStackTrace();
-				}
-			}
-
-		}
-		public static void SpråkVoid(){
-			if (prop.getProperty("9778436klbgflf","kjg").equals("86325yhrel")){
-				välkommen = "Välkommen " + prop.getProperty("Namn");
-				string="Uppdatering tillgänglig. Vill du uppdatera?";
-				laddaString="Uppdatera nu";
-				cancelString="Uppdatera senare";
-				finishedString="Uppdatering slutförd. \nProgrammet kommer nu att starta om";
-				GoJb1.label.setText("Skriv vad du har på hjärtat här. Det\nspelar ingen roll om det "
-						+ "är buggar,\nförslag till programmet, eller förslag \ntill nya program. Skriv "
-						+ "det här! :D");
-				frame2.revalidate();
-				frame2.repaint();
-				namnInt = 1;
-
-			}
-			else if (prop.getProperty("9778436klbgflf","kjg").equals("lhdohf7984")){
-				välkommen = "Welcome " + prop.getProperty("Namn");
-				string="Update available. Do you want to update?";
-				laddaString = "Update now";
-				cancelString = "Update later";
-				finishedString = "Uppdate finished. \nThe program will now restart";
-				GoJb1.label.setText("Write what's on your mind here. It \ndoesn't matter if it's about buggs or\nideas "
-						+ "for this program, or ideas for \na new program. Write it here! :D");
-				frame2.revalidate();
-				frame2.repaint();
-				namnInt = 1;
-
+				sparaProp();
 			}
 		}
-			public static void main(String[] args) {
-			progressBar = new JProgressBar(0,101);
-			try {
-				UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-			} catch (Exception e) {
-				((Runnable) Toolkit.getDefaultToolkit().getDesktopProperty("win.sound.hand")).run();
-				JOptionPane.showMessageDialog(null, "Bad LookAndFeel!","Error",JOptionPane.ERROR_MESSAGE);
-			}
-			
-			new GoJb1();
+	};
+	
+	Timer timer = new Timer(30, actionListener2);
+	public GoJb1(){
+		try {
+			prop.load(new FileInputStream(System.getProperty ("user.home") + "\\AppData\\Roaming\\GoJb\\settings.gojb"));
+		} catch (IOException e) {
+			System.err.println("sdoövhjxcblizxg,vbs");
+		}
+		
+		frame2.setLayeredPane(layeredPane);
+		frame2.setBackground(white);
+		frame2.setIconImage(new ImageIcon(getClass().getResource("/images/Java-icon.png")).getImage());
+		frame2.setUndecorated(true);
+		frame2.setLayout(new BorderLayout());
+		frame2.setSize(300,200);
+		frame2.setLocationRelativeTo(null);
+		frame2.setDefaultCloseOperation(3);
+		frame2.setVisible(true);
+
+		background.setOpaque(true);
+		background.setBackground(blue);
+		background.setSize(300,200);
+		background.setLocation(0,0);
+
+		background1.setForeground(Color.white);
+		background1.setOpaque(false);
+		background1.setBackground(Color.black);
+		background1.setSize(300,54);
+		background1.setLocation(20, 30);
+		background1.setFont(new Font("Arial",Font.BOLD,25));
+
+		background2.setForeground(Color.white);
+		background2.setOpaque(false);
+		background2.setBackground(Color.black);
+		background2.setSize(200,54);
+		background2.setLocation(125,70);
+		background2.setFont(new Font("Arial",Font.BOLD,30));
+
+		progressBar.setLocation(50,150);
+		progressBar.setSize(200, 30);
+		progressBar.setForeground(Color.green);
+		progressBar.setBackground(Color.black);
+		progressBar.setBorderPainted(false);
+		
+		layeredPane.add(background);
+		layeredPane.add(background1);
+		layeredPane.add(background2);
+		layeredPane.add(progressBar);
+		layeredPane.setLayer(background, 25);
+		layeredPane.setLayer(background1, 90);
+		layeredPane.setLayer(background2, 90);
+		layeredPane.setLayer(progressBar, 100);
+
+		SpråkVoid();
+
+		frame2.repaint();
+		frame2.revalidate();
+		layeredPane.revalidate();
+		layeredPane.repaint();
+
+		timer.start();
+
+		if(prop.getProperty("y","1").equals("10")){
+			mailSkickat=true;
+			System.out.println("Mail = true");
+
+		}
+		else{
+			mailSkickat=false;
+			System.out.println("Mail = false");
 		}
 
+		if (!prop.getProperty("9778436klbgflf","kjg").equals("lhdohf7984")&&
+				!prop.getProperty("9778436klbgflf","kjg").equals("86325yhrel")){
+			System.err.println(prop.getProperty("9778436klbgflf"));
+
+			System.err.println("Språk ej valt");
+
+			namnInt = 2;
+
+			prop.setProperty("Namn", "");
+			välkommen = "Welcome! Loading...";
+			sparaProp();
+		}
+	}
+	public void SpråkVoid(){
+		if (prop.getProperty("9778436klbgflf","kjg").equals("86325yhrel")){
+			välkommen = "Välkommen " + prop.getProperty("Namn");
+			string="Uppdatering tillgänglig. Vill du uppdatera?";
+			laddaString="Uppdatera nu";
+			cancelString="Uppdatera senare";
+			finishedString="Uppdatering slutförd. \nProgrammet kommer nu att starta om";
+			label.setText("Skriv vad du har på hjärtat här. Det\nspelar ingen roll om det "
+					+ "är buggar,\nförslag till programmet, eller förslag \ntill nya program. Skriv "
+					+ "det här! :D");
+			namnInt = 1;
+
+		}
+		else if (prop.getProperty("9778436klbgflf","kjg").equals("lhdohf7984")){
+			välkommen = "Welcome " + prop.getProperty("Namn");
+			string="Update available. Do you want to update?";
+			laddaString = "Update now";
+			cancelString = "Update later";
+			finishedString = "Uppdate finished. \nThe program will now restart";
+			label.setText("Write what's on your mind here. It \ndoesn't matter if it's about buggs or\nideas "
+					+ "for this program, or ideas for \na new program. Write it here! :D");
+			namnInt = 1;
+		}
+	}
+	public static void main(String[] args) {
+		progressBar = new JProgressBar(0,101);
+		try {
+			UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+		} catch (Exception e) {
+			((Runnable) Toolkit.getDefaultToolkit().getDesktopProperty("win.sound.hand")).run();
+			JOptionPane.showMessageDialog(null, "Bad LookAndFeel!","Error",JOptionPane.ERROR_MESSAGE);
+		}
+
+		new GoJb1();
+	}
 }
 class Update implements Runnable{
-
-
 	public synchronized void run(){
 		if (getClass().getResource("/" + getClass().getName().replace('.','/') + ".class").toString().startsWith("jar:")) {
 			try {
-				URL u = new URL("http://gojb.bl.ee/GoJbGuide.jar");
+				URLConnection connection = new URL("http://gojb.bl.ee/GoJbGuide.jar").openConnection();
 				File file = new File(getClass().getProtectionDomain().getCodeSource().getLocation().toURI());
-				System.out.println("Online: " + u.openConnection().getLastModified());
+				System.out.println("Online: " + connection.getLastModified());
 				System.out.println("File: " + file);
 				System.out.println("Lokal:  "+ file.lastModified());
-				if (file.lastModified() + 60000 < u.openConnection().getLastModified()) {
-					Object[] options = { GoJb1.laddaString, GoJb1.cancelString };
-					if(JOptionPane.showOptionDialog(null, GoJb1.string, "Update",
-							JOptionPane.DEFAULT_OPTION, JOptionPane.WARNING_MESSAGE,
-							null, options, options[0])==OK_OPTION) {
+				Object[] options = { GoJb1.laddaString, GoJb1.cancelString };
+				if (file.lastModified() + 60000 < connection.getLastModified()&&
+						showOptionDialog(null, GoJb1.string, "GoJbGuide",
+								DEFAULT_OPTION, WARNING_MESSAGE,
+								null, options, options[0])==OK_OPTION) {
 
-						InputStream in = new BufferedInputStream(u.openStream());
-						ByteArrayOutputStream out = new ByteArrayOutputStream();
-						byte[] buf = new byte[1024];
-						JProgressBar bar = new JProgressBar(0, in.available()/2);
-						JFrame frame = new JFrame("Downloading...");
-						frame.add(bar);
-						frame.setIconImage(new ImageIcon(getClass().getResource("/images/Java-icon.png")).getImage());
-						frame.setLocationRelativeTo(null);
-						frame.setVisible(true);
-						frame.setSize(500,200);
-						int n = 0;
-						while (-1!=(n=in.read(buf))){
-							out.write(buf, 0, n);
-							bar.setValue(bar.getValue()+1);
-						}
-						out.close();
-						in.close();
-						FileOutputStream fos = new FileOutputStream(file);
-						fos.write(out.toByteArray());
-						fos.close();
-						System.out.println("Finished");
-						frame.dispose();
-						showMessageDialog(null, GoJb1.finishedString, "Update Finished", INFORMATION_MESSAGE);
-						try {
-							String string = "java -jar \"" + file.toString()+"\"";
-							Runtime.getRuntime().exec(string);
-							System.err.println(string);
-						} catch (Exception e) {
-							e.printStackTrace(); 
-						}
-						System.exit(0);
+					JProgressBar bar = new JProgressBar(0, connection.getContentLength());
+					JFrame frame = new JFrame("Downloading update...");
+					frame.add(bar);
+					frame.setIconImage(new ImageIcon(getClass().getResource("/images/Java-icon.png")).getImage());
+					frame.setSize(500,100);	
+					frame.setLocation(Toolkit.getDefaultToolkit().getScreenSize().width-frame.getWidth(),
+							Toolkit.getDefaultToolkit().getScreenSize().height-frame.getHeight()*2);
+					frame.setVisible(true);
+					frame.toFront();
+					InputStream in = connection.getInputStream();
+					ByteArrayOutputStream out = new ByteArrayOutputStream();
+					int n = 0;
+					byte[] buf = new byte[1024];
+					while (-1!=(n=in.read(buf))){
+						out.write(buf, 0, n);
+						bar.setValue(bar.getValue()+n);
 					}
-
+					frame.setTitle("Saving...");
+					bar.setIndeterminate(true);
+					FileOutputStream fos = new FileOutputStream(file);
+					fos.write(out.toByteArray());
+					fos.close();
+					out.close();
+					in.close();
+					frame.dispose();
+					System.out.println("Klart!");
+					showMessageDialog(null, GoJb1.finishedString, "Update Finished", INFORMATION_MESSAGE);
+					try {
+						String string = "java -jar \"" + file.toString()+"\"";
+						Runtime.getRuntime().exec(string);
+						System.err.println(string);
+					} catch (Exception e) {
+						e.printStackTrace(); 
+					}
+					System.exit(0);
 				}
 			} catch(Exception e){
 				System.err.println("Ingen uppdatering hittades");
 			}
 		}
 	}
-
 }
 /*Idéer:
  * 

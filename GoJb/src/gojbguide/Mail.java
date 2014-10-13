@@ -6,12 +6,15 @@ import java.util.*;
 import javax.mail.*;
 import javax.mail.internet.*;
 
+
 class Mail {
 	
 	public static void main(String[] args) throws Exception {
 		new Mail2();
 	}
-	static void Skicka(String Till, String Ämne, String Meddelande) throws AddressException, MessagingException{
+	
+	public static void Skicka(String Till, String Ämne, String Meddelande) throws AddressException, MessagingException{
+
 
 		Properties props = new Properties();
 		props.put("mail.smtp.host", "mx1.hostinger.se");
@@ -42,6 +45,7 @@ class Mail {
 	}
 
 }
+	
 class Mail2{
 
 

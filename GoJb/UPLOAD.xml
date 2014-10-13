@@ -8,6 +8,8 @@
 		<echo message="${inputvalue}"/>
         <jar destfile="GoJbGuide.jar" filesetmanifest="mergewithoutmain">
             <manifest>
+            	<attribute name="Application-Name" value="GoJbGuide"/>
+            	<attribute name="Permissions" value="all-permissions"/>
                 <attribute name="Main-Class" value="gojbguide.GoJb1"/>
                 <attribute name="Class-Path" value="."/>
             </manifest>
