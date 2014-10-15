@@ -25,19 +25,19 @@ public class GoJb1 implements ActionListener, CaretListener{
 	private JFrame[] frames = new JFrame[115];
 
 	private JFrame frameHuvud = new JFrame("GoJbGuide"),
-				språk = new JFrame("Language"),
-				ideasFrame = new JFrame("Ideas");
+			språk = new JFrame("Language"),
+			ideasFrame = new JFrame("Ideas");
 	private static JFrame frame2;
 
 	private static Properties prop = new Properties();
 
 	private JButton svenska = new JButton("Svenska",new ImageIcon(getClass().getResource("/images/Swedish.jpg"))),
-					engelska = new JButton("English",new ImageIcon(getClass().getResource("/images/Brittish.jpg"))),
-					skicka = new JButton("Send");
+			engelska = new JButton("English",new ImageIcon(getClass().getResource("/images/Brittish.jpg"))),
+			skicka = new JButton("Send");
 
 	private JButton[] buttons = new JButton[frames.length];
 	private JButton[][] frameButtons = new JButton[frames.length][10];
-	
+
 	private JMenuBar bar = new JMenuBar();
 
 	private ArrayList<JButton> list = new ArrayList<JButton>();
@@ -45,7 +45,7 @@ public class GoJb1 implements ActionListener, CaretListener{
 	private JTextField text = new JTextField();
 
 	private JTextArea area = new JTextArea(),
-					label = new JTextArea();
+			label = new JTextArea();
 
 	private Timer mailTimer = new Timer(1000, this);
 
@@ -57,74 +57,74 @@ public class GoJb1 implements ActionListener, CaretListener{
 			ideasItem = new JMenuItem("Ideas/bugs");
 
 	private ImageIcon 	kullersten = new ImageIcon(getClass().getResource("/images/1.png")),
-					rödsten = new ImageIcon(getClass().getResource("/images/2.png")),
-					plankor = new ImageIcon(getClass().getResource("/images/3.png")),
-					pilbåge = new ImageIcon(getClass().getResource("/images/68.gif")),
-					tra = new ImageIcon(getClass().getResource("/images/200.png")),
-					sand = new ImageIcon(getClass().getResource("/images/4.png")),
-					ull = new ImageIcon(getClass().getResource("/images/1026.gif")),
-					guld = new ImageIcon(getClass().getResource("/images/5.png")),
-					pinne = new ImageIcon(getClass().getResource("/images/71.png")),
-					tryckplatta = new ImageIcon(getClass().getResource("/images/30.png")),
-					kolv = new ImageIcon(getClass().getResource("/images/14.gif")),
-					slime = new ImageIcon(getClass().getResource("/images/1000.png")),
-					tråd = new ImageIcon(getClass().getResource("/images/1001.png")),
-					tegel = new ImageIcon(getClass().getResource("/images/1006.png")),
-					krut = new ImageIcon(getClass().getResource("/images/1005.png")),
-					järn = new ImageIcon(getClass().getResource("/images/6.png")),
-					diamant = new ImageIcon(getClass().getResource("/images/1013.png")),
-					snöboll = new ImageIcon(getClass().getResource("/images/1012.png")),
-					obsidian = new ImageIcon(getClass().getResource("/images/1018.png")),
-					enderöga = new ImageIcon(getClass().getResource("/images/103.png")),
-					bok = new ImageIcon(getClass().getResource("/images/84.png")),
-					papper = new ImageIcon(getClass().getResource("/images/83.png")),
-					läder = new ImageIcon(getClass().getResource("/images/1032.png")),
-					gruvvagn = new ImageIcon(getClass().getResource("/images/81.png")),
-					hopper = new ImageIcon(getClass().getResource("/images/58.png")),
-					kista = new ImageIcon(getClass().getResource("/images/22.gif")),
-					ugn = new ImageIcon(getClass().getResource("/images/24.png")),
-					färger = new ImageIcon(getClass().getResource("/images/90.gif")),
-					raketstjärna = new ImageIcon(getClass().getResource("/images/111.png")),
-					dynamit = new ImageIcon(getClass().getResource("/images/18.png")),
-					block = new ImageIcon(getClass().getResource("/images/1008.gif")),
-					socker = new ImageIcon(getClass().getResource("/images/91.png")),
-					ägg = new ImageIcon(getClass().getResource("/images/1035.png")),
-					pumpa = new ImageIcon(getClass().getResource("/images/1015.png")),
-					kol = new ImageIcon(getClass().getResource("/images/1007.png")),
-					morot = new ImageIcon(getClass().getResource("/images/1042.png")),
-					fiskespö = new ImageIcon(getClass().getResource("/images/88.png")),
-					guldklimp = new ImageIcon(getClass().getResource("/images/98.png")),
-					järnträ = new ImageIcon(getClass().getResource("/images/1009.gif")),
-					fjäder = new ImageIcon(getClass().getResource("/images/1030.png")),
-					bläck = new ImageIcon(getClass().getResource("/images/1041.png")),
-					tryck = new ImageIcon(getClass().getResource("/images/1011.gif")),
-					melon = new ImageIcon(getClass().getResource("/images/1017.png")),
-					blazepulver = new ImageIcon(getClass().getResource("/images/101.png")),
-					blaze = new ImageIcon(getClass().getResource("/images/1019.png")),
-					enderpärla = new ImageIcon(getClass().getResource("/images/1040.png")),
-					svamp = new ImageIcon(getClass().getResource("/images/1039.png")),
-					spindelöga = new ImageIcon(getClass().getResource("/images/1038.png")),
-					glödstenspulver = new ImageIcon(getClass().getResource("/images/1014.png")),
-					fackla = new ImageIcon(getClass().getResource("/images/20.png")),
-					glas = new ImageIcon(getClass().getResource("/images/1016.png")),
-					vete = new ImageIcon(getClass().getResource("/images/1028.png")),
-					kakao = new ImageIcon(getClass().getResource("/images/1037.png")),
-					kompass = new ImageIcon(getClass().getResource("/images/87.png")),
-					sten = new ImageIcon(getClass().getResource("/images/1002.png")),
-					rödstensfackla = new ImageIcon(getClass().getResource("/images/31.png")),
-					mjölk = new ImageIcon(getClass().getResource("/images/1036.png")),
-					färgglas = new ImageIcon(getClass().getResource("/images/1012.gif")),
-					sockerrör = new ImageIcon(getClass().getResource("/images/1034.png")),
-					glödstenslampa = new ImageIcon(getClass().getResource("/images/36.png")),
-					äpple = new ImageIcon(getClass().getResource("/images/1033.png")),
-					flinta = new ImageIcon(getClass().getResource("/images/1031.png")),
-					järnStenTrä = new ImageIcon(getClass().getResource("/images/1029.gif")),
-					nederstjärna = new ImageIcon(getClass().getResource("/images/1020.png")),
-					järnblock = new ImageIcon(getClass().getResource("/images/1021.png")),
-					trähalvblock = new ImageIcon(getClass().getResource("/images/1023.png")),
-					nederkvarts = new ImageIcon(getClass().getResource("/images/1022.png")),
-					material = new ImageIcon(getClass().getResource("/images/1027.gif")),
-					snubbeltrådskrok = new ImageIcon(getClass().getResource("/images/49.gif"));
+			rödsten = new ImageIcon(getClass().getResource("/images/2.png")),
+			plankor = new ImageIcon(getClass().getResource("/images/3.png")),
+			pilbåge = new ImageIcon(getClass().getResource("/images/68.gif")),
+			tra = new ImageIcon(getClass().getResource("/images/200.png")),
+			sand = new ImageIcon(getClass().getResource("/images/4.png")),
+			ull = new ImageIcon(getClass().getResource("/images/1026.gif")),
+			guld = new ImageIcon(getClass().getResource("/images/5.png")),
+			pinne = new ImageIcon(getClass().getResource("/images/71.png")),
+			tryckplatta = new ImageIcon(getClass().getResource("/images/30.png")),
+			kolv = new ImageIcon(getClass().getResource("/images/14.gif")),
+			slime = new ImageIcon(getClass().getResource("/images/1000.png")),
+			tråd = new ImageIcon(getClass().getResource("/images/1001.png")),
+			tegel = new ImageIcon(getClass().getResource("/images/1006.png")),
+			krut = new ImageIcon(getClass().getResource("/images/1005.png")),
+			järn = new ImageIcon(getClass().getResource("/images/6.png")),
+			diamant = new ImageIcon(getClass().getResource("/images/1013.png")),
+			snöboll = new ImageIcon(getClass().getResource("/images/1012.png")),
+			obsidian = new ImageIcon(getClass().getResource("/images/1018.png")),
+			enderöga = new ImageIcon(getClass().getResource("/images/103.png")),
+			bok = new ImageIcon(getClass().getResource("/images/84.png")),
+			papper = new ImageIcon(getClass().getResource("/images/83.png")),
+			läder = new ImageIcon(getClass().getResource("/images/1032.png")),
+			gruvvagn = new ImageIcon(getClass().getResource("/images/81.png")),
+			hopper = new ImageIcon(getClass().getResource("/images/58.png")),
+			kista = new ImageIcon(getClass().getResource("/images/22.gif")),
+			ugn = new ImageIcon(getClass().getResource("/images/24.png")),
+			färger = new ImageIcon(getClass().getResource("/images/90.gif")),
+			raketstjärna = new ImageIcon(getClass().getResource("/images/111.png")),
+			dynamit = new ImageIcon(getClass().getResource("/images/18.png")),
+			block = new ImageIcon(getClass().getResource("/images/1008.gif")),
+			socker = new ImageIcon(getClass().getResource("/images/91.png")),
+			ägg = new ImageIcon(getClass().getResource("/images/1035.png")),
+			pumpa = new ImageIcon(getClass().getResource("/images/1015.png")),
+			kol = new ImageIcon(getClass().getResource("/images/1007.png")),
+			morot = new ImageIcon(getClass().getResource("/images/1042.png")),
+			fiskespö = new ImageIcon(getClass().getResource("/images/88.png")),
+			guldklimp = new ImageIcon(getClass().getResource("/images/98.png")),
+			järnträ = new ImageIcon(getClass().getResource("/images/1009.gif")),
+			fjäder = new ImageIcon(getClass().getResource("/images/1030.png")),
+			bläck = new ImageIcon(getClass().getResource("/images/1041.png")),
+			tryck = new ImageIcon(getClass().getResource("/images/1011.gif")),
+			melon = new ImageIcon(getClass().getResource("/images/1017.png")),
+			blazepulver = new ImageIcon(getClass().getResource("/images/101.png")),
+			blaze = new ImageIcon(getClass().getResource("/images/1019.png")),
+			enderpärla = new ImageIcon(getClass().getResource("/images/1040.png")),
+			svamp = new ImageIcon(getClass().getResource("/images/1039.png")),
+			spindelöga = new ImageIcon(getClass().getResource("/images/1038.png")),
+			glödstenspulver = new ImageIcon(getClass().getResource("/images/1014.png")),
+			fackla = new ImageIcon(getClass().getResource("/images/20.png")),
+			glas = new ImageIcon(getClass().getResource("/images/1016.png")),
+			vete = new ImageIcon(getClass().getResource("/images/1028.png")),
+			kakao = new ImageIcon(getClass().getResource("/images/1037.png")),
+			kompass = new ImageIcon(getClass().getResource("/images/87.png")),
+			sten = new ImageIcon(getClass().getResource("/images/1002.png")),
+			rödstensfackla = new ImageIcon(getClass().getResource("/images/31.png")),
+			mjölk = new ImageIcon(getClass().getResource("/images/1036.png")),
+			färgglas = new ImageIcon(getClass().getResource("/images/1012.gif")),
+			sockerrör = new ImageIcon(getClass().getResource("/images/1034.png")),
+			glödstenslampa = new ImageIcon(getClass().getResource("/images/36.png")),
+			äpple = new ImageIcon(getClass().getResource("/images/1033.png")),
+			flinta = new ImageIcon(getClass().getResource("/images/1031.png")),
+			järnStenTrä = new ImageIcon(getClass().getResource("/images/1029.gif")),
+			nederstjärna = new ImageIcon(getClass().getResource("/images/1020.png")),
+			järnblock = new ImageIcon(getClass().getResource("/images/1021.png")),
+			trähalvblock = new ImageIcon(getClass().getResource("/images/1023.png")),
+			nederkvarts = new ImageIcon(getClass().getResource("/images/1022.png")),
+			material = new ImageIcon(getClass().getResource("/images/1027.gif")),
+			snubbeltrådskrok = new ImageIcon(getClass().getResource("/images/49.gif"));
 
 	private String traString = "",kullerString = "",rödString = "",sandString = "",guldString = "",
 			slimesString = "",trådsString = "",tegelString = "",krutString = "",järnString = "",
@@ -143,7 +143,7 @@ public class GoJb1 implements ActionListener, CaretListener{
 	private static int namnInt;
 
 	static String laddaString, cancelString, string, finishedString;
-	
+
 	private static String help, yString, namn = "", välkommen;
 
 	private static Boolean mailSkickat;
@@ -151,10 +151,10 @@ public class GoJb1 implements ActionListener, CaretListener{
 	private static JProgressBar progressBar;
 
 	private JLayeredPane layeredPane = new JLayeredPane();
-	
+
 	private JLabel background=new JLabel(new ImageIcon(getClass().getResource("/images/Mine.jpg"))),
-				background1=new JLabel(),
-				background2 = new JLabel();
+			background1=new JLabel(),
+			background2 = new JLabel();
 	/**
 9778436klbgflf=lhdohf7984
 #Engelska
@@ -166,7 +166,7 @@ public class GoJb1 implements ActionListener, CaretListener{
 	public void Språkfråga() {
 		ActionListener dActionListener = new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
+
 				if (e.getSource()==svenska) {
 					prop.setProperty("9778436klbgflf", "86325yhrel");
 					SpråkVoid();
@@ -222,7 +222,7 @@ public class GoJb1 implements ActionListener, CaretListener{
 				hjälpMenu.setText("Hjälp");
 				helpItem.setText("Hjälp");
 				ideasItem.setText("Idéer/buggar");
-     
+
 				buttons[3].setText("Träplankor");
 				buttons[7].setText("Automat");
 				buttons[8].setText("Sandsten");
@@ -571,26 +571,26 @@ public class GoJb1 implements ActionListener, CaretListener{
 				frame2.repaint();
 			}
 		}
-		
+
 	}
 	void GörFönster() {
 
 		scrollBar.getVerticalScrollBar().setUnitIncrement(20);
-		
+
 		frameHuvud.setIconImage(new ImageIcon(getClass().getResource("/images/Java-icon.png")).getImage());
 		frameHuvud.setSize(800,700);
 		frameHuvud.setLocationRelativeTo(null);
 		frameHuvud.add(scrollBar);
 		frameHuvud.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frameHuvud.setJMenuBar(bar);
-		
+
 		for (int i = 3; i < buttons.length; i++) {
 			if (i!=4&&i!=5&&i!=6&&i!=90) {
 				frames[i] = new JFrame();
 				frames[i].setSize(500,500);
 				frames[i].setLayout(new GridLayout(3,3));
 				frames[i].setIconImage(frameHuvud.getIconImage());
-				
+
 				buttons[i] = new JButton();
 				buttons[i].addActionListener(this);
 				buttons[i].setVerticalTextPosition(JButton.BOTTOM);
@@ -666,7 +666,7 @@ public class GoJb1 implements ActionListener, CaretListener{
 		Bilder(frameButtons[55],null,rödsten,null,rödsten,nederkvarts,rödsten,sten,sten,sten);
 		Bilder(frameButtons[56],glas,glas,glas,nederkvarts,nederkvarts,nederkvarts,trähalvblock,trähalvblock,trähalvblock);
 		Bilder(frameButtons[57],material,material,material,material,material,material,material,material,material);
-		
+
 	}
 	void ladda3(){
 		Bilder(frameButtons[58],järn,null,järn,järn,kista,järn,null,järn,null);
@@ -757,7 +757,7 @@ public class GoJb1 implements ActionListener, CaretListener{
 		ideasFrame.add(label);
 		ideasFrame.add(area);
 		ideasFrame.add(skicka);
-		
+
 		skicka.addActionListener(this);
 	}
 	int a = 1;
@@ -769,7 +769,7 @@ public class GoJb1 implements ActionListener, CaretListener{
 					//Mail
 					System.out.println("Försök " + a);
 					Mail.Skicka("gojb@gojb.bl.ee", "Användande av GoJbGuide", "Namn:  " + prop.getProperty("Namn") +
-								", Språk:  " + prop.getProperty("9778436klbgflf") + "\n //lhdohf7984 = Engelska \n //86325yhrel = Svenska");
+							", Språk:  " + prop.getProperty("9778436klbgflf") + "\n //lhdohf7984 = Engelska \n //86325yhrel = Svenska");
 					prop.setProperty("y", "10");
 					System.out.println("Skickat!");
 					mailTimer.stop();
@@ -818,13 +818,139 @@ public class GoJb1 implements ActionListener, CaretListener{
 		try {
 			Icon abc = ((AbstractButton) e.getSource()).getIcon();
 			if (abc==tra) {
-				JOptionPane.showMessageDialog(null, traString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
+				JOptionPane.showMessageDialog(frameHuvud, traString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
 			}
 			if (abc==kullersten) {
-				JOptionPane.showMessageDialog(null, kullerString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE,abc);
+				JOptionPane.showMessageDialog(frameHuvud, kullerString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE,abc);
 			}
 			if (abc==rödsten) {
-				JOptionPane.showMessageDialog(null, rödString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
+				JOptionPane.showMessageDialog(frameHuvud, rödString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
+			}
+			if (abc==sand) {
+				JOptionPane.showMessageDialog(frameHuvud, sandString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
+			}
+			if (abc==guld) {
+				JOptionPane.showMessageDialog(frameHuvud, guldString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
+			}
+			if (abc==slime) {
+				JOptionPane.showMessageDialog(frameHuvud, slimesString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
+			}
+			if (abc==tråd) {
+				JOptionPane.showMessageDialog(frameHuvud, trådsString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
+			}
+			if (abc==tegel) {
+				JOptionPane.showMessageDialog(frameHuvud, tegelString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
+			}
+			if (abc==krut) {
+				JOptionPane.showMessageDialog(frameHuvud, krutString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
+			}
+			if (abc==järn) {
+				JOptionPane.showMessageDialog(frameHuvud, järnString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
+			}
+			if (abc==diamant) {
+				JOptionPane.showMessageDialog(frameHuvud, diamantString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
+			}
+			if (abc==snöboll) {
+				JOptionPane.showMessageDialog(frameHuvud, snöbollString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
+			}
+			if (abc==obsidian) {
+				JOptionPane.showMessageDialog(frameHuvud, obsidianString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
+			}
+			if (abc==läder) {
+				JOptionPane.showMessageDialog(frameHuvud, lädersString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
+			}
+			if (abc==färger) {
+				JOptionPane.showMessageDialog(frameHuvud, färgerString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
+			}
+			if (abc==pumpa) {
+				JOptionPane.showMessageDialog(frameHuvud, pumpaString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
+			}
+			if (abc==ägg) {
+				JOptionPane.showMessageDialog(frameHuvud, äggString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
+			}
+			if (abc==kol) {
+				JOptionPane.showMessageDialog(frameHuvud, kolString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
+			}
+			if (abc==morot) {
+				JOptionPane.showMessageDialog(frameHuvud, morotString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
+			}
+			if (abc==järnträ) {
+				JOptionPane.showMessageDialog(frameHuvud, järnelrträdString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
+			}
+			if (abc==fjäder) {
+				JOptionPane.showMessageDialog(frameHuvud, fjäderString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
+			}
+			if (abc==bläck) {
+				JOptionPane.showMessageDialog(frameHuvud, bläckString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
+			}
+			if (abc==tryck) {
+				JOptionPane.showMessageDialog(frameHuvud, träjärnstenString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
+			}
+			if (abc==melon) {
+				JOptionPane.showMessageDialog(frameHuvud, melonString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
+			}
+			if (abc==blaze) {
+				JOptionPane.showMessageDialog(frameHuvud, blazeString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
+			}
+			if (abc==svamp) {
+				JOptionPane.showMessageDialog(frameHuvud, svampString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
+			}
+			if (abc==spindelöga) {
+				JOptionPane.showMessageDialog(frameHuvud, spindelögaString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
+			}
+			if (abc==glödstenspulver) {
+				JOptionPane.showMessageDialog(frameHuvud, glödstenspulverString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
+			}
+			if (abc==glas) {
+				JOptionPane.showMessageDialog(frameHuvud, glasString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
+			}
+			if (abc==vete) {
+				JOptionPane.showMessageDialog(frameHuvud, veteString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
+			}
+			if (abc==kakao) {
+				JOptionPane.showMessageDialog(frameHuvud, kakaoString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
+			}
+			if (abc==sten) {
+				JOptionPane.showMessageDialog(frameHuvud, stenString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
+			}
+			if (abc==mjölk) {
+				JOptionPane.showMessageDialog(frameHuvud, mjölkString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
+			}
+			if (abc==sockerrör) {
+				JOptionPane.showMessageDialog(frameHuvud, sockerrörString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
+			}
+			if (abc==äpple) {
+				JOptionPane.showMessageDialog(frameHuvud, äppleString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
+			}
+			if (abc==flinta) {
+				JOptionPane.showMessageDialog(frameHuvud, flintaString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
+			}
+			if (abc==järnStenTrä) {
+				JOptionPane.showMessageDialog(frameHuvud, järnstenträString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
+			}
+			if (abc==nederstjärna) {
+				JOptionPane.showMessageDialog(frameHuvud, nederstjärnaString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
+			}
+			if (abc==nederkvarts) {
+				JOptionPane.showMessageDialog(frameHuvud, nederkvartString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
+			}
+			if (abc==material) {
+				JOptionPane.showMessageDialog(frameHuvud, materialString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
+			}
+			if (abc==enderpärla) {
+				JOptionPane.showMessageDialog(frameHuvud, enderString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
+			}
+			if (abc==järnblock) {
+				frames[57].setVisible(true);
+			}
+			if (abc==fackla) {
+				frames[20].setVisible(true);
+			}
+			if (abc==trähalvblock) {
+				frames[16].setVisible(true);
+			}
+			if (abc==snubbeltrådskrok) {
+				frames[49].setVisible(true);
 			}
 			if (abc==plankor) {
 				frames[3].setVisible(true);
@@ -832,47 +958,8 @@ public class GoJb1 implements ActionListener, CaretListener{
 			if (abc==pilbåge) {
 				frames[68].setVisible(true);
 			}
-			if (abc==sand) {
-				JOptionPane.showMessageDialog(null, sandString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
-			}
 			if (abc==ull) {
 				frames[15].setVisible(true);
-			}
-			if (abc==guld) {
-				JOptionPane.showMessageDialog(null, guldString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
-			}
-			if (abc==pinne) {
-				frames[71].setVisible(true);
-			}
-			if (abc==tryckplatta) {
-				frames[30].setVisible(true);
-			}
-			if (abc==kolv) {
-				frames[14].setVisible(true);
-			}
-			if (abc==slime) {
-				JOptionPane.showMessageDialog(null, slimesString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
-			}
-			if (abc==tråd) {
-				JOptionPane.showMessageDialog(null, trådsString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
-			}
-			if (abc==tegel) {
-				JOptionPane.showMessageDialog(null, tegelString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
-			}
-			if (abc==krut) {
-				JOptionPane.showMessageDialog(null, krutString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
-			}
-			if (abc==järn) {
-				JOptionPane.showMessageDialog(null, järnString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
-			}
-			if (abc==diamant) {
-				JOptionPane.showMessageDialog(null, diamantString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
-			}
-			if (abc==snöboll) {
-				JOptionPane.showMessageDialog(null, snöbollString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
-			}
-			if (abc==obsidian) {
-				JOptionPane.showMessageDialog(null, obsidianString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
 			}
 			if (abc==enderöga) {
 				frames[103].setVisible(true);
@@ -882,9 +969,6 @@ public class GoJb1 implements ActionListener, CaretListener{
 			}
 			if (abc==papper) {
 				frames[83].setVisible(true);
-			}
-			if (abc==läder) {
-				JOptionPane.showMessageDialog(null, lädersString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
 			}
 			if (abc==gruvvagn) {
 				frames[81].setVisible(true);
@@ -898,8 +982,14 @@ public class GoJb1 implements ActionListener, CaretListener{
 			if (abc==ugn) {
 				frames[24].setVisible(true);
 			}
-			if (abc==färger) {
-				JOptionPane.showMessageDialog(null, färgerString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
+			if (abc==pinne) {
+				frames[71].setVisible(true);
+			}
+			if (abc==tryckplatta) {
+				frames[30].setVisible(true);
+			}
+			if (abc==kolv) {
+				frames[14].setVisible(true);
 			}
 			if (abc==raketstjärna) {
 				frames[111].setVisible(true);
@@ -913,119 +1003,29 @@ public class GoJb1 implements ActionListener, CaretListener{
 			if (abc==socker) {
 				frames[91].setVisible(true);
 			}
-			if (abc==pumpa) {
-				JOptionPane.showMessageDialog(null, pumpaString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
-			}
-			if (abc==ägg) {
-				JOptionPane.showMessageDialog(null, äggString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
-			}
-			if (abc==kol) {
-				JOptionPane.showMessageDialog(null, kolString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
-			}
-			if (abc==morot) {
-				JOptionPane.showMessageDialog(null, morotString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
-			}
 			if (abc==fiskespö) {
 				frames[88].setVisible(true);
 			}
 			if (abc==guldklimp) {
 				frames[98].setVisible(true);
 			}
-			if (abc==järnträ) {
-				JOptionPane.showMessageDialog(null, järnelrträdString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
-			}
-			if (abc==fjäder) {
-				JOptionPane.showMessageDialog(null, fjäderString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
-			}
-			if (abc==bläck) {
-				JOptionPane.showMessageDialog(null, bläckString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
-			}
-			if (abc==tryck) {
-				JOptionPane.showMessageDialog(null, träjärnstenString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
-			}
-			if (abc==melon) {
-				JOptionPane.showMessageDialog(null, melonString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
-			}
 			if (abc==blazepulver) {
 				frames[101].setVisible(true);
-			}
-			if (abc==blaze) {
-				JOptionPane.showMessageDialog(null, blazeString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
-			}
-			if (abc==svamp) {
-				JOptionPane.showMessageDialog(null, svampString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
-			}
-			if (abc==spindelöga) {
-				JOptionPane.showMessageDialog(null, spindelögaString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
-			}
-			if (abc==glödstenspulver) {
-				JOptionPane.showMessageDialog(null, glödstenspulverString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
-			}
-			if (abc==fackla) {
-				frames[20].setVisible(true);
-			}
-			if (abc==glas) {
-				JOptionPane.showMessageDialog(null, glasString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
-			}
-			if (abc==vete) {
-				JOptionPane.showMessageDialog(null, veteString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
-			}
-			if (abc==kakao) {
-				JOptionPane.showMessageDialog(null, kakaoString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
 			}
 			if (abc==kompass) {
 				frames[87].setVisible(true);
 			}
-			if (abc==sten) {
-				JOptionPane.showMessageDialog(null, stenString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
-			}
 			if (abc==rödstensfackla) {
 				frames[31].setVisible(true);
-			}
-			if (abc==mjölk) {
-				JOptionPane.showMessageDialog(null, mjölkString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
 			}
 			if (abc==färgglas) {
 				frames[38].setVisible(true);
 			}
-			if (abc==sockerrör) {
-				JOptionPane.showMessageDialog(null, sockerrörString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
-			}
 			if (abc==glödstenslampa) {
 				frames[36].setVisible(true);
-			}
-			if (abc==äpple) {
-				JOptionPane.showMessageDialog(null, äppleString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
-			}
-			if (abc==flinta) {
-				JOptionPane.showMessageDialog(null, flintaString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
-			}
-			if (abc==järnStenTrä) {
-				JOptionPane.showMessageDialog(null, järnstenträString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
-			}
-			if (abc==nederstjärna) {
-				JOptionPane.showMessageDialog(null, nederstjärnaString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
-			}
-			if (abc==järnblock) {
-				frames[57].setVisible(true);
-			}
-			if (abc==trähalvblock) {
-				frames[16].setVisible(true);
-			}
-			if (abc==nederkvarts) {
-				JOptionPane.showMessageDialog(null, nederkvartString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
-			}
-			if (abc==material) {
-				JOptionPane.showMessageDialog(null, materialString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
-			}
-			if (abc==snubbeltrådskrok) {
-				frames[49].setVisible(true);
-			}
+			}			
 			if (e.getSource()==väljSpråk){
 				Språkfråga();
-			}
-			if (abc==enderpärla) {
-				JOptionPane.showMessageDialog(null, enderString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
 			}
 		}catch (Exception e1) {}
 	}
@@ -1133,7 +1133,7 @@ public class GoJb1 implements ActionListener, CaretListener{
 		progressBar.setForeground(Color.green);
 		progressBar.setBackground(Color.black);
 		progressBar.setBorderPainted(false);
-		
+
 		layeredPane.add(background);
 		layeredPane.add(background1);
 		layeredPane.add(background2);
@@ -1174,7 +1174,7 @@ public class GoJb1 implements ActionListener, CaretListener{
 		}
 		while (true) {
 			progressBar.setValue(progressBar.getValue()+1);
-			
+
 			try {
 				Thread.sleep(20);
 			} catch (InterruptedException e) {
@@ -1253,15 +1253,15 @@ public class GoJb1 implements ActionListener, CaretListener{
 	void Bilder(JButton[] buttons, ImageIcon icon1,ImageIcon icon2,ImageIcon icon3,
 			ImageIcon icon4,ImageIcon icon5,ImageIcon icon6,ImageIcon icon7,
 			ImageIcon icon8,ImageIcon icon9){
-		
+
 		ImageIcon[] iconer = new ImageIcon[]{icon1,icon2,icon3,icon4,icon5,icon6,icon7,icon8,icon9};
 		for (int i = 1; i < buttons.length; i++) {
 			if(iconer[i-1] != null){
 				buttons[i].setIcon(iconer[i-1]);
 				buttons[i].addActionListener(this);
 			}
-			
-			
+
+
 		}
 	}
 	public static void main(String[] args) {
