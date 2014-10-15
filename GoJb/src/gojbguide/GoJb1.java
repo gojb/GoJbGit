@@ -614,1096 +614,117 @@ public class GoJb1 implements ActionListener, CaretListener{
 		}
 	}
 	void ladda2(){
-		frameButtons[3][1].setIcon(null);
-		frameButtons[3][2].setIcon(null);
-		frameButtons[3][3].setIcon(null);
-		frameButtons[3][4].setIcon(null);
-		frameButtons[3][5].setIcon(tra);
-		frameButtons[3][6].setIcon(null);
-		frameButtons[3][7].setIcon(null);
-		frameButtons[3][8].setIcon(null);
-		frameButtons[3][9].setIcon(null);
-                     
-		frameButtons[7][1].setIcon(kullersten);
-		frameButtons[7][2].setIcon(kullersten);
-		frameButtons[7][3].setIcon(kullersten);
-		frameButtons[7][4].setIcon(kullersten);
-		frameButtons[7][5].setIcon(pilbåge);
-		frameButtons[7][6].setIcon(kullersten);
-		frameButtons[7][7].setIcon(kullersten);
-		frameButtons[7][8].setIcon(rödsten);
-		frameButtons[7][9].setIcon(kullersten);
-                     
-		frameButtons[8][1].setIcon(sand);
-		frameButtons[8][2].setIcon(sand);
-		frameButtons[8][3].setIcon(null);
-		frameButtons[8][4].setIcon(sand);
-		frameButtons[8][5].setIcon(sand);
-		frameButtons[8][6].setIcon(null);
-		frameButtons[8][7].setIcon(null);
-		frameButtons[8][8].setIcon(null);
-		frameButtons[8][9].setIcon(null);
-                     
-		frameButtons[9][1].setIcon(plankor);
-		frameButtons[9][2].setIcon(plankor);
-		frameButtons[9][3].setIcon(plankor);
-		frameButtons[9][4].setIcon(plankor);
-		frameButtons[9][5].setIcon(rödsten);
-		frameButtons[9][6].setIcon(plankor);
-		frameButtons[9][7].setIcon(plankor);
-		frameButtons[9][8].setIcon(plankor);
-		frameButtons[9][9].setIcon(plankor);
-
-		frameButtons[10][1].setIcon(null);
-		frameButtons[10][2].setIcon(null);
-		frameButtons[10][3].setIcon(null);
-		frameButtons[10][4].setIcon(ull);
-		frameButtons[10][5].setIcon(ull);
-		frameButtons[10][6].setIcon(ull);
-		frameButtons[10][7].setIcon(plankor);
-		frameButtons[10][8].setIcon(plankor);
-		frameButtons[10][9].setIcon(plankor);
-                      
-		frameButtons[11][1].setIcon(guld);
-		frameButtons[11][2].setIcon(null);
-		frameButtons[11][3].setIcon(guld);
-		frameButtons[11][4].setIcon(guld);
-		frameButtons[11][5].setIcon(pinne);
-		frameButtons[11][6].setIcon(guld);
-		frameButtons[11][7].setIcon(guld);
-		frameButtons[11][8].setIcon(rödsten);
-		frameButtons[11][9].setIcon(guld);
-                      
-		frameButtons[12][1].setIcon(pinne);
-		frameButtons[12][2].setIcon(null);
-		frameButtons[12][3].setIcon(pinne);
-		frameButtons[12][4].setIcon(pinne);
-		frameButtons[12][5].setIcon(tryckplatta);
-		frameButtons[12][6].setIcon(pinne);
-		frameButtons[12][7].setIcon(pinne);
-		frameButtons[12][8].setIcon(rödsten);
-		frameButtons[12][9].setIcon(pinne);
-                      
-		frameButtons[13][1].setIcon(null);
-		frameButtons[13][2].setIcon(null);
-		frameButtons[13][3].setIcon(null);
-		frameButtons[13][4].setIcon(null);
-		frameButtons[13][5].setIcon(slime);
-		frameButtons[13][6].setIcon(null);
-		frameButtons[13][7].setIcon(null);
-		frameButtons[13][8].setIcon(kolv);
-		frameButtons[13][9].setIcon(null);
-                      
-		frameButtons[14][1].setIcon(plankor);
-		frameButtons[14][2].setIcon(plankor);
-		frameButtons[14][3].setIcon(plankor);
-		frameButtons[14][4].setIcon(kullersten);
-		frameButtons[14][5].setIcon(järn);
-		frameButtons[14][6].setIcon(kullersten);
-		frameButtons[14][7].setIcon(kullersten);
-		frameButtons[14][8].setIcon(rödsten);
-		frameButtons[14][9].setIcon(kullersten);
-                      
-		frameButtons[15][1].setIcon(null);
-		frameButtons[15][2].setIcon(null);
-		frameButtons[15][3].setIcon(null);
-		frameButtons[15][4].setIcon(tråd);
-		frameButtons[15][5].setIcon(tråd);
-		frameButtons[15][6].setIcon(null);
-		frameButtons[15][7].setIcon(tråd);
-		frameButtons[15][8].setIcon(tråd);
-		frameButtons[15][9].setIcon(null);
-                      
-		frameButtons[16][1].setIcon(null);
-		frameButtons[16][2].setIcon(null);
-		frameButtons[16][3].setIcon(null);
-		frameButtons[16][4].setIcon(null);
-		frameButtons[16][5].setIcon(null);
-		frameButtons[16][6].setIcon(null);
-		frameButtons[16][7].setIcon(block);
-		frameButtons[16][8].setIcon(block);
-		frameButtons[16][9].setIcon(block);
-                      
-		frameButtons[17][1].setIcon(null);
-		frameButtons[17][2].setIcon(null);
-		frameButtons[17][3].setIcon(null);
-		frameButtons[17][4].setIcon(tegel);
-		frameButtons[17][5].setIcon(tegel);
-		frameButtons[17][6].setIcon(null);
-		frameButtons[17][7].setIcon(tegel);
-		frameButtons[17][8].setIcon(tegel);
-		frameButtons[17][9].setIcon(null);
-                      
-		frameButtons[18][1].setIcon(krut);
-		frameButtons[18][2].setIcon(sand);
-		frameButtons[18][3].setIcon(krut);
-		frameButtons[18][4].setIcon(sand);
-		frameButtons[18][5].setIcon(krut);
-		frameButtons[18][6].setIcon(sand);
-		frameButtons[18][7].setIcon(krut);
-		frameButtons[18][8].setIcon(sand);
-		frameButtons[18][9].setIcon(krut);
-                      
-		frameButtons[19][1].setIcon(plankor);
-		frameButtons[19][2].setIcon(plankor);
-		frameButtons[19][3].setIcon(plankor);
-		frameButtons[19][4].setIcon(bok);
-		frameButtons[19][5].setIcon(bok);
-		frameButtons[19][6].setIcon(bok);
-		frameButtons[19][7].setIcon(plankor);
-		frameButtons[19][8].setIcon(plankor);
-		frameButtons[19][9].setIcon(plankor);
-                      
-		frameButtons[20][1].setIcon(null);
-		frameButtons[20][2].setIcon(null);
-		frameButtons[20][3].setIcon(null);
-		frameButtons[20][4].setIcon(null);
-		frameButtons[20][5].setIcon(kol);
-		frameButtons[20][6].setIcon(null);
-		frameButtons[20][7].setIcon(null);
-		frameButtons[20][8].setIcon(pinne);
-		frameButtons[20][9].setIcon(null);
-                      
-		frameButtons[21][1].setIcon(null);
-		frameButtons[21][2].setIcon(null);
-		frameButtons[21][3].setIcon(block);
-		frameButtons[21][4].setIcon(null);
-		frameButtons[21][5].setIcon(block);
-		frameButtons[21][6].setIcon(block);
-		frameButtons[21][7].setIcon(block);
-		frameButtons[21][8].setIcon(block);
-		frameButtons[21][9].setIcon(block);
-                      
-		frameButtons[22][1].setIcon(plankor);
-		frameButtons[22][2].setIcon(plankor);
-		frameButtons[22][3].setIcon(plankor);
-		frameButtons[22][4].setIcon(plankor);
-		frameButtons[22][5].setIcon(null);
-		frameButtons[22][6].setIcon(plankor);
-		frameButtons[22][7].setIcon(plankor);
-		frameButtons[22][8].setIcon(plankor);
-		frameButtons[22][9].setIcon(plankor);
-                      
-		frameButtons[23][1].setIcon(plankor);
-		frameButtons[23][2].setIcon(plankor);
-		frameButtons[23][3].setIcon(null);
-		frameButtons[23][4].setIcon(plankor);
-		frameButtons[23][5].setIcon(plankor);
-		frameButtons[23][6].setIcon(null);
-		frameButtons[23][7].setIcon(null);
-		frameButtons[23][8].setIcon(null);
-		frameButtons[23][9].setIcon(null);
-                      
-		frameButtons[24][1].setIcon(kullersten);
-		frameButtons[24][2].setIcon(kullersten);
-		frameButtons[24][3].setIcon(kullersten);
-		frameButtons[24][4].setIcon(kullersten);
-		frameButtons[24][5].setIcon(kullersten);
-		frameButtons[24][6].setIcon(kullersten);
-		frameButtons[24][7].setIcon(kullersten);
-		frameButtons[24][8].setIcon(kullersten);
-		frameButtons[24][9].setIcon(kullersten);
-                      
-		frameButtons[25][1].setIcon(plankor);
-		frameButtons[25][2].setIcon(plankor);
-		frameButtons[25][3].setIcon(plankor);
-		frameButtons[25][4].setIcon(plankor);
-		frameButtons[25][5].setIcon(plankor);
-		frameButtons[25][6].setIcon(plankor);
-		frameButtons[25][7].setIcon(null);
-		frameButtons[25][8].setIcon(pinne);
-		frameButtons[25][9].setIcon(null);
-                      
-		frameButtons[26][1].setIcon(järnträ);
-		frameButtons[26][2].setIcon(järnträ);
-		frameButtons[26][3].setIcon(null);
-		frameButtons[26][4].setIcon(järnträ);
-		frameButtons[26][5].setIcon(järnträ);
-		frameButtons[26][6].setIcon(null);
-		frameButtons[26][7].setIcon(järnträ);
-		frameButtons[26][8].setIcon(järnträ);
-		frameButtons[26][9].setIcon(null);
-                      
-		frameButtons[27][1].setIcon(pinne);
-		frameButtons[27][2].setIcon(null);
-		frameButtons[27][3].setIcon(pinne);
-		frameButtons[27][4].setIcon(pinne);
-		frameButtons[27][5].setIcon(pinne);
-		frameButtons[27][6].setIcon(pinne);
-		frameButtons[27][7].setIcon(pinne);
-		frameButtons[27][8].setIcon(null);
-		frameButtons[27][9].setIcon(pinne);
-                      
-		frameButtons[28][1].setIcon(pinne);
-		frameButtons[28][2].setIcon(null);
-		frameButtons[28][3].setIcon(pinne);
-		frameButtons[28][4].setIcon(pinne);
-		frameButtons[28][5].setIcon(järn);
-		frameButtons[28][6].setIcon(pinne);
-		frameButtons[28][7].setIcon(pinne);
-		frameButtons[28][8].setIcon(null);
-		frameButtons[28][9].setIcon(pinne);
-                      
-		frameButtons[29][1].setIcon(null);
-		frameButtons[29][2].setIcon(pinne);
-		frameButtons[29][3].setIcon(null);
-		frameButtons[29][4].setIcon(null);
-		frameButtons[29][5].setIcon(kullersten);
-		frameButtons[29][6].setIcon(null);
-		frameButtons[29][7].setIcon(null);
-		frameButtons[29][8].setIcon(null);
-		frameButtons[29][9].setIcon(null);
-                      
-		frameButtons[30][1].setIcon(null);
-		frameButtons[30][2].setIcon(null);
-		frameButtons[30][3].setIcon(null);
-		frameButtons[30][4].setIcon(null);
-		frameButtons[30][5].setIcon(null);
-		frameButtons[30][6].setIcon(null);
-		frameButtons[30][7].setIcon(null);
-		frameButtons[30][8].setIcon(tryck);
-		frameButtons[30][9].setIcon(tryck);
-                      
-		frameButtons[31][1].setIcon(null);
-		frameButtons[31][2].setIcon(rödsten);
-		frameButtons[31][3].setIcon(null);
-		frameButtons[31][4].setIcon(null);
-		frameButtons[31][5].setIcon(pinne);
-		frameButtons[31][6].setIcon(null);
-		frameButtons[31][7].setIcon(null);
-		frameButtons[31][8].setIcon(null);
-		frameButtons[31][9].setIcon(null);
-                      
-		frameButtons[32][1].setIcon(null);
-		frameButtons[32][2].setIcon(null);
-		frameButtons[32][3].setIcon(null);
-		frameButtons[32][4].setIcon(null);
-		frameButtons[32][5].setIcon(plankor);
-		frameButtons[32][6].setIcon(null);
-		frameButtons[32][7].setIcon(null);
-		frameButtons[32][8].setIcon(null);
-		frameButtons[32][9].setIcon(null);
-                      
-		frameButtons[33][1].setIcon(snöboll);
-		frameButtons[33][2].setIcon(snöboll);
-		frameButtons[33][3].setIcon(null);
-		frameButtons[33][4].setIcon(snöboll);
-		frameButtons[33][5].setIcon(snöboll);
-		frameButtons[33][6].setIcon(null);
-		frameButtons[33][7].setIcon(null);
-		frameButtons[33][8].setIcon(null);
-		frameButtons[33][9].setIcon(null);
-                      
-		frameButtons[34][1].setIcon(plankor);
-		frameButtons[34][2].setIcon(plankor);
-		frameButtons[34][3].setIcon(plankor);
-		frameButtons[34][4].setIcon(plankor);
-		frameButtons[34][5].setIcon(diamant);
-		frameButtons[34][6].setIcon(plankor);
-		frameButtons[34][7].setIcon(plankor);
-		frameButtons[34][8].setIcon(plankor);
-		frameButtons[34][9].setIcon(plankor);
-                      
-		frameButtons[35][1].setIcon(null);
-		frameButtons[35][2].setIcon(null);
-		frameButtons[35][3].setIcon(null);
-		frameButtons[35][4].setIcon(pinne);
-		frameButtons[35][5].setIcon(pinne);
-		frameButtons[35][6].setIcon(pinne);
-		frameButtons[35][7].setIcon(pinne);
-		frameButtons[35][8].setIcon(pinne);
-		frameButtons[35][9].setIcon(pinne);
-                      
-		frameButtons[36][1].setIcon(null);
-		frameButtons[36][2].setIcon(null);
-		frameButtons[36][3].setIcon(null);
-		frameButtons[36][4].setIcon(glödstenspulver);
-		frameButtons[36][5].setIcon(glödstenspulver);
-		frameButtons[36][6].setIcon(null);
-		frameButtons[36][7].setIcon(glödstenspulver);
-		frameButtons[36][8].setIcon(glödstenspulver);
-		frameButtons[36][9].setIcon(null);
-                      
-		frameButtons[37][1].setIcon(null);
-		frameButtons[37][2].setIcon(null);
-		frameButtons[37][3].setIcon(null);
-		frameButtons[37][4].setIcon(null);
-		frameButtons[37][5].setIcon(pumpa);
-		frameButtons[37][6].setIcon(null);
-		frameButtons[37][7].setIcon(null);
-		frameButtons[37][8].setIcon(fackla);
-		frameButtons[37][9].setIcon(null);
-                      
-		frameButtons[38][1].setIcon(glas);
-		frameButtons[38][2].setIcon(glas);
-		frameButtons[38][3].setIcon(glas);
-		frameButtons[38][4].setIcon(glas);
-		frameButtons[38][5].setIcon(färger);
-		frameButtons[38][6].setIcon(glas);
-		frameButtons[38][7].setIcon(glas);
-		frameButtons[38][8].setIcon(glas);
-		frameButtons[38][9].setIcon(glas);
-                      
-		frameButtons[39][1].setIcon(null);
-		frameButtons[39][2].setIcon(null);
-		frameButtons[39][3].setIcon(null);
-		frameButtons[39][4].setIcon(plankor);
-		frameButtons[39][5].setIcon(plankor);
-		frameButtons[39][6].setIcon(plankor);
-		frameButtons[39][7].setIcon(plankor);
-		frameButtons[39][8].setIcon(plankor);
-		frameButtons[39][9].setIcon(plankor);
-                      
-		frameButtons[40][1].setIcon(null);
-		frameButtons[40][2].setIcon(null);
-		frameButtons[40][3].setIcon(null);
-		frameButtons[40][4].setIcon(järn);
-		frameButtons[40][5].setIcon(järn);
-		frameButtons[40][6].setIcon(järn);
-		frameButtons[40][7].setIcon(järn);
-		frameButtons[40][8].setIcon(järn);
-		frameButtons[40][9].setIcon(järn);
-                      
-		frameButtons[41][1].setIcon(null);
-		frameButtons[41][2].setIcon(null);
-		frameButtons[41][3].setIcon(null);
-		frameButtons[41][4].setIcon(färgglas);
-		frameButtons[41][5].setIcon(färgglas);
-		frameButtons[41][6].setIcon(färgglas);
-		frameButtons[41][7].setIcon(färgglas);
-		frameButtons[41][8].setIcon(färgglas);
-		frameButtons[41][9].setIcon(färgglas);
-                      
-		frameButtons[42][1].setIcon(melon);
-		frameButtons[42][2].setIcon(melon);
-		frameButtons[42][3].setIcon(melon);
-		frameButtons[42][4].setIcon(melon);
-		frameButtons[42][5].setIcon(melon);
-		frameButtons[42][6].setIcon(melon);
-		frameButtons[42][7].setIcon(melon);
-		frameButtons[42][8].setIcon(melon);
-		frameButtons[42][9].setIcon(melon);
-                      
-		frameButtons[43][1].setIcon(null);
-		frameButtons[43][2].setIcon(null);
-		frameButtons[43][3].setIcon(null);
-		frameButtons[43][4].setIcon(pinne);
-		frameButtons[43][5].setIcon(plankor);
-		frameButtons[43][6].setIcon(pinne);
-		frameButtons[43][7].setIcon(pinne);
-		frameButtons[43][8].setIcon(plankor);
-		frameButtons[43][9].setIcon(pinne);
-                      
-		frameButtons[44][1].setIcon(null);
-		frameButtons[44][2].setIcon(bok);
-		frameButtons[44][3].setIcon(null);
-		frameButtons[44][4].setIcon(diamant);
-		frameButtons[44][5].setIcon(obsidian);
-		frameButtons[44][6].setIcon(diamant);
-		frameButtons[44][7].setIcon(obsidian);
-		frameButtons[44][8].setIcon(obsidian);
-		frameButtons[44][9].setIcon(obsidian);
-                      
-		frameButtons[45][1].setIcon(null);
-		frameButtons[45][2].setIcon(null);
-		frameButtons[45][3].setIcon(null);
-		frameButtons[45][4].setIcon(null);
-		frameButtons[45][5].setIcon(blaze);
-		frameButtons[45][6].setIcon(null);
-		frameButtons[45][7].setIcon(kullersten);
-		frameButtons[45][8].setIcon(kullersten);
-		frameButtons[45][9].setIcon(kullersten);
-                      
-		frameButtons[46][1].setIcon(järn);
-		frameButtons[46][2].setIcon(null);
-		frameButtons[46][3].setIcon(järn);
-		frameButtons[46][4].setIcon(järn);
-		frameButtons[46][5].setIcon(null);
-		frameButtons[46][6].setIcon(järn);
-		frameButtons[46][7].setIcon(järn);
-		frameButtons[46][8].setIcon(järn);
-		frameButtons[46][9].setIcon(järn);
-                      
-		frameButtons[47][1].setIcon(null);
-		frameButtons[47][2].setIcon(rödsten);
-		frameButtons[47][3].setIcon(null);
-		frameButtons[47][4].setIcon(rödsten);
-		frameButtons[47][5].setIcon(glödstenslampa);
-		frameButtons[47][6].setIcon(rödsten);
-		frameButtons[47][7].setIcon(null);
-		frameButtons[47][8].setIcon(rödsten);
-		frameButtons[47][9].setIcon(null);
-                      
-		frameButtons[48][1].setIcon(obsidian);
-		frameButtons[48][2].setIcon(obsidian);
-		frameButtons[48][3].setIcon(obsidian);
-		frameButtons[48][4].setIcon(obsidian);
-		frameButtons[48][5].setIcon(enderöga);
-		frameButtons[48][6].setIcon(obsidian);
-		frameButtons[48][7].setIcon(obsidian);
-		frameButtons[48][8].setIcon(obsidian);
-		frameButtons[48][9].setIcon(obsidian);
-                      
-		frameButtons[49][1].setIcon(null);
-		frameButtons[49][2].setIcon(järn);
-		frameButtons[49][3].setIcon(null);
-		frameButtons[49][4].setIcon(null);
-		frameButtons[49][5].setIcon(pinne);
-		frameButtons[49][6].setIcon(null);
-		frameButtons[49][7].setIcon(null);
-		frameButtons[49][8].setIcon(plankor);
-		frameButtons[49][9].setIcon(null);
-                      
-		frameButtons[50][1].setIcon(glas);
-		frameButtons[50][2].setIcon(glas);
-		frameButtons[50][3].setIcon(glas);
-		frameButtons[50][4].setIcon(glas);
-		frameButtons[50][5].setIcon(nederstjärna);
-		frameButtons[50][6].setIcon(glas);
-		frameButtons[50][7].setIcon(obsidian);
-		frameButtons[50][8].setIcon(obsidian);
-		frameButtons[50][9].setIcon(obsidian);
-                      
-		frameButtons[51][1].setIcon(null);
-		frameButtons[51][2].setIcon(null);
-		frameButtons[51][3].setIcon(null);
-		frameButtons[51][4].setIcon(kullersten);
-		frameButtons[51][5].setIcon(kullersten);
-		frameButtons[51][6].setIcon(kullersten);
-		frameButtons[51][7].setIcon(kullersten);
-		frameButtons[51][8].setIcon(kullersten);
-		frameButtons[51][9].setIcon(kullersten);
-                      
-		frameButtons[52][1].setIcon(null);
-		frameButtons[52][2].setIcon(null);
-		frameButtons[52][3].setIcon(null);
-		frameButtons[52][4].setIcon(tegel);
-		frameButtons[52][5].setIcon(null);
-		frameButtons[52][6].setIcon(tegel);
-		frameButtons[52][7].setIcon(null);
-		frameButtons[52][8].setIcon(tegel);
-		frameButtons[52][9].setIcon(null);
-                      
-		frameButtons[53][1].setIcon(järnblock);
-		frameButtons[53][2].setIcon(järnblock);
-		frameButtons[53][3].setIcon(järnblock);
-		frameButtons[53][4].setIcon(null);
-		frameButtons[53][5].setIcon(järn);
-		frameButtons[53][6].setIcon(null);
-		frameButtons[53][7].setIcon(järn);
-		frameButtons[53][8].setIcon(järn);
-		frameButtons[53][9].setIcon(järn);
-                      
-		frameButtons[54][1].setIcon(null);
-		frameButtons[54][2].setIcon(null);
-		frameButtons[54][3].setIcon(null);
-		frameButtons[54][4].setIcon(snubbeltrådskrok);
-		frameButtons[54][5].setIcon(kista);
-		frameButtons[54][6].setIcon(null);
-		frameButtons[54][7].setIcon(null);
-		frameButtons[54][8].setIcon(null);
-		frameButtons[54][9].setIcon(null);
-                      
-		frameButtons[55][1].setIcon(null);
-		frameButtons[55][2].setIcon(rödsten);
-		frameButtons[55][3].setIcon(null);
-		frameButtons[55][4].setIcon(rödsten);
-		frameButtons[55][5].setIcon(nederkvarts);
-		frameButtons[55][6].setIcon(rödsten);
-		frameButtons[55][7].setIcon(sten);
-		frameButtons[55][8].setIcon(sten);
-		frameButtons[55][9].setIcon(sten);
-                      
-		frameButtons[56][1].setIcon(glas);
-		frameButtons[56][2].setIcon(glas);
-		frameButtons[56][3].setIcon(glas);
-		frameButtons[56][4].setIcon(nederkvarts);
-		frameButtons[56][5].setIcon(nederkvarts);
-		frameButtons[56][6].setIcon(nederkvarts);
-		frameButtons[56][7].setIcon(trähalvblock);
-		frameButtons[56][8].setIcon(trähalvblock);
-		frameButtons[56][9].setIcon(trähalvblock);
-                      
-		frameButtons[57][1].setIcon(material);
-		frameButtons[57][2].setIcon(material);
-		frameButtons[57][3].setIcon(material);
-		frameButtons[57][4].setIcon(material);
-		frameButtons[57][5].setIcon(material);
-		frameButtons[57][6].setIcon(material);
-		frameButtons[57][7].setIcon(material);
-		frameButtons[57][8].setIcon(material);
-		frameButtons[57][9].setIcon(material);
-                      
-		frameButtons[58][1].setIcon(järn);
-		frameButtons[58][2].setIcon(null);
-		frameButtons[58][3].setIcon(järn);
-		frameButtons[58][4].setIcon(järn);
-		frameButtons[58][5].setIcon(kista);
-		frameButtons[58][6].setIcon(järn);
-		frameButtons[58][7].setIcon(null);
-		frameButtons[58][8].setIcon(järn);
-		frameButtons[58][9].setIcon(null);
-                      
-		frameButtons[59][1].setIcon(null);
-		frameButtons[59][2].setIcon(ull);
-		frameButtons[59][3].setIcon(null);
-		frameButtons[59][4].setIcon(null);
-		frameButtons[59][5].setIcon(null);
-		frameButtons[59][6].setIcon(null);
-		frameButtons[59][7].setIcon(null);
-		frameButtons[59][8].setIcon(null);
-		frameButtons[59][9].setIcon(null);
-                      
-		frameButtons[60][1].setIcon(järn);
-		frameButtons[60][2].setIcon(pinne);
-		frameButtons[60][3].setIcon(järn);
-		frameButtons[60][4].setIcon(järn);
-		frameButtons[60][5].setIcon(rödstensfackla);
-		frameButtons[60][6].setIcon(järn);
-		frameButtons[60][7].setIcon(järn);
-		frameButtons[60][8].setIcon(pinne);
-		frameButtons[60][9].setIcon(järn);
-                      
-		frameButtons[61][1].setIcon(kullersten);
-		frameButtons[61][2].setIcon(kullersten);
-		frameButtons[61][3].setIcon(kullersten);
-		frameButtons[61][4].setIcon(kullersten);
-		frameButtons[61][5].setIcon(null);
-		frameButtons[61][6].setIcon(kullersten);
-		frameButtons[61][7].setIcon(kullersten);
-		frameButtons[61][8].setIcon(rödsten);
-		frameButtons[61][9].setIcon(kullersten);
-                      
-		frameButtons[62][1].setIcon(vete);
-		frameButtons[62][2].setIcon(vete);
-		frameButtons[62][3].setIcon(vete);
-		frameButtons[62][4].setIcon(vete);
-		frameButtons[62][5].setIcon(vete);
-		frameButtons[62][6].setIcon(vete);
-		frameButtons[62][7].setIcon(vete);
-		frameButtons[62][8].setIcon(vete);
-		frameButtons[62][9].setIcon(vete);
-                      
-		frameButtons[63][1].setIcon(null);
-		frameButtons[63][2].setIcon(järnStenTrä);
-		frameButtons[63][3].setIcon(null);
-		frameButtons[63][4].setIcon(null);
-		frameButtons[63][5].setIcon(pinne);
-		frameButtons[63][6].setIcon(null);
-		frameButtons[63][7].setIcon(null);
-		frameButtons[63][8].setIcon(pinne);
-		frameButtons[63][9].setIcon(null);
-                      
-		frameButtons[64][1].setIcon(järnStenTrä);
-		frameButtons[64][2].setIcon(järnStenTrä);
-		frameButtons[64][3].setIcon(null);
-		frameButtons[64][4].setIcon(järnStenTrä);
-		frameButtons[64][5].setIcon(pinne);
-		frameButtons[64][6].setIcon(null);
-		frameButtons[64][7].setIcon(null);
-		frameButtons[64][8].setIcon(pinne);
-		frameButtons[64][9].setIcon(null);
-                      
-		frameButtons[65][1].setIcon(järnStenTrä);
-		frameButtons[65][2].setIcon(järnStenTrä);
-		frameButtons[65][3].setIcon(järnStenTrä);
-		frameButtons[65][4].setIcon(null);
-		frameButtons[65][5].setIcon(pinne);
-		frameButtons[65][6].setIcon(null);
-		frameButtons[65][7].setIcon(null);
-		frameButtons[65][8].setIcon(pinne);
-		frameButtons[65][9].setIcon(null);
-                      
-		frameButtons[66][1].setIcon(null);
-		frameButtons[66][2].setIcon(järnStenTrä);
-		frameButtons[66][3].setIcon(null);
-		frameButtons[66][4].setIcon(null);
-		frameButtons[66][5].setIcon(järnStenTrä);
-		frameButtons[66][6].setIcon(null);
-		frameButtons[66][7].setIcon(null);
-		frameButtons[66][8].setIcon(pinne);
-		frameButtons[66][9].setIcon(null);
-                      
-		frameButtons[67][1].setIcon(järnStenTrä);
-		frameButtons[67][2].setIcon(järnStenTrä);
-		frameButtons[67][3].setIcon(null);
-		frameButtons[67][4].setIcon(null);
-		frameButtons[67][5].setIcon(pinne);
-		frameButtons[67][6].setIcon(null);
-		frameButtons[67][7].setIcon(null);
-		frameButtons[67][8].setIcon(pinne);
-		frameButtons[67][9].setIcon(null);
-                      
-		frameButtons[68][1].setIcon(null);
-		frameButtons[68][2].setIcon(pinne);
-		frameButtons[68][3].setIcon(tråd);
-		frameButtons[68][4].setIcon(pinne);
-		frameButtons[68][5].setIcon(null);
-		frameButtons[68][6].setIcon(tråd);
-		frameButtons[68][7].setIcon(null);
-		frameButtons[68][8].setIcon(pinne);
-		frameButtons[68][9].setIcon(tråd);
-                      
-		frameButtons[69][1].setIcon(null);
-		frameButtons[69][2].setIcon(flinta);
-		frameButtons[69][3].setIcon(null);
-		frameButtons[69][4].setIcon(null);
-		frameButtons[69][5].setIcon(fjäder);
-		frameButtons[69][6].setIcon(null);
-		frameButtons[69][7].setIcon(null);
-		frameButtons[69][8].setIcon(pinne);
-		frameButtons[69][9].setIcon(null);
-                      
-		frameButtons[70][1].setIcon(null);
-		frameButtons[70][2].setIcon(null);
-		frameButtons[70][3].setIcon(null);
-		frameButtons[70][4].setIcon(järn);
-		frameButtons[70][5].setIcon(flinta);
-		frameButtons[70][6].setIcon(null);
-		frameButtons[70][7].setIcon(null);
-		frameButtons[70][8].setIcon(null);
-		frameButtons[70][9].setIcon(null);
-                      
-		frameButtons[71][1].setIcon(null);
-		frameButtons[71][2].setIcon(plankor);
-		frameButtons[71][3].setIcon(null);
-		frameButtons[71][4].setIcon(null);
-		frameButtons[71][5].setIcon(plankor);
-		frameButtons[71][6].setIcon(null);
-		frameButtons[71][7].setIcon(null);
-		frameButtons[71][8].setIcon(null);
-		frameButtons[71][9].setIcon(null);
-                      
-		frameButtons[72][1].setIcon(null);
-		frameButtons[72][2].setIcon(null);
-		frameButtons[72][3].setIcon(null);
-		frameButtons[72][4].setIcon(plankor);
-		frameButtons[72][5].setIcon(null);
-		frameButtons[72][6].setIcon(plankor);
-		frameButtons[72][7].setIcon(null);
-		frameButtons[72][8].setIcon(plankor);
-		frameButtons[72][9].setIcon(null);
-                      
-		frameButtons[73][1].setIcon(null);
-		frameButtons[73][2].setIcon(null);
-		frameButtons[73][3].setIcon(null);
-		frameButtons[73][4].setIcon(null);
-		frameButtons[73][5].setIcon(null);
-		frameButtons[73][6].setIcon(null);
-		frameButtons[73][7].setIcon(vete);
-		frameButtons[73][8].setIcon(vete);
-		frameButtons[73][9].setIcon(vete);
-                      
-		frameButtons[74][1].setIcon(null);
-		frameButtons[74][2].setIcon(null);
-		frameButtons[74][3].setIcon(null);
-		frameButtons[74][4].setIcon(läder);
-		frameButtons[74][5].setIcon(läder);
-		frameButtons[74][6].setIcon(läder);
-		frameButtons[74][7].setIcon(läder);
-		frameButtons[74][8].setIcon(null);
-		frameButtons[74][9].setIcon(läder);
-                      
-		frameButtons[75][1].setIcon(läder);
-		frameButtons[75][2].setIcon(null);
-		frameButtons[75][3].setIcon(läder);
-		frameButtons[75][4].setIcon(läder);
-		frameButtons[75][5].setIcon(läder);
-		frameButtons[75][6].setIcon(läder);
-		frameButtons[75][7].setIcon(läder);
-		frameButtons[75][8].setIcon(läder);
-		frameButtons[75][9].setIcon(läder);
-                      
-		frameButtons[76][1].setIcon(läder);
-		frameButtons[76][2].setIcon(läder);
-		frameButtons[76][3].setIcon(läder);
-		frameButtons[76][4].setIcon(läder);
-		frameButtons[76][5].setIcon(null);
-		frameButtons[76][6].setIcon(läder);
-		frameButtons[76][7].setIcon(läder);
-		frameButtons[76][8].setIcon(null);
-		frameButtons[76][9].setIcon(läder);
-                      
-		frameButtons[77][1].setIcon(null);
-		frameButtons[77][2].setIcon(null);
-		frameButtons[77][3].setIcon(null);
-		frameButtons[77][4].setIcon(läder);
-		frameButtons[77][5].setIcon(null);
-		frameButtons[77][6].setIcon(läder);
-		frameButtons[77][7].setIcon(läder);
-		frameButtons[77][8].setIcon(null);
-		frameButtons[77][9].setIcon(läder);
-                      
-		frameButtons[78][1].setIcon(pinne);
-		frameButtons[78][2].setIcon(pinne);
-		frameButtons[78][3].setIcon(pinne);
-		frameButtons[78][4].setIcon(pinne);
-		frameButtons[78][5].setIcon(ull);
-		frameButtons[78][6].setIcon(pinne);
-		frameButtons[78][7].setIcon(pinne);
-		frameButtons[78][8].setIcon(pinne);
-		frameButtons[78][9].setIcon(pinne);
-                      
-		frameButtons[79][1].setIcon(guldklimp);
-		frameButtons[79][2].setIcon(guldklimp);
-		frameButtons[79][3].setIcon(guldklimp);
-		frameButtons[79][4].setIcon(guldklimp);
-		frameButtons[79][5].setIcon(äpple);
-		frameButtons[79][6].setIcon(guldklimp);
-		frameButtons[79][7].setIcon(guldklimp);
-		frameButtons[79][8].setIcon(guldklimp);
-		frameButtons[79][9].setIcon(guldklimp);
-                      
-		frameButtons[80][1].setIcon(null);
-		frameButtons[80][2].setIcon(null);
-		frameButtons[80][3].setIcon(null);
-		frameButtons[80][4].setIcon(järn);
-		frameButtons[80][5].setIcon(null);
-		frameButtons[80][6].setIcon(järn);
-		frameButtons[80][7].setIcon(null);
-		frameButtons[80][8].setIcon(järn);
-		frameButtons[80][9].setIcon(null);
-                      
-		frameButtons[81][1].setIcon(null);
-		frameButtons[81][2].setIcon(null);
-		frameButtons[81][3].setIcon(null);
-		frameButtons[81][4].setIcon(järn);
-		frameButtons[81][5].setIcon(null);
-		frameButtons[81][6].setIcon(järn);
-		frameButtons[81][7].setIcon(järn);
-		frameButtons[81][8].setIcon(järn);
-		frameButtons[81][9].setIcon(järn);
-                      
-		frameButtons[82][1].setIcon(null);
-		frameButtons[82][2].setIcon(null);
-		frameButtons[82][3].setIcon(null);
-		frameButtons[82][4].setIcon(plankor);
-		frameButtons[82][5].setIcon(null);
-		frameButtons[82][6].setIcon(plankor);
-		frameButtons[82][7].setIcon(plankor);
-		frameButtons[82][8].setIcon(plankor);
-		frameButtons[82][9].setIcon(plankor);
-                      
-		frameButtons[83][1].setIcon(null);
-		frameButtons[83][2].setIcon(null);
-		frameButtons[83][3].setIcon(null);
-		frameButtons[83][4].setIcon(null);
-		frameButtons[83][5].setIcon(null);
-		frameButtons[83][6].setIcon(null);
-		frameButtons[83][7].setIcon(sockerrör);
-		frameButtons[83][8].setIcon(sockerrör);
-		frameButtons[83][9].setIcon(sockerrör);
-                      
-		frameButtons[84][1].setIcon(null);
-		frameButtons[84][2].setIcon(papper);
-		frameButtons[84][3].setIcon(null);
-		frameButtons[84][4].setIcon(null);
-		frameButtons[84][5].setIcon(papper);
-		frameButtons[84][6].setIcon(null);
-		frameButtons[84][7].setIcon(null);
-		frameButtons[84][8].setIcon(papper);
-		frameButtons[84][9].setIcon(läder);
-                      
-		frameButtons[85][1].setIcon(null);
-		frameButtons[85][2].setIcon(null);
-		frameButtons[85][3].setIcon(null);
-		frameButtons[85][4].setIcon(null);
-		frameButtons[85][5].setIcon(kista);
-		frameButtons[85][6].setIcon(null);
-		frameButtons[85][7].setIcon(null);
-		frameButtons[85][8].setIcon(gruvvagn);
-		frameButtons[85][9].setIcon(null);
-                      
-		frameButtons[86][1].setIcon(null);
-		frameButtons[86][2].setIcon(null);
-		frameButtons[86][3].setIcon(null);
-		frameButtons[86][4].setIcon(null);
-		frameButtons[86][5].setIcon(ugn);
-		frameButtons[86][6].setIcon(null);
-		frameButtons[86][7].setIcon(null);
-		frameButtons[86][8].setIcon(gruvvagn);
-		frameButtons[86][9].setIcon(null);
-                      
-		frameButtons[87][1].setIcon(null);
-		frameButtons[87][2].setIcon(järn);
-		frameButtons[87][3].setIcon(null);
-		frameButtons[87][4].setIcon(järn);
-		frameButtons[87][5].setIcon(rödsten);
-		frameButtons[87][6].setIcon(järn);
-		frameButtons[87][7].setIcon(null);
-		frameButtons[87][8].setIcon(järn);
-		frameButtons[87][9].setIcon(null);
-                      
-		frameButtons[88][1].setIcon(null);
-		frameButtons[88][2].setIcon(null);
-		frameButtons[88][3].setIcon(pinne);
-		frameButtons[88][4].setIcon(null);
-		frameButtons[88][5].setIcon(pinne);
-		frameButtons[88][6].setIcon(tråd);
-		frameButtons[88][7].setIcon(pinne);
-		frameButtons[88][8].setIcon(null);
-		frameButtons[88][9].setIcon(tråd);
-                      
-		frameButtons[89][1].setIcon(null);
-		frameButtons[89][2].setIcon(guld);
-		frameButtons[89][3].setIcon(null);
-		frameButtons[89][4].setIcon(guld);
-		frameButtons[89][5].setIcon(rödsten);
-		frameButtons[89][6].setIcon(guld);
-		frameButtons[89][7].setIcon(null);
-		frameButtons[89][8].setIcon(guld);
-		frameButtons[89][9].setIcon(null);
-                      
-		frameButtons[91][1].setIcon(null);
-		frameButtons[91][2].setIcon(null);
-		frameButtons[91][3].setIcon(null);
-		frameButtons[91][4].setIcon(null);
-		frameButtons[91][5].setIcon(sockerrör);
-		frameButtons[91][6].setIcon(null);
-		frameButtons[91][7].setIcon(null);
-		frameButtons[91][8].setIcon(null);
-		frameButtons[91][9].setIcon(null);
-                      
-		frameButtons[92][1].setIcon(mjölk);
-		frameButtons[92][2].setIcon(mjölk);
-		frameButtons[92][3].setIcon(mjölk);
-		frameButtons[92][4].setIcon(socker);
-		frameButtons[92][5].setIcon(ägg);
-		frameButtons[92][6].setIcon(socker);
-		frameButtons[92][7].setIcon(vete);
-		frameButtons[92][8].setIcon(vete);
-		frameButtons[92][9].setIcon(vete);
-                      
-		frameButtons[93][1].setIcon(null);
-		frameButtons[93][2].setIcon(null);
-		frameButtons[93][3].setIcon(null);
-		frameButtons[93][4].setIcon(rödstensfackla);
-		frameButtons[93][5].setIcon(rödsten);
-		frameButtons[93][6].setIcon(rödstensfackla);
-		frameButtons[93][7].setIcon(sten);
-		frameButtons[93][8].setIcon(sten);
-		frameButtons[93][9].setIcon(sten);
-                      
-		frameButtons[94][1].setIcon(null);
-		frameButtons[94][2].setIcon(null);
-		frameButtons[94][3].setIcon(null);
-		frameButtons[94][4].setIcon(null);
-		frameButtons[94][5].setIcon(null);
-		frameButtons[94][6].setIcon(null);
-		frameButtons[94][7].setIcon(vete);
-		frameButtons[94][8].setIcon(kakao);
-		frameButtons[94][9].setIcon(vete);
-                      
-		frameButtons[95][1].setIcon(papper);
-		frameButtons[95][2].setIcon(papper);
-		frameButtons[95][3].setIcon(papper);
-		frameButtons[95][4].setIcon(papper);
-		frameButtons[95][5].setIcon(kompass);
-		frameButtons[95][6].setIcon(papper);
-		frameButtons[95][7].setIcon(papper);
-		frameButtons[95][8].setIcon(papper);
-		frameButtons[95][9].setIcon(papper);
-                      
-		frameButtons[96][1].setIcon(null);
-		frameButtons[96][2].setIcon(null);
-		frameButtons[96][3].setIcon(null);
-		frameButtons[96][4].setIcon(null);
-		frameButtons[96][5].setIcon(järn);
-		frameButtons[96][6].setIcon(null);
-		frameButtons[96][7].setIcon(järn);
-		frameButtons[96][8].setIcon(null);
-		frameButtons[96][9].setIcon(null);
-                      
-		frameButtons[97][1].setIcon(null);
-		frameButtons[97][2].setIcon(null);
-		frameButtons[97][3].setIcon(null);
-		frameButtons[97][4].setIcon(null);
-		frameButtons[97][5].setIcon(melon);
-		frameButtons[97][6].setIcon(null);
-		frameButtons[97][7].setIcon(null);
-		frameButtons[97][8].setIcon(null);
-		frameButtons[97][9].setIcon(null);
-                      
-		frameButtons[98][1].setIcon(null);
-		frameButtons[98][2].setIcon(null);
-		frameButtons[98][3].setIcon(null);
-		frameButtons[98][4].setIcon(null);
-		frameButtons[98][5].setIcon(guld);
-		frameButtons[98][6].setIcon(null);
-		frameButtons[98][7].setIcon(null);
-		frameButtons[98][8].setIcon(null);
-		frameButtons[98][9].setIcon(null);
-                      
-		frameButtons[99][1].setIcon(null);
-		frameButtons[99][2].setIcon(null);
-		frameButtons[99][3].setIcon(null);
-		frameButtons[99][4].setIcon(glas);
-		frameButtons[99][5].setIcon(null);
-		frameButtons[99][6].setIcon(glas);
-		frameButtons[99][7].setIcon(null);
-		frameButtons[99][8].setIcon(glas);
-		frameButtons[99][9].setIcon(null);
-
-		frameButtons[100][1].setIcon(null);
-		frameButtons[100][2].setIcon(null);
-		frameButtons[100][3].setIcon(null);
-		frameButtons[100][4].setIcon(svamp);
-		frameButtons[100][5].setIcon(socker);
-		frameButtons[100][6].setIcon(null);
-		frameButtons[100][7].setIcon(null);
-		frameButtons[100][8].setIcon(spindelöga);
-		frameButtons[100][9].setIcon(null);
-                       
-		frameButtons[101][1].setIcon(null);
-		frameButtons[101][2].setIcon(null);
-		frameButtons[101][3].setIcon(null);
-		frameButtons[101][4].setIcon(null);
-		frameButtons[101][5].setIcon(blaze);
-		frameButtons[101][6].setIcon(null);
-		frameButtons[101][7].setIcon(null);
-		frameButtons[101][8].setIcon(null);
-		frameButtons[101][9].setIcon(null);
-                       
-		frameButtons[102][1].setIcon(null);
-		frameButtons[102][2].setIcon(null);
-		frameButtons[102][3].setIcon(null);
-		frameButtons[102][4].setIcon(null);
-		frameButtons[102][5].setIcon(slime);
-		frameButtons[102][6].setIcon(null);
-		frameButtons[102][7].setIcon(null);
-		frameButtons[102][8].setIcon(blazepulver);
-		frameButtons[102][9].setIcon(null);
-                       
-		frameButtons[103][1].setIcon(null);
-		frameButtons[103][2].setIcon(null);
-		frameButtons[103][3].setIcon(null);
-		frameButtons[103][4].setIcon(null);
-		frameButtons[103][5].setIcon(enderpärla);
-		frameButtons[103][6].setIcon(null);
-		frameButtons[103][7].setIcon(null);
-		frameButtons[103][8].setIcon(blazepulver);
-		frameButtons[103][9].setIcon(null);
-                       
-		frameButtons[104][1].setIcon(guldklimp);
-		frameButtons[104][2].setIcon(guldklimp);
-		frameButtons[104][3].setIcon(guldklimp);
-		frameButtons[104][4].setIcon(guldklimp);
-		frameButtons[104][5].setIcon(melon);
-		frameButtons[104][6].setIcon(guldklimp);
-		frameButtons[104][7].setIcon(guldklimp);
-		frameButtons[104][8].setIcon(guldklimp);
-		frameButtons[104][9].setIcon(guldklimp);
-                       
-		frameButtons[105][1].setIcon(null);
-		frameButtons[105][2].setIcon(null);
-		frameButtons[105][3].setIcon(null);
-		frameButtons[105][4].setIcon(fjäder);
-		frameButtons[105][5].setIcon(null);
-		frameButtons[105][6].setIcon(null);
-		frameButtons[105][7].setIcon(bläck);
-		frameButtons[105][8].setIcon(bok);
-		frameButtons[105][9].setIcon(null);
-                       
-		frameButtons[106][1].setIcon(pinne);
-		frameButtons[106][2].setIcon(pinne);
-		frameButtons[106][3].setIcon(pinne);
-		frameButtons[106][4].setIcon(pinne);
-		frameButtons[106][5].setIcon(läder);
-		frameButtons[106][6].setIcon(pinne);
-		frameButtons[106][7].setIcon(pinne);
-		frameButtons[106][8].setIcon(pinne);
-		frameButtons[106][9].setIcon(pinne);
-                       
-		frameButtons[107][1].setIcon(guldklimp);
-		frameButtons[107][2].setIcon(guldklimp);
-		frameButtons[107][3].setIcon(guldklimp);
-		frameButtons[107][4].setIcon(guldklimp);
-		frameButtons[107][5].setIcon(morot);
-		frameButtons[107][6].setIcon(guldklimp);
-		frameButtons[107][7].setIcon(guldklimp);
-		frameButtons[107][8].setIcon(guldklimp);
-		frameButtons[107][9].setIcon(guldklimp);
-                       
-		frameButtons[108][1].setIcon(null);
-		frameButtons[108][2].setIcon(null);
-		frameButtons[108][3].setIcon(null);
-		frameButtons[108][4].setIcon(fiskespö);
-		frameButtons[108][5].setIcon(null);
-		frameButtons[108][6].setIcon(null);
-		frameButtons[108][7].setIcon(null);
-		frameButtons[108][8].setIcon(morot);
-		frameButtons[108][9].setIcon(null);
-                       
-		frameButtons[109][1].setIcon(null);
-		frameButtons[109][2].setIcon(null);
-		frameButtons[109][3].setIcon(null);
-		frameButtons[109][4].setIcon(pumpa);
-		frameButtons[109][5].setIcon(socker);
-		frameButtons[109][6].setIcon(null);
-		frameButtons[109][7].setIcon(null);
-		frameButtons[109][8].setIcon(ägg);
-		frameButtons[109][9].setIcon(null);
-                       
-		frameButtons[110][1].setIcon(null);
-		frameButtons[110][2].setIcon(null);
-		frameButtons[110][3].setIcon(null);
-		frameButtons[110][4].setIcon(raketstjärna);
-		frameButtons[110][5].setIcon(papper);
-		frameButtons[110][6].setIcon(krut);
-		frameButtons[110][7].setIcon(null);
-		frameButtons[110][8].setIcon(null);
-		frameButtons[110][9].setIcon(null);
-                       
-		frameButtons[111][1].setIcon(null);
-		frameButtons[111][2].setIcon(null);
-		frameButtons[111][3].setIcon(null);
-		frameButtons[111][4].setIcon(krut);
-		frameButtons[111][5].setIcon(färger);
-		frameButtons[111][6].setIcon(null);
-		frameButtons[111][7].setIcon(null);
-		frameButtons[111][8].setIcon(null);
-		frameButtons[111][9].setIcon(null);
-                       
-		frameButtons[112][1].setIcon(null);
-		frameButtons[112][2].setIcon(null);
-		frameButtons[112][3].setIcon(null);
-		frameButtons[112][4].setIcon(null);
-		frameButtons[112][5].setIcon(dynamit);
-		frameButtons[112][6].setIcon(null);
-		frameButtons[112][7].setIcon(null);
-		frameButtons[112][8].setIcon(gruvvagn);
-		frameButtons[112][9].setIcon(null);
-                       
-		frameButtons[113][1].setIcon(null);
-		frameButtons[113][2].setIcon(null);
-		frameButtons[113][3].setIcon(null);
-		frameButtons[113][4].setIcon(null);
-		frameButtons[113][5].setIcon(hopper);
-		frameButtons[113][6].setIcon(null);
-		frameButtons[113][7].setIcon(null);
-		frameButtons[113][8].setIcon(gruvvagn);
-		frameButtons[113][9].setIcon(null);
-                       
-		frameButtons[114][1].setIcon(tråd);
-		frameButtons[114][2].setIcon(tråd);
-		frameButtons[114][3].setIcon(null);
-		frameButtons[114][4].setIcon(tråd);
-		frameButtons[114][5].setIcon(slime);
-		frameButtons[114][6].setIcon(null);
-		frameButtons[114][7].setIcon(null);
-		frameButtons[114][8].setIcon(null);
-		frameButtons[114][9].setIcon(tråd);
+		Bilder(frameButtons[3],null,null,null,null,tra,null,null,null,null);
+		Bilder(frameButtons[7],kullersten,kullersten,kullersten,kullersten,pilbåge,kullersten,kullersten,rödsten,kullersten);
+		Bilder(frameButtons[8],sand,sand,null,sand,sand,null,null,null,null);
+		Bilder(frameButtons[9],plankor,plankor,plankor,plankor,rödsten,plankor,plankor,plankor,plankor);
+		Bilder(frameButtons[10],null,null,null,ull,ull,ull,plankor,plankor,plankor);
+		Bilder(frameButtons[11],guld,null,guld,guld,pinne,guld,guld,rödsten,guld);
+		Bilder(frameButtons[12],pinne,null,pinne,pinne,tryckplatta,pinne,pinne,rödsten,pinne);
+		Bilder(frameButtons[13],null,null,null,null,slime,null,null,kolv,null);
+		Bilder(frameButtons[14],plankor,plankor,plankor,kullersten,järn,kullersten,kullersten,rödsten,kullersten);
+		Bilder(frameButtons[15],null,null,null,tråd,tråd,null,tråd,tråd,null);
+		Bilder(frameButtons[16],null,null,null,null,null,null,block,block,block);
+		Bilder(frameButtons[17],null,null,null,tegel,tegel,null,tegel,tegel,null);
+		Bilder(frameButtons[18],krut,sand,krut,sand,krut,sand,krut,sand,krut);
+		Bilder(frameButtons[19],plankor,plankor,plankor,bok,bok,bok,plankor,plankor,plankor);
+		Bilder(frameButtons[20],null,null,null,null,kol,null,null,pinne,null);
+		Bilder(frameButtons[21],null,null,block,null,block,block,block,block,block);
+		Bilder(frameButtons[22],plankor,plankor,plankor,plankor,null,plankor,plankor,plankor,plankor);
+		Bilder(frameButtons[23],plankor,plankor,null,plankor,plankor,null,null,null,null);
+		Bilder(frameButtons[24],kullersten,kullersten,kullersten,kullersten,kullersten,kullersten,kullersten,kullersten,kullersten);
+		Bilder(frameButtons[25],plankor,plankor,plankor,plankor,plankor,plankor,null,pinne,null);
+		Bilder(frameButtons[26],järnträ,järnträ,null,järnträ,järnträ,null,järnträ,järnträ,null);
+		Bilder(frameButtons[27],pinne,null,pinne,pinne,pinne,pinne,pinne,null,pinne);
+		Bilder(frameButtons[28],pinne,null,pinne,pinne,järn,pinne,pinne,null,pinne);
+		Bilder(frameButtons[29],null,pinne,null,null,kullersten,null,null,null,null);
+		Bilder(frameButtons[30],null,null,null,null,null,null,null,tryck,tryck);
+		Bilder(frameButtons[31],null,rödsten,null,null,pinne,null,null,null,null);
+		Bilder(frameButtons[32],null,null,null,null,plankor,null,null,null,null);
+		Bilder(frameButtons[33],snöboll,snöboll,null,snöboll,snöboll,null,null,null,null);
+		Bilder(frameButtons[34],plankor,plankor,plankor,plankor,diamant,plankor,plankor,plankor,plankor);
+		Bilder(frameButtons[35],null,null,null,pinne,pinne,pinne,pinne,pinne,pinne);
+		Bilder(frameButtons[36],null,null,null,glödstenspulver,glödstenspulver,null,glödstenspulver,glödstenspulver,null);
+		Bilder(frameButtons[37],null,null,null,null,pumpa,null,null,fackla,null);
+		Bilder(frameButtons[38],glas,glas,glas,glas,färger,glas,glas,glas,glas);
+		Bilder(frameButtons[39],null,null,null,plankor,plankor,plankor,plankor,plankor,plankor);
+		Bilder(frameButtons[40],null,null,null,järn,järn,järn,järn,järn,järn);
+		Bilder(frameButtons[41],null,null,null,färgglas,färgglas,färgglas,färgglas,färgglas,färgglas);
+		Bilder(frameButtons[42],melon,melon,melon,melon,melon,melon,melon,melon,melon);
+		Bilder(frameButtons[43],null,null,null,pinne,plankor,pinne,pinne,plankor,pinne);
+		Bilder(frameButtons[44],null,bok,null,diamant,obsidian,diamant,obsidian,obsidian,obsidian);
+		Bilder(frameButtons[45],null,null,null,null,blaze,null,kullersten,kullersten,kullersten);
+		Bilder(frameButtons[46],järn,null,järn,järn,null,järn,järn,järn,järn);
+		Bilder(frameButtons[47],null,rödsten,null,rödsten,glödstenslampa,rödsten,null,rödsten,null);
+		Bilder(frameButtons[48],obsidian,obsidian,obsidian,obsidian,enderöga,obsidian,obsidian,obsidian,obsidian);
+		Bilder(frameButtons[49],null,järn,null,null,pinne,null,null,plankor,null);
+		Bilder(frameButtons[50],glas,glas,glas,glas,nederstjärna,glas,obsidian,obsidian,obsidian);
+		Bilder(frameButtons[51],null,null,null,kullersten,kullersten,kullersten,kullersten,kullersten,kullersten);
+		Bilder(frameButtons[52],null,null,null,tegel,null,tegel,null,tegel,null);
+		Bilder(frameButtons[53],järnblock,järnblock,järnblock,null,järn,null,järn,järn,järn);
+		Bilder(frameButtons[54],null,null,null,snubbeltrådskrok,kista,null,null,null,null);
+		Bilder(frameButtons[55],null,rödsten,null,rödsten,nederkvarts,rödsten,sten,sten,sten);
+		Bilder(frameButtons[56],glas,glas,glas,nederkvarts,nederkvarts,nederkvarts,trähalvblock,trähalvblock,trähalvblock);
+		Bilder(frameButtons[57],material,material,material,material,material,material,material,material,material);
+		
 	}
 	void ladda3(){
-		for (int i = 3; i < frameButtons.length; i++) {
-			if (i!=4&&i!=5&&i!=6&&i!=90) {
-				for (int j = 1; j < frameButtons[i].length; j++) {
-					if(frameButtons[i][j].getIcon() != null){
-						frameButtons[i][j].addActionListener(this);
-					}
-				}
-			}
-		}
+		Bilder(frameButtons[58],järn,null,järn,järn,kista,järn,null,järn,null);
+		Bilder(frameButtons[59],null,ull,null,null,null,null,null,null,null);
+		Bilder(frameButtons[60],järn,pinne,järn,järn,rödstensfackla,järn,järn,pinne,järn);
+		Bilder(frameButtons[61],kullersten,kullersten,kullersten,kullersten,null,kullersten,kullersten,rödsten,kullersten);
+		Bilder(frameButtons[62],vete,vete,vete,vete,vete,vete,vete,vete,vete);
+		Bilder(frameButtons[63],null,järnStenTrä,null,null,pinne,null,null,pinne,null);
+		Bilder(frameButtons[64],järnStenTrä,järnStenTrä,null,järnStenTrä,pinne,null,null,pinne,null);
+		Bilder(frameButtons[65],järnStenTrä,järnStenTrä,järnStenTrä,null,pinne,null,null,pinne,null);
+		Bilder(frameButtons[66],null,järnStenTrä,null,null,järnStenTrä,null,null,pinne,null);
+		Bilder(frameButtons[67],järnStenTrä,järnStenTrä,null,null,pinne,null,null,pinne,null);
+		Bilder(frameButtons[68],null,pinne,tråd,pinne,null,tråd,null,pinne,tråd);
+		Bilder(frameButtons[69],null,flinta,null,null,fjäder,null,null,pinne,null);
+		Bilder(frameButtons[70],null,null,null,järn,flinta,null,null,null,null);
+		Bilder(frameButtons[71],null,plankor,null,null,plankor,null,null,null,null);
+		Bilder(frameButtons[72],null,null,null,plankor,null,plankor,null,plankor,null);
+		Bilder(frameButtons[73],null,null,null,null,null,null,vete,vete,vete);
+		Bilder(frameButtons[74],null,null,null,läder,läder,läder,läder,null,läder);
+		Bilder(frameButtons[75],läder,null,läder,läder,läder,läder,läder,läder,läder);
+		Bilder(frameButtons[76],läder,läder,läder,läder,null,läder,läder,null,läder);
+		Bilder(frameButtons[77],null,null,null,läder,null,läder,läder,null,läder);
+		Bilder(frameButtons[78],pinne,pinne,pinne,pinne,ull,pinne,pinne,pinne,pinne);
+		Bilder(frameButtons[79],guldklimp,guldklimp,guldklimp,guldklimp,äpple,guldklimp,guldklimp,guldklimp,guldklimp);
+		Bilder(frameButtons[80],null,null,null,järn,null,järn,null,järn,null);
+		Bilder(frameButtons[81],null,null,null,järn,null,järn,järn,järn,järn);
+		Bilder(frameButtons[82],null,null,null,plankor,null,plankor,plankor,plankor,plankor);
+		Bilder(frameButtons[83],null,null,null,null,null,null,sockerrör,sockerrör,sockerrör);
+		Bilder(frameButtons[84],null,papper,null,null,papper,null,null,papper,läder);
+		Bilder(frameButtons[85],null,null,null,null,kista,null,null,gruvvagn,null);
+		Bilder(frameButtons[86],null,null,null,null,ugn,null,null,gruvvagn,null);
+		Bilder(frameButtons[87],null,järn,null,järn,rödsten,järn,null,järn,null);
+		Bilder(frameButtons[88],null,null,pinne,null,pinne,tråd,pinne,null,tråd);
+		Bilder(frameButtons[89],null,guld,null,guld,rödsten,guld,null,guld,null);
+		Bilder(frameButtons[91],null,null,null,null,sockerrör,null,null,null,null);
+		Bilder(frameButtons[92],mjölk,mjölk,mjölk,socker,ägg,socker,vete,vete,vete);
+		Bilder(frameButtons[93],null,null,null,rödstensfackla,rödsten,rödstensfackla,sten,sten,sten);
+		Bilder(frameButtons[94],null,null,null,null,null,null,vete,kakao,vete);
+		Bilder(frameButtons[95],papper,papper,papper,papper,kompass,papper,papper,papper,papper);
+		Bilder(frameButtons[96],null,null,null,null,järn,null,järn,null,null);
+		Bilder(frameButtons[97],null,null,null,null,melon,null,null,null,null);
+		Bilder(frameButtons[98],null,null,null,null,guld,null,null,null,null);
+		Bilder(frameButtons[99],null,null,null,glas,null,glas,null,glas,null);
+		Bilder(frameButtons[100],null,null,null,svamp,socker,null,null,spindelöga,null);
+		Bilder(frameButtons[101],null,null,null,null,blaze,null,null,null,null);
+		Bilder(frameButtons[102],null,null,null,null,slime,null,null,blazepulver,null);
+		Bilder(frameButtons[103],null,null,null,null,enderpärla,null,null,blazepulver,null);
+		Bilder(frameButtons[104],guldklimp,guldklimp,guldklimp,guldklimp,melon,guldklimp,guldklimp,guldklimp,guldklimp);
+		Bilder(frameButtons[105],null,null,null,fjäder,null,null,bläck,bok,null);
+		Bilder(frameButtons[106],pinne,pinne,pinne,pinne,läder,pinne,pinne,pinne,pinne);
+		Bilder(frameButtons[107],guldklimp,guldklimp,guldklimp,guldklimp,morot,guldklimp,guldklimp,guldklimp,guldklimp);
+		Bilder(frameButtons[108],null,null,null,fiskespö,null,null,null,morot,null);
+		Bilder(frameButtons[109],null,null,null,pumpa,socker,null,null,ägg,null);
+		Bilder(frameButtons[110],null,null,null,raketstjärna,papper,krut,null,null,null);
+		Bilder(frameButtons[111],null,null,null,krut,färger,null,null,null,null);
+		Bilder(frameButtons[112],null,null,null,null,dynamit,null,null,gruvvagn,null);
+		Bilder(frameButtons[113],null,null,null,null,hopper,null,null,gruvvagn,null);
+		Bilder(frameButtons[114], tråd,tråd,null,tråd,slime,null,null,null,tråd);
 	}
 	void ladda4(){
 		frame.setLayout(new GridLayout(0, 3));
@@ -2227,6 +1248,20 @@ public class GoJb1 implements ActionListener, CaretListener{
 			label.setText("Write what's on your mind here. It \ndoesn't matter if it's about buggs or\nideas "
 					+ "for this program, or ideas for \na new program. Write it here! :D");
 			namnInt = 1;
+		}
+	}
+	void Bilder(JButton[] buttons, ImageIcon icon1,ImageIcon icon2,ImageIcon icon3,
+			ImageIcon icon4,ImageIcon icon5,ImageIcon icon6,ImageIcon icon7,
+			ImageIcon icon8,ImageIcon icon9){
+		
+		ImageIcon[] iconer = new ImageIcon[]{icon1,icon2,icon3,icon4,icon5,icon6,icon7,icon8,icon9};
+		for (int i = 1; i < buttons.length; i++) {
+			if(iconer[i-1] != null){
+				buttons[i].setIcon(iconer[i-1]);
+				buttons[i].addActionListener(this);
+			}
+			
+			
 		}
 	}
 	public static void main(String[] args) {
