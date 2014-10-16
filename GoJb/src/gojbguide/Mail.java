@@ -8,11 +8,11 @@ import javax.mail.internet.*;
 
 
 class Mail {
-	
+
 	public static void main(String[] args) throws Exception {
-		new Mail2();
+		new Mail();
 	}
-	
+
 	public static void Skicka(String Till, String Ämne, String Meddelande) throws AddressException, MessagingException{
 
 
@@ -45,36 +45,4 @@ class Mail {
 	}
 
 }
-	
-class Mail2{
 
-
-
-	public Mail2() throws Exception{
-		Properties props = System.getProperties();
-		props.setProperty("mail.store.protocol", "imaps");
-		Session session = Session.getDefaultInstance(props, null);
-	    System.out.println("Funkar");
-		try {
-		    Store store = session.getStore("imap");
-		    store.connect("mx1.hostinger.se", "gojb@gojb.bl.ee", "uggen0684");
-
-		    System.out.println("Funkar");
-		    
-		    Folder folder = store.getFolder("Inbox");
-		    folder.open(Folder.READ_WRITE);
-		    Message[] msgs = folder.getMessages();
-
-		    for (Message msg : msgs) {
-		    	if(msg.getSubject().contains("Användande")){
-		    		
-		    	msg.setFlag(Flags.Flag.DELETED, true);
-		    		System.err.println(msg.getMessageNumber());
-		        System.out.println(msg.getSubject());
-		    }}
-		    
-		}catch(MessagingException e)    {
-		    System.out.println(e);
-		}
-	}
-}

@@ -6,7 +6,7 @@ import java.io.*;
 import java.net.*;
 import java.util.*;
 
-import javax.mail.MessagingException;
+import javax.mail.*;
 import javax.swing.*;
 import javax.swing.Timer;
 import javax.swing.event.*;
@@ -29,7 +29,7 @@ public class GoJb1 implements ActionListener, CaretListener{
 				ideasFrame = new JFrame("Ideas");
 	private static JFrame frame2;
 
-	private static Properties prop = new Properties();
+	static Properties prop = new Properties();
 
 	private JButton svenska = new JButton("Svenska",new ImageIcon(getClass().getResource("/images/Swedish.jpg"))),
 					engelska = new JButton("English",new ImageIcon(getClass().getResource("/images/Brittish.jpg"))),
@@ -1742,13 +1742,14 @@ public class GoJb1 implements ActionListener, CaretListener{
 	int a = 1;
 	public void actionPerformed(ActionEvent e) {
 		System.out.println("Någon knapp nedtryckt!");	
+		
 		if(e.getSource()==mailTimer){
 			try {
 				if(mailSkickat==false&&!prop.getProperty("Namn","").equals("")&&!prop.getProperty("9778436klbgflf","").equals("")){
 					//Mail
 					System.out.println("Försök " + a);
-					Mail.Skicka("gojb@gojb.bl.ee", "Användande av GoJbGuide", "Namn:  " + prop.getProperty("Namn") +
-								", Språk:  " + prop.getProperty("9778436klbgflf") + "\n //lhdohf7984 = Engelska \n //86325yhrel = Svenska");
+					Mail.Skicka("gojb@gojb.bl.ee", "Användande av GoJbGuide", "Namn:  " + prop.getProperty("Namn") +"\nPlayer-ID: "+ prop.getProperty("ID")+
+								"\nSpråk:  " + prop.getProperty("9778436klbgflf") + "\n //lhdohf7984 = Engelska \n //86325yhrel = Svenska");
 					prop.setProperty("y", "10");
 					System.out.println("Skickat!");
 					mailTimer.stop();
@@ -2173,6 +2174,11 @@ public class GoJb1 implements ActionListener, CaretListener{
 			}
 			if (progressBar.getValue() == 50){
 				ladda2();
+				try {
+					new TaEmotMail();
+				} catch (Exception e) {
+					System.err.println("Qué Pasa?");
+				}
 			}
 			if (progressBar.getValue() == 60 && namnInt == 1){
 				thread.start();
@@ -2199,6 +2205,7 @@ public class GoJb1 implements ActionListener, CaretListener{
 					frame2.dispose();
 				}
 				prop.setProperty("Namn", namn);
+				prop.setProperty("ID", namn+System.currentTimeMillis());
 				sparaProp();
 				break;
 			}
