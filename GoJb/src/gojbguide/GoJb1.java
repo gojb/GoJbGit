@@ -56,7 +56,7 @@ public class GoJb1 implements ActionListener, CaretListener{
 			helpItem = new JMenuItem("Hjälp"),
 			ideasItem = new JMenuItem("Ideas/bugs");
 
-	private ImageIcon 	kullersten = new ImageIcon(getClass().getResource("/images/1.png")),
+	private ImageIcon kullersten = new ImageIcon(getClass().getResource("/images/1.png")),
 			rödsten = new ImageIcon(getClass().getResource("/images/2.png")),
 			plankor = new ImageIcon(getClass().getResource("/images/3.png")),
 			pilbåge = new ImageIcon(getClass().getResource("/images/68.gif")),
@@ -608,7 +608,7 @@ public class GoJb1 implements ActionListener, CaretListener{
 					frameButtons[i][j] = new JButton();
 					frames[i].add(frameButtons[i][j]);
 				}
-				progressBar.setValue((int) ((i*100/buttons.length)*0.35));
+				progressBar.setValue((int) ((i*100/buttons.length)*0.49));
 				frame2.repaint();
 			}
 		}
@@ -1087,8 +1087,8 @@ public class GoJb1 implements ActionListener, CaretListener{
 	public GoJb1(){
 		try {
 			prop.load(new FileInputStream(System.getProperty ("user.home") + "\\AppData\\Roaming\\GoJb\\settings.gojb"));
-		} catch (IOException e) {
-			System.err.println("sdoövhjxcblizxg,vbs");
+		} catch (Exception e) {
+			System.err.println("Property saknas");
 		}
 		frame2 = new JFrame(){
 			private static final long serialVersionUID = 1L;
@@ -1100,7 +1100,6 @@ public class GoJb1 implements ActionListener, CaretListener{
 		};
 		Thread thread = null; 
 		frame2.setLayeredPane(layeredPane);
-		frame2.setBackground(white);
 		frame2.setIconImage(new ImageIcon(getClass().getResource("/images/Java-icon.png")).getImage());
 		frame2.setUndecorated(true);
 		frame2.setLayout(new BorderLayout());
@@ -1109,21 +1108,14 @@ public class GoJb1 implements ActionListener, CaretListener{
 		frame2.setDefaultCloseOperation(3);
 		frame2.setVisible(true);
 
-		background.setOpaque(true);
-		background.setBackground(blue);
 		background.setSize(300,200);
-		background.setLocation(0,0);
 
 		background1.setForeground(Color.white);
-		background1.setOpaque(false);
-		background1.setBackground(Color.black);
 		background1.setSize(300,54);
 		background1.setLocation(20, 30);
 		background1.setFont(new Font("Arial",Font.BOLD,25));
 
 		background2.setForeground(Color.white);
-		background2.setOpaque(false);
-		background2.setBackground(Color.black);
 		background2.setSize(200,54);
 		background2.setLocation(125,70);
 		background2.setFont(new Font("Arial",Font.BOLD,30));
@@ -1147,25 +1139,20 @@ public class GoJb1 implements ActionListener, CaretListener{
 
 		frame2.repaint();
 		frame2.revalidate();
-		layeredPane.revalidate();
-		layeredPane.repaint();
 
 		if(prop.getProperty("y","1").equals("10")){
 			mailSkickat=true;
 			System.out.println("Mail = true");
-
 		}
 		else{
 			mailSkickat=false;
 			System.out.println("Mail = false");
 		}
-
 		if (!prop.getProperty("9778436klbgflf","kjg").equals("lhdohf7984")&&
-				!prop.getProperty("9778436klbgflf","kjg").equals("86325yhrel")){
-			System.err.println(prop.getProperty("9778436klbgflf"));
+			!prop.getProperty("9778436klbgflf","kjg").equals("86325yhrel")){
 
-			System.err.println("Språk ej valt");
-
+			System.err.println("Språk ej valt! REF:" + prop.getProperty("9778436klbgflf"));
+			
 			namnInt = 2;
 
 			prop.setProperty("Namn", "");
@@ -1176,29 +1163,29 @@ public class GoJb1 implements ActionListener, CaretListener{
 			progressBar.setValue(progressBar.getValue()+1);
 
 			try {
-				Thread.sleep(20);
+				Thread.sleep(10);
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
 			if (progressBar.getValue() == 2){
 				GörFönster();
 			}
-			if (progressBar.getValue() == 40 && namnInt == 1){
-				Språk();
-			}
-			if (progressBar.getValue() == 47 && namnInt == 1){
+			if (progressBar.getValue() == 50 && namnInt == 1){
 				thread =  new Thread(new Update());
 			}
 			if (progressBar.getValue() == 50 && namnInt==2){
 				välkommen = "Välkommen! Laddar...";
 			}
-			if (progressBar.getValue() == 50){
+			if (progressBar.getValue() == 55 && namnInt == 1){
+				Språk();
+			}
+			if (progressBar.getValue() == 60){
 				ladda2();
 			}
-			if (progressBar.getValue() == 60 && namnInt == 1){
+			if (progressBar.getValue() == 65 && namnInt == 1){
 				thread.start();
 			}
-			if (progressBar.getValue() == 65){
+			if (progressBar.getValue() == 70){
 				ladda3();
 			}
 			if (progressBar.getValue() == 80){
@@ -1260,8 +1247,6 @@ public class GoJb1 implements ActionListener, CaretListener{
 				buttons[i].setIcon(iconer[i-1]);
 				buttons[i].addActionListener(this);
 			}
-
-
 		}
 	}
 	public static void main(String[] args) {
