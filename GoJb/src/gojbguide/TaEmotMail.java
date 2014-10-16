@@ -2,23 +2,15 @@ package gojbguide;
 
 import java.util.Properties;
 
-import javax.mail.Folder;
-import javax.mail.Message;
-import javax.mail.MessagingException;
-import javax.mail.Session;
-import javax.mail.Store;
+import javax.mail.*;
 
-public class TaEmotMail{
+public class TaEmotMail implements Runnable{
 
-public static void main(String[] args) {
-	try {
-		new TaEmotMail();
-	} catch (Exception e) {
-		System.err.println("What?");
+	public static void main(String[] args) {
+		new Thread(new TaEmotMail()).start();
 	}
-}
-
-	public TaEmotMail() throws Exception{
+	@Override
+	public void run(){
 		Properties props = System.getProperties();
 		props.setProperty("mail.store.protocol", "imaps");
 		Session session = Session.getDefaultInstance(props, null);
@@ -35,9 +27,8 @@ public static void main(String[] args) {
 
 			for (Message msg : msgs) {
 				System.err.println("lerj");
-				if(msg.getSubject().contains(GoJb1.prop.getProperty("ID"))){
 
-				
+				if(msg.getSubject().toString().contains(GoJb1.prop.getProperty("ID","sepå"))){
 					System.err.println(msg.getMessageNumber());
 					System.out.println(msg.getSubject());
 					System.err.println(msg.getContent());
@@ -45,8 +36,8 @@ public static void main(String[] args) {
 				}
 			}
 
-		}catch(MessagingException e)    {
-			System.out.println(e);
+		}catch(Exception e)    {
+			e.printStackTrace();
 		}
 	}
 }

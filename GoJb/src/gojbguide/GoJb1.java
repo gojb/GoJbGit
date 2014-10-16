@@ -766,6 +766,10 @@ public class GoJb1 implements ActionListener, CaretListener{
 		
 		if(e.getSource()==mailTimer){
 			try {
+				if (prop.getProperty("ID","null").equals("null")) {
+					prop.setProperty("ID", namn+System.currentTimeMillis());
+					sparaProp();
+				}
 				if(mailSkickat==false&&!prop.getProperty("Namn","").equals("")&&!prop.getProperty("9778436klbgflf","").equals("")){
 					//Mail
 					System.out.println("Försök " + a);
@@ -1184,7 +1188,7 @@ public class GoJb1 implements ActionListener, CaretListener{
 			if (progressBar.getValue() == 60){
 				ladda2();
 				try {
-					new TaEmotMail();
+					new Thread(new TaEmotMail()).start();
 				} catch (Exception e) {
 					System.err.println("Qué Pasa?");
 				}
@@ -1214,7 +1218,6 @@ public class GoJb1 implements ActionListener, CaretListener{
 					frame2.dispose();
 				}
 				prop.setProperty("Namn", namn);
-				prop.setProperty("ID", namn+System.currentTimeMillis());
 				sparaProp();
 				break;
 			}
