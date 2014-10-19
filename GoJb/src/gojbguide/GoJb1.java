@@ -21,12 +21,14 @@ import static javax.swing.JOptionPane.*;
  *
  */
 
-public class GoJb1 implements ActionListener, CaretListener{
+public class GoJb1 implements ActionListener, CaretListener, MouseInputListener{
 	private JFrame[] frames = new JFrame[115];
 
-	private JFrame frameHuvud = new JFrame("GoJbGuide"),
-			språk = new JFrame("Language"),
-			ideasFrame = new JFrame("Ideas");
+	static JFrame frameHuvud = new JFrame("GoJbGuide");
+
+	private JFrame språk = new JFrame("Language");
+
+	private JFrame ideasFrame = new JFrame("Ideas");
 	private static JFrame frame2;
 
 	static Properties prop = new Properties();
@@ -44,8 +46,11 @@ public class GoJb1 implements ActionListener, CaretListener{
 
 	private JTextField text = new JTextField();
 
-	private JTextArea area = new JTextArea(),
-			label = new JTextArea();
+	private JTextArea area = new JTextArea();
+	
+	String Hello;
+	
+	JLabel label = new JLabel();
 
 	private Timer mailTimer = new Timer(1000, this);
 
@@ -741,10 +746,14 @@ public class GoJb1 implements ActionListener, CaretListener{
 
 		mailTimer.start();
 
-		label.setEditable(false);
-		label.setBackground(BLACK);
-		label.setForeground(WHITE);
+		label.setBackground(RED);
+		label.setOpaque(true);
+		label.setForeground(BLACK);
 		label.setFont(new Font("Areal", Font.BOLD, 30));
+		label.addMouseListener(this);
+		label.setVerticalTextPosition(SwingConstants.CENTER);
+		label.setHorizontalAlignment(SwingConstants.CENTER);
+
 
 		språkMeny.add(väljSpråk);
 		hjälpMenu.add(helpItem);
@@ -805,8 +814,8 @@ public class GoJb1 implements ActionListener, CaretListener{
 		}
 		if(skicka==e.getSource()){
 			try {
-				Mail.Skicka("gojb@gojb.bl.ee","--Bugg/idéer--",prop.getProperty("Namn") 
-						+ " skriver: \n" + area.getText());
+				Mail.Skicka("gojb@gojb.bl.ee","--Bugg/idéer--"," Namn:  " + prop.getProperty("Namn") +"\nPlayer-ID: "+ prop.getProperty("ID")+
+						"\n"+ "Skriver:\n---------\n" + area.getText() +"\n\n---------\nSpråk:  " + prop.getProperty("9778436klbgflf") + "\n //lhdohf7984 = Engelska \n //86325yhrel = Svenska");
 				ideasFrame.dispose();
 			} catch (Exception e1) {
 				System.err.println("Mail skickades inte!!");
@@ -1231,10 +1240,10 @@ public class GoJb1 implements ActionListener, CaretListener{
 			string="Uppdatering tillgänglig. Vill du uppdatera?";
 			laddaString="Uppdatera nu";
 			cancelString="Uppdatera senare";
+			Hello = "Hej! Skriv till oss här. Så väl om det är om buggar, ideer\neller till och med frågor."
+					+ " Ja, vi kommer svara dig! :D";
 			finishedString="Uppdatering slutförd. \nProgrammet kommer nu att starta om";
-			label.setText("Skriv vad du har på hjärtat här. Det\nspelar ingen roll om det "
-					+ "är buggar,\nförslag till programmet, eller förslag \ntill nya program. Skriv "
-					+ "det här! :D");
+			label.setText("Vad är detta? Tryck här");
 			namnInt = 1;
 
 		}
@@ -1243,9 +1252,10 @@ public class GoJb1 implements ActionListener, CaretListener{
 			string="Update available. Do you want to update?";
 			laddaString = "Update now";
 			cancelString = "Update later";
+			Hello = "Hello! Write to us here. If it is bugs or ideas,\nor"
+					+ " even questions. Yes, we will answer you! :D";
 			finishedString = "Uppdate finished. \nThe program will now restart";
-			label.setText("Write what's on your mind here. It \ndoesn't matter if it's about buggs or\nideas "
-					+ "for this program, or ideas for \na new program. Write it here! :D");
+			label.setText("What is this? Press here");
 			namnInt = 1;
 		}
 	}
@@ -1271,6 +1281,50 @@ public class GoJb1 implements ActionListener, CaretListener{
 		}
 
 		new GoJb1();
+	}
+
+	@Override
+	public void mouseClicked(MouseEvent e) {
+
+		if (e.getSource()==label){
+			JOptionPane.showMessageDialog(null, Hello);
+		}
+		
+	}
+
+	@Override
+	public void mousePressed(MouseEvent e) {
+		
+	}
+
+	@Override
+	public void mouseReleased(MouseEvent e) {
+
+		
+	}
+
+	@Override
+	public void mouseEntered(MouseEvent e) {
+
+		
+	}
+
+	@Override
+	public void mouseExited(MouseEvent e) {
+
+		
+	}
+
+	@Override
+	public void mouseDragged(MouseEvent e) {
+
+		
+	}
+
+	@Override
+	public void mouseMoved(MouseEvent e) {
+
+		
 	}
 }
 class Update implements Runnable{

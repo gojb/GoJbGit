@@ -1,17 +1,17 @@
-Idéer Java
+IdÃ©er Java
  
 GojbGuide:
-Lagga till en laddframe på kanske 2 sek som sager någonting i form med "Hello/Hej *namn*. 
+Lagga till en laddframe pÃ¥ kanske 2 sek som sager nÃ¥gonting i form med "Hello/Hej *namn*. 
 --KLART--
 
-Möjlighet att byta namn och då skickad ett mejl med info om namnbyte. 
+MÃ¶jlighet att byta namn och dÃ¥ skickad ett mejl med info om namnbyte. 
 
-Statistik om appen. Varje, säg tionde gång programmet körs skickas ett ett mejl om T.ex. hur många gånger det öppnats, Tid öppet de tio senaste gångerna. 
+Statistik om appen. Varje, sÃ¤g tionde gÃ¥ng programmet kÃ¶rs skickas ett ett mejl om T.ex. hur mÃ¥nga gÃ¥nger det Ã¶ppnats, Tid Ã¶ppet de tio senaste gÃ¥ngerna. 
 
-Varje gång programmet stängs ändras en variabel (startar x++, stängs x--) så man märker om programmet stängt på ett annat sätt än tänkt. T.ex. p.g.a. crash. 
+Varje gÃ¥ng programmet stÃ¤ngs Ã¤ndras en variabel (startar x++, stÃ¤ngs x--) sÃ¥ man mÃ¤rker om programmet stÃ¤ngt pÃ¥ ett annat sÃ¤tt Ã¤n tÃ¤nkt. T.ex. p.g.a. crash. 
 
-Skicka mail till en mailadress så visas ett meddelande i programmet. 
---PÅBÖRJAD--
+Skicka mail till en mailadress sÃ¥ visas ett meddelande i programmet. 
+--PÃ…BÃ–RJAD--
 
 -----------
 
@@ -20,26 +20,29 @@ Nytt:
 Flappy Bird
 --KLART--
 
-Ta tid på for-loop. Rakna 100 for-looper medans en timer tickar och dela sedan tiden med 100 för att få reda på hur lång tid en for-loop tar. 
+Ta tid pÃ¥ for-loop. Rakna 100 for-looper medans en timer tickar och dela sedan tiden med 100 fÃ¶r att fÃ¥ reda pÃ¥ hur lÃ¥ng tid en for-loop tar. 
 
 
-Nummerplåtslump
+NummerplÃ¥tslump
 --KLART--
 
 "Spotifyslump"
-En lista på t.ex. 30 låtar och en slumpgenerator som bestammet ordning, och en låt spelas bara en gång. t.ex. --- if(låtett==låttvå) { RandomIgen }
+En lista pÃ¥ t.ex. 30 lÃ¥tar och en slumpgenerator som bestammet ordning, och en lÃ¥t spelas bara en gÃ¥ng. t.ex. --- if(lÃ¥tett==lÃ¥ttvÃ¥) { RandomIgen }
 
 
 Snakeiplayer
 Snake multiplayer
 
 
-En ruta som när man trycker på den blir helskärm, m.h.a. size++
+En ruta som nÃ¤r man trycker pÃ¥ den blir helskÃ¤rm, m.h.a. size++
 
 
-Frågespel, typ QuizKampen. Kan använda update xml för att spela mot varandra
+FrÃ¥gespel, typ QuizKampen. Kan anvÃ¤nda update xml fÃ¶r att spela mot varandra
 
 
 Graf
-En graf ritad av for-loopade linjer/JLabels. Sen en funktion, som om den ar högst (5,5,-5,-5), och man skriver att x ska vara 3, raknar den 
-x = xstring + 5 (då x börjar i vanstra kanten, och det blir +5 för att komma in i mitten)
+En graf ritad av for-loopade linjer/JLabels. Sen en funktion, som om den ar hÃ¶gst (5,5,-5,-5), och man skriver att x ska vara 3, raknar den 
+x = xstring + 5 (dÃ¥ x bÃ¶rjar i vanstra kanten, och det blir +5 fÃ¶r att komma in i mitten)
+
+
+Mailåprogram för alla mailadresser man har, på ett ställe!
