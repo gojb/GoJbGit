@@ -3,6 +3,7 @@ package gojbguide;
 import java.util.Properties;
 
 import javax.mail.*;
+import javax.swing.JOptionPane;
 
 public class TaEmotMail implements Runnable{
 
@@ -25,14 +26,27 @@ public class TaEmotMail implements Runnable{
 			folder.open(Folder.READ_WRITE);
 			Message[] msgs = folder.getMessages();
 
-			for (Message msg : msgs) {
+			for (int j = msgs.length-1; j > 0; j--) {
+		
+				Message msg = msgs[j];
+//				System.out.println("---" + msg.getContent());;
+				
 				System.err.println("lerj");
-
+				if(msg.isSet(Flags.Flag.SEEN)){
+				System.out.println("SEEN");	
+				}
+				else {
 				if(msg.getSubject().toString().contains(GoJb1.prop.getProperty("ID","sepå"))){
+					msg.setFlag(Flags.Flag.SEEN, true);
 					System.err.println(msg.getMessageNumber());
 					System.out.println(msg.getSubject());
 					System.err.println(msg.getContent());
 					System.out.println();
+					JOptionPane.showMessageDialog(GoJb1.frameHuvud, msg.getContent());
+				}
+				else{
+					System.out.println("Nada");
+				}
 				}
 			}
 

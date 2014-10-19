@@ -45,4 +45,4 @@ En graf ritad av for-loopade linjer/JLabels. Sen en funktion, som om den ar hÃ¶g
 x = xstring + 5 (dÃ¥ x bÃ¶rjar i vanstra kanten, och det blir +5 fÃ¶r att komma in i mitten)
 
 
-Test
+Mailåprogram för alla mailadresser man har, på ett ställe!
