@@ -1,7 +1,5 @@
 package gojbguide;
 
-import java.util.Properties;
-
 import javax.mail.*;
 
 public class TaEmotMail implements Runnable{
@@ -11,9 +9,7 @@ public class TaEmotMail implements Runnable{
 	}
 	@Override
 	public void run(){
-		Properties props = System.getProperties();
-		props.setProperty("mail.store.protocol", "imaps");
-		Session session = Session.getDefaultInstance(props, null);
+		Session session = Session.getDefaultInstance(System.getProperties());
 		System.out.println("Funkar");
 		try {
 			Store store = session.getStore("imap");

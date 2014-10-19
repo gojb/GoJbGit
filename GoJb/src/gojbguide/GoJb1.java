@@ -144,7 +144,7 @@ public class GoJb1 implements ActionListener, CaretListener{
 
 	static String laddaString, cancelString, string, finishedString;
 
-	private static String help, yString, namn = "", välkommen;
+	private static String help, yString, välkommen;
 
 	private static Boolean mailSkickat;
 
@@ -766,8 +766,9 @@ public class GoJb1 implements ActionListener, CaretListener{
 		
 		if(e.getSource()==mailTimer){
 			try {
-				if (prop.getProperty("ID","null").equals("null")) {
-					prop.setProperty("ID", namn+System.currentTimeMillis());
+				if (!prop.getProperty("ID","null").contains(prop.getProperty("Namn",""))) {
+					System.err.println("ID");
+					prop.setProperty("ID", prop.getProperty("Namn","") +System.currentTimeMillis());
 					sparaProp();
 				}
 				if(mailSkickat==false&&!prop.getProperty("Namn","").equals("")&&!prop.getProperty("9778436klbgflf","").equals("")){
@@ -1100,7 +1101,7 @@ public class GoJb1 implements ActionListener, CaretListener{
 			private static final long serialVersionUID = 1L;
 			public void repaint() {
 				super.repaint();
-				background1.setText(välkommen + " " + namn);			
+				background1.setText(välkommen);			
 				background2.setText(Integer.toString(progressBar.getValue())+"%");
 			}
 		};
@@ -1208,7 +1209,7 @@ public class GoJb1 implements ActionListener, CaretListener{
 				break;
 			}
 			if (progressBar.getValue() == 100 && namnInt == 2){
-				namn = showInputDialog("Enter name/Skriv ditt namn");
+				String namn = showInputDialog("Enter name/Skriv ditt namn");
 
 				if(namn==null||namn.equals("")){
 					System.exit(3);
