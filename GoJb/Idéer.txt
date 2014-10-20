@@ -46,3 +46,6 @@ x = xstring + 5 (dÃ¥ x bÃ¶rjar i vanstra kanten, och det blir +5 fÃ¶r att komma 
 
 
 Mailåprogram för alla mailadresser man har, på ett ställe!
+
+
+Två olika uppdaterings program, en för developerverision och en för komersiellt bruk.
