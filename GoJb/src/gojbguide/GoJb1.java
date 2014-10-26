@@ -1259,11 +1259,7 @@ public class GoJb1 implements ActionListener, CaretListener, MouseInputListener{
 			namnInt = 1;
 		}
 	}
-	void Bilder(JButton[] buttons, ImageIcon icon1,ImageIcon icon2,ImageIcon icon3,
-			ImageIcon icon4,ImageIcon icon5,ImageIcon icon6,ImageIcon icon7,
-			ImageIcon icon8,ImageIcon icon9){
-
-		ImageIcon[] iconer = new ImageIcon[]{icon1,icon2,icon3,icon4,icon5,icon6,icon7,icon8,icon9};
+	void Bilder(JButton[] buttons, ImageIcon...iconer){
 		for (int i = 1; i < buttons.length; i++) {
 			if(iconer[i-1] != null){
 				buttons[i].setIcon(iconer[i-1]);
