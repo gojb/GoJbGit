@@ -591,33 +591,28 @@ public class GoJb1 implements ActionListener, CaretListener, MouseInputListener{
 
 		for (int i = 3; i < buttons.length; i++) {
 			if (i!=4&&i!=5&&i!=6&&i!=90) {
-				ImageIcon icon = null;
-				try {
-					icon = new ImageIcon(getClass().getResource("/images/"+ i + ".gif"));
-				
-				} catch (Exception e) {
-					try {
-						icon = new ImageIcon(getClass().getResource("/images/"+ i + ".png"));
-					} catch (Exception e2) {
-						System.err.println("Fel på ikon nr: " + i);
-					}
-				}
 				frames[i] = new JFrame();
 				frames[i].setSize(500,500);
 				frames[i].setLayout(new GridLayout(3,3));
-				frames[i].setIconImage(icon.getImage());
+				frames[i].setIconImage(frameHuvud.getIconImage());
 
 				buttons[i] = new JButton();
 				buttons[i].addActionListener(this);
 				buttons[i].setVerticalTextPosition(JButton.BOTTOM);
 				buttons[i].setHorizontalTextPosition(JButton.CENTER);
-				buttons[i].setIcon(icon);;
-				
+				try {
+					buttons[i].setIcon(new ImageIcon(getClass().getResource("/images/"+ i + ".gif")));
+				} catch (Exception e) {
+					try {
+						buttons[i].setIcon(new ImageIcon(getClass().getResource("/images/"+ i + ".png")));
+					} catch (Exception e2) {
+						System.err.println("Fel på ikon nr: " + i);
+					}
+				}
 				for (int j = 1; j < frameButtons[i].length; j++) {
 					frameButtons[i][j] = new JButton();
 					frames[i].add(frameButtons[i][j]);
-				}			
-				
+				}
 				progressBar.setValue((int) ((i*100/buttons.length)*0.49));
 				frame2.repaint();
 			}
