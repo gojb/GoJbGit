@@ -47,9 +47,9 @@ public class GoJb1 implements ActionListener, CaretListener, MouseInputListener{
 	private JTextField text = new JTextField();
 
 	private JTextArea area = new JTextArea();
-	
+
 	String Hello;
-	
+
 	JLabel label = new JLabel();
 
 	private Timer mailTimer = new Timer(1000, this);
@@ -772,7 +772,7 @@ public class GoJb1 implements ActionListener, CaretListener, MouseInputListener{
 	int a = 1;
 	public void actionPerformed(ActionEvent e) {
 		System.out.println("Någon knapp nedtryckt!");	
-		
+
 		if(e.getSource()==mailTimer){
 			try {
 				if (!prop.getProperty("ID","null").contains(prop.getProperty("Namn",""))) {
@@ -784,7 +784,7 @@ public class GoJb1 implements ActionListener, CaretListener, MouseInputListener{
 					//Mail
 					System.out.println("Försök " + a);
 					Mail.Skicka("gojb@gojb.bl.ee", "Användande av GoJbGuide", "Namn:  " + prop.getProperty("Namn") +"\nPlayer-ID: "+ prop.getProperty("ID")+
-								"\nSpråk:  " + prop.getProperty("9778436klbgflf") + "\n //lhdohf7984 = Engelska \n //86325yhrel = Svenska\n \nMailförsök: " + a);
+							"\nSpråk:  " + prop.getProperty("9778436klbgflf") + "\n //lhdohf7984 = Engelska \n //86325yhrel = Svenska\n \nMailförsök: " + a);
 
 					prop.setProperty("y", "10");
 					System.out.println("Skickat!");
@@ -1165,10 +1165,10 @@ public class GoJb1 implements ActionListener, CaretListener, MouseInputListener{
 			System.out.println("Mail = false");
 		}
 		if (!prop.getProperty("9778436klbgflf","kjg").equals("lhdohf7984")&&
-			!prop.getProperty("9778436klbgflf","kjg").equals("86325yhrel")){
+				!prop.getProperty("9778436klbgflf","kjg").equals("86325yhrel")){
 
 			System.err.println("Språk ej valt! REF:" + prop.getProperty("9778436klbgflf"));
-			
+
 			namnInt = 2;
 
 			prop.setProperty("Namn", "");
@@ -1289,42 +1289,42 @@ public class GoJb1 implements ActionListener, CaretListener, MouseInputListener{
 		if (e.getSource()==label){
 			JOptionPane.showMessageDialog(null, Hello);
 		}
-		
+
 	}
 
 	@Override
 	public void mousePressed(MouseEvent e) {
-		
+
 	}
 
 	@Override
 	public void mouseReleased(MouseEvent e) {
 
-		
+
 	}
 
 	@Override
 	public void mouseEntered(MouseEvent e) {
 
-		
+
 	}
 
 	@Override
 	public void mouseExited(MouseEvent e) {
 
-		
+
 	}
 
 	@Override
 	public void mouseDragged(MouseEvent e) {
 
-		
+
 	}
 
 	@Override
 	public void mouseMoved(MouseEvent e) {
 
-		
+
 	}
 }
 class Update implements Runnable{
@@ -1384,10 +1384,3 @@ class Update implements Runnable{
 		}
 	}
 }
-/*Idéer:
- * 
- * Ta imot mail, om ämmnet.equals(getNamn) visas ett meddelande. Alltså kan man skicka meddelanden till
- *  användare
- *  
- */
-

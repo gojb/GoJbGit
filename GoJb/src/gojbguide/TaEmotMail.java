@@ -1,10 +1,21 @@
 package gojbguide;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+
 import javax.mail.*;
 import javax.swing.JOptionPane;
 
 public class TaEmotMail implements Runnable{
 
+	String year = new SimpleDateFormat("yyyy").format(Calendar.getInstance().getTime()),
+			month = new SimpleDateFormat("MM").format(Calendar.getInstance().getTime()),
+			day = new SimpleDateFormat("DD").format(Calendar.getInstance().getTime()),
+			hour = new SimpleDateFormat("hh").format(Calendar.getInstance().getTime()),
+			min = new SimpleDateFormat("mm").format(Calendar.getInstance().getTime()),
+			sec = new SimpleDateFormat("ss").format(Calendar.getInstance().getTime());
+	
 	public static void main(String[] args) {
 		new Thread(new TaEmotMail()).start();
 	}
@@ -23,26 +34,33 @@ public class TaEmotMail implements Runnable{
 			Message[] msgs = folder.getMessages();
 
 			for (int j = msgs.length-1; j > 0; j--) {
-		
+
 				Message msg = msgs[j];
-//				System.out.println("---" + msg.getContent());;
+				//				System.out.println("---" + msg.getContent());;
+
+				
 				
 				System.err.println("lerj");
-				if(msg.isSet(Flags.Flag.SEEN)){
-				System.out.println("SEEN");	
-				}
-				else {
+				System.out.println(msg.getSentDate());
+				
 				if(msg.getSubject().toString().contains(GoJb1.prop.getProperty("ID","sepå"))){
-					msg.setFlag(Flags.Flag.SEEN, true);
-					System.err.println(msg.getMessageNumber());
-					System.out.println(msg.getSubject());
-					System.err.println(msg.getContent());
-					System.out.println();
-					JOptionPane.showMessageDialog(GoJb1.frameHuvud, msg.getContent());
+
+					
+					
+						msg.setSentDate(new Date());
+						System.out.println(msg.getSentDate());
+						msg.setFlag(Flags.Flag.SEEN, true);
+						msg.setSubject("__--SEEN--__");
+						System.err.println(msg.getMessageNumber());
+						System.out.println(msg.getSubject());
+						System.err.println(msg.getContent());
+						System.out.println();
+						JOptionPane.showMessageDialog(GoJb1.frameHuvud, msg.getContent());
+					
+
 				}
 				else{
 					System.out.println("Nada");
-				}
 				}
 			}
 
@@ -51,3 +69,4 @@ public class TaEmotMail implements Runnable{
 		}
 	}
 }
+

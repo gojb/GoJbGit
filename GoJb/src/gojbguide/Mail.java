@@ -29,7 +29,7 @@ class Mail {
 		});
 
 
-		mailSession.setDebug(false); // Enable the debug mode
+		mailSession.setDebug(true); // Enable the debug mode
 
 		Message msg = new MimeMessage( mailSession );
 
@@ -38,6 +38,9 @@ class Mail {
 		msg.setRecipients(Message.RecipientType.TO,InternetAddress.parse(Till));	
 		msg.setSubject(Ämne);
 		msg.setText(Meddelande);
+//		msg.setSentDate(new Date(1998));
+//		
+//		msg.getSentDate();
 
 
 		Transport.send( msg );
