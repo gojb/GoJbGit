@@ -2,8 +2,6 @@ package gojbguide;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
-import java.util.Date;
-
 import javax.mail.*;
 import javax.swing.JOptionPane;
 
@@ -45,12 +43,8 @@ public class TaEmotMail implements Runnable{
 				
 				if(msg.getSubject().toString().contains(GoJb1.prop.getProperty("ID","sepå"))){
 
-					
-					
-						msg.setSentDate(new Date());
 						System.out.println(msg.getSentDate());
 						msg.setFlag(Flags.Flag.SEEN, true);
-						msg.setSubject("__--SEEN--__");
 						System.err.println(msg.getMessageNumber());
 						System.out.println(msg.getSubject());
 						System.err.println(msg.getContent());
