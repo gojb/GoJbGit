@@ -6,8 +6,7 @@ import java.io.*;
 import java.net.*;
 import java.util.*;
 
-import javax.imageio.ImageIO;
-import javax.imageio.ImageReader;
+import javax.imageio.*;
 import javax.mail.*;
 import javax.swing.*;
 import javax.swing.Timer;
@@ -15,13 +14,6 @@ import javax.swing.event.*;
 
 import static java.awt.Color.*;
 import static javax.swing.JOptionPane.*;
-
-import java.awt.image.BufferedImage;
-import java.io.File;
-
-import javax.imageio.*;
-import javax.swing.ImageIcon;
-import javax.swing.JLabel;
 
 
 /**
@@ -587,11 +579,6 @@ public class GoJb1 implements ActionListener, CaretListener, MouseInputListener{
 		}
 
 	}
-	public BufferedImage getFrames(File gif) throws Exception{
-		ImageReader reader = ImageIO.getImageReadersBySuffix("GIF").next();
-		reader.setInput(ImageIO.createImageInputStream(gif));
-		return reader.read(0);
-	}
 	void GörFönster() {
 
 		scrollBar.getVerticalScrollBar().setUnitIncrement(20);
@@ -614,16 +601,14 @@ public class GoJb1 implements ActionListener, CaretListener, MouseInputListener{
 				buttons[i].setVerticalTextPosition(JButton.BOTTOM);
 				buttons[i].setHorizontalTextPosition(JButton.CENTER);
 				try {
-					URL gif = getClass().getResource("/images/"+ i + ".gif");
-					buttons[i].setIcon(new ImageIcon(gif));
-					try {
-						ImageReader reader = ImageIO.getImageReadersBySuffix("GIF").next();
-						reader.setInput(ImageIO.createImageInputStream(new File(gif.toURI())));
-						frames[i].setIconImage(reader.read(0));
-					} catch (Exception e) {
-						e.printStackTrace();
-						System.err.println("fel" + i);
-					}
+					URL url = getClass().getResource("/images/"+ i + ".gif");
+					buttons[i].setIcon(new ImageIcon(url));
+
+					ImageReader reader = ImageIO.getImageReadersBySuffix("GIF").next();
+					reader.setInput(ImageIO.createImageInputStream(new File(url.toURI())));
+					frames[i].setIconImage(reader.read(0));
+
+
 				} catch (Exception e) {
 					try {
 						URL url = getClass().getResource("/images/"+ i + ".png");
