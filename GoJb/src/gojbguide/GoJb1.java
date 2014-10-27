@@ -6,6 +6,8 @@ import java.io.*;
 import java.net.*;
 import java.util.*;
 
+import javax.imageio.ImageIO;
+import javax.imageio.ImageReader;
 import javax.mail.*;
 import javax.swing.*;
 import javax.swing.Timer;
@@ -13,6 +15,13 @@ import javax.swing.event.*;
 
 import static java.awt.Color.*;
 import static javax.swing.JOptionPane.*;
+
+import java.awt.image.BufferedImage;
+import java.io.File;
+
+import javax.imageio.*;
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
 
 
 /**
@@ -578,6 +587,11 @@ public class GoJb1 implements ActionListener, CaretListener, MouseInputListener{
 		}
 
 	}
+	public BufferedImage getFrames(File gif) throws Exception{
+		ImageReader reader = ImageIO.getImageReadersBySuffix("GIF").next();
+		reader.setInput(ImageIO.createImageInputStream(gif));
+		return reader.read(0);
+	}
 	void GörFönster() {
 
 		scrollBar.getVerticalScrollBar().setUnitIncrement(20);
@@ -594,17 +608,27 @@ public class GoJb1 implements ActionListener, CaretListener, MouseInputListener{
 				frames[i] = new JFrame();
 				frames[i].setSize(500,500);
 				frames[i].setLayout(new GridLayout(3,3));
-				frames[i].setIconImage(frameHuvud.getIconImage());
 
 				buttons[i] = new JButton();
 				buttons[i].addActionListener(this);
 				buttons[i].setVerticalTextPosition(JButton.BOTTOM);
 				buttons[i].setHorizontalTextPosition(JButton.CENTER);
 				try {
-					buttons[i].setIcon(new ImageIcon(getClass().getResource("/images/"+ i + ".gif")));
+					URL gif = getClass().getResource("/images/"+ i + ".gif");
+					buttons[i].setIcon(new ImageIcon(gif));
+					try {
+						ImageReader reader = ImageIO.getImageReadersBySuffix("GIF").next();
+						reader.setInput(ImageIO.createImageInputStream(new File(gif.toURI())));
+						frames[i].setIconImage(reader.read(0));
+					} catch (Exception e) {
+						e.printStackTrace();
+						System.err.println("fel" + i);
+					}
 				} catch (Exception e) {
 					try {
-						buttons[i].setIcon(new ImageIcon(getClass().getResource("/images/"+ i + ".png")));
+						URL url = getClass().getResource("/images/"+ i + ".png");
+						buttons[i].setIcon(new ImageIcon(url));
+						frames[i].setIconImage(new ImageIcon(url).getImage());
 					} catch (Exception e2) {
 						System.err.println("Fel på ikon nr: " + i);
 					}
