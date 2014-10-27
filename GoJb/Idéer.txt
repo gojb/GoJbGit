@@ -1,7 +1,7 @@
 Idéer Java
  
 GojbGuide:
-Lagga till en laddframe på kanske 2 sek som sager någonting i form med "Hello/Hej *namn*. 
+Lagga till en laddframe på kanske 2 sek som säger någonting i form med "Hello/Hej *namn*. 
 --KLART--
 
 Möjlighet att byta namn och då skickad ett mejl med info om namnbyte. 
@@ -11,7 +11,7 @@ Statistik om appen. Varje, säg tionde gång programmet körs skickas ett ett me
 Varje gång programmet stängs ändras en variabel (startar x++, stängs x--) så man märker om programmet stängt på ett annat sätt än tänkt. T.ex. p.g.a. crash. 
 
 Skicka mail till en mailadress så visas ett meddelande i programmet. 
---PÅBÖRJAD--
+--KLART--
 
 -----------
 
@@ -45,7 +45,10 @@ En graf ritad av for-loopade linjer/JLabels. Sen en funktion, som om den ar hög
 x = xstring + 5 (då x börjar i vanstra kanten, och det blir +5 för att komma in i mitten)
 
 
-Mail�program f�r alla mailadresser man har, p� ett st�lle!
+Mailprogram får alla mailadresser man har, på ett ställe!
+--PÅBÖRJAD--
 
 
-Tv� olika uppdaterings program, en f�r developerverision och en f�r komersiellt bruk.
+Program med alla GoJbGuide använadre samlade, skapas från mailen. Enkelt att ta bort användare, våra som vi testar med.
+
+Två olika uppdaterings program, en för developerverision och en får komersiellt bruk.
