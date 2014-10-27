@@ -31,18 +31,17 @@ public class TaEmotMail implements Runnable{
 			folder.open(Folder.READ_WRITE);
 			Message[] msgs = folder.getMessages();
 
-			for (int j = msgs.length-1; j > 0; j--) {
-
-				Message msg = msgs[j];
-				//				System.out.println("---" + msg.getContent());;
-
+			for (Message msg:msgs){
 				
 				
 				System.err.println("lerj");
 				System.out.println(msg.getSentDate());
+				System.err.println(msg.getAllRecipients()[0]);
 				
-				if(msg.getSubject().toString().contains(GoJb1.prop.getProperty("ID","sepå"))){
-
+				
+				if(msg.getAllRecipients()[0].toString().contains(GoJb1.prop.getProperty("ID","sepå").toLowerCase())){
+					System.out.println("dssdfbdfd");
+						if(!msg.isSet(Flags.Flag.SEEN)){
 						System.out.println(msg.getSentDate());
 						msg.setFlag(Flags.Flag.SEEN, true);
 						System.err.println(msg.getMessageNumber());
@@ -50,7 +49,7 @@ public class TaEmotMail implements Runnable{
 						System.err.println(msg.getContent());
 						System.out.println();
 						JOptionPane.showMessageDialog(GoJb1.frameHuvud, msg.getContent());
-					
+						}
 
 				}
 				else{
