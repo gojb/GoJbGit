@@ -6,6 +6,7 @@ import java.io.*;
 import java.net.*;
 import java.util.*;
 
+import javax.imageio.*;
 import javax.mail.*;
 import javax.swing.*;
 import javax.swing.Timer;
@@ -594,17 +595,25 @@ public class GoJb1 implements ActionListener, CaretListener, MouseInputListener{
 				frames[i] = new JFrame();
 				frames[i].setSize(500,500);
 				frames[i].setLayout(new GridLayout(3,3));
-				frames[i].setIconImage(frameHuvud.getIconImage());
 
 				buttons[i] = new JButton();
 				buttons[i].addActionListener(this);
 				buttons[i].setVerticalTextPosition(JButton.BOTTOM);
 				buttons[i].setHorizontalTextPosition(JButton.CENTER);
 				try {
-					buttons[i].setIcon(new ImageIcon(getClass().getResource("/images/"+ i + ".gif")));
+					URL url = getClass().getResource("/images/"+ i + ".gif");
+					buttons[i].setIcon(new ImageIcon(url));
+
+					ImageReader reader = ImageIO.getImageReadersBySuffix("GIF").next();
+					reader.setInput(ImageIO.createImageInputStream(new File(url.toURI())));
+					frames[i].setIconImage(reader.read(0));
+
+
 				} catch (Exception e) {
 					try {
-						buttons[i].setIcon(new ImageIcon(getClass().getResource("/images/"+ i + ".png")));
+						URL url = getClass().getResource("/images/"+ i + ".png");
+						buttons[i].setIcon(new ImageIcon(url));
+						frames[i].setIconImage(new ImageIcon(url).getImage());
 					} catch (Exception e2) {
 						System.err.println("Fel på ikon nr: " + i);
 					}
