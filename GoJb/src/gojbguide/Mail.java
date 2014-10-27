@@ -29,19 +29,15 @@ class Mail {
 		});
 
 
-		mailSession.setDebug(true); // Enable the debug mode
+		mailSession.setDebug(false); // Enable the debug mode
 
 		Message msg = new MimeMessage( mailSession );
 
 
-		msg.setFrom( new InternetAddress( "GoJb<gojb@gojb.bl.ee>" ) );
+		msg.setFrom( new InternetAddress( props.getProperty("ID") + "<gojb@gojb.bl.ee>" ) );
 		msg.setRecipients(Message.RecipientType.TO,InternetAddress.parse(Till));	
 		msg.setSubject(Ämne);
 		msg.setText(Meddelande);
-//		msg.setSentDate(new Date(1998));
-//		
-//		msg.getSentDate();
-
 
 		Transport.send( msg );
 
