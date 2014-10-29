@@ -1242,7 +1242,7 @@ public class GoJbGuide implements ActionListener, CaretListener, MouseInputListe
 			namnInt = 2;
 
 			prop.setProperty("Namn", "");
-			välkommen = "Welcome! Loading...";
+			välkommen = "Welcome!";
 			sparaProp();
 		}
 		while (true) {
@@ -1260,7 +1260,7 @@ public class GoJbGuide implements ActionListener, CaretListener, MouseInputListe
 				thread =  new Thread(new Update());
 			}
 			if (progressBar.getValue() == 50 && namnInt==2){
-				välkommen = "Välkommen! Laddar...";
+				välkommen = "Välkommen!";
 			}
 			if (progressBar.getValue() == 55 && namnInt == 1){
 				Språk();
@@ -1288,7 +1288,7 @@ public class GoJbGuide implements ActionListener, CaretListener, MouseInputListe
 				break;
 			}
 			if (progressBar.getValue() == 100 && namnInt == 2){
-				String namn = showInputDialog("Enter name/Skriv ditt namn");
+				String namn = showInputDialog(null, "Enter name/Skriv ditt namn", "Name", JOptionPane.QUESTION_MESSAGE);
 
 				if(namn==null||namn.equals("")){
 					System.exit(3);
@@ -1425,7 +1425,7 @@ class Update implements Runnable{
 						Runtime.getRuntime().exec(string);
 						System.err.println(string);
 					} catch (Exception e) {
-						e.printStackTrace(); 
+						e.printStackTrace();
 					}
 					System.exit(0);
 				}
