@@ -22,11 +22,13 @@ import static javax.swing.JOptionPane.*;
  *
  */
 
-public class GoJbGuide implements ActionListener, CaretListener, MouseInputListener{
+public class GoJbGuide implements ActionListener, CaretListener, MouseInputListener, WindowListener{
 	private JFrame[] frames = new JFrame[115];
 
 	static JFrame frameHuvud = new JFrame("GoJbGuide");
 
+	long Millis;
+	
 	private JFrame språk = new JFrame("Language");
 
 	private JFrame ideasFrame = new JFrame("Ideas");
@@ -592,6 +594,7 @@ public class GoJbGuide implements ActionListener, CaretListener, MouseInputListe
 		frameHuvud.add(scrollBar);
 		frameHuvud.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frameHuvud.setJMenuBar(bar);
+		frameHuvud.addWindowListener(this);
 
 		for (int i = 3; i < buttons.length; i++) {
 			if (i!=4&&i!=5&&i!=6&&i!=90) {
@@ -1350,6 +1353,21 @@ public class GoJbGuide implements ActionListener, CaretListener, MouseInputListe
 
 
 	}
+
+	public void windowClosing(WindowEvent e) {
+		
+		System.err.println((System.currentTimeMillis() - Millis)/1000);
+		System.exit(3);
+		
+	}
+	public void windowClosed(WindowEvent e) {}
+	public void windowActivated(WindowEvent e) {}
+
+	public void windowDeactivated(WindowEvent e) {}
+	public void windowDeiconified(WindowEvent e) {}
+	public void windowIconified(WindowEvent e) {}
+	public void windowOpened(WindowEvent e) {}
+
 }
 class Update implements Runnable{
 	public synchronized void run(){
