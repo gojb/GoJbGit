@@ -60,7 +60,8 @@ public class GoJb1 implements ActionListener, CaretListener, MouseInputListener{
 
 	private JMenuItem 	väljSpråk = new JMenuItem(),
 			helpItem = new JMenuItem("Hjälp"),
-			ideasItem = new JMenuItem("Ideas/bugs");
+			ideasItem = new JMenuItem("Ideas/bugs"),
+			namnbyte = new JMenuItem();
 
 	private ImageIcon kullersten = new ImageIcon(getClass().getResource("/images/1.png")),
 			rödsten = new ImageIcon(getClass().getResource("/images/2.png")),
@@ -228,6 +229,7 @@ public class GoJb1 implements ActionListener, CaretListener, MouseInputListener{
 				hjälpMenu.setText("Hjälp");
 				helpItem.setText("Hjälp");
 				ideasItem.setText("Idéer/buggar");
+				namnbyte.setText("Byt namn");
 
 				buttons[3].setText("Träplankor");
 				buttons[7].setText("Automat");
@@ -405,6 +407,7 @@ public class GoJb1 implements ActionListener, CaretListener, MouseInputListener{
 				hjälpMenu.setText("Help");
 				helpItem.setText("Help");
 				ideasItem.setText("Ideas/Bugs");
+				namnbyte.setText("Change name");
 
 				buttons[3].setText("Planks");
 				buttons[7].setText("Dispenser");
@@ -752,6 +755,8 @@ public class GoJb1 implements ActionListener, CaretListener, MouseInputListener{
 
 		helpItem.addActionListener(this);
 		ideasItem.addActionListener(this);
+		namnbyte.addActionListener(this);
+		väljSpråk.addActionListener(this);
 
 		mailTimer.start();
 
@@ -767,7 +772,8 @@ public class GoJb1 implements ActionListener, CaretListener, MouseInputListener{
 		språkMeny.add(väljSpråk);
 		hjälpMenu.add(helpItem);
 		hjälpMenu.add(ideasItem);
-		väljSpråk.addActionListener(this);
+		hjälpMenu.add(namnbyte);
+
 
 		ideasFrame.setSize(525,500);
 		ideasFrame.setLocationRelativeTo(null);
@@ -784,9 +790,9 @@ public class GoJb1 implements ActionListener, CaretListener, MouseInputListener{
 
 		if(e.getSource()==mailTimer){
 			try {
-				if (!prop.getProperty("ID","null").contains(prop.getProperty("Namn",""))) {
+				if (prop.getProperty("ID","").equals("")) {
 					System.err.println("ID");
-					prop.setProperty("ID", prop.getProperty("Namn","") +System.currentTimeMillis());
+					prop.setProperty("ID", Long.toString(System.currentTimeMillis()));
 					sparaProp();
 				}
 				if(mailSkickat==false&&!prop.getProperty("Namn","").equals("")&&!prop.getProperty("9778436klbgflf","").equals("")){
@@ -820,6 +826,19 @@ public class GoJb1 implements ActionListener, CaretListener, MouseInputListener{
 		}
 		if (e.getSource()==ideasItem) {
 			ideasFrame.setVisible(true);
+		}
+		if (e.getSource()== namnbyte) {
+			String old = prop.getProperty("Namn");
+			String s = showInputDialog(null,"Enter your new name",old);
+			if (s!=null&&s!=""&&!old.equals(s)) {
+				prop.setProperty("Namn", s);
+				sparaProp();
+				try {
+					Mail.Skicka("gojb@gojb.bl.ee", "Namnyte på GoJbGuide", old + " - har bytt namn till - " + s);
+				} catch (Exception e1){
+					e1.printStackTrace();
+				}
+			}
 		}
 		if(skicka==e.getSource()){
 			try {
