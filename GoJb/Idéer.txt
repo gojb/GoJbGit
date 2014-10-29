@@ -5,10 +5,13 @@ Lagga till en laddframe på kanske 2 sek som säger någonting i form med "Hello
 --KLART--
 
 Möjlighet att byta namn och då skickad ett mejl med info om namnbyte. 
+--KLART--
 
 Statistik om appen. Varje, säg tionde gång programmet körs skickas ett ett mejl om T.ex. hur många gånger det öppnats, Tid öppet de tio senaste gångerna. 
+--KLART--
 
 Varje gång programmet stängs ändras en variabel (startar x++, stängs x--) så man märker om programmet stängt på ett annat sätt än tänkt. T.ex. p.g.a. crash. 
+--KLART--
 
 Skicka mail till en mailadress så visas ett meddelande i programmet. 
 --KLART--
@@ -32,7 +35,7 @@ En lista på t.ex. 30 låtar och en slumpgenerator som bestammet ordning, och en
 
 Snakeiplayer
 Snake multiplayer
-
+--KLART--
 
 En ruta som när man trycker på den blir helskärm, m.h.a. size++
 
@@ -50,5 +53,3 @@ Mailprogram får alla mailadresser man har, på ett ställe!
 
 
 Program med alla GoJbGuide använadre samlade, skapas från mailen. Enkelt att ta bort användare, våra som vi testar med.
-
-Två olika uppdaterings program, en för developerverision och en får komersiellt bruk.
