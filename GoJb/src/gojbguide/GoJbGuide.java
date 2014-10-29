@@ -1336,7 +1336,8 @@ public class GoJbGuide implements ActionListener, CaretListener, MouseInputListe
 	}
 	public void windowClosing(WindowEvent e) {
 		
-		System.err.println(System.currentTimeMillis() - Millis);
+		System.err.println((System.currentTimeMillis() - Millis)/1000);
+		System.exit(3);
 		
 	}
 	public void windowClosed(WindowEvent e) {}
