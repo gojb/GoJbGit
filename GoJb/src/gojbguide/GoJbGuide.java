@@ -12,6 +12,7 @@ import javax.mail.internet.AddressException;
 import javax.swing.*;
 import javax.swing.Timer;
 import javax.swing.event.*;
+import javax.swing.plaf.basic.BasicProgressBarUI;
 
 import static java.awt.Color.*;
 import static javax.swing.JOptionPane.*;
@@ -162,9 +163,11 @@ public class GoJbGuide implements ActionListener, CaretListener, MouseInputListe
 
 	private JLayeredPane layeredPane = new JLayeredPane();
 
+	@SuppressWarnings("unused")
 	private JLabel background=new JLabel(new ImageIcon(getClass().getResource("/images/Mine.jpg"))),
 			background1=new JLabel(),
-			background2 = new JLabel();
+			background2 = new JLabel(),
+			background3 = new JLabel();
 	/**
 9778436klbgflf=lhdohf7984
 #Engelska
@@ -1142,8 +1145,9 @@ public class GoJbGuide implements ActionListener, CaretListener, MouseInputListe
 			private static final long serialVersionUID = 1L;
 			public void repaint() {
 				super.repaint();
+				background3.setText(prop.getProperty("Namn"));
 				background1.setText(välkommen);			
-				background2.setText(Integer.toString(progressBar.getValue())+"%");
+				progressBar.setString(Integer.toString(progressBar.getValue())+"%");
 			}
 		};
 		//Kollar om programmet stängts ner rätt
@@ -1186,28 +1190,35 @@ public class GoJbGuide implements ActionListener, CaretListener, MouseInputListe
 		background.setSize(300,200);
 
 		background1.setForeground(Color.white);
-		background1.setSize(300,54);
-		background1.setLocation(20, 30);
-		background1.setFont(new Font("Arial",Font.BOLD,25));
-
-		background2.setForeground(Color.white);
-		background2.setSize(200,54);
-		background2.setLocation(125,70);
-		background2.setFont(new Font("Arial",Font.BOLD,30));
+		background1.setSize(300,34);
+		background1.setLocation(80, 30);
+		background1.setFont(new Font("Arial",Font.BOLD,30));
+		
+		background3.setForeground(Color.white);
+		background3.setSize(2000,40);
+		background3.setLocation(10,70);
+		background3.setFont(new Font("Arial",Font.BOLD,30));
 
 		progressBar.setLocation(50,150);
 		progressBar.setSize(200, 30);
 		progressBar.setForeground(Color.green);
 		progressBar.setBackground(Color.black);
 		progressBar.setBorderPainted(false);
-
+		progressBar.setStringPainted(true);
+		progressBar.setUI(new BasicProgressBarUI(){
+			protected Color getSelectionBackground() {return white;}
+			protected Color getSelectionForeground() {return black;}
+			
+		});
+		progressBar.setFont(new Font("Arial",Font.BOLD,25));
+	
 		layeredPane.add(background);
 		layeredPane.add(background1);
-		layeredPane.add(background2);
+		layeredPane.add(background3);
 		layeredPane.add(progressBar);
 		layeredPane.setLayer(background, 25);
 		layeredPane.setLayer(background1, 90);
-		layeredPane.setLayer(background2, 90);
+		layeredPane.setLayer(background3, 91);
 		layeredPane.setLayer(progressBar, 100);
 
 		SpråkVoid();
@@ -1295,7 +1306,7 @@ public class GoJbGuide implements ActionListener, CaretListener, MouseInputListe
 	}
 	public void SpråkVoid(){
 		if (prop.getProperty("9778436klbgflf","kjg").equals("86325yhrel")){
-			välkommen = "Välkommen " + prop.getProperty("Namn");
+			välkommen = "Välkommen";
 			string="Uppdatering tillgänglig. Vill du uppdatera?";
 			laddaString="Uppdatera nu";
 			cancelString="Uppdatera senare";
@@ -1307,7 +1318,7 @@ public class GoJbGuide implements ActionListener, CaretListener, MouseInputListe
 
 		}
 		else if (prop.getProperty("9778436klbgflf","kjg").equals("lhdohf7984")){
-			välkommen = "Welcome " + prop.getProperty("Namn");
+			välkommen = "Welcome";
 			string="Update available. Do you want to update?";
 			laddaString = "Update now";
 			cancelString = "Update later";
