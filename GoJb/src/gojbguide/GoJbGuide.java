@@ -165,9 +165,9 @@ public class GoJbGuide implements ActionListener, CaretListener, MouseInputListe
 
 	@SuppressWarnings("unused")
 	private JLabel background=new JLabel(new ImageIcon(getClass().getResource("/images/Mine.jpg"))),
-			background1=new JLabel(),
-			background2 = new JLabel(),
-			background3 = new JLabel();
+	background1=new JLabel(),
+	background2 = new JLabel(),
+	background3 = new JLabel();
 	/**
 9778436klbgflf=lhdohf7984
 #Engelska
@@ -1159,7 +1159,7 @@ public class GoJbGuide implements ActionListener, CaretListener, MouseInputListe
 			prop.setProperty("CheckWrongShutdown","1");
 			sparaProp();
 		}
-		
+
 		prop.setProperty("TimesOpen", Integer.toString(Integer.sum(Integer.parseInt(prop.getProperty("TimesOpen","0")),1)));
 		prop.setProperty("TotalTimesOpen", Integer.toString(Integer.sum(Integer.parseInt(prop.getProperty("TotalTimesOpen","0")),1)));
 		if(prop.getProperty("TimesOpen", "0").equals("10")){
@@ -1193,7 +1193,7 @@ public class GoJbGuide implements ActionListener, CaretListener, MouseInputListe
 		background1.setSize(300,34);
 		background1.setLocation(80, 30);
 		background1.setFont(new Font("Arial",Font.BOLD,30));
-		
+
 		background3.setForeground(Color.white);
 		background3.setSize(2000,40);
 		background3.setLocation(10,70);
@@ -1208,10 +1208,10 @@ public class GoJbGuide implements ActionListener, CaretListener, MouseInputListe
 		progressBar.setUI(new BasicProgressBarUI(){
 			protected Color getSelectionBackground() {return white;}
 			protected Color getSelectionForeground() {return black;}
-			
+
 		});
 		progressBar.setFont(new Font("Arial",Font.BOLD,25));
-	
+
 		layeredPane.add(background);
 		layeredPane.add(background1);
 		layeredPane.add(background3);
@@ -1359,42 +1359,18 @@ public class GoJbGuide implements ActionListener, CaretListener, MouseInputListe
 		}
 
 	}
-
-	@Override
-	public void mousePressed(MouseEvent e) {
-
-	}
-
-	@Override
-	public void mouseReleased(MouseEvent e) {
-
-
-	}
-
-	@Override
-	public void mouseEntered(MouseEvent e) {
-
-
-	}
-
-	@Override
-	public void mouseExited(MouseEvent e) {
-
-
-	}
-
-	@Override
-	public void mouseDragged(MouseEvent e) {
-
-
-	}
-
-	@Override
-	public void mouseMoved(MouseEvent e) {
-
-
-	}
-
+	public void mousePressed(MouseEvent e) {}
+	public void mouseReleased(MouseEvent e) {}
+	public void mouseEntered(MouseEvent e) {}
+	public void mouseExited(MouseEvent e) {}
+	public void mouseDragged(MouseEvent e) {}
+	public void mouseMoved(MouseEvent e) {}	
+	public void windowClosed(WindowEvent e) {}
+	public void windowActivated(WindowEvent e) {}
+	public void windowDeactivated(WindowEvent e) {}
+	public void windowDeiconified(WindowEvent e) {}
+	public void windowIconified(WindowEvent e) {}
+	public void windowOpened(WindowEvent e) {}
 	public void windowClosing(WindowEvent e) {
 
 		prop.setProperty("TimeOpen", Double.toString(Double.sum(Double.parseDouble(prop.getProperty("TimeOpen","0")),(double)(System.currentTimeMillis() - Millis)/1000)));
@@ -1403,14 +1379,6 @@ public class GoJbGuide implements ActionListener, CaretListener, MouseInputListe
 		System.exit(3);
 
 	}
-	public void windowClosed(WindowEvent e) {}
-	public void windowActivated(WindowEvent e) {}
-
-	public void windowDeactivated(WindowEvent e) {}
-	public void windowDeiconified(WindowEvent e) {}
-	public void windowIconified(WindowEvent e) {}
-	public void windowOpened(WindowEvent e) {}
-
 }
 class Update implements Runnable{
 	public synchronized void run(){
