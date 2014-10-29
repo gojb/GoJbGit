@@ -53,7 +53,7 @@ public class GoJbGuide implements ActionListener, CaretListener, MouseInputListe
 
 	private JTextArea area = new JTextArea();
 
-	String Hello;
+	String Hello, newName;
 
 	JLabel label = new JLabel();
 
@@ -829,14 +829,14 @@ public class GoJbGuide implements ActionListener, CaretListener, MouseInputListe
 			}
 		}
 		if (e.getSource()==helpItem){
-			JOptionPane.showMessageDialog(null, help);
+			JOptionPane.showMessageDialog(null, help, "Help", JOptionPane.INFORMATION_MESSAGE);
 		}
 		if (e.getSource()==ideasItem) {
 			ideasFrame.setVisible(true);
 		}
 		if (e.getSource()== namnbyte) {
 			String old = prop.getProperty("Namn");
-			String s = showInputDialog(null,"Enter your new name",old);
+			String s = showInputDialog(null, newName, "Name", JOptionPane.INFORMATION_MESSAGE);
 			if (s!=null&&s!=""&&!old.equals(s)) {
 				prop.setProperty("Namn", s);
 				sparaProp();
@@ -1315,6 +1315,7 @@ public class GoJbGuide implements ActionListener, CaretListener, MouseInputListe
 			finishedString="Uppdatering slutförd. \nProgrammet kommer nu att starta om";
 			label.setText("Vad är detta? Tryck här");
 			namnInt = 1;
+			newName="Skriv nytt namn";
 
 		}
 		else if (prop.getProperty("9778436klbgflf","kjg").equals("lhdohf7984")){
@@ -1327,6 +1328,7 @@ public class GoJbGuide implements ActionListener, CaretListener, MouseInputListe
 			finishedString = "Uppdate finished. \nThe program will now restart";
 			label.setText("What is this? Press here");
 			namnInt = 1;
+			newName="Enter new name";
 		}
 	}
 	void Bilder(JButton[] buttons, ImageIcon...iconer){
@@ -1353,7 +1355,7 @@ public class GoJbGuide implements ActionListener, CaretListener, MouseInputListe
 	public void mouseClicked(MouseEvent e) {
 
 		if (e.getSource()==label){
-			JOptionPane.showMessageDialog(null, Hello);
+			JOptionPane.showMessageDialog(null, Hello, "Message", JOptionPane.INFORMATION_MESSAGE);
 		}
 
 	}
