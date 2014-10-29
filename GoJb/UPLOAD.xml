@@ -10,7 +10,7 @@
             <manifest>
             	<attribute name="Application-Name" value="GoJbGuide"/>
             	<attribute name="Permissions" value="all-permissions"/>
-                <attribute name="Main-Class" value="gojbguide.GoJb1"/>
+                <attribute name="Main-Class" value="gojbguide.GoJbGuide"/>
                 <attribute name="Class-Path" value="."/>
             </manifest>
             <fileset dir="${basedir}/bin"/>
