@@ -8,6 +8,7 @@ import java.util.*;
 
 import javax.imageio.*;
 import javax.mail.*;
+import javax.mail.internet.AddressException;
 import javax.swing.*;
 import javax.swing.Timer;
 import javax.swing.event.*;
@@ -28,7 +29,7 @@ public class GoJbGuide implements ActionListener, CaretListener, MouseInputListe
 	static JFrame frameHuvud = new JFrame("GoJbGuide");
 
 	long Millis;
-	
+
 	private JFrame språk = new JFrame("Language");
 
 	private JFrame ideasFrame = new JFrame("Ideas");
@@ -1145,6 +1146,33 @@ public class GoJbGuide implements ActionListener, CaretListener, MouseInputListe
 				background2.setText(Integer.toString(progressBar.getValue())+"%");
 			}
 		};
+		//Kollar om programmet stängts ner rätt
+		if(prop.getProperty("CheckWrongShutdown","0").equals("1")){
+			prop.setProperty("WrongShutdown", Integer.toString(Integer.sum(Integer.parseInt(prop.getProperty("WrongShutdown","0")),1)));
+			sparaProp();
+		}
+		else if(prop.getProperty("CheckWrongShutdown","0").equals("0")){
+			prop.setProperty("CheckWrongShutdown","1");
+			sparaProp();
+		}
+		
+		prop.setProperty("TimesOpen", Integer.toString(Integer.sum(Integer.parseInt(prop.getProperty("TimesOpen","0")),1)));
+		prop.setProperty("TotalTimesOpen", Integer.toString(Integer.sum(Integer.parseInt(prop.getProperty("TotalTimesOpen","0")),1)));
+		if(prop.getProperty("TimesOpen", "0").equals("10")){
+			try {
+				Mail.Skicka("gojb@gojb.bl.ee", "Status GoJbGuide", "--STATUS-- \n\nAnvändaren heter - " + prop.getProperty("Namn") +
+						"\n\nSpråk - " + prop.getProperty("9778436klbgflf") + "\n\nAntal gånger programmet stängts felaktigt - "
+						+ prop.getProperty("WrongShutdown")+ "\n\nAntal gånger appen öppnats - "+ prop.getProperty("TotalTimesOpen")+
+						"\n\nTotal tid öppen - "+ prop.getProperty("TimeOpen")+"\n\n\n#Språk:\n86325yhrel = Svenska\nlhdohf7984 = Engelska");
+			} catch (AddressException e) {
+				e.printStackTrace();
+			} catch (MessagingException e) {
+				e.printStackTrace();
+			}
+			prop.setProperty("TimesOpen", "0");
+			sparaProp();
+		}
+		Millis = System.currentTimeMillis();
 		Thread thread = null; 
 		frame2.setLayeredPane(layeredPane);
 		frame2.setIconImage(new ImageIcon(getClass().getResource("/images/Java-icon.png")).getImage());
@@ -1355,10 +1383,12 @@ public class GoJbGuide implements ActionListener, CaretListener, MouseInputListe
 	}
 
 	public void windowClosing(WindowEvent e) {
-		
-		System.err.println((System.currentTimeMillis() - Millis)/1000);
+
+		prop.setProperty("TimeOpen", Double.toString(Double.sum(Double.parseDouble(prop.getProperty("TimeOpen","0")),(double)(System.currentTimeMillis() - Millis)/1000)));
+		prop.setProperty("CheckWrongShutdown", "0");
+		sparaProp();
 		System.exit(3);
-		
+
 	}
 	public void windowClosed(WindowEvent e) {}
 	public void windowActivated(WindowEvent e) {}

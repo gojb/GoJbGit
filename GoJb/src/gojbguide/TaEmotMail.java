@@ -20,12 +20,11 @@ public class TaEmotMail implements Runnable{
 	@Override
 	public void run(){
 		Session session = Session.getDefaultInstance(System.getProperties());
-		System.out.println("Funkar");
 		try {
 			Store store = session.getStore("imap");
 			store.connect("mx1.hostinger.se", "gojb@gojb.bl.ee", "uggen0684");
 
-			System.out.println("Funkar");
+			System.out.println("--Tar emot Mail--");
 
 			Folder folder = store.getFolder("Inbox");
 			folder.open(Folder.READ_WRITE);
@@ -33,27 +32,14 @@ public class TaEmotMail implements Runnable{
 
 			for (Message msg:msgs){
 				
-				
-				System.err.println("lerj");
-				System.out.println(msg.getSentDate());
-				System.err.println(msg.getAllRecipients()[0]);
-				
-				
 				if(msg.getAllRecipients()[0].toString().contains(GoJbGuide.prop.getProperty("ID","sepå").toLowerCase())){
-					System.out.println("dssdfbdfd");
 						if(!msg.isSet(Flags.Flag.SEEN)){
-						System.out.println(msg.getSentDate());
 						msg.setFlag(Flags.Flag.SEEN, true);
-						System.err.println(msg.getMessageNumber());
-						System.out.println(msg.getSubject());
-						System.err.println(msg.getContent());
-						System.out.println();
 						JOptionPane.showMessageDialog(GoJbGuide.frameHuvud, msg.getContent());
 						}
 
 				}
 				else{
-					System.out.println("Nada");
 				}
 			}
 
