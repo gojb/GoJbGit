@@ -22,11 +22,13 @@ import static javax.swing.JOptionPane.*;
  *
  */
 
-public class GoJbGuide implements ActionListener, CaretListener, MouseInputListener{
+public class GoJbGuide implements ActionListener, CaretListener, MouseInputListener, WindowListener{
 	private JFrame[] frames = new JFrame[115];
 
 	static JFrame frameHuvud = new JFrame("GoJbGuide");
 
+	static long Millis;
+	
 	private JFrame språk = new JFrame("Language");
 
 	private JFrame ideasFrame = new JFrame("Ideas");
@@ -587,8 +589,8 @@ public class GoJbGuide implements ActionListener, CaretListener, MouseInputListe
 		frameHuvud.setSize(800,700);
 		frameHuvud.setLocationRelativeTo(null);
 		frameHuvud.add(scrollBar);
-		frameHuvud.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frameHuvud.setJMenuBar(bar);
+		frameHuvud.addWindowListener(this);
 
 		for (int i = 3; i < buttons.length; i++) {
 			if (i!=4&&i!=5&&i!=6&&i!=90) {
@@ -1123,6 +1125,7 @@ public class GoJbGuide implements ActionListener, CaretListener, MouseInputListe
 				background2.setText(Integer.toString(progressBar.getValue())+"%");
 			}
 		};
+		Millis = System.currentTimeMillis();
 		Thread thread = null; 
 		frame2.setLayeredPane(layeredPane);
 		frame2.setIconImage(new ImageIcon(getClass().getResource("/images/Java-icon.png")).getImage());
@@ -1331,6 +1334,18 @@ public class GoJbGuide implements ActionListener, CaretListener, MouseInputListe
 
 
 	}
+	public void windowClosing(WindowEvent e) {
+		
+		System.err.println(System.currentTimeMillis() - Millis);
+		
+	}
+	public void windowClosed(WindowEvent e) {}
+	public void windowActivated(WindowEvent e) {}
+
+	public void windowDeactivated(WindowEvent e) {}
+	public void windowDeiconified(WindowEvent e) {}
+	public void windowIconified(WindowEvent e) {}
+	public void windowOpened(WindowEvent e) {}
 }
 class Update implements Runnable{
 	public synchronized void run(){
