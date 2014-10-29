@@ -1312,46 +1312,9 @@ public class GoJbGuide implements ActionListener, CaretListener, MouseInputListe
 
 	@Override
 	public void mouseClicked(MouseEvent e) {
-
 		if (e.getSource()==label){
 			JOptionPane.showMessageDialog(null, Hello);
 		}
-
-	}
-
-	@Override
-	public void mousePressed(MouseEvent e) {
-
-	}
-
-	@Override
-	public void mouseReleased(MouseEvent e) {
-
-
-	}
-
-	@Override
-	public void mouseEntered(MouseEvent e) {
-
-
-	}
-
-	@Override
-	public void mouseExited(MouseEvent e) {
-
-
-	}
-
-	@Override
-	public void mouseDragged(MouseEvent e) {
-
-
-	}
-
-	@Override
-	public void mouseMoved(MouseEvent e) {
-
-
 	}
 
 	public void windowClosing(WindowEvent e) {
@@ -1362,11 +1325,16 @@ public class GoJbGuide implements ActionListener, CaretListener, MouseInputListe
 	}
 	public void windowClosed(WindowEvent e) {}
 	public void windowActivated(WindowEvent e) {}
-
 	public void windowDeactivated(WindowEvent e) {}
 	public void windowDeiconified(WindowEvent e) {}
 	public void windowIconified(WindowEvent e) {}
 	public void windowOpened(WindowEvent e) {}
+	public void mousePressed(MouseEvent e) {}
+	public void mouseReleased(MouseEvent e) {}
+	public void mouseEntered(MouseEvent e) {}
+	public void mouseExited(MouseEvent e) {}
+	public void mouseDragged(MouseEvent e) {}
+	public void mouseMoved(MouseEvent e) {}
 
 }
 class Update implements Runnable{
