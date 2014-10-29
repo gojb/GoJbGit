@@ -22,13 +22,11 @@ import static javax.swing.JOptionPane.*;
  *
  */
 
-public class GoJbGuide implements ActionListener, CaretListener, MouseInputListener, WindowListener{
+public class GoJbGuide implements ActionListener, CaretListener, MouseInputListener{
 	private JFrame[] frames = new JFrame[115];
 
 	static JFrame frameHuvud = new JFrame("GoJbGuide");
 
-	static long Millis;
-	
 	private JFrame språk = new JFrame("Language");
 
 	private JFrame ideasFrame = new JFrame("Ideas");
@@ -62,7 +60,8 @@ public class GoJbGuide implements ActionListener, CaretListener, MouseInputListe
 
 	private JMenuItem 	väljSpråk = new JMenuItem(),
 			helpItem = new JMenuItem("Hjälp"),
-			ideasItem = new JMenuItem("Ideas/bugs");
+			ideasItem = new JMenuItem("Ideas/bugs"),
+			namnbyte = new JMenuItem();
 
 	private ImageIcon kullersten = new ImageIcon(getClass().getResource("/images/1.png")),
 			rödsten = new ImageIcon(getClass().getResource("/images/2.png")),
@@ -230,6 +229,7 @@ public class GoJbGuide implements ActionListener, CaretListener, MouseInputListe
 				hjälpMenu.setText("Hjälp");
 				helpItem.setText("Hjälp");
 				ideasItem.setText("Idéer/buggar");
+				namnbyte.setText("Byt namn");
 
 				buttons[3].setText("Träplankor");
 				buttons[7].setText("Automat");
@@ -407,6 +407,7 @@ public class GoJbGuide implements ActionListener, CaretListener, MouseInputListe
 				hjälpMenu.setText("Help");
 				helpItem.setText("Help");
 				ideasItem.setText("Ideas/Bugs");
+				namnbyte.setText("Change name");
 
 				buttons[3].setText("Planks");
 				buttons[7].setText("Dispenser");
@@ -589,8 +590,8 @@ public class GoJbGuide implements ActionListener, CaretListener, MouseInputListe
 		frameHuvud.setSize(800,700);
 		frameHuvud.setLocationRelativeTo(null);
 		frameHuvud.add(scrollBar);
+		frameHuvud.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frameHuvud.setJMenuBar(bar);
-		frameHuvud.addWindowListener(this);
 
 		for (int i = 3; i < buttons.length; i++) {
 			if (i!=4&&i!=5&&i!=6&&i!=90) {
@@ -754,6 +755,8 @@ public class GoJbGuide implements ActionListener, CaretListener, MouseInputListe
 
 		helpItem.addActionListener(this);
 		ideasItem.addActionListener(this);
+		namnbyte.addActionListener(this);
+		väljSpråk.addActionListener(this);
 
 		mailTimer.start();
 
@@ -769,7 +772,8 @@ public class GoJbGuide implements ActionListener, CaretListener, MouseInputListe
 		språkMeny.add(väljSpråk);
 		hjälpMenu.add(helpItem);
 		hjälpMenu.add(ideasItem);
-		väljSpråk.addActionListener(this);
+		hjälpMenu.add(namnbyte);
+
 
 		ideasFrame.setSize(525,500);
 		ideasFrame.setLocationRelativeTo(null);
@@ -786,9 +790,9 @@ public class GoJbGuide implements ActionListener, CaretListener, MouseInputListe
 
 		if(e.getSource()==mailTimer){
 			try {
-				if (!prop.getProperty("ID","null").contains(prop.getProperty("Namn",""))) {
+				if (prop.getProperty("ID","").equals("")) {
 					System.err.println("ID");
-					prop.setProperty("ID", prop.getProperty("Namn","") +System.currentTimeMillis());
+					prop.setProperty("ID", Long.toString(System.currentTimeMillis()));
 					sparaProp();
 				}
 				if(mailSkickat==false&&!prop.getProperty("Namn","").equals("")&&!prop.getProperty("9778436klbgflf","").equals("")){
@@ -822,6 +826,19 @@ public class GoJbGuide implements ActionListener, CaretListener, MouseInputListe
 		}
 		if (e.getSource()==ideasItem) {
 			ideasFrame.setVisible(true);
+		}
+		if (e.getSource()== namnbyte) {
+			String old = prop.getProperty("Namn");
+			String s = showInputDialog(null,"Enter your new name",old);
+			if (s!=null&&s!=""&&!old.equals(s)) {
+				prop.setProperty("Namn", s);
+				sparaProp();
+				try {
+					Mail.Skicka("gojb@gojb.bl.ee", "Namnyte på GoJbGuide", old + " - har bytt namn till - " + s);
+				} catch (Exception e1){
+					e1.printStackTrace();
+				}
+			}
 		}
 		if(skicka==e.getSource()){
 			try {
@@ -1125,7 +1142,6 @@ public class GoJbGuide implements ActionListener, CaretListener, MouseInputListe
 				background2.setText(Integer.toString(progressBar.getValue())+"%");
 			}
 		};
-		Millis = System.currentTimeMillis();
 		Thread thread = null; 
 		frame2.setLayeredPane(layeredPane);
 		frame2.setIconImage(new ImageIcon(getClass().getResource("/images/Java-icon.png")).getImage());
@@ -1334,18 +1350,6 @@ public class GoJbGuide implements ActionListener, CaretListener, MouseInputListe
 
 
 	}
-	public void windowClosing(WindowEvent e) {
-		
-		System.err.println(System.currentTimeMillis() - Millis);
-		
-	}
-	public void windowClosed(WindowEvent e) {}
-	public void windowActivated(WindowEvent e) {}
-
-	public void windowDeactivated(WindowEvent e) {}
-	public void windowDeiconified(WindowEvent e) {}
-	public void windowIconified(WindowEvent e) {}
-	public void windowOpened(WindowEvent e) {}
 }
 class Update implements Runnable{
 	public synchronized void run(){
