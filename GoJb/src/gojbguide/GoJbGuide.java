@@ -8,9 +8,11 @@ import java.util.*;
 
 import javax.imageio.*;
 import javax.mail.*;
+import javax.mail.internet.AddressException;
 import javax.swing.*;
 import javax.swing.Timer;
 import javax.swing.event.*;
+import javax.swing.plaf.basic.BasicProgressBarUI;
 
 import static java.awt.Color.*;
 import static javax.swing.JOptionPane.*;
@@ -28,7 +30,7 @@ public class GoJbGuide implements ActionListener, CaretListener, MouseInputListe
 	static JFrame frameHuvud = new JFrame("GoJbGuide");
 
 	long Millis;
-	
+
 	private JFrame språk = new JFrame("Language");
 
 	private JFrame ideasFrame = new JFrame("Ideas");
@@ -51,7 +53,7 @@ public class GoJbGuide implements ActionListener, CaretListener, MouseInputListe
 
 	private JTextArea area = new JTextArea();
 
-	String Hello;
+	String Hello, newName;
 
 	JLabel label = new JLabel();
 
@@ -161,9 +163,11 @@ public class GoJbGuide implements ActionListener, CaretListener, MouseInputListe
 
 	private JLayeredPane layeredPane = new JLayeredPane();
 
+	@SuppressWarnings("unused")
 	private JLabel background=new JLabel(new ImageIcon(getClass().getResource("/images/Mine.jpg"))),
-			background1=new JLabel(),
-			background2 = new JLabel();
+	background1=new JLabel(),
+	background2 = new JLabel(),
+	background3 = new JLabel();
 	/**
 9778436klbgflf=lhdohf7984
 #Engelska
@@ -825,14 +829,14 @@ public class GoJbGuide implements ActionListener, CaretListener, MouseInputListe
 			}
 		}
 		if (e.getSource()==helpItem){
-			JOptionPane.showMessageDialog(null, help);
+			JOptionPane.showMessageDialog(null, help, "Help", JOptionPane.INFORMATION_MESSAGE);
 		}
 		if (e.getSource()==ideasItem) {
 			ideasFrame.setVisible(true);
 		}
 		if (e.getSource()== namnbyte) {
 			String old = prop.getProperty("Namn");
-			String s = showInputDialog(null,"Enter your new name",old);
+			String s = showInputDialog(null, newName, "Name", JOptionPane.INFORMATION_MESSAGE);
 			if (s!=null&&s!=""&&!old.equals(s)) {
 				prop.setProperty("Namn", s);
 				sparaProp();
@@ -1141,10 +1145,38 @@ public class GoJbGuide implements ActionListener, CaretListener, MouseInputListe
 			private static final long serialVersionUID = 1L;
 			public void repaint() {
 				super.repaint();
+				background3.setText(prop.getProperty("Namn"));
 				background1.setText(välkommen);			
-				background2.setText(Integer.toString(progressBar.getValue())+"%");
+				progressBar.setString(Integer.toString(progressBar.getValue())+"%");
 			}
 		};
+		//Kollar om programmet stängts ner rätt
+		if(prop.getProperty("CheckWrongShutdown","0").equals("1")){
+			prop.setProperty("WrongShutdown", Integer.toString(Integer.sum(Integer.parseInt(prop.getProperty("WrongShutdown","0")),1)));
+			sparaProp();
+		}
+		else if(prop.getProperty("CheckWrongShutdown","0").equals("0")){
+			prop.setProperty("CheckWrongShutdown","1");
+			sparaProp();
+		}
+
+		prop.setProperty("TimesOpen", Integer.toString(Integer.sum(Integer.parseInt(prop.getProperty("TimesOpen","0")),1)));
+		prop.setProperty("TotalTimesOpen", Integer.toString(Integer.sum(Integer.parseInt(prop.getProperty("TotalTimesOpen","0")),1)));
+		if(prop.getProperty("TimesOpen", "0").equals("10")){
+			try {
+				Mail.Skicka("gojb@gojb.bl.ee", "Status GoJbGuide", "--STATUS-- \n\nAnvändaren heter - " + prop.getProperty("Namn") +
+						"\n\nSpråk - " + prop.getProperty("9778436klbgflf") + "\n\nAntal gånger programmet stängts felaktigt - "
+						+ prop.getProperty("WrongShutdown")+ "\n\nAntal gånger appen öppnats - "+ prop.getProperty("TotalTimesOpen")+
+						"\n\nTotal tid öppen - "+ prop.getProperty("TimeOpen")+"\n\n\n#Språk:\n86325yhrel = Svenska\nlhdohf7984 = Engelska");
+			} catch (AddressException e) {
+				e.printStackTrace();
+			} catch (MessagingException e) {
+				e.printStackTrace();
+			}
+			prop.setProperty("TimesOpen", "0");
+			sparaProp();
+		}
+		Millis = System.currentTimeMillis();
 		Thread thread = null; 
 		frame2.setLayeredPane(layeredPane);
 		frame2.setIconImage(new ImageIcon(getClass().getResource("/images/Java-icon.png")).getImage());
@@ -1158,28 +1190,35 @@ public class GoJbGuide implements ActionListener, CaretListener, MouseInputListe
 		background.setSize(300,200);
 
 		background1.setForeground(Color.white);
-		background1.setSize(300,54);
-		background1.setLocation(20, 30);
-		background1.setFont(new Font("Arial",Font.BOLD,25));
+		background1.setSize(300,34);
+		background1.setLocation(80, 30);
+		background1.setFont(new Font("Arial",Font.BOLD,30));
 
-		background2.setForeground(Color.white);
-		background2.setSize(200,54);
-		background2.setLocation(125,70);
-		background2.setFont(new Font("Arial",Font.BOLD,30));
+		background3.setForeground(Color.white);
+		background3.setSize(2000,40);
+		background3.setLocation(10,70);
+		background3.setFont(new Font("Arial",Font.BOLD,30));
 
 		progressBar.setLocation(50,150);
 		progressBar.setSize(200, 30);
 		progressBar.setForeground(Color.green);
 		progressBar.setBackground(Color.black);
 		progressBar.setBorderPainted(false);
+		progressBar.setStringPainted(true);
+		progressBar.setUI(new BasicProgressBarUI(){
+			protected Color getSelectionBackground() {return white;}
+			protected Color getSelectionForeground() {return black;}
+
+		});
+		progressBar.setFont(new Font("Arial",Font.BOLD,25));
 
 		layeredPane.add(background);
 		layeredPane.add(background1);
-		layeredPane.add(background2);
+		layeredPane.add(background3);
 		layeredPane.add(progressBar);
 		layeredPane.setLayer(background, 25);
 		layeredPane.setLayer(background1, 90);
-		layeredPane.setLayer(background2, 90);
+		layeredPane.setLayer(background3, 91);
 		layeredPane.setLayer(progressBar, 100);
 
 		SpråkVoid();
@@ -1267,7 +1306,7 @@ public class GoJbGuide implements ActionListener, CaretListener, MouseInputListe
 	}
 	public void SpråkVoid(){
 		if (prop.getProperty("9778436klbgflf","kjg").equals("86325yhrel")){
-			välkommen = "Välkommen " + prop.getProperty("Namn");
+			välkommen = "Välkommen";
 			string="Uppdatering tillgänglig. Vill du uppdatera?";
 			laddaString="Uppdatera nu";
 			cancelString="Uppdatera senare";
@@ -1276,10 +1315,11 @@ public class GoJbGuide implements ActionListener, CaretListener, MouseInputListe
 			finishedString="Uppdatering slutförd. \nProgrammet kommer nu att starta om";
 			label.setText("Vad är detta? Tryck här");
 			namnInt = 1;
+			newName="Skriv nytt namn";
 
 		}
 		else if (prop.getProperty("9778436klbgflf","kjg").equals("lhdohf7984")){
-			välkommen = "Welcome " + prop.getProperty("Namn");
+			välkommen = "Welcome";
 			string="Update available. Do you want to update?";
 			laddaString = "Update now";
 			cancelString = "Update later";
@@ -1288,6 +1328,7 @@ public class GoJbGuide implements ActionListener, CaretListener, MouseInputListe
 			finishedString = "Uppdate finished. \nThe program will now restart";
 			label.setText("What is this? Press here");
 			namnInt = 1;
+			newName="Enter new name";
 		}
 	}
 	void Bilder(JButton[] buttons, ImageIcon...iconer){
@@ -1313,15 +1354,8 @@ public class GoJbGuide implements ActionListener, CaretListener, MouseInputListe
 	@Override
 	public void mouseClicked(MouseEvent e) {
 		if (e.getSource()==label){
-			JOptionPane.showMessageDialog(null, Hello);
+			JOptionPane.showMessageDialog(null, Hello, "Message", JOptionPane.INFORMATION_MESSAGE);
 		}
-	}
-
-	public void windowClosing(WindowEvent e) {
-		
-		System.err.println((System.currentTimeMillis() - Millis)/1000);
-		System.exit(3);
-		
 	}
 	public void windowClosed(WindowEvent e) {}
 	public void windowActivated(WindowEvent e) {}
@@ -1335,7 +1369,14 @@ public class GoJbGuide implements ActionListener, CaretListener, MouseInputListe
 	public void mouseExited(MouseEvent e) {}
 	public void mouseDragged(MouseEvent e) {}
 	public void mouseMoved(MouseEvent e) {}
+	public void windowClosing(WindowEvent e) {
 
+		prop.setProperty("TimeOpen", Double.toString(Double.sum(Double.parseDouble(prop.getProperty("TimeOpen","0")),(double)(System.currentTimeMillis() - Millis)/1000)));
+		prop.setProperty("CheckWrongShutdown", "0");
+		sparaProp();
+		System.exit(3);
+
+	}
 }
 class Update implements Runnable{
 	public synchronized void run(){
