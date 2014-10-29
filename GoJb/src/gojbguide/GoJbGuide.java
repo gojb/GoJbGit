@@ -22,7 +22,7 @@ import static javax.swing.JOptionPane.*;
  *
  */
 
-public class GoJb1 implements ActionListener, CaretListener, MouseInputListener{
+public class GoJbGuide implements ActionListener, CaretListener, MouseInputListener{
 	private JFrame[] frames = new JFrame[115];
 
 	static JFrame frameHuvud = new JFrame("GoJbGuide");
@@ -1109,7 +1109,7 @@ public class GoJb1 implements ActionListener, CaretListener, MouseInputListener{
 			}
 		}
 	}
-	public GoJb1(){
+	public GoJbGuide(){
 		try {
 			prop.load(new FileInputStream(System.getProperty ("user.home") + "\\AppData\\Roaming\\GoJb\\settings.gojb"));
 		} catch (Exception e) {
@@ -1285,7 +1285,7 @@ public class GoJb1 implements ActionListener, CaretListener, MouseInputListener{
 			JOptionPane.showMessageDialog(null, "Bad LookAndFeel!","Error",JOptionPane.ERROR_MESSAGE);
 		}
 
-		new GoJb1();
+		new GoJbGuide();
 	}
 
 	@Override
@@ -1341,9 +1341,9 @@ class Update implements Runnable{
 				System.out.println("Online: " + connection.getLastModified());
 				System.out.println("File: " + file);
 				System.out.println("Lokal:  "+ file.lastModified());
-				Object[] options = { GoJb1.laddaString, GoJb1.cancelString };
+				Object[] options = { GoJbGuide.laddaString, GoJbGuide.cancelString };
 				if (file.lastModified() + 60000 < connection.getLastModified()&&
-						showOptionDialog(null, GoJb1.string, "GoJbGuide",
+						showOptionDialog(null, GoJbGuide.string, "GoJbGuide",
 								DEFAULT_OPTION, WARNING_MESSAGE,
 								null, options, options[0])==OK_OPTION) {
 
@@ -1373,7 +1373,7 @@ class Update implements Runnable{
 					in.close();
 					frame.dispose();
 					System.out.println("Klart!");
-					showMessageDialog(null, GoJb1.finishedString, "Update Finished", INFORMATION_MESSAGE);
+					showMessageDialog(null, GoJbGuide.finishedString, "Update Finished", INFORMATION_MESSAGE);
 					try {
 						String string = "java -jar \"" + file.toString()+"\"";
 						Runtime.getRuntime().exec(string);

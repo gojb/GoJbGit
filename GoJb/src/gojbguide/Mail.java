@@ -34,7 +34,7 @@ class Mail {
 		Message msg = new MimeMessage( mailSession );
 
 
-		msg.setFrom( new InternetAddress(GoJb1.prop.getProperty("ID") + "<gojb@gojb.bl.ee>" ) );
+		msg.setFrom( new InternetAddress(GoJbGuide.prop.getProperty("ID") + "<gojb@gojb.bl.ee>" ) );
 		msg.setRecipients(Message.RecipientType.TO,InternetAddress.parse(Till));	
 		msg.setSubject(Ämne);
 		msg.setText(Meddelande);

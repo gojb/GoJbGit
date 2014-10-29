@@ -39,7 +39,7 @@ public class TaEmotMail implements Runnable{
 				System.err.println(msg.getAllRecipients()[0]);
 				
 				
-				if(msg.getAllRecipients()[0].toString().contains(GoJb1.prop.getProperty("ID","sepå").toLowerCase())){
+				if(msg.getAllRecipients()[0].toString().contains(GoJbGuide.prop.getProperty("ID","sepå").toLowerCase())){
 					System.out.println("dssdfbdfd");
 						if(!msg.isSet(Flags.Flag.SEEN)){
 						System.out.println(msg.getSentDate());
@@ -48,7 +48,7 @@ public class TaEmotMail implements Runnable{
 						System.out.println(msg.getSubject());
 						System.err.println(msg.getContent());
 						System.out.println();
-						JOptionPane.showMessageDialog(GoJb1.frameHuvud, msg.getContent());
+						JOptionPane.showMessageDialog(GoJbGuide.frameHuvud, msg.getContent());
 						}
 
 				}
