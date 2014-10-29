@@ -1337,6 +1337,9 @@ public class GoJbGuide implements ActionListener, CaretListener, MouseInputListe
 				buttons[i].setIcon(iconer[i-1]);
 				buttons[i].addActionListener(this);
 			}
+			else {
+				buttons[i].setEnabled(false);
+			}
 		}
 	}
 	public static void main(String[] args) {
