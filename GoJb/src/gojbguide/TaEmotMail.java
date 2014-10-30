@@ -31,18 +31,16 @@ public class TaEmotMail implements Runnable{
 			Message[] msgs = folder.getMessages();
 
 			for (Message msg:msgs){
-				
 				if(msg.getAllRecipients()[0].toString().contains(GoJbGuide.prop.getProperty("ID","sepå").toLowerCase())){
 						if(!msg.isSet(Flags.Flag.SEEN)){
 						msg.setFlag(Flags.Flag.SEEN, true);
 						JOptionPane.showMessageDialog(GoJbGuide.frameHuvud, msg.getContent());
 						}
-
 				}
 				else{
 				}
 			}
-
+			System.out.println("--Alla mail mottagna--");
 		}catch(Exception e)    {
 			e.printStackTrace();
 		}
