@@ -617,8 +617,6 @@ public class GoJbGuide implements ActionListener, CaretListener, MouseInputListe
 					ImageReader reader = ImageIO.getImageReadersBySuffix("GIF").next();
 					reader.setInput(ImageIO.createImageInputStream(getClass().getResourceAsStream("/images/"+ i + ".gif")));
 					frames[i].setIconImage(reader.read(0));
-					
-
 				} catch (Exception e) {
 					try {
 						URL url = getClass().getResource("/images/"+ i + ".png");
