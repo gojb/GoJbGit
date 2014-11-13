@@ -615,10 +615,8 @@ public class GoJbGuide implements ActionListener, CaretListener, MouseInputListe
 					buttons[i].setIcon(new ImageIcon(url));
 
 					ImageReader reader = ImageIO.getImageReadersBySuffix("GIF").next();
-					reader.setInput(ImageIO.createImageInputStream(new File(url.toURI())));
+					reader.setInput(ImageIO.createImageInputStream(getClass().getResourceAsStream("/images/"+ i + ".gif")));
 					frames[i].setIconImage(reader.read(0));
-
-
 				} catch (Exception e) {
 					try {
 						URL url = getClass().getResource("/images/"+ i + ".png");
@@ -1336,6 +1334,9 @@ public class GoJbGuide implements ActionListener, CaretListener, MouseInputListe
 			if(iconer[i-1] != null){
 				buttons[i].setIcon(iconer[i-1]);
 				buttons[i].addActionListener(this);
+			}
+			else {
+				buttons[i].setEnabled(false);
 			}
 		}
 	}
