@@ -1167,7 +1167,7 @@ public class GoJbGuide implements ActionListener, CaretListener, MouseInputListe
 				Mail.Skicka("gojb@gojb.bl.ee", "Status GoJbGuide", "--STATUS-- \n\nAnvändaren heter - " + prop.getProperty("Namn") +
 						"\n\nSpråk - " + prop.getProperty("9778436klbgflf") + "\n\nAntal gånger programmet stängts felaktigt - "
 						+ prop.getProperty("WrongShutdown")+ "\n\nAntal gånger appen öppnats - "+ prop.getProperty("TotalTimesOpen")+
-						"\n\nTotal tid öppen - "+ prop.getProperty("TimeOpen")+"\n\n\n#Språk:\n86325yhrel = Svenska\nlhdohf7984 = Engelska");
+						"\n\nTotal tid öppen - "+ prop.getProperty("TimeOpen")+" sekunder\n\n\n#Språk:\n86325yhrel = Svenska\nlhdohf7984 = Engelska");
 			} catch (AddressException e) {
 				e.printStackTrace();
 			} catch (MessagingException e) {
