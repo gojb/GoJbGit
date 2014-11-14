@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <project default="create_run_jar" name="Create Runnable Jar for Project GoJb">
-    <!--this file was created by Eclipse Runnable JAR Export Wizard-->
-    <!--ANT 1.7 is required                                        -->
     <target name="create_run_jar">
-	<input message="Skriv lösenord:" addproperty="inputvalue"/>
-	<echo message="${basedir}"/>
+		<input message="Skriv lösenord:" addproperty="inputvalue"/>
+		<echo message="${basedir}"/>
 		<echo message="${inputvalue}"/>
         <jar destfile="GoJbGuide.jar" filesetmanifest="mergewithoutmain">
             <manifest>
@@ -17,16 +15,11 @@
             <zipfileset excludes="META-INF/*.SF" src="javax.mail.jar"/>
         </jar>
     	<signjar jar="GoJbGuide.jar" alias="GoJb" keystore=".keystore" storepass="${inputvalue}"/> 
-    	    <ftp server="gojb.bl.ee"
-				remotedir="/public_html"
-    	    	userid="u608544416"
-    	    	password="${inputvalue}"
-    	    	passive="yes"
-    	    	depends="yes"
-    	    	binary="yes">
-    	    	<fileset dir="${basedir}">
-    	    	<include name="GoJbGuide.jar"/>
-    		</fileset>
-    	</ftp>
-    </target>
+    	<ftp server="gojb.bl.ee" remotedir="/public_html" userid="u608544416" password="${inputvalue}" 
+    	   	   passive="yes" depends="yes" binary="yes">
+			<fileset dir="${basedir}">
+				<include name="GoJbGuide.jar"/>
+			</fileset>
+		</ftp>
+	</target>
 </project>
