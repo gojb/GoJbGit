@@ -59,7 +59,7 @@ public class GoJbGuide implements ActionListener, CaretListener, MouseInputListe
 
 	private Timer mailTimer = new Timer(1000, this);
 
-	private JMenu språkMeny = new JMenu(),
+	private JMenu 
 			hjälpMenu = new JMenu("Hjälp");
 
 	private JMenuItem 	väljSpråk = new JMenuItem(),
@@ -225,13 +225,16 @@ public class GoJbGuide implements ActionListener, CaretListener, MouseInputListe
 
 				help = "Hej! Det här programmet är programmerat av \n GoJbs Javaprogramering." + yString;
 
-				språkMeny.setIcon(new ImageIcon(getClass().getResource("/images/Swedish.jpg")));
+				väljSpråk.setIcon(new ImageIcon(getClass().getResource("/images/Swedish.jpg")));
 
 				System.out.println("Hej!");
 
 				väljSpråk.setText("Språk");
-				språkMeny.setText("Språk");
+				
+				bar.revalidate();
 
+				helpItem.revalidate();
+				
 				hjälpMenu.setText("Hjälp");
 				helpItem.setText("Hjälp");
 				ideasItem.setText("Idéer/buggar");
@@ -405,10 +408,11 @@ public class GoJbGuide implements ActionListener, CaretListener, MouseInputListe
 
 				help = "Hello! This program is coded by\n GoJbs Javaprogramming." + yString;
 
-				språkMeny.setIcon(new ImageIcon(getClass().getResource("/images/Brittish.jpg")));
+				väljSpråk.setIcon(new ImageIcon(getClass().getResource("/images/Brittish.jpg")));
 
 				väljSpråk.setText("Language");
-				språkMeny.setText("Language");
+				
+				bar.revalidate();
 
 				hjälpMenu.setText("Help");
 				helpItem.setText("Help");
@@ -751,7 +755,7 @@ public class GoJbGuide implements ActionListener, CaretListener, MouseInputListe
 	void ladda4(){
 		frame.setLayout(new GridLayout(0, 3));
 
-		bar.add(språkMeny);
+		bar.add(väljSpråk);
 		bar.add(hjälpMenu);
 
 		text.addCaretListener(this);
@@ -773,8 +777,6 @@ public class GoJbGuide implements ActionListener, CaretListener, MouseInputListe
 		label.setVerticalTextPosition(SwingConstants.CENTER);
 		label.setHorizontalAlignment(SwingConstants.CENTER);
 
-
-		språkMeny.add(väljSpråk);
 		hjälpMenu.add(helpItem);
 		hjälpMenu.add(ideasItem);
 		hjälpMenu.add(namnbyte);
