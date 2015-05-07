@@ -204,7 +204,6 @@ public class GoJbGuide implements ActionListener, CaretListener, MouseInputListe
 		språk.pack();
 		språk.setLocationRelativeTo(null);
 		språk.setVisible(true);
-		språk.setDefaultCloseOperation(3);
 
 		svenska.addActionListener(dActionListener);
 		engelska.addActionListener(dActionListener);
