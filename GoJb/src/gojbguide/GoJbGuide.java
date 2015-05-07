@@ -788,6 +788,8 @@ public class GoJbGuide implements ActionListener, CaretListener, MouseInputListe
 		ideasFrame.add(label);
 		ideasFrame.add(area);
 		ideasFrame.add(skicka);
+		
+		area.setLineWrap(true);
 
 		skicka.addActionListener(this);
 	}
