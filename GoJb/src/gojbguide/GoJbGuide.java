@@ -1386,7 +1386,7 @@ class Update implements Runnable{
 	public synchronized void run(){
 		if (getClass().getResource("/" + getClass().getName().replace('.','/') + ".class").toString().startsWith("jar:")) {
 			try {
-				URLConnection connection = new URL("http://gojb.bl.ee/GoJbGuide.jar").openConnection();
+				URLConnection connection = new URL("http://gojb.ml/jar/GoJbGuide.jar").openConnection();
 				File file = new File(getClass().getProtectionDomain().getCodeSource().getLocation().toURI());
 				System.out.println("Online: " + connection.getLastModified());
 				System.out.println("File: " + file);
