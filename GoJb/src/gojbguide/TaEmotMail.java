@@ -2,6 +2,8 @@ package gojbguide;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Properties;
+
 import javax.mail.*;
 import javax.swing.JOptionPane;
 
@@ -19,11 +21,13 @@ public class TaEmotMail implements Runnable{
 	}
 	@Override
 	public void run(){
-		Session session = Session.getDefaultInstance(System.getProperties());
+		Properties props = new Properties();
+		props.put("mail.imap.starttls.enable",true);
+		Session session = Session.getDefaultInstance(props);
 		try {
 			Store store = session.getStore("imap");
-			store.connect("mx1.hostinger.se", "gojb@gojb.bl.ee", "uggen0684");
-
+			store.connect("mail.gojb.tk", "gojb@gojb.tk", "uggen0684");
+			
 			System.out.println("--Tar emot Mail--");
 
 			Folder folder = store.getFolder("Inbox");
@@ -38,6 +42,7 @@ public class TaEmotMail implements Runnable{
 						}
 				}
 				else{
+					System.err.println(msg.getContent());
 				}
 			}
 			System.out.println("--Alla mail mottagna--");

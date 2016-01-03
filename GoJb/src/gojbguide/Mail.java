@@ -17,31 +17,32 @@ class Mail {
 
 
 		Properties props = new Properties();
-		props.put("mail.smtp.host", "mx1.hostinger.se");
+		props.put("mail.smtp.host", "mail.gojb.tk");
+		props.put("mail.smtp.port", "25");
 		props.put("mail.smtp.auth", "true");
-		props.put("mail.smtp.port", "2525");
+		props.put("mail.smtp.debug", "true");
 
 		Session mailSession = Session.getInstance(props, new Authenticator() {
 
 			protected PasswordAuthentication getPasswordAuthentication() {
-				return new PasswordAuthentication("gojb@gojb.bl.ee", "uggen0684");
+				return new PasswordAuthentication("gojb@gojb.tk", "uggen0684");
 			}
 		});
 
 
-		mailSession.setDebug(false); // Enable the debug mode
+		mailSession.setDebug(true); // Enable the debug mode
 
 		Message msg = new MimeMessage( mailSession );
 
 
-		msg.setFrom( new InternetAddress(GoJbGuide.prop.getProperty("ID") + "<gojb@gojb.bl.ee>" ) );
-		msg.setRecipients(Message.RecipientType.TO,InternetAddress.parse(Till));	
-		msg.setSubject(Ämne);
-		msg.setText(Meddelande);
-
-		System.err.println("--SKICKAT--");
+		msg.setFrom( new InternetAddress(GoJbGuide.prop.getProperty("ID") + "<GoJb>" ) );
+		msg.setRecipients(Message.RecipientType.TO,InternetAddress.parse("gojb@gojb.tk"));	
+		msg.setSubject("dasds");
+		msg.setText("asdadssd");
 		
 		Transport.send( msg );
+		
+		System.err.println("--SKICKAT--");
 
 	}
 
