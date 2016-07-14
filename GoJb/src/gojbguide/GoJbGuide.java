@@ -47,7 +47,7 @@ public class GoJbGuide implements ActionListener, CaretListener, MouseInputListe
 
 	private JMenuBar bar = new JMenuBar();
 
-	private ArrayList<JButton> list = new ArrayList<JButton>();
+	private ArrayList<JButton> list = new ArrayList<>();
 
 	private JTextField text = new JTextField();
 
@@ -872,211 +872,211 @@ public class GoJbGuide implements ActionListener, CaretListener, MouseInputListe
 			if (abc==tra) {
 				JOptionPane.showMessageDialog(frameHuvud, traString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
 			}
-			if (abc==kullersten) {
+			else if (abc==kullersten) {
 				JOptionPane.showMessageDialog(frameHuvud, kullerString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE,abc);
 			}
-			if (abc==rödsten) {
+			else if (abc==rödsten) {
 				JOptionPane.showMessageDialog(frameHuvud, rödString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
 			}
-			if (abc==sand) {
+			else if (abc==sand) {
 				JOptionPane.showMessageDialog(frameHuvud, sandString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
 			}
-			if (abc==guld) {
+			else if (abc==guld) {
 				JOptionPane.showMessageDialog(frameHuvud, guldString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
 			}
-			if (abc==slime) {
+			else if (abc==slime) {
 				JOptionPane.showMessageDialog(frameHuvud, slimesString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
 			}
-			if (abc==tråd) {
+			else if (abc==tråd) {
 				JOptionPane.showMessageDialog(frameHuvud, trådsString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
 			}
-			if (abc==tegel) {
+			else if (abc==tegel) {
 				JOptionPane.showMessageDialog(frameHuvud, tegelString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
 			}
-			if (abc==krut) {
+			else if (abc==krut) {
 				JOptionPane.showMessageDialog(frameHuvud, krutString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
 			}
-			if (abc==järn) {
+			else if (abc==järn) {
 				JOptionPane.showMessageDialog(frameHuvud, järnString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
 			}
-			if (abc==diamant) {
+			else if (abc==diamant) {
 				JOptionPane.showMessageDialog(frameHuvud, diamantString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
 			}
-			if (abc==snöboll) {
+			else if (abc==snöboll) {
 				JOptionPane.showMessageDialog(frameHuvud, snöbollString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
 			}
-			if (abc==obsidian) {
+			else if (abc==obsidian) {
 				JOptionPane.showMessageDialog(frameHuvud, obsidianString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
 			}
-			if (abc==läder) {
+			else if (abc==läder) {
 				JOptionPane.showMessageDialog(frameHuvud, lädersString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
 			}
-			if (abc==färger) {
+			else if (abc==färger) {
 				JOptionPane.showMessageDialog(frameHuvud, färgerString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
 			}
-			if (abc==pumpa) {
+			else if (abc==pumpa) {
 				JOptionPane.showMessageDialog(frameHuvud, pumpaString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
 			}
-			if (abc==ägg) {
+			else if (abc==ägg) {
 				JOptionPane.showMessageDialog(frameHuvud, äggString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
 			}
-			if (abc==kol) {
+			else if (abc==kol) {
 				JOptionPane.showMessageDialog(frameHuvud, kolString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
 			}
-			if (abc==morot) {
+			else if (abc==morot) {
 				JOptionPane.showMessageDialog(frameHuvud, morotString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
 			}
-			if (abc==järnträ) {
+			else if (abc==järnträ) {
 				JOptionPane.showMessageDialog(frameHuvud, järnelrträdString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
 			}
-			if (abc==fjäder) {
+			else if (abc==fjäder) {
 				JOptionPane.showMessageDialog(frameHuvud, fjäderString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
 			}
-			if (abc==bläck) {
+			else if (abc==bläck) {
 				JOptionPane.showMessageDialog(frameHuvud, bläckString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
 			}
-			if (abc==tryck) {
+			else if (abc==tryck) {
 				JOptionPane.showMessageDialog(frameHuvud, träjärnstenString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
 			}
-			if (abc==melon) {
+			else if (abc==melon) {
 				JOptionPane.showMessageDialog(frameHuvud, melonString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
 			}
-			if (abc==blaze) {
+			else if (abc==blaze) {
 				JOptionPane.showMessageDialog(frameHuvud, blazeString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
 			}
-			if (abc==svamp) {
+			else if (abc==svamp) {
 				JOptionPane.showMessageDialog(frameHuvud, svampString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
 			}
-			if (abc==spindelöga) {
+			else if (abc==spindelöga) {
 				JOptionPane.showMessageDialog(frameHuvud, spindelögaString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
 			}
-			if (abc==glödstenspulver) {
+			else if (abc==glödstenspulver) {
 				JOptionPane.showMessageDialog(frameHuvud, glödstenspulverString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
 			}
-			if (abc==glas) {
+			else if (abc==glas) {
 				JOptionPane.showMessageDialog(frameHuvud, glasString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
 			}
-			if (abc==vete) {
+			else if (abc==vete) {
 				JOptionPane.showMessageDialog(frameHuvud, veteString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
 			}
-			if (abc==kakao) {
+			else if (abc==kakao) {
 				JOptionPane.showMessageDialog(frameHuvud, kakaoString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
 			}
-			if (abc==sten) {
+			else if (abc==sten) {
 				JOptionPane.showMessageDialog(frameHuvud, stenString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
 			}
-			if (abc==mjölk) {
+			else if (abc==mjölk) {
 				JOptionPane.showMessageDialog(frameHuvud, mjölkString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
 			}
-			if (abc==sockerrör) {
+			else if (abc==sockerrör) {
 				JOptionPane.showMessageDialog(frameHuvud, sockerrörString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
 			}
-			if (abc==äpple) {
+			else if (abc==äpple) {
 				JOptionPane.showMessageDialog(frameHuvud, äppleString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
 			}
-			if (abc==flinta) {
+			else if (abc==flinta) {
 				JOptionPane.showMessageDialog(frameHuvud, flintaString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
 			}
-			if (abc==järnStenTrä) {
+			else if (abc==järnStenTrä) {
 				JOptionPane.showMessageDialog(frameHuvud, järnstenträString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
 			}
-			if (abc==nederstjärna) {
+			else if (abc==nederstjärna) {
 				JOptionPane.showMessageDialog(frameHuvud, nederstjärnaString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
 			}
-			if (abc==nederkvarts) {
+			else if (abc==nederkvarts) {
 				JOptionPane.showMessageDialog(frameHuvud, nederkvartString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
 			}
-			if (abc==material) {
+			else if (abc==material) {
 				JOptionPane.showMessageDialog(frameHuvud, materialString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
 			}
-			if (abc==enderpärla) {
+			else if (abc==enderpärla) {
 				JOptionPane.showMessageDialog(frameHuvud, enderString,frameHuvud.getTitle(), JOptionPane.INFORMATION_MESSAGE, abc);
 			}
-			if (abc==järnblock) {
+			else if (abc==järnblock) {
 				frames[57].setVisible(true);
 			}
-			if (abc==fackla) {
+			else if (abc==fackla) {
 				frames[20].setVisible(true);
 			}
-			if (abc==trähalvblock) {
+			else if (abc==trähalvblock) {
 				frames[16].setVisible(true);
 			}
-			if (abc==snubbeltrådskrok) {
+			else if (abc==snubbeltrådskrok) {
 				frames[49].setVisible(true);
 			}
-			if (abc==plankor) {
+			else if (abc==plankor) {
 				frames[3].setVisible(true);
 			}
-			if (abc==pilbåge) {
+			else if (abc==pilbåge) {
 				frames[68].setVisible(true);
 			}
-			if (abc==ull) {
+			else if (abc==ull) {
 				frames[15].setVisible(true);
 			}
-			if (abc==enderöga) {
+			else if (abc==enderöga) {
 				frames[103].setVisible(true);
 			}
-			if (abc==bok) {
+			else if (abc==bok) {
 				frames[84].setVisible(true);
 			}
-			if (abc==papper) {
+			else if (abc==papper) {
 				frames[83].setVisible(true);
 			}
-			if (abc==gruvvagn) {
+			else if (abc==gruvvagn) {
 				frames[81].setVisible(true);
 			}
-			if (abc==hopper) {
+			else if (abc==hopper) {
 				frames[58].setVisible(true);
 			}
-			if (abc==kista) {
+			else if (abc==kista) {
 				frames[22].setVisible(true);
 			}
-			if (abc==ugn) {
+			else if (abc==ugn) {
 				frames[24].setVisible(true);
 			}
-			if (abc==pinne) {
+			else if (abc==pinne) {
 				frames[71].setVisible(true);
 			}
-			if (abc==tryckplatta) {
+			else if (abc==tryckplatta) {
 				frames[30].setVisible(true);
 			}
-			if (abc==kolv) {
+			else if (abc==kolv) {
 				frames[14].setVisible(true);
 			}
-			if (abc==raketstjärna) {
+			else if (abc==raketstjärna) {
 				frames[111].setVisible(true);
 			}
-			if (abc==dynamit) {
+			else if (abc==dynamit) {
 				frames[18].setVisible(true);
 			}
-			if (abc==block) {
+			else if (abc==block) {
 				frames[57].setVisible(true);
 			}
-			if (abc==socker) {
+			else if (abc==socker) {
 				frames[91].setVisible(true);
 			}
-			if (abc==fiskespö) {
+			else if (abc==fiskespö) {
 				frames[88].setVisible(true);
 			}
-			if (abc==guldklimp) {
+			else if (abc==guldklimp) {
 				frames[98].setVisible(true);
 			}
-			if (abc==blazepulver) {
+			else if (abc==blazepulver) {
 				frames[101].setVisible(true);
 			}
-			if (abc==kompass) {
+			else if (abc==kompass) {
 				frames[87].setVisible(true);
 			}
-			if (abc==rödstensfackla) {
+			else if (abc==rödstensfackla) {
 				frames[31].setVisible(true);
 			}
-			if (abc==färgglas) {
+			else if (abc==färgglas) {
 				frames[38].setVisible(true);
 			}
-			if (abc==glödstenslampa) {
+			else if (abc==glödstenslampa) {
 				frames[36].setVisible(true);
 			}			
-			if (e.getSource()==väljSpråk){
+			else if (e.getSource()==väljSpråk){
 				Språkfråga();
 			}
 		}catch (Exception e1) {}
@@ -1100,7 +1100,7 @@ public class GoJbGuide implements ActionListener, CaretListener, MouseInputListe
 	}
 	void sortera(){
 		list.removeAll(list);
-		ArrayList<String> list = new ArrayList<String>();
+		ArrayList<String> list = new ArrayList<>();
 		for (int i = 3; i < buttons.length; i++) {
 			if (i!=4&&i!=5&&i!=6&&i!=90) {
 				list.add(buttons[i].getText());
